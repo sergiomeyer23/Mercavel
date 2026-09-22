@@ -1,0 +1,86 @@
+[
+  {
+    "id": "cat-mercearia",
+    "name": "Mercearia",
+    "slug": "mercearia",
+    "description": "Arroz, feijão, açúcar, farinhas, massas e itens secos.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-carnes",
+    "name": "Carnes",
+    "slug": "carnes",
+    "description": "Cortes bovinos, aves e peixes.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-bebidas",
+    "name": "Bebidas",
+    "slug": "bebidas",
+    "description": "Refrigerantes, sucos, águas e cervejas.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-laticinios",
+    "name": "Laticínios",
+    "slug": "laticinios",
+    "description": "Leites, queijos, iogurtes, manteigas e requeijões.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-hortifruti",
+    "name": "Hortifruti",
+    "slug": "hortifruti",
+    "description": "Frutas, verduras e legumes.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-higiene",
+    "name": "Higiene Pessoal",
+    "slug": "higiene-pessoal",
+    "description": "Cuidados pessoais, cabelos, bucal e papel higiênico.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-limpeza",
+    "name": "Limpeza",
+    "slug": "limpeza",
+    "description": "Detergentes, sabões, desinfetantes e utilidades de limpeza.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-padaria",
+    "name": "Padaria",
+    "slug": "padaria",
+    "description": "Pães, bolos e itens de panificação.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-congelados",
+    "name": "Congelados",
+    "slug": "congelados",
+    "description": "Congelados, sorvetes e itens resfriados.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-alimentos",
+    "name": "Alimentos",
+    "slug": "alimentos",
+    "description": "Enlatados, conservas e alimentos prontos.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-pet",
+    "name": "Pet",
+    "slug": "pet",
+    "description": "Alimentação e cuidados para animais.",
+    "parentCategoryId": null
+  },
+  {
+    "id": "cat-outros",
+    "name": "Outros",
+    "slug": "outros",
+    "description": "Itens diversos sem categoria específica.",
+    "parentCategoryId": null
+  }
+]
