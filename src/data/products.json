@@ -1,0 +1,492 @@
+[
+  {
+    "id": "arroz-tipo1-5kg",
+    "name": "Arroz Branco Tipo 1 5 kg",
+    "brand": "Exemplo Alimentos",
+    "ean": "7891234567890",
+    "unit": "5 kg",
+    "quantity": 5,
+    "quantityUnit": "KG",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "feijao-carioca-1kg",
+    "name": "Feijão Carioca Tipo 1 1 kg",
+    "brand": "Exemplo Grãos",
+    "ean": "7891234575809",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "cafe-torrado-500g",
+    "name": "Café Torrado e Moído Tradicional 500 g",
+    "brand": "Exemplo Café",
+    "ean": "7891234583728",
+    "unit": "500 g",
+    "quantity": 500,
+    "quantityUnit": "G",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "acucar-refinado-1kg",
+    "name": "Açúcar Refinado 1 kg",
+    "brand": "Exemplo Doces",
+    "ean": "7891234591647",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "farinha-trigo-1kg",
+    "name": "Farinha de Trigo Tipo 1 1 kg",
+    "brand": "Exemplo Moinhos",
+    "ean": "7891234599566",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "oleo-soja-900ml",
+    "name": "Óleo de Soja 900 ml",
+    "brand": "Exemplo Óleos",
+    "ean": "7891234607485",
+    "unit": "900 ml",
+    "quantity": 900,
+    "quantityUnit": "ML",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "macarrao-espaguete-500g",
+    "name": "Macarrão Espaguete 500 g",
+    "brand": "Exemplo Massas",
+    "ean": "7891234615404",
+    "unit": "500 g",
+    "quantity": 500,
+    "quantityUnit": "G",
+    "categoryId": "cat-mercearia"
+  },
+  {
+    "id": "molho-tomate-340g",
+    "name": "Molho de Tomate Tradicional 340 g",
+    "brand": "Exemplo Sabores",
+    "ean": "7891234623323",
+    "unit": "340 g",
+    "quantity": 340,
+    "quantityUnit": "G",
+    "categoryId": "cat-alimentos"
+  },
+  {
+    "id": "milho-verde-lata",
+    "name": "Milho Verde em Conserva 170 g",
+    "brand": "Exemplo Conservas",
+    "ean": "7891234631242",
+    "unit": "170 g",
+    "quantity": 170,
+    "quantityUnit": "G",
+    "categoryId": "cat-alimentos"
+  },
+  {
+    "id": "atum-ralado-lata",
+    "name": "Atum Ralado em Óleo 170 g",
+    "brand": "Exemplo Mar",
+    "ean": "7891234639161",
+    "unit": "170 g",
+    "quantity": 170,
+    "quantityUnit": "G",
+    "categoryId": "cat-alimentos"
+  },
+  {
+    "id": "leite-uht-integral-1l",
+    "name": "Leite UHT Integral 1 L",
+    "brand": "Exemplo Leite",
+    "ean": "7891234647080",
+    "unit": "1 l",
+    "quantity": 1,
+    "quantityUnit": "L",
+    "categoryId": "cat-laticinios"
+  },
+  {
+    "id": "queijo-mussarela-kg",
+    "name": "Queijo Mussarela Fatiado (por kg)",
+    "brand": "Exemplo Laticínios",
+    "ean": "7891234654999",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-laticinios"
+  },
+  {
+    "id": "manteiga-200g",
+    "name": "Manteiga com Sal 200 g",
+    "brand": "Exemplo Laticínios",
+    "ean": "7891234662918",
+    "unit": "200 g",
+    "quantity": 200,
+    "quantityUnit": "G",
+    "categoryId": "cat-laticinios"
+  },
+  {
+    "id": "requeijao-200g",
+    "name": "Requeijão Cremoso Tradicional 200 g",
+    "brand": "Exemplo Laticínios",
+    "ean": "7891234670837",
+    "unit": "200 g",
+    "quantity": 200,
+    "quantityUnit": "G",
+    "categoryId": "cat-laticinios"
+  },
+  {
+    "id": "iogurte-natural-170g",
+    "name": "Iogurte Natural Integral 170 g",
+    "brand": "Exemplo Laticínios",
+    "ean": "7891234678756",
+    "unit": "170 g",
+    "quantity": 170,
+    "quantityUnit": "G",
+    "categoryId": "cat-laticinios"
+  },
+  {
+    "id": "ovo-branco-dz",
+    "name": "Ovo Branco Grande (dúzia)",
+    "brand": "Exemplo Avícola",
+    "ean": "7891234686675",
+    "unit": "12 un",
+    "quantity": 12,
+    "quantityUnit": "UN",
+    "categoryId": "cat-hortifruti"
+  },
+  {
+    "id": "coxao-mole-kg",
+    "name": "Coxão Mole (por kg)",
+    "brand": "Exemplo Carnes",
+    "ean": "7891234694594",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-carnes"
+  },
+  {
+    "id": "picanha-kg",
+    "name": "Picanha Bovina (por kg)",
+    "brand": "Exemplo Carnes",
+    "ean": "7891234702513",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-carnes"
+  },
+  {
+    "id": "file-peito-frango-kg",
+    "name": "Filé de Peito de Frango (por kg)",
+    "brand": "Exemplo Avícola",
+    "ean": "7891234710432",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-carnes"
+  },
+  {
+    "id": "coxa-sobrecoxa-kg",
+    "name": "Coxa e Sobrecoxa de Frango (por kg)",
+    "brand": "Exemplo Avícola",
+    "ean": "7891234718351",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-carnes"
+  },
+  {
+    "id": "linguica-toscana-kg",
+    "name": "Linguiça Toscana (por kg)",
+    "brand": "Exemplo Carnes",
+    "ean": "7891234726270",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-carnes"
+  },
+  {
+    "id": "refrigerante-cola-2l",
+    "name": "Refrigerante Sabor Cola 2 L",
+    "brand": "Exemplo Bebidas",
+    "ean": "7891234734189",
+    "unit": "2 l",
+    "quantity": 2,
+    "quantityUnit": "L",
+    "categoryId": "cat-bebidas"
+  },
+  {
+    "id": "refrigerante-guarana-2l",
+    "name": "Refrigerante Sabor Guaraná 2 L",
+    "brand": "Exemplo Bebidas",
+    "ean": "7891234742108",
+    "unit": "2 l",
+    "quantity": 2,
+    "quantityUnit": "L",
+    "categoryId": "cat-bebidas"
+  },
+  {
+    "id": "suco-laranja-1l",
+    "name": "Suco de Laranja Integral 1 L",
+    "brand": "Exemplo Bebidas",
+    "ean": "7891234750027",
+    "unit": "1 l",
+    "quantity": 1,
+    "quantityUnit": "L",
+    "categoryId": "cat-bebidas"
+  },
+  {
+    "id": "agua-mineral-15l",
+    "name": "Água Mineral sem Gás 1,5 L",
+    "brand": "Exemplo Águas",
+    "ean": "7891234757946",
+    "unit": "1.5 l",
+    "quantity": 1.5,
+    "quantityUnit": "L",
+    "categoryId": "cat-bebidas"
+  },
+  {
+    "id": "cerveja-pilsen-350ml",
+    "name": "Cerveja Pilsen Lata 350 ml",
+    "brand": "Exemplo Cervejas",
+    "ean": "7891234765865",
+    "unit": "350 ml",
+    "quantity": 350,
+    "quantityUnit": "ML",
+    "categoryId": "cat-bebidas"
+  },
+  {
+    "id": "banana-prata-kg",
+    "name": "Banana Prata (por kg)",
+    "brand": "Exemplo Hortifruti",
+    "ean": "7891234773784",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-hortifruti"
+  },
+  {
+    "id": "tomate-italiano-kg",
+    "name": "Tomate Italiano (por kg)",
+    "brand": "Exemplo Hortifruti",
+    "ean": "7891234781703",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-hortifruti"
+  },
+  {
+    "id": "batata-inglesa-kg",
+    "name": "Batata Inglesa (por kg)",
+    "brand": "Exemplo Hortifruti",
+    "ean": "7891234789622",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-hortifruti"
+  },
+  {
+    "id": "cebola-nacional-kg",
+    "name": "Cebola Nacional (por kg)",
+    "brand": "Exemplo Hortifruti",
+    "ean": "7891234797541",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-hortifruti"
+  },
+  {
+    "id": "alface-crespa-un",
+    "name": "Alface Crespa (unidade)",
+    "brand": "Exemplo Hortifruti",
+    "ean": "7891234805460",
+    "unit": "1 un",
+    "quantity": 1,
+    "quantityUnit": "UN",
+    "categoryId": "cat-hortifruti"
+  },
+  {
+    "id": "pao-frances-kg",
+    "name": "Pão Francês (por kg)",
+    "brand": "Exemplo Padaria",
+    "ean": "7891234813379",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-padaria"
+  },
+  {
+    "id": "pao-forma-500g",
+    "name": "Pão de Forma Tradicional 500 g",
+    "brand": "Exemplo Padaria",
+    "ean": "7891234821298",
+    "unit": "500 g",
+    "quantity": 500,
+    "quantityUnit": "G",
+    "categoryId": "cat-padaria"
+  },
+  {
+    "id": "bolo-forma-400g",
+    "name": "Bolo de Baunilha 400 g",
+    "brand": "Exemplo Padaria",
+    "ean": "7891234829217",
+    "unit": "400 g",
+    "quantity": 400,
+    "quantityUnit": "G",
+    "categoryId": "cat-padaria"
+  },
+  {
+    "id": "pizza-congelada-460g",
+    "name": "Pizza Congelada de Mussarela 460 g",
+    "brand": "Exemplo Congelados",
+    "ean": "7891234837136",
+    "unit": "460 g",
+    "quantity": 460,
+    "quantityUnit": "G",
+    "categoryId": "cat-congelados"
+  },
+  {
+    "id": "sorvete-creme-2l",
+    "name": "Sorvete de Creme 2 L",
+    "brand": "Exemplo Congelados",
+    "ean": "7891234845055",
+    "unit": "2 l",
+    "quantity": 2,
+    "quantityUnit": "L",
+    "categoryId": "cat-congelados"
+  },
+  {
+    "id": "batata-palito-congelada-2kg",
+    "name": "Batata Palito Congelada 2 kg",
+    "brand": "Exemplo Congelados",
+    "ean": "7891234852974",
+    "unit": "2 kg",
+    "quantity": 2,
+    "quantityUnit": "KG",
+    "categoryId": "cat-congelados"
+  },
+  {
+    "id": "detergente-neutro-500ml",
+    "name": "Detergente Neutro 500 ml",
+    "brand": "Exemplo Limpeza",
+    "ean": "7891234860893",
+    "unit": "500 ml",
+    "quantity": 500,
+    "quantityUnit": "ML",
+    "categoryId": "cat-limpeza"
+  },
+  {
+    "id": "sabao-po-1kg",
+    "name": "Sabão em Pó 1 kg",
+    "brand": "Exemplo Limpeza",
+    "ean": "7891234868812",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-limpeza"
+  },
+  {
+    "id": "amaciante-2l",
+    "name": "Amaciante Concentrado 2 L",
+    "brand": "Exemplo Limpeza",
+    "ean": "7891234876731",
+    "unit": "2 l",
+    "quantity": 2,
+    "quantityUnit": "L",
+    "categoryId": "cat-limpeza"
+  },
+  {
+    "id": "desinfetante-2l",
+    "name": "Desinfetante Pinho 2 L",
+    "brand": "Exemplo Limpeza",
+    "ean": "7891234884650",
+    "unit": "2 l",
+    "quantity": 2,
+    "quantityUnit": "L",
+    "categoryId": "cat-limpeza"
+  },
+  {
+    "id": "papel-higienico-12un",
+    "name": "Papel Higiênico Folha Dupla 12 rolos",
+    "brand": "Exemplo Higiene",
+    "ean": "7891234892569",
+    "unit": "12 un",
+    "quantity": 12,
+    "quantityUnit": "UN",
+    "categoryId": "cat-higiene"
+  },
+  {
+    "id": "sabonete-85g",
+    "name": "Sabonete em Barra Erva Doce 85 g",
+    "brand": "Exemplo Higiene",
+    "ean": "7891234900488",
+    "unit": "85 g",
+    "quantity": 85,
+    "quantityUnit": "G",
+    "categoryId": "cat-higiene"
+  },
+  {
+    "id": "creme-dental-90g",
+    "name": "Creme Dental com Flúor 90 g",
+    "brand": "Exemplo Higiene",
+    "ean": "7891234908407",
+    "unit": "90 g",
+    "quantity": 90,
+    "quantityUnit": "G",
+    "categoryId": "cat-higiene"
+  },
+  {
+    "id": "shampoo-350ml",
+    "name": "Shampoo Hidratação 350 ml",
+    "brand": "Exemplo Higiene",
+    "ean": "7891234916326",
+    "unit": "350 ml",
+    "quantity": 350,
+    "quantityUnit": "ML",
+    "categoryId": "cat-higiene"
+  },
+  {
+    "id": "racao-cao-adulto-3kg",
+    "name": "Ração para Cães Adultos 3 kg",
+    "brand": "Exemplo Pet",
+    "ean": "7891234924245",
+    "unit": "3 kg",
+    "quantity": 3,
+    "quantityUnit": "KG",
+    "categoryId": "cat-pet"
+  },
+  {
+    "id": "racao-gato-1kg",
+    "name": "Ração para Gatos Adultos 1 kg",
+    "brand": "Exemplo Pet",
+    "ean": "7891234932164",
+    "unit": "1 kg",
+    "quantity": 1,
+    "quantityUnit": "KG",
+    "categoryId": "cat-pet"
+  },
+  {
+    "id": "pilha-aa-4un",
+    "name": "Pilha Alcalina AA (4 unidades)",
+    "brand": "Exemplo Utilidades",
+    "ean": "7891234940083",
+    "unit": "4 un",
+    "quantity": 4,
+    "quantityUnit": "UN",
+    "categoryId": "cat-outros"
+  },
+  {
+    "id": "vela-comum-cx",
+    "name": "Vela Comum Branca (caixa)",
+    "brand": "Exemplo Utilidades",
+    "ean": "7891234948002",
+    "unit": "8 un",
+    "quantity": 8,
+    "quantityUnit": "UN",
+    "categoryId": "cat-outros"
+  }
+]

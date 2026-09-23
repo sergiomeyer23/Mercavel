@@ -1,0 +1,68 @@
+[
+  {
+    "id": "muffato",
+    "name": "Super Muffato",
+    "shortName": "Muffato",
+    "slug": "muffato",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": "https://www.supermuffato.com.br",
+    "onlineShoppingAvailable": true,
+    "priceFactor": 1
+  },
+  {
+    "id": "irani",
+    "name": "Irani Supermercados",
+    "shortName": "Irani",
+    "slug": "irani",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": "https://www.irani.com.br",
+    "onlineShoppingAvailable": true,
+    "priceFactor": 0.97
+  },
+  {
+    "id": "festval",
+    "name": "Festval",
+    "shortName": "Festval",
+    "slug": "festval",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": "https://www.festval.com.br",
+    "onlineShoppingAvailable": true,
+    "priceFactor": 1.09
+  },
+  {
+    "id": "puppo",
+    "name": "Super Puppo",
+    "shortName": "Puppo",
+    "slug": "puppo",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": "https://www.superpuppo.com.br",
+    "onlineShoppingAvailable": true,
+    "priceFactor": 0.95
+  },
+  {
+    "id": "atacadao",
+    "name": "Atacadão",
+    "shortName": "Atacadão",
+    "slug": "atacadao",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": "https://www.atacadao.com.br",
+    "onlineShoppingAvailable": false,
+    "priceFactor": 0.9
+  },
+  {
+    "id": "compre-mais",
+    "name": "Compre Mais",
+    "shortName": "Compre Mais",
+    "slug": "compre-mais",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": null,
+    "onlineShoppingAvailable": false,
+    "priceFactor": 1.02
+  }
+]
