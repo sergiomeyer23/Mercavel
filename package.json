@@ -1,5 +1,5 @@
 {
-  "name": "cesta-cascavel",
+  "name": "mercavel",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,15 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
+  "keywords": [
+    "precos",
+    "supermercados",
+    "cascavel",
+    "comparador"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "comparador de precos de supermercados de cascavel/pr",
+  "description": "Plataforma independente de comparacao de precos de supermercados de Cascavel/PR",
   "private": "true",
   "type": "module",
   "dependencies": {
