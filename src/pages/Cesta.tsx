@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Chip from '../components/Chip'
 import { markets, products } from '../data'
 import { useCesta } from '../context/BasketContext'
 import type { PriceType } from '../types'
@@ -16,13 +17,6 @@ const cestaModelo = [
   'file-peito-frango-kg',
   'refrigerante-cola-2l',
 ]
-
-function chip(ativo: boolean) {
-  return (
-    'rounded-full px-3 py-1 text-xs font-semibold ' +
-    (ativo ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
-  )
-}
 
 export default function Cesta() {
   const { itens, qtdItens, adicionar, remover, mudarQtd, limpar } = useCesta()
@@ -68,7 +62,7 @@ export default function Cesta() {
           </p>
           <button
             onClick={() => cestaModelo.forEach((id) => adicionar(id))}
-            className="mt-4 rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700"
+            className="mt-4 rounded-lg bg-marca-600 px-4 py-2 text-sm font-semibold text-white hover:bg-marca-700"
           >
             usar cesta de exemplo (8 itens)
           </button>
@@ -82,7 +76,7 @@ export default function Cesta() {
                 <button
                   key={p.id}
                   onClick={() => adicionar(p.id)}
-                  className="rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-green-400 hover:text-green-700"
+                  className="rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-marca-400 hover:text-marca-700"
                 >
                   + {p.name}
                 </button>
@@ -100,9 +94,9 @@ export default function Cesta() {
         <h1 className="text-xl font-bold text-gray-900">Compare sua cesta</h1>
         <div className="flex gap-1.5">
           {(['todos', 'ONLINE', 'PHYSICAL'] as const).map((t) => (
-            <button key={t} onClick={() => setTipo(t)} className={chip(tipo === t)}>
+            <Chip key={t} onClick={() => setTipo(t)} ativo={tipo === t}>
               {t === 'todos' ? 'qualquer tipo' : t === 'ONLINE' ? 'só online' : 'só loja física'}
-            </button>
+            </Chip>
           ))}
         </div>
       </div>
@@ -120,12 +114,12 @@ export default function Cesta() {
                 <li
                   key={r.mercado.id}
                   className={`flex flex-wrap items-center gap-3 rounded-lg border px-3 py-2.5 ${
-                    ehMenor ? 'border-green-300 bg-green-50' : 'border-gray-200'
+                    ehMenor ? 'border-marca-300 bg-marca-50' : 'border-gray-200'
                   }`}
                 >
                   <span className="w-5 text-center text-sm font-bold text-gray-400">{i + 1}</span>
                   <div className="min-w-0 flex-1">
-                    <Link to={`/mercado/${r.mercado.slug}`} className="text-sm font-semibold text-gray-800 hover:text-green-700">
+                    <Link to={`/mercado/${r.mercado.slug}`} className="text-sm font-semibold text-gray-800 hover:text-marca-700">
                       {r.mercado.name}
                     </Link>
                     <p className="text-[11px] text-gray-400">
@@ -135,7 +129,7 @@ export default function Cesta() {
                   <div className="text-right">
                     {r.faltando === 0 ? (
                       <>
-                        <p className={`font-bold ${ehMenor ? 'text-green-700' : 'text-gray-900'}`}>{brl(r.total)}</p>
+                        <p className={`font-bold ${ehMenor ? 'text-marca-700' : 'text-gray-900'}`}>{brl(r.total)}</p>
                         {menor !== null && r.total > menor && (
                           <p className="text-[11px] text-gray-400">+{brl(r.total - menor)} que o menor</p>
                         )}
@@ -151,10 +145,10 @@ export default function Cesta() {
         </div>
 
         <div className="space-y-3">
-          <div className="rounded-xl bg-green-600 p-5 text-white">
-            <p className="text-xs font-semibold uppercase text-green-200">cesta mais barata</p>
+          <div className="rounded-xl bg-marca-600 p-5 text-white">
+            <p className="text-xs font-semibold uppercase text-marca-200">cesta mais barata</p>
             <p className="mt-1 text-2xl font-bold">{menor !== null ? brl(menor) : '—'}</p>
-            <p className="mt-1 text-sm text-green-100">
+            <p className="mt-1 text-sm text-marca-100">
               {completos.length > 0 ? completos[0].mercado.name : 'nenhum mercado tem tudo'}
             </p>
           </div>
@@ -202,7 +196,7 @@ export default function Cesta() {
               return (
                 <tr key={item.productId} className="border-b border-gray-50 last:border-0">
                   <td className="px-4 py-2.5">
-                    <Link to={`/produto/${produto.id}`} className="font-semibold text-gray-800 hover:text-green-700">
+                    <Link to={`/produto/${produto.id}`} className="font-semibold text-gray-800 hover:text-marca-700">
                       {produto.name}
                     </Link>
                     <p className="text-[11px] text-gray-400">
@@ -213,14 +207,14 @@ export default function Cesta() {
                     <div className="inline-flex items-center rounded-lg border border-gray-300">
                       <button
                         onClick={() => mudarQtd(item.productId, item.qtd - 1)}
-                        className="px-2.5 py-1 text-sm font-bold text-gray-500 hover:text-green-700"
+                        className="px-2.5 py-1 text-sm font-bold text-gray-500 hover:text-marca-700"
                       >
                         −
                       </button>
                       <span className="w-7 text-center text-sm font-semibold">{item.qtd}</span>
                       <button
                         onClick={() => mudarQtd(item.productId, item.qtd + 1)}
-                        className="px-2.5 py-1 text-sm font-bold text-gray-500 hover:text-green-700"
+                        className="px-2.5 py-1 text-sm font-bold text-gray-500 hover:text-marca-700"
                       >
                         +
                       </button>
@@ -253,7 +247,7 @@ export default function Cesta() {
               <button
                 key={p.id}
                 onClick={() => adicionar(p.id)}
-                className="rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-green-400 hover:text-green-700"
+                className="rounded-full border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-marca-400 hover:text-marca-700"
               >
                 + {p.name}
               </button>

@@ -1,17 +1,11 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { categories, markets, prices, products } from '../data'
+import Chip from '../components/Chip'
 import ProductCard from '../components/ProductCard'
 import NaoEncontrada from './NaoEncontrada'
 import type { Price, Product } from '../types'
 import { brl, mediaValores, precosDoProduto } from '../utils'
-
-function chip(ativo: boolean) {
-  return (
-    'rounded-full px-3 py-1 text-xs font-semibold ' +
-    (ativo ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
-  )
-}
 
 export default function Categoria() {
   const { slug } = useParams()
@@ -73,9 +67,9 @@ export default function Categoria() {
   return (
     <div className="space-y-6">
       <p className="text-xs text-gray-400">
-        <Link to="/" className="hover:text-green-700">início</Link>
+        <Link to="/" className="hover:text-marca-700">início</Link>
         {' / '}
-        <Link to="/categorias" className="hover:text-green-700">categorias</Link>
+        <Link to="/categorias" className="hover:text-marca-700">categorias</Link>
         {' / '}
         <span className="text-gray-600">{categoria.name}</span>
       </p>
@@ -104,13 +98,13 @@ export default function Categoria() {
               return (
                 <tr key={r.mercado.id} className="border-b border-gray-50 last:border-0">
                   <td className="px-4 py-2.5 font-semibold text-gray-800">
-                    <Link to={`/mercado/${r.mercado.slug}`} className="hover:text-green-700">
+                    <Link to={`/mercado/${r.mercado.slug}`} className="hover:text-marca-700">
                       {r.mercado.name}
                     </Link>
                   </td>
                   <td className="px-4 py-2.5 font-bold text-gray-900">{brl(r.media ?? 0)}</td>
                   <td className="px-4 py-2.5 text-gray-600">{r.qtd}</td>
-                  <td className={`px-4 py-2.5 text-right font-semibold ${difPct > 0 ? 'text-amber-600' : 'text-green-700'}`}>
+                  <td className={`px-4 py-2.5 text-right font-semibold ${difPct > 0 ? 'text-amber-600' : 'text-marca-700'}`}>
                     {difPct > 0 ? '+' : ''}
                     {difPct.toFixed(1).replace('.', ',')}%
                   </td>
@@ -128,8 +122,8 @@ export default function Categoria() {
       <div className="grid gap-3 sm:grid-cols-2">
         {maisBarato && (
           <div className="rounded-xl border border-gray-200 bg-white p-4">
-            <p className="text-xs font-semibold uppercase text-green-700">produto mais barato</p>
-            <Link to={`/produto/${maisBarato.produto.id}`} className="text-sm font-bold text-gray-900 hover:text-green-700">
+            <p className="text-xs font-semibold uppercase text-marca-700">produto mais barato</p>
+            <Link to={`/produto/${maisBarato.produto.id}`} className="text-sm font-bold text-gray-900 hover:text-marca-700">
               {maisBarato.produto.name}
             </Link>
             <p className="text-xs text-gray-500">{brl(maisBarato.preco.price)}</p>
@@ -138,7 +132,7 @@ export default function Categoria() {
         {maisCaro && (
           <div className="rounded-xl border border-gray-200 bg-white p-4">
             <p className="text-xs font-semibold uppercase text-amber-600">produto mais caro</p>
-            <Link to={`/produto/${maisCaro.produto.id}`} className="text-sm font-bold text-gray-900 hover:text-green-700">
+            <Link to={`/produto/${maisCaro.produto.id}`} className="text-sm font-bold text-gray-900 hover:text-marca-700">
               {maisCaro.produto.name}
             </Link>
             <p className="text-xs text-gray-500">{brl(maisCaro.preco.price)}</p>
@@ -150,15 +144,15 @@ export default function Categoria() {
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-lg font-bold text-gray-900">Produtos</h2>
           <div className="flex gap-1.5">
-            <button onClick={() => setOrdem('dif')} className={chip(ordem === 'dif')}>
+            <Chip onClick={() => setOrdem('dif')} ativo={ordem === 'dif'}>
               maior diferença
-            </button>
-            <button onClick={() => setOrdem('barato')} className={chip(ordem === 'barato')}>
+            </Chip>
+            <Chip onClick={() => setOrdem('barato')} ativo={ordem === 'barato'}>
               menor preço
-            </button>
-            <button onClick={() => setOrdem('nome')} className={chip(ordem === 'nome')}>
+            </Chip>
+            <Chip onClick={() => setOrdem('nome')} ativo={ordem === 'nome'}>
               a-z
-            </button>
+            </Chip>
           </div>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

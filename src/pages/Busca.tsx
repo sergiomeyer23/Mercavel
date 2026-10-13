@@ -1,17 +1,11 @@
 import { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { categories, products } from '../data'
+import Chip from '../components/Chip'
 import ProductCard from '../components/ProductCard'
 
 function semAcento(texto: string) {
   return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-}
-
-function chip(ativo: boolean) {
-  return (
-    'rounded-full px-3 py-1 text-xs font-semibold ' +
-    (ativo ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
-  )
 }
 
 export default function Busca() {
@@ -36,17 +30,17 @@ export default function Busca() {
       <p className="text-sm text-gray-500">{achados.length} produtos encontrados</p>
 
       <div className="flex flex-wrap gap-2">
-        <button onClick={() => setCategoria('todas')} className={chip(categoria === 'todas')}>
+        <Chip onClick={() => setCategoria('todas')} ativo={categoria === 'todas'}>
           todas ({achados.length})
-        </button>
+        </Chip>
         {catsDoResultado.map((id) => {
           const cat = categories.find((c) => c.id === id)
           if (!cat) return null
           const qtd = achados.filter((p) => p.categoryId === id).length
           return (
-            <button key={id} onClick={() => setCategoria(id)} className={chip(categoria === id)}>
+            <Chip key={id} onClick={() => setCategoria(id)} ativo={categoria === id}>
               {cat.name} ({qtd})
-            </button>
+            </Chip>
           )
         })}
       </div>
@@ -54,7 +48,7 @@ export default function Busca() {
       {filtrados.length === 0 ? (
         <div className="rounded-xl border border-dashed border-gray-300 bg-white p-10 text-center">
           <p className="text-sm text-gray-500">Nada encontrado. Tenta buscar algo tipo "arroz" ou "leite".</p>
-          <Link to="/categorias" className="mt-3 inline-block text-sm font-semibold text-green-700 hover:underline">
+          <Link to="/categorias" className="mt-3 inline-block text-sm font-semibold text-marca-700 hover:underline">
             ver categorias
           </Link>
         </div>

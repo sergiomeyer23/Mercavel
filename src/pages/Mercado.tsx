@@ -1,15 +1,9 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Chip from '../components/Chip'
 import { categories, markets, prices, products } from '../data'
 import NaoEncontrada from './NaoEncontrada'
 import { brl, corDoPreco, dataHora, mediaValores, nomeDoPreco } from '../utils'
-
-function chip(ativo: boolean) {
-  return (
-    'rounded-full px-3 py-1 text-xs font-semibold ' +
-    (ativo ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
-  )
-}
 
 export default function Mercado() {
   const { slug } = useParams()
@@ -44,9 +38,9 @@ export default function Mercado() {
   return (
     <div className="space-y-6">
       <p className="text-xs text-gray-400">
-        <Link to="/" className="hover:text-green-700">início</Link>
+        <Link to="/" className="hover:text-marca-700">início</Link>
         {' / '}
-        <Link to="/mercados" className="hover:text-green-700">mercados</Link>
+        <Link to="/mercados" className="hover:text-marca-700">mercados</Link>
         {' / '}
         <span className="text-gray-600">{mercado.name}</span>
       </p>
@@ -58,7 +52,7 @@ export default function Mercado() {
           {mercado.website && (
             <>
               {' · '}
-              <a href={mercado.website} target="_blank" rel="noreferrer" className="font-semibold text-green-700 hover:underline">
+              <a href={mercado.website} target="_blank" rel="noreferrer" className="font-semibold text-marca-700 hover:underline">
                 site oficial ↗
               </a>
             </>
@@ -99,14 +93,14 @@ export default function Mercado() {
               {porCategoria.map((r) => (
                 <tr key={r.cat.id} className="border-b border-gray-50 last:border-0">
                   <td className="px-4 py-2.5 font-semibold text-gray-800">
-                    <Link to={`/categoria/${r.cat.slug}`} className="hover:text-green-700">
+                    <Link to={`/categoria/${r.cat.slug}`} className="hover:text-marca-700">
                       {r.cat.name}
                     </Link>
                   </td>
                   <td className="px-4 py-2.5 text-gray-600">{r.qtd}</td>
                   <td className="px-4 py-2.5 font-bold text-gray-900">{r.media !== null ? brl(r.media) : '—'}</td>
                   <td className="px-4 py-2.5 text-right">
-                    <button onClick={() => setCatFiltro(r.cat.id)} className="text-xs font-semibold text-green-700 hover:underline">
+                    <button onClick={() => setCatFiltro(r.cat.id)} className="text-xs font-semibold text-marca-700 hover:underline">
                       filtrar ↓
                     </button>
                   </td>
@@ -121,13 +115,13 @@ export default function Mercado() {
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-lg font-bold text-gray-900">Produtos</h2>
           <div className="flex flex-wrap gap-1.5">
-            <button onClick={() => setCatFiltro('todas')} className={chip(catFiltro === 'todas')}>
+            <Chip onClick={() => setCatFiltro('todas')} ativo={catFiltro === 'todas'}>
               todas
-            </button>
+            </Chip>
             {porCategoria.map((r) => (
-              <button key={r.cat.id} onClick={() => setCatFiltro(r.cat.id)} className={chip(catFiltro === r.cat.id)}>
+              <Chip key={r.cat.id} onClick={() => setCatFiltro(r.cat.id)} ativo={catFiltro === r.cat.id}>
                 {r.cat.name}
-              </button>
+              </Chip>
             ))}
           </div>
         </div>
@@ -152,7 +146,7 @@ export default function Mercado() {
                 return (
                   <tr key={p.id} className="border-b border-gray-50 last:border-0">
                     <td className="px-4 py-2.5">
-                      <Link to={`/produto/${p.id}`} className="font-semibold text-gray-800 hover:text-green-700">
+                      <Link to={`/produto/${p.id}`} className="font-semibold text-gray-800 hover:text-marca-700">
                         {p.name}
                       </Link>
                     </td>
