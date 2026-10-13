@@ -6,7 +6,7 @@ export default function AddToBasket({ productId }: { productId: string }) {
   return (
     <button
       onClick={() => adicionar(productId)}
-      className="rounded-lg border border-gray-300 bg-white px-2.5 py-1 text-xs font-semibold text-gray-600 hover:border-green-500 hover:text-green-700"
+      className="rounded-lg border border-gray-300 bg-white px-2.5 py-1 text-xs font-semibold text-gray-600 hover:border-marca-500 hover:text-marca-700"
     >
       + cesta
     </button>

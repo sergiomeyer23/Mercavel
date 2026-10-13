@@ -12,7 +12,7 @@ export default function ProductCard({ produto }: { produto: Product }) {
 
   return (
     <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-4">
-      <Link to={`/produto/${produto.id}`} className="text-sm font-semibold text-gray-900 hover:text-green-700">
+      <Link to={`/produto/${produto.id}`} className="text-sm font-semibold text-gray-900 hover:text-marca-700">
         {produto.name}
       </Link>
       <p className="mt-0.5 text-xs text-gray-400">
@@ -23,7 +23,7 @@ export default function ProductCard({ produto }: { produto: Product }) {
         <div>
           {maisBarato ? (
             <>
-              <p className="text-lg font-bold text-green-700">{brl(maisBarato.price)}</p>
+              <p className="text-lg font-bold text-marca-700">{brl(maisBarato.price)}</p>
               <p className="text-[11px] text-gray-400">
                 {acharMarket(maisBarato.marketId)?.shortName} · {nomeDoPreco(maisBarato.priceType)}
               </p>
@@ -33,7 +33,7 @@ export default function ProductCard({ produto }: { produto: Product }) {
           )}
         </div>
         <div className="flex flex-col items-end gap-2">
-          <Link to={`/produto/${produto.id}`} className="text-xs font-semibold text-green-700 hover:underline">
+          <Link to={`/produto/${produto.id}`} className="text-xs font-semibold text-marca-700 hover:underline">
             comparar ({precos.length})
           </Link>
           <AddToBasket productId={produto.id} />

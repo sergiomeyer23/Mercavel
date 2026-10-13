@@ -26,7 +26,7 @@ export function nomeDoPreco(tipo: PriceType) {
 export function corDoPreco(tipo: PriceType) {
   switch (tipo) {
     case 'ONLINE':
-      return 'bg-green-100 text-green-700'
+      return 'bg-marca-100 text-marca-700'
     case 'PHYSICAL':
       return 'bg-gray-200 text-gray-700'
     case 'PROMOTION':
@@ -54,6 +54,11 @@ export function precosDoProduto(productId: string, tipo?: PriceType): Price[] {
     lista = lista.filter((p) => p.priceType === tipo)
   }
   return lista.sort((a, b) => a.price - b.price)
+}
+
+// usado pelos dois campos de busca (o do cabeçalho e o da home)
+export function caminhoDaBusca(termo: string) {
+  return '/busca?q=' + encodeURIComponent(termo.trim())
 }
 
 export function mediaValores(valores: number[]) {

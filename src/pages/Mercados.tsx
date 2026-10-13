@@ -22,7 +22,7 @@ export default function Mercados() {
             <Link
               key={m.id}
               to={`/mercado/${m.slug}`}
-              className="rounded-xl border border-gray-200 bg-white p-5 hover:border-green-400"
+              className="rounded-xl border border-gray-200 bg-white p-5 hover:border-marca-400"
             >
               <h2 className="font-semibold text-gray-800">{m.name}</h2>
               <p className="text-xs text-gray-400">

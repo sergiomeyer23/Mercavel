@@ -22,7 +22,7 @@ export default function Categorias() {
             <Link
               key={cat.id}
               to={`/categoria/${cat.slug}`}
-              className="rounded-xl border border-gray-200 bg-white p-5 hover:border-green-400"
+              className="rounded-xl border border-gray-200 bg-white p-5 hover:border-marca-400"
             >
               <div className="flex items-center justify-between">
                 <h2 className="font-semibold text-gray-800">{cat.name}</h2>
@@ -30,7 +30,7 @@ export default function Categorias() {
               </div>
               <p className="mt-1 text-xs text-gray-400">{cat.description}</p>
               <p className="mt-3 text-sm text-gray-600">
-                preço médio: <span className="font-bold text-green-700">{media !== null ? brl(media) : '—'}</span>
+                preço médio: <span className="font-bold text-marca-700">{media !== null ? brl(media) : '—'}</span>
               </p>
             </Link>
           )
