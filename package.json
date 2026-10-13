@@ -1,9 +1,11 @@
 {
   "name": "mercavel",
   "version": "0.1.0",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "description": "Comparador de preços de supermercados de Cascavel/PR",
+  "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
@@ -14,11 +16,6 @@
     "cascavel",
     "comparador"
   ],
-  "author": "",
-  "license": "ISC",
-  "description": "Plataforma independente de comparacao de precos de supermercados de Cascavel/PR",
-  "private": "true",
-  "type": "module",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
