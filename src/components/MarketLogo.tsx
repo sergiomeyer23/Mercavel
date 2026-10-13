@@ -1,10 +1,20 @@
 import { useState } from 'react'
 import type { Market } from '../types'
 
-const TAMANHOS = {
+// o escudo de iniciais é quadrado, mas as logos oficiais têm proporções bem
+// diferentes entre os mercados (de 1,5:1 até 3:1). por isso a imagem usa altura
+// fixa com largura livre - dentro de um quadrado as mais largas ficariam
+// ilegíveis no tamanho pequeno.
+const ESCUDO = {
   sm: 'h-6 w-6 rounded-md text-[10px]',
   md: 'h-9 w-9 rounded-lg text-xs',
   lg: 'h-14 w-14 rounded-xl text-base',
+}
+
+const LOGO = {
+  sm: 'h-6 max-w-[72px] rounded',
+  md: 'h-9 max-w-[108px] rounded-md',
+  lg: 'h-14 max-w-[168px] rounded-lg',
 }
 
 function iniciais(nome: string) {
@@ -17,20 +27,19 @@ function iniciais(nome: string) {
 
 interface MarketLogoProps {
   mercado: Market
-  tamanho?: keyof typeof TAMANHOS
+  tamanho?: keyof typeof ESCUDO
 }
 
 export default function MarketLogo({ mercado, tamanho = 'md' }: MarketLogoProps) {
   const [naoCarregou, setNaoCarregou] = useState(false)
-  const classe = TAMANHOS[tamanho]
 
-  // o name do mercado sempre aparece do lado, entao a imagem fica decorativa
+  // o nome do mercado sempre aparece do lado, então a imagem fica decorativa
   if (mercado.logo && !naoCarregou) {
     return (
       <img
         src={mercado.logo}
         alt=""
-        className={`${classe} shrink-0 bg-white object-contain p-0.5`}
+        className={`${LOGO[tamanho]} w-auto shrink-0 bg-white object-contain p-0.5`}
         onError={() => setNaoCarregou(true)}
       />
     )
@@ -38,7 +47,7 @@ export default function MarketLogo({ mercado, tamanho = 'md' }: MarketLogoProps)
 
   return (
     <span
-      className={`${classe} flex shrink-0 items-center justify-center font-bold text-white`}
+      className={`${ESCUDO[tamanho]} flex shrink-0 items-center justify-center font-bold text-white`}
       style={{ backgroundColor: mercado.cor }}
       aria-hidden="true"
     >

@@ -56,14 +56,12 @@ as cores da marca ficam no `tailwind.config.js`: `marca` é o verde do logo e `t
 ## Logos dos mercados
 
 cada mercado aparece com um escudo de iniciais na cor dele, que fica no campo `cor` do
-`src/data/markets.json`. pra usar a logo oficial, é só colocar o arquivo em `public/logos/` e apontar o
-campo `logo` daquele mercado:
+`src/data/markets.json`. se o campo `logo` apontar pra um arquivo, o site mostra a imagem; se estiver
+`null` — ou se a imagem não carregar — cai no escudo de iniciais.
 
-```json
-"logo": "/logos/muffato.svg"
-```
-
-enquanto o campo estiver `null` — ou se a imagem não carregar — o site cai no escudo de iniciais.
+as logos ficam em `public/logos/<slug>.png`, todas padronizadas do mesmo jeito: margem em volta
+recortada, mesmo formato (PNG) e no máximo 128px de altura, que é 2x o maior tamanho usado na tela.
+o Compre Mais ainda está sem logo, então aparece o escudo `CM`.
 
 as logos são marca dos respectivos mercados, então o certo é usar com autorização deles.
 

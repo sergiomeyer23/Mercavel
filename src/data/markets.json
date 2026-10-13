@@ -8,7 +8,7 @@
     "state": "PR",
     "website": "https://www.supermuffato.com.br",
     "onlineShoppingAvailable": true,
-    "logo": null,
+    "logo": "/logos/muffato.png",
     "cor": "#c0392b"
   },
   {
@@ -20,7 +20,7 @@
     "state": "PR",
     "website": "https://www.irani.com.br",
     "onlineShoppingAvailable": true,
-    "logo": null,
+    "logo": "/logos/irani.png",
     "cor": "#1d4ed8"
   },
   {
@@ -32,7 +32,7 @@
     "state": "PR",
     "website": "https://www.festval.com.br",
     "onlineShoppingAvailable": true,
-    "logo": null,
+    "logo": "/logos/festval.png",
     "cor": "#b45309"
   },
   {
@@ -44,7 +44,7 @@
     "state": "PR",
     "website": "https://www.superpuppo.com.br",
     "onlineShoppingAvailable": true,
-    "logo": null,
+    "logo": "/logos/puppo.png",
     "cor": "#7c3aed"
   },
   {
@@ -56,7 +56,7 @@
     "state": "PR",
     "website": "https://www.atacadao.com.br",
     "onlineShoppingAvailable": false,
-    "logo": null,
+    "logo": "/logos/atacadao.png",
     "cor": "#0f766e"
   },
   {
