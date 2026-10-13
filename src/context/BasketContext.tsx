@@ -33,17 +33,22 @@ export function CestaProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('cesta', JSON.stringify(itens))
   }, [itens])
 
+  // tudo aqui atualiza a cesta pela forma funcional (atual => ...) porque o
+  // mesmo clique pode chamar essas funções várias vezes seguidas - o botão da
+  // cesta de exemplo adiciona 8 produtos de uma vez. lendo "itens" direto, todas
+  // as chamadas enxergariam a mesma lista velha e só a última valeria.
   function adicionar(productId: string) {
-    const jaTem = itens.find((i) => i.productId === productId)
-    if (jaTem) {
-      setItens(itens.map((i) => (i.productId === productId ? { ...i, qtd: i.qtd + 1 } : i)))
-    } else {
-      setItens([...itens, { productId, qtd: 1 }])
-    }
+    setItens((atual) => {
+      const jaTem = atual.find((i) => i.productId === productId)
+      if (!jaTem) {
+        return [...atual, { productId, qtd: 1 }]
+      }
+      return atual.map((i) => (i.productId === productId ? { ...i, qtd: i.qtd + 1 } : i))
+    })
   }
 
   function remover(productId: string) {
-    setItens(itens.filter((i) => i.productId !== productId))
+    setItens((atual) => atual.filter((i) => i.productId !== productId))
   }
 
   function mudarQtd(productId: string, qtd: number) {
@@ -51,7 +56,7 @@ export function CestaProvider({ children }: { children: ReactNode }) {
       remover(productId)
       return
     }
-    setItens(itens.map((i) => (i.productId === productId ? { ...i, qtd } : i)))
+    setItens((atual) => atual.map((i) => (i.productId === productId ? { ...i, qtd } : i)))
   }
 
   function limpar() {
