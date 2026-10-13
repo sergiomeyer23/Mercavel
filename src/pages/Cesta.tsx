@@ -262,7 +262,8 @@ export default function Cesta() {
       )}
 
       <p className="text-xs text-gray-400">
-        obs: os totais comparam o mesmo tipo de preço entre os mercados (ex: online com online). preços fictícios.
+        obs: os totais comparam o mesmo tipo de preço entre os mercados (ex: online com online).
+        preços coletados nos sites dos mercados.
       </p>
     </div>
   )

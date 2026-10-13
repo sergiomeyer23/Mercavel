@@ -45,7 +45,7 @@ export default function Home() {
     <div className="space-y-8">
       <section className="rounded-2xl bg-marca-700 px-6 py-10 text-white">
         <p className="text-xs font-semibold uppercase tracking-wider text-marca-200">
-          protótipo · preços fictícios · Cascavel/PR
+          protótipo · preços coletados nos sites dos mercados · Cascavel/PR
         </p>
         <h1 className="mt-2 max-w-2xl text-2xl font-bold sm:text-3xl">
           Compare os preços dos supermercados de Cascavel
@@ -71,8 +71,8 @@ export default function Home() {
       </section>
 
       <p className="rounded-lg bg-amber-50 px-4 py-2 text-xs text-amber-700">
-        obs: os produtos e preços aqui são fictícios, coloquei só pra ter conteúdo na tela. depois entram dados
-        reais, coletados nos sites dos mercados.
+        os preços são coletados automaticamente nos sites dos mercados. nem todo produto tem preço
+        em todo mercado, porque depende do que cada loja vende online.
       </p>
 
       <section>

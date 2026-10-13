@@ -53,4 +53,9 @@ export interface Price {
   availability: 'IN_STOCK' | 'OUT_OF_STOCK'
   // categoria que o mercado usa lá no site dele (antes de eu padronizar)
   marketOriginalCategory: string | null
+  // dados da oferta na loja: o nosso produto é genérico, quem tem marca e
+  // código de barras é o produto de cada mercado
+  marketEan: string | null
+  marketProductName: string | null
+  marketBrand: string | null
 }

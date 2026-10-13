@@ -1,0 +1,538 @@
+{
+  "geradoEm": "2026-10-13T23:45:34.506Z",
+  "observacao": "Casamentos que nao passaram no criterio de aprovacao e precisam de olho humano.",
+  "pendentes": [
+    {
+      "produtoId": "farinha-trigo-1kg",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "integral, confianca media",
+      "melhorOferta": "Farinha de Trigo Venturelli Integral 1 Kg"
+    },
+    {
+      "produtoId": "macarrao-espaguete-500g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "sem gluten, confianca media",
+      "melhorOferta": "Macarrão Sem Glúten Linguine Barilla 500g"
+    },
+    {
+      "produtoId": "molho-tomate-340g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "sache, confianca media",
+      "melhorOferta": "Molho de Tomate Quero Tradicional Sachê 240g"
+    },
+    {
+      "produtoId": "manteiga-200g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "zero, extra, confianca media",
+      "melhorOferta": "Manteiga Extra com Sal Zero Lactose Président Gastronomique  200g"
+    },
+    {
+      "produtoId": "requeijao-200g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "cremoso, confianca media",
+      "melhorOferta": "Requeijão Presidente Queijo Cheddar 200g"
+    },
+    {
+      "produtoId": "iogurte-natural-170g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "zero, confianca media",
+      "melhorOferta": "Iogurte Leitíssimo Natural Integral Zero Lactose 170g"
+    },
+    {
+      "produtoId": "ovo-branco-dz",
+      "mercadoId": "muffato",
+      "confianca": "baixa",
+      "motivo": "tamanho nao confirmado, confianca baixa",
+      "melhorOferta": "Peneira Plasvale Grande Branco Un"
+    },
+    {
+      "produtoId": "linguica-toscana-kg",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Linguiça Perdigao Toscana na Brasa 700g"
+    },
+    {
+      "produtoId": "refrigerante-cola-2l",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Refrigerante Coca-Cola Sabor Original 1L"
+    },
+    {
+      "produtoId": "suco-laranja-1l",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Suco de Laranja Integral MFresh 3 Litros"
+    },
+    {
+      "produtoId": "agua-mineral-15l",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "com gas, sem gas, confianca media",
+      "melhorOferta": "Água Mineral Sferriê com Gás 1,5L"
+    },
+    {
+      "produtoId": "cerveja-pilsen-350ml",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "embalagem multipla, confianca media",
+      "melhorOferta": "Pack Cerveja Pilsen Skol Lata 12 Unidades 350ml Cada"
+    },
+    {
+      "produtoId": "tomate-italiano-kg",
+      "mercadoId": "muffato",
+      "confianca": "baixa",
+      "motivo": "confianca baixa",
+      "melhorOferta": "Molho de Tomate Cirio Passata Rustica 680g"
+    },
+    {
+      "produtoId": "batata-inglesa-kg",
+      "mercadoId": "muffato",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "cebola-nacional-kg",
+      "mercadoId": "muffato",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "pao-forma-500g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "zero, sem gluten, confianca media",
+      "melhorOferta": "Pão de Forma Tradicional sem Glúten Zero Lactose Zero Açúcar Vitalin Padaria Pacote 300g"
+    },
+    {
+      "produtoId": "bolo-forma-400g",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "mistura, confianca media",
+      "melhorOferta": "Mistura para Bolo Apti Baunilha 400g"
+    },
+    {
+      "produtoId": "sorvete-creme-2l",
+      "mercadoId": "muffato",
+      "confianca": "baixa",
+      "motivo": "confianca baixa",
+      "melhorOferta": "Sorvete Nestlé Flocos Tradicional 1,5L"
+    },
+    {
+      "produtoId": "sabao-po-1kg",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "sache, confianca media",
+      "melhorOferta": "Sabão em Pó Omo Lavagem Perfeita Sachê 2,4Kg"
+    },
+    {
+      "produtoId": "amaciante-2l",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Amaciante Concentrado Comfort Lavanda 1.5L"
+    },
+    {
+      "produtoId": "desinfetante-2l",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Desinfetante Pinho Sol Original 1L"
+    },
+    {
+      "produtoId": "racao-cao-adulto-3kg",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Ração seca PURINA® DOG CHOW® NUTRIÇÃO REFORÇADA para Cães Adultos Minis e Pequenos Carne, Frango e Arroz 2,5kg"
+    },
+    {
+      "produtoId": "pilha-aa-4un",
+      "mercadoId": "muffato",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Pilha Panasonic Aaa Palito 4un"
+    },
+    {
+      "produtoId": "arroz-tipo1-5kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Arroz Camil Branco Tipo 1 2kg"
+    },
+    {
+      "produtoId": "macarrao-espaguete-500g",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Macarrão Italiano Mamma Bia Farfalle 500g"
+    },
+    {
+      "produtoId": "queijo-mussarela-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Queijo Mussarela Argentino Fatiado Festval Aproximadamente 250g"
+    },
+    {
+      "produtoId": "requeijao-200g",
+      "mercadoId": "festval",
+      "confianca": "baixa",
+      "motivo": "cremoso, embalagem multipla, oferta indisponivel, confianca baixa",
+      "melhorOferta": "Caixa de Bombons Chocolate Lindt Lindor Ao Leite 200g Com 16 unidades"
+    },
+    {
+      "produtoId": "ovo-branco-dz",
+      "mercadoId": "festval",
+      "confianca": "baixa",
+      "motivo": "tamanho nao confirmado, oferta indisponivel, confianca baixa",
+      "melhorOferta": "Ovo de Páscoa Branco Bis Lacta 234g"
+    },
+    {
+      "produtoId": "coxao-mole-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Carne Moída de Coxão Mole Reserva Friboi 400g"
+    },
+    {
+      "produtoId": "picanha-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Hambúrguer de Carne Bovina Picanha Perdigão na Brasa Pacote 150g"
+    },
+    {
+      "produtoId": "linguica-toscana-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Linguiça Toscana Frimesa Aproximadamente 800g"
+    },
+    {
+      "produtoId": "suco-laranja-1l",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Suco Integral Laranja Prat's Garrafa 1,7l"
+    },
+    {
+      "produtoId": "banana-prata-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Banana Prata Aproximadamente 150g/un"
+    },
+    {
+      "produtoId": "tomate-italiano-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Molho de Tomate Italiano Mamma Bia Pelati 400g"
+    },
+    {
+      "produtoId": "batata-inglesa-kg",
+      "mercadoId": "festval",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "cebola-nacional-kg",
+      "mercadoId": "festval",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "alface-crespa-un",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, oferta indisponivel, confianca media",
+      "melhorOferta": "Alface Crespa Unidade"
+    },
+    {
+      "produtoId": "pao-frances-kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Pão Francês Festval 80g/Un"
+    },
+    {
+      "produtoId": "pao-forma-500g",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "fatiado, oferta indisponivel, confianca media",
+      "melhorOferta": "Pão de Forma Fatiado Tradicional Festval 400g"
+    },
+    {
+      "produtoId": "bolo-forma-400g",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Bolo de Tapioca Festval 400g"
+    },
+    {
+      "produtoId": "pizza-congelada-460g",
+      "mercadoId": "festval",
+      "confianca": "baixa",
+      "motivo": "oferta indisponivel, confianca baixa",
+      "melhorOferta": "Pizza Festval Mussarela 500g"
+    },
+    {
+      "produtoId": "sorvete-creme-2l",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Sorvete Creme Cremosíssimo Kibon Pote 1,5L"
+    },
+    {
+      "produtoId": "batata-palito-congelada-2kg",
+      "mercadoId": "festval",
+      "confianca": "baixa",
+      "motivo": "oferta indisponivel, confianca baixa",
+      "melhorOferta": "Batata Palito Copacol 1,100kg"
+    },
+    {
+      "produtoId": "sabao-po-1kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Sabão em Pó Omo Lavagem Perfeita 4kg"
+    },
+    {
+      "produtoId": "amaciante-2l",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Amaciante Concentrado Comfort Brisa Elegante 1.5L"
+    },
+    {
+      "produtoId": "desinfetante-2l",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Desinfetante Uso Geral Original Pinho Sol 1L"
+    },
+    {
+      "produtoId": "creme-dental-90g",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Creme Dental com Flúor Chiclete Disney Princess Oral-B Kids Caixa 50g"
+    },
+    {
+      "produtoId": "racao-cao-adulto-3kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Ração para Cães Adultos Raças de Médio e Grande Porte Dog Chow 10,1kg"
+    },
+    {
+      "produtoId": "racao-gato-1kg",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "oferta indisponivel, confianca media",
+      "melhorOferta": "Ração Seca para Gatos Adultos Whiskas Frango 900g"
+    },
+    {
+      "produtoId": "vela-comum-cx",
+      "mercadoId": "festval",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, oferta indisponivel, confianca media",
+      "melhorOferta": "Vela Prata Branca N 12 3 U"
+    },
+    {
+      "produtoId": "arroz-tipo1-5kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Arroz Bulnez Agulhinha Tipo 1 5kg"
+    },
+    {
+      "produtoId": "cafe-torrado-500g",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "moido, torrado, confianca media",
+      "melhorOferta": "Café Bulnez Tradicional 500g"
+    },
+    {
+      "produtoId": "farinha-trigo-1kg",
+      "mercadoId": "atacadao",
+      "confianca": "baixa",
+      "motivo": "confianca baixa",
+      "melhorOferta": "Feijão Carioca Bulnez Tipo 1 1kg"
+    },
+    {
+      "produtoId": "oleo-soja-900ml",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Óleo de Milho Veleiro 900ml"
+    },
+    {
+      "produtoId": "molho-tomate-340g",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Molho de Tomate Quero Tradicional 240g"
+    },
+    {
+      "produtoId": "atum-ralado-lata",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Atum Ralado Bulnez Óleo 98g"
+    },
+    {
+      "produtoId": "queijo-mussarela-kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, confianca media",
+      "melhorOferta": "Queijo Mussarela Fatiado Aurora quilo"
+    },
+    {
+      "produtoId": "picanha-kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, confianca media",
+      "melhorOferta": "Carne Bovina Picanha Bordon Resf Preço por quilo na peça"
+    },
+    {
+      "produtoId": "linguica-toscana-kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, confianca media",
+      "melhorOferta": "Linguiça Toscana Alegra Congelada quilo"
+    },
+    {
+      "produtoId": "refrigerante-cola-2l",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Refrigerante Coca-Cola 1L"
+    },
+    {
+      "produtoId": "cerveja-pilsen-350ml",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Cerveja Crystal 350ml"
+    },
+    {
+      "produtoId": "banana-prata-kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, confianca media",
+      "melhorOferta": "Banana Prata Quilo"
+    },
+    {
+      "produtoId": "tomate-italiano-kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, confianca media",
+      "melhorOferta": "Tomate Italiano Quilo"
+    },
+    {
+      "produtoId": "batata-inglesa-kg",
+      "mercadoId": "atacadao",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "cebola-nacional-kg",
+      "mercadoId": "atacadao",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "alface-crespa-un",
+      "mercadoId": "atacadao",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "pao-frances-kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "tamanho nao confirmado, confianca media",
+      "melhorOferta": "Pão Francês Mini Marquespan quilo"
+    },
+    {
+      "produtoId": "bolo-forma-400g",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "mistura, confianca media",
+      "melhorOferta": "Mistura para Bolo Apti Cenoura 400g"
+    },
+    {
+      "produtoId": "pizza-congelada-460g",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Pizza Perdigão Napolitana 460g"
+    },
+    {
+      "produtoId": "sabao-po-1kg",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Sabão em Pó Tixan Power Act 1,6Kg"
+    },
+    {
+      "produtoId": "amaciante-2l",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Amaciante para Roupas Concentrado Comfort 5L"
+    },
+    {
+      "produtoId": "desinfetante-2l",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Desinfetante Pinho Bril Lavanda LV 1L PG 900ml"
+    },
+    {
+      "produtoId": "shampoo-350ml",
+      "mercadoId": "atacadao",
+      "confianca": "media",
+      "motivo": "confianca media",
+      "melhorOferta": "Shampoo Pantene Hidratação 175ml"
+    },
+    {
+      "produtoId": "racao-cao-adulto-3kg",
+      "mercadoId": "atacadao",
+      "confianca": "baixa",
+      "motivo": "confianca baixa",
+      "melhorOferta": "Alimento p Cães Adultos Dog Chow Raças Pequenas 2,5kg"
+    },
+    {
+      "produtoId": "racao-gato-1kg",
+      "mercadoId": "atacadao",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    },
+    {
+      "produtoId": "vela-comum-cx",
+      "mercadoId": "atacadao",
+      "confianca": "nenhuma",
+      "motivo": "nenhuma oferta encontrada",
+      "melhorOferta": null
+    }
+  ]
+}

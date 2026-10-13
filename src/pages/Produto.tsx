@@ -120,6 +120,9 @@ export default function Produto() {
                         ) : (
                           p.marketId
                         )}
+                        {p.marketProductName && (
+                          <p className="mt-0.5 text-[11px] font-normal text-gray-400">{p.marketProductName}</p>
+                        )}
                       </td>
                       <td className="px-4 py-2.5 font-bold text-gray-900">{brl(p.price)}</td>
                       <td className="px-4 py-2.5">
@@ -153,7 +156,7 @@ export default function Produto() {
           </div>
         )}
         <p className="mt-2 text-xs text-gray-400">
-          preços fictícios, só pra demonstrar o site · preço online não é o mesmo preço da loja física
+          preço de e-commerce, coletado no site do mercado · pode mudar a qualquer momento
         </p>
       </div>
 

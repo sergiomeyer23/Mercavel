@@ -169,7 +169,7 @@ export default function Mercado() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-xs text-gray-400">preços fictícios, só pra demonstrar o site funcionando</p>
+        preços coletados no site do mercado · e-commerce, não loja física
       </div>
     </div>
   )

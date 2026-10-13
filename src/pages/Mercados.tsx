@@ -8,7 +8,7 @@ export default function Mercados() {
     <div className="space-y-4">
       <h1 className="text-xl font-bold text-gray-900">Supermercados monitorados</h1>
       <p className="text-sm text-gray-500">
-        os preços fictícios do site ficam "coletados" nesses mercados, cada um com sua data de coleta
+        os preços são coletados nos sites desses mercados, cada um com sua data de coleta
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

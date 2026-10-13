@@ -3,9 +3,9 @@
 Site pra comparar preços de supermercados em Cascavel/PR. A ideia é pesquisar um produto e ver quanto
 cada mercado cobra, olhar a média por categoria e montar uma cesta pra ver onde a compra fica mais barata.
 
-**Importante: os produtos e preços são todos fictícios.** Coloquei esses dados só pra o site ter conteúdo,
-não é preço real de nenhum mercado. Mais pra frente a intenção é puxar isso de uma API que coleta os
-preços nos sites dos supermercados.
+**Os preços são reais**, coletados automaticamente nos sites dos mercados. São preços de e-commerce e
+podem mudar a qualquer momento. Nem todo produto tem preço em todo mercado: depende do que cada loja
+vende online, e cada preço guarda a data da coleta e o link da oferta.
 
 ## Como rodar
 
@@ -67,9 +67,8 @@ as logos são marca dos respectivos mercados, então o certo é usar com autoriz
 
 ## Coleta de preços reais
 
-O site ainda está com os preços fictícios, mas o caminho para os dados reais já está montado em
-`scripts/coletar.mjs`. Hoje ele cobre os mercados que usam **VTEX** (Super Muffato, Festval e
-Atacadão), que expõem uma API pública de catálogo:
+Os preços do site vêm dos scripts desta pasta. A coleta cobre os mercados que usam **VTEX**
+(Super Muffato, Festval e Atacadão), que expõem uma API pública de catálogo:
 
 ```
 node scripts/coletar.mjs --mercados=muffato
@@ -79,13 +78,17 @@ O script busca cada produto do catálogo pelo nome, pontua os candidatos por nom
 embalagem** — comparar 5 kg com 1 kg é o erro que estraga a comparação de preço — e escreve uma lista
 de conferência em `dados/revisao.json`. Ele **não altera o catálogo**.
 
-A coleta tem duas fases:
+A coleta tem duas fases, uma em cada script:
 
-1. **aprender os EANs** — os EANs do `products.json` são provisórios (gerados na limpeza dos dados) e
-   não existem de verdade. A partir da lista de revisão, o EAN real de cada oferta é gravado no
-   catálogo.
-2. **coleta diária** — com o EAN real em mãos, a consulta passa a ser exata por código de barras, uma
-   requisição por produto.
+1. `scripts/coletar.mjs` — busca cada produto pelo nome, pontua os candidatos e monta a lista de
+   conferência em `dados/revisao.json`.
+2. `scripts/coletar-precos.mjs` — aprova só os casamentos sem dúvida (`dados/vinculos.json`), coleta
+   cada um pelo código de barras e escreve `src/data/prices.json`. O que ficou duvidoso vai para
+   `dados/pendentes.json`.
+
+os códigos de barras são das lojas: o nosso produto é genérico ("Arroz Branco Tipo 1 5 kg") e não tem
+código próprio. Por isso o campo `ean` do catálogo é nulo e cada preço guarda o código, a marca e o nome
+do produto naquela loja — Muffato, Festval e Atacadão vendem marcas diferentes do mesmo item.
 
 Detalhe da API da VTEX que custa caro errar: o filtro por código de barras é
 `fq=alternateIds_Ean:<ean>` — com **dois pontos**. Com sinal de igual a API ignora o filtro em

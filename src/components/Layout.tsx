@@ -108,8 +108,8 @@ export default function Layout() {
         <div className="mx-auto max-w-5xl px-4 text-xs text-gray-500">
           <Logo compacta />
           <p className="mt-2">
-            Comparador de preços de supermercados de Cascavel/PR. Os produtos e preços do site são fictícios,
-            colocados só pra demonstrar o funcionamento.
+            Comparador de preços de supermercados de Cascavel/PR. Os preços são coletados automaticamente
+            nos sites dos mercados: são preços de e-commerce, não da loja física.
           </p>
         </div>
       </footer>

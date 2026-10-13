@@ -115,7 +115,7 @@ export default function Categoria() {
         </table>
         <p className="border-t border-gray-100 bg-gray-50 px-4 py-2 text-xs text-gray-500">
           média geral: {mediaGeral !== null ? brl(mediaGeral) : '—'} · não é ranking, cada mercado trabalha com
-          uma quantidade diferente de produtos · preços fictícios
+          uma quantidade diferente de produtos · preços coletados nos sites dos mercados
         </p>
       </div>
 
