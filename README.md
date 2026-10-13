@@ -65,6 +65,43 @@ o Compre Mais ainda está sem logo, então aparece o escudo `CM`.
 
 as logos são marca dos respectivos mercados, então o certo é usar com autorização deles.
 
+## Coleta de preços reais
+
+O site ainda está com os preços fictícios, mas o caminho para os dados reais já está montado em
+`scripts/coletar.mjs`. Hoje ele cobre os mercados que usam **VTEX** (Super Muffato, Festval e
+Atacadão), que expõem uma API pública de catálogo:
+
+```
+node scripts/coletar.mjs --mercados=muffato
+```
+
+O script busca cada produto do catálogo pelo nome, pontua os candidatos por nome e por **tamanho da
+embalagem** — comparar 5 kg com 1 kg é o erro que estraga a comparação de preço — e escreve uma lista
+de conferência em `dados/revisao.json`. Ele **não altera o catálogo**.
+
+A coleta tem duas fases:
+
+1. **aprender os EANs** — os EANs do `products.json` são provisórios (gerados na limpeza dos dados) e
+   não existem de verdade. A partir da lista de revisão, o EAN real de cada oferta é gravado no
+   catálogo.
+2. **coleta diária** — com o EAN real em mãos, a consulta passa a ser exata por código de barras, uma
+   requisição por produto.
+
+Detalhe da API da VTEX que custa caro errar: o filtro por código de barras é
+`fq=alternateIds_Ean:<ean>` — com **dois pontos**. Com sinal de igual a API ignora o filtro em
+silêncio e devolve o catálogo inteiro.
+
+Situação de cada mercado:
+
+| Mercado | Coleta |
+|---|---|
+| Super Muffato, Festval, Atacadão | automática (API VTEX) |
+| Irani | por raspagem da página de ofertas |
+| Super Puppo | manual — a loja só existe no app Mercadapp, sem catálogo web |
+| Compre Mais | manual — não tem site |
+
+preço de e-commerce não é o mesmo preço da loja física, por isso o site separa por tipo de preço.
+
 ## Ideias pra depois
 
 - API + banco de dados no lugar dos jsons
