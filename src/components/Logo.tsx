@@ -73,3 +73,4 @@ export default function Logo({ variante = 'padrao', compacta = false, comSlogan 
       </span>
     </span>
   )
+}
