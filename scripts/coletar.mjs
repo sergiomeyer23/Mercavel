@@ -162,12 +162,10 @@ function pontuar(alvo, oferta) {
   }
 
   // contagem tambem e' tamanho: 12 rolos nao e' o mesmo produto que 16 rolos
-  if (tamanhoIgual === null) {
-    const minhasUnidades = meuTamanho.unidades ?? null
-    const unidadesOferta = unidadesDoNome(oferta.nome)
-    if (minhasUnidades && unidadesOferta) {
-      tamanhoIgual = minhasUnidades === unidadesOferta
-    }
+  const minhasUnidades = meuTamanho.unidades ?? null
+  const unidadesOferta = unidadesDoNome(oferta.nome)
+  if (tamanhoIgual === null && minhasUnidades && unidadesOferta) {
+    tamanhoIgual = minhasUnidades === unidadesOferta
   }
 
   const minhas = new Set(palavras(alvo.produto.name))
@@ -186,9 +184,16 @@ function pontuar(alvo, oferta) {
     ...[...meusQualificadores].filter((q) => !qualificadoresOferta.has(q)),
   ]
 
-  // pack de 12 latas por R$ 41 nao compara com uma lata: precisa de olho humano
-  if (ehMultiplo(oferta.nome) && !ehMultiplo(alvo.produto.name)) {
+  // pack de 12 latas por R$ 41 nao compara com uma lata. mas a duzia de ovos
+  // ("12 un") bate com o nosso produto, entao ai nao e' problema.
+  if (ehMultiplo(oferta.nome) && unidadesOferta !== minhasUnidades) {
     motivosRevisao.push('embalagem multipla')
+  }
+
+  // nosso produto tem tamanho, mas o da oferta nao deu pra ler: pode ser outra
+  // embalagem, entao nao pode passar como alta
+  if ((meuGramas || meuTamanho.unidades) && tamanhoIgual === null) {
+    motivosRevisao.push('tamanho nao confirmado')
   }
 
   return {
@@ -241,7 +246,7 @@ async function buscar(mercado, termo, quantos = 5) {
 
   const produtos = await resposta.json()
 
-  return (Array.isArray(produtos) ? produtos : []).map((p) => {
+  const ofertas = (Array.isArray(produtos) ? produtos : []).map((p) => {
     const item = p.items?.[0] ?? {}
     const oferta = item.sellers?.[0]?.commertialOffer ?? {}
     return {
@@ -255,6 +260,10 @@ async function buscar(mercado, termo, quantos = 5) {
       imagem: item.images?.[0]?.imageUrl ?? null,
     }
   })
+
+  // o Atacadao devolve Price 0 quando a regiao de entrega nao esta definida.
+  // oferta sem preco nao serve pra comparar nada, entao sai da lista.
+  return ofertas.filter((oferta) => typeof oferta.preco === 'number' && oferta.preco > 0)
 }
 
 async function revisarMercado(idMercado, produtos) {
@@ -275,7 +284,7 @@ async function revisarMercado(idMercado, produtos) {
       const ofertas = await buscar(mercado, termoDeBusca(produto))
 
       if (!ofertas.length) {
-        console.log('sem resultado')
+        console.log('sem oferta com preco')
         resultados.push({ produtoId: produto.id, nossoNome: produto.name, confianca: 'nenhuma', escolhido: null, candidatos: [] })
         baixa++
         continue
