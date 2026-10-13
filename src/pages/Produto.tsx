@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { categories, products } from '../data'
 import Chip from '../components/Chip'
+import MarketLogo from '../components/MarketLogo'
 import AddToBasket from '../components/AddToBasket'
 import NaoEncontrada from './NaoEncontrada'
 import type { PriceType } from '../types'
@@ -109,7 +110,11 @@ export default function Produto() {
                     <tr key={p.id} className={p.price === menor ? 'bg-marca-50' : ''}>
                       <td className="px-4 py-2.5 font-semibold text-gray-800">
                         {mercado ? (
-                          <Link to={`/mercado/${mercado.slug}`} className="hover:text-marca-700">
+                          <Link
+                            to={`/mercado/${mercado.slug}`}
+                            className="flex items-center gap-2 hover:text-marca-700"
+                          >
+                            <MarketLogo mercado={mercado} tamanho="sm" />
                             {mercado.name}
                           </Link>
                         ) : (

@@ -7,7 +7,9 @@
     "city": "Cascavel",
     "state": "PR",
     "website": "https://www.supermuffato.com.br",
-    "onlineShoppingAvailable": true
+    "onlineShoppingAvailable": true,
+    "logo": null,
+    "cor": "#c0392b"
   },
   {
     "id": "irani",
@@ -17,7 +19,9 @@
     "city": "Cascavel",
     "state": "PR",
     "website": "https://www.irani.com.br",
-    "onlineShoppingAvailable": true
+    "onlineShoppingAvailable": true,
+    "logo": null,
+    "cor": "#1d4ed8"
   },
   {
     "id": "festval",
@@ -27,7 +31,9 @@
     "city": "Cascavel",
     "state": "PR",
     "website": "https://www.festval.com.br",
-    "onlineShoppingAvailable": true
+    "onlineShoppingAvailable": true,
+    "logo": null,
+    "cor": "#b45309"
   },
   {
     "id": "puppo",
@@ -37,7 +43,9 @@
     "city": "Cascavel",
     "state": "PR",
     "website": "https://www.superpuppo.com.br",
-    "onlineShoppingAvailable": true
+    "onlineShoppingAvailable": true,
+    "logo": null,
+    "cor": "#7c3aed"
   },
   {
     "id": "atacadao",
@@ -47,7 +55,9 @@
     "city": "Cascavel",
     "state": "PR",
     "website": "https://www.atacadao.com.br",
-    "onlineShoppingAvailable": false
+    "onlineShoppingAvailable": false,
+    "logo": null,
+    "cor": "#0f766e"
   },
   {
     "id": "compre-mais",
@@ -57,6 +67,8 @@
     "city": "Cascavel",
     "state": "PR",
     "website": null,
-    "onlineShoppingAvailable": false
+    "onlineShoppingAvailable": false,
+    "logo": null,
+    "cor": "#be185d"
   }
 ]

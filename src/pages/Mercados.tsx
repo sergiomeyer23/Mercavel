@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import MarketLogo from '../components/MarketLogo'
 import { markets, prices } from '../data'
 import { dataHora } from '../utils'
 
@@ -24,10 +25,15 @@ export default function Mercados() {
               to={`/mercado/${m.slug}`}
               className="rounded-xl border border-gray-200 bg-white p-5 hover:border-marca-400"
             >
-              <h2 className="font-semibold text-gray-800">{m.name}</h2>
-              <p className="text-xs text-gray-400">
-                {m.city}/{m.state}
-              </p>
+              <div className="flex items-center gap-2.5">
+                <MarketLogo mercado={m} tamanho="md" />
+                <div className="min-w-0">
+                  <h2 className="truncate font-semibold text-gray-800">{m.name}</h2>
+                  <p className="text-xs text-gray-400">
+                    {m.city}/{m.state}
+                  </p>
+                </div>
+              </div>
               <p className="mt-2 text-xs text-gray-500">
                 {qtdProdutos} produtos · {obs.length} preços
               </p>

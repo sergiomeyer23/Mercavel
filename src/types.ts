@@ -16,6 +16,10 @@ export interface Market {
   state: string
   website: string | null
   onlineShoppingAvailable: boolean
+  // caminho da logo dentro de public/ - enquanto for null, o site mostra um
+  // escudo com as iniciais na cor do mercado
+  logo: string | null
+  cor: string
 }
 
 export interface Category {

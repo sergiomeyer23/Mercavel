@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Chip from '../components/Chip'
+import MarketLogo from '../components/MarketLogo'
 import { categories, markets, prices, products } from '../data'
 import NaoEncontrada from './NaoEncontrada'
 import { brl, corDoPreco, dataHora, mediaValores, nomeDoPreco } from '../utils'
@@ -46,7 +47,10 @@ export default function Mercado() {
       </p>
 
       <div className="rounded-xl border border-gray-200 bg-white p-5">
-        <h1 className="text-xl font-bold text-gray-900">{mercado.name}</h1>
+        <div className="flex items-center gap-3">
+          <MarketLogo mercado={mercado} tamanho="lg" />
+          <h1 className="text-xl font-bold text-gray-900">{mercado.name}</h1>
+        </div>
         <p className="mt-1 text-sm text-gray-500">
           {mercado.city}/{mercado.state}
           {mercado.website && (

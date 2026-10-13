@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Chip from '../components/Chip'
+import MarketLogo from '../components/MarketLogo'
 import { markets, products } from '../data'
 import { useCesta } from '../context/BasketContext'
 import type { PriceType } from '../types'
@@ -119,7 +120,11 @@ export default function Cesta() {
                 >
                   <span className="w-5 text-center text-sm font-bold text-gray-400">{i + 1}</span>
                   <div className="min-w-0 flex-1">
-                    <Link to={`/mercado/${r.mercado.slug}`} className="text-sm font-semibold text-gray-800 hover:text-marca-700">
+                    <Link
+                      to={`/mercado/${r.mercado.slug}`}
+                      className="flex items-center gap-2 text-sm font-semibold text-gray-800 hover:text-marca-700"
+                    >
+                      <MarketLogo mercado={r.mercado} tamanho="sm" />
                       {r.mercado.name}
                     </Link>
                     <p className="text-[11px] text-gray-400">

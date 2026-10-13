@@ -53,6 +53,20 @@ os dados são os jsons em `src/data`.
 
 as cores da marca ficam no `tailwind.config.js`: `marca` é o verde do logo e `tinta` o azul-marinho do nome.
 
+## Logos dos mercados
+
+cada mercado aparece com um escudo de iniciais na cor dele, que fica no campo `cor` do
+`src/data/markets.json`. pra usar a logo oficial, é só colocar o arquivo em `public/logos/` e apontar o
+campo `logo` daquele mercado:
+
+```json
+"logo": "/logos/muffato.svg"
+```
+
+enquanto o campo estiver `null` — ou se a imagem não carregar — o site cai no escudo de iniciais.
+
+as logos são marca dos respectivos mercados, então o certo é usar com autorização deles.
+
 ## Ideias pra depois
 
 - API + banco de dados no lugar dos jsons

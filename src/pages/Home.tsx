@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import type { FormEvent } from 'react'
 import { categories, markets, prices, products } from '../data'
+import MarketLogo from '../components/MarketLogo'
 import ProductCard from '../components/ProductCard'
 import { brl, caminhoDaBusca, mediaValores } from '../utils'
 
@@ -114,7 +115,10 @@ export default function Home() {
               to={`/mercado/${m.slug}`}
               className="rounded-xl border border-gray-200 bg-white p-4 hover:border-marca-400"
             >
-              <p className="text-sm font-semibold text-gray-800">{m.name}</p>
+              <div className="flex items-center gap-2.5">
+                <MarketLogo mercado={m} tamanho="md" />
+                <p className="text-sm font-semibold text-gray-800">{m.name}</p>
+              </div>
               <p className="text-xs text-gray-400">
                 {m.city}/{m.state} · {m.onlineShoppingAvailable ? 'tem site próprio' : 'só loja física'}
               </p>
