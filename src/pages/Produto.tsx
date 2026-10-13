@@ -1,17 +1,11 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { categories, products } from '../data'
+import Chip from '../components/Chip'
 import AddToBasket from '../components/AddToBasket'
 import NaoEncontrada from './NaoEncontrada'
 import type { PriceType } from '../types'
 import { acharMarket, brl, corDoPreco, dataHora, nomeDoPreco, precosDoProduto } from '../utils'
-
-function chip(ativo: boolean) {
-  return (
-    'rounded-full px-3 py-1 text-xs font-semibold ' +
-    (ativo ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
-  )
-}
 
 export default function Produto() {
   const { id } = useParams()
@@ -32,13 +26,13 @@ export default function Produto() {
   return (
     <div className="space-y-6">
       <p className="text-xs text-gray-400">
-        <Link to="/" className="hover:text-green-700">início</Link>
+        <Link to="/" className="hover:text-marca-700">início</Link>
         {' / '}
-        <Link to="/categorias" className="hover:text-green-700">categorias</Link>
+        <Link to="/categorias" className="hover:text-marca-700">categorias</Link>
         {categoria && (
           <>
             {' / '}
-            <Link to={`/categoria/${categoria.slug}`} className="hover:text-green-700">
+            <Link to={`/categoria/${categoria.slug}`} className="hover:text-marca-700">
               {categoria.name}
             </Link>
           </>
@@ -57,9 +51,9 @@ export default function Produto() {
         </div>
 
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <div className="rounded-lg bg-green-50 p-3">
-            <p className="text-[11px] font-semibold uppercase text-green-700">menor preço</p>
-            <p className="text-lg font-bold text-green-700">{menor !== null ? brl(menor) : '—'}</p>
+          <div className="rounded-lg bg-marca-50 p-3">
+            <p className="text-[11px] font-semibold uppercase text-marca-700">menor preço</p>
+            <p className="text-lg font-bold text-marca-700">{menor !== null ? brl(menor) : '—'}</p>
           </div>
           <div className="rounded-lg bg-gray-50 p-3">
             <p className="text-[11px] font-semibold uppercase text-gray-400">maior preço</p>
@@ -83,9 +77,9 @@ export default function Produto() {
           <h2 className="text-lg font-bold text-gray-900">Preço em cada supermercado</h2>
           <div className="flex gap-1.5">
             {(['todos', 'ONLINE', 'PHYSICAL'] as const).map((t) => (
-              <button key={t} onClick={() => setTipo(t)} className={chip(tipo === t)}>
+              <Chip key={t} onClick={() => setTipo(t)} ativo={tipo === t}>
                 {t === 'todos' ? 'todos os tipos' : nomeDoPreco(t)}
-              </button>
+              </Chip>
             ))}
           </div>
         </div>
@@ -96,12 +90,13 @@ export default function Produto() {
           </p>
         ) : (
           <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-            <table className="w-full min-w-[560px] text-left text-sm">
+            <table className="w-full min-w-[680px] text-left text-sm">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50 text-xs uppercase text-gray-500">
                   <th className="px-4 py-2.5">mercado</th>
                   <th className="px-4 py-2.5">preço</th>
                   <th className="px-4 py-2.5">tipo</th>
+                  <th className="px-4 py-2.5">fonte</th>
                   <th className="px-4 py-2.5">coletado em</th>
                   <th className="px-4 py-2.5 text-right">diferença</th>
                 </tr>
@@ -111,10 +106,10 @@ export default function Produto() {
                   const mercado = acharMarket(p.marketId)
                   const dif = menor !== null ? p.price - menor : 0
                   return (
-                    <tr key={p.id} className={p.price === menor ? 'bg-green-50' : ''}>
+                    <tr key={p.id} className={p.price === menor ? 'bg-marca-50' : ''}>
                       <td className="px-4 py-2.5 font-semibold text-gray-800">
                         {mercado ? (
-                          <Link to={`/mercado/${mercado.slug}`} className="hover:text-green-700">
+                          <Link to={`/mercado/${mercado.slug}`} className="hover:text-marca-700">
                             {mercado.name}
                           </Link>
                         ) : (
@@ -127,9 +122,23 @@ export default function Produto() {
                           {nomeDoPreco(p.priceType)}
                         </span>
                       </td>
+                      <td className="px-4 py-2.5 text-gray-500">
+                        {p.sourceUrl ? (
+                          <a
+                            href={p.sourceUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-marca-700 hover:underline"
+                          >
+                            {p.source}
+                          </a>
+                        ) : (
+                          p.source
+                        )}
+                      </td>
                       <td className="px-4 py-2.5 text-gray-500">{dataHora(p.collectedAt)}</td>
                       <td className="px-4 py-2.5 text-right text-gray-500">
-                        {dif === 0 ? <span className="font-semibold text-green-700">menor preço</span> : `+${brl(dif)}`}
+                        {dif === 0 ? <span className="font-semibold text-marca-700">menor preço</span> : `+${brl(dif)}`}
                       </td>
                     </tr>
                   )
@@ -139,8 +148,7 @@ export default function Produto() {
           </div>
         )}
         <p className="mt-2 text-xs text-gray-400">
-          fonte: site de cada supermercado · preços fictícios, só pra demonstrar · preço online não é o mesmo
-          preço da loja física
+          preços fictícios, só pra demonstrar o site · preço online não é o mesmo preço da loja física
         </p>
       </div>
 
@@ -152,7 +160,7 @@ export default function Produto() {
               <Link
                 key={p.id}
                 to={`/produto/${p.id}`}
-                className="rounded-full border border-gray-300 bg-white px-3 py-1 text-xs text-gray-600 hover:border-green-400"
+                className="rounded-full border border-gray-300 bg-white px-3 py-1 text-xs text-gray-600 hover:border-marca-400"
               >
                 {p.name}
               </Link>

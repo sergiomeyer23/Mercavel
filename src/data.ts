@@ -10,5 +10,3 @@ export const markets = marketsJson as Market[]
 export const categories = categoriesJson as Category[]
 export const products = productsJson as Product[]
 export const prices = pricesJson as Price[]
-
-export const ULTIMA_COLETA = '22/09/2026'

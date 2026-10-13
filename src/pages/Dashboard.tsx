@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { categories, markets, prices, products, ULTIMA_COLETA } from '../data'
+import { categories, markets, prices, products } from '../data'
 import type { Product } from '../types'
 import { brl, dataHora, mediaValores, precosDoProduto } from '../utils'
 
@@ -71,7 +71,6 @@ export default function Dashboard() {
         <div className="rounded-xl border border-gray-200 bg-white p-4">
           <p className="text-[11px] font-semibold uppercase text-gray-400">coleta</p>
           <p className="text-sm font-bold text-gray-800">{dataHora(ultimaColeta)}</p>
-          <p className="text-[11px] text-gray-400">{ULTIMA_COLETA}</p>
         </div>
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
           <p className="text-[11px] font-semibold uppercase text-amber-600">maior diferença</p>
@@ -83,7 +82,7 @@ export default function Dashboard() {
         <div className="rounded-xl border border-gray-200 bg-white p-5">
           <p className="text-xs font-semibold uppercase text-gray-400">maior diferença encontrada</p>
           <p className="mt-1 text-sm text-gray-600">
-            <Link to={`/produto/${maiorDif.produto.id}`} className="font-bold text-gray-900 hover:text-green-700">
+            <Link to={`/produto/${maiorDif.produto.id}`} className="font-bold text-gray-900 hover:text-marca-700">
               {maiorDif.produto.name}
             </Link>{' '}
             tem {brl(maiorDif.dif)} de diferença entre o mercado mais barato e o mais caro
@@ -98,14 +97,14 @@ export default function Dashboard() {
             {medias.slice(0, 8).map(({ cat, media }) => (
               <div key={cat.id} className="py-1.5">
                 <div className="flex justify-between text-sm">
-                  <Link to={`/categoria/${cat.slug}`} className="text-gray-700 hover:text-green-700">
+                  <Link to={`/categoria/${cat.slug}`} className="text-gray-700 hover:text-marca-700">
                     {cat.name}
                   </Link>
                   <span className="font-semibold text-gray-800">{brl(media ?? 0)}</span>
                 </div>
                 <div className="mt-1 h-2 rounded-full bg-gray-100">
                   <div
-                    className="h-2 rounded-full bg-green-500"
+                    className="h-2 rounded-full bg-marca-500"
                     style={{ width: `${Math.max(2, Math.round(((media ?? 0) / maiorMedia) * 100))}%` }}
                   />
                 </div>
@@ -120,14 +119,14 @@ export default function Dashboard() {
             {porMercado.map(({ m, qtd }) => (
               <div key={m.id} className="py-1.5">
                 <div className="flex justify-between text-sm">
-                  <Link to={`/mercado/${m.slug}`} className="text-gray-700 hover:text-green-700">
+                  <Link to={`/mercado/${m.slug}`} className="text-gray-700 hover:text-marca-700">
                     {m.name}
                   </Link>
                   <span className="font-semibold text-gray-800">{qtd}</span>
                 </div>
                 <div className="mt-1 h-2 rounded-full bg-gray-100">
                   <div
-                    className="h-2 rounded-full bg-green-500"
+                    className="h-2 rounded-full bg-marca-500"
                     style={{ width: `${Math.max(2, Math.round((qtd / maiorQtd) * 100))}%` }}
                   />
                 </div>
