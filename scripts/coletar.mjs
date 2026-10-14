@@ -80,8 +80,9 @@ function tamanhoDoNome(texto) {
     medida.mililitros = parseFloat(volume[1].replace(',', '.')) * UNIDADES_VOLUME[volume[2]]
   }
 
-  // produto vendido a granel: "Picanha Bovina (por kg)", "Banana Prata Kg"
-  if (!medida.gramas && !medida.mililitros && /(por kg|\bkg\b)/.test(t)) {
+  // produto vendido a granel. as lojas escrevem das duas formas: "Picanha Kg"
+  // e "Banana Prata Quilo" - so "kg" nao pegava metade dos casos
+  if (!medida.gramas && !medida.mililitros && /(por kg|\bkg\b|\bquilos?\b)/.test(t)) {
     medida.gramas = 1000
   }
 
@@ -206,8 +207,23 @@ function pontuar(alvo, oferta) {
   }
 }
 
+const LIMITE_ALTA = 0.72
+
+/**
+ * Termos de busca, do mais especifico ao mais generico.
+ * "Batata Inglesa" nao devolve nada no site, mas "Batata" devolve.
+ */
+function tentativasDeBusca(produto) {
+  const significativas = palavras(produto.name)
+  const completo = termoDeBusca(produto)
+  const semUltima = significativas.slice(0, 2).join(' ')
+  const soPrimeira = significativas.slice(0, 1).join(' ')
+
+  return [...new Set([completo, semUltima, soPrimeira].filter(Boolean))]
+}
+
 function confianca(pontuacao) {
-  if (pontuacao >= 0.72) return 'alta'
+  if (pontuacao >= LIMITE_ALTA) return 'alta'
   if (pontuacao >= 0.55) return 'media'
   return 'baixa'
 }
@@ -281,18 +297,28 @@ async function revisarMercado(idMercado, produtos) {
     process.stdout.write(`  ${produto.id.padEnd(30)} `)
 
     try {
-      const ofertas = await buscar(mercado, termoDeBusca(produto))
+      // tenta o nome completo e vai encurtando enquanto a nota for fraca
+      let pontuadas = []
+      for (const termo of tentativasDeBusca(produto)) {
+        const ofertas = await buscar(mercado, termo)
+        const avaliadas = ofertas
+          .map((oferta) => ({ ...oferta, ...pontuar(alvo, oferta) }))
+          .sort((a, b) => b.pontuacao - a.pontuacao)
 
-      if (!ofertas.length) {
+        if (avaliadas.length && (!pontuadas.length || avaliadas[0].pontuacao > pontuadas[0].pontuacao)) {
+          pontuadas = avaliadas
+        }
+        if (pontuadas.length && pontuadas[0].pontuacao >= LIMITE_ALTA) break
+
+        await new Promise((r) => setTimeout(r, PAUSA_MS))
+      }
+
+      if (!pontuadas.length) {
         console.log('sem oferta com preco')
         resultados.push({ produtoId: produto.id, nossoNome: produto.name, confianca: 'nenhuma', escolhido: null, candidatos: [] })
         baixa++
         continue
       }
-
-      const pontuadas = ofertas
-        .map((oferta) => ({ ...oferta, ...pontuar(alvo, oferta) }))
-        .sort((a, b) => b.pontuacao - a.pontuacao)
 
       const escolhido = pontuadas[0]
       let nivel = confianca(escolhido.pontuacao)

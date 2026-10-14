@@ -61,7 +61,6 @@ function motivosDaRecusa(resultado) {
   const motivos = [...(escolhido.motivosRevisao ?? [])]
   if (!escolhido.ean) motivos.push('oferta sem codigo de barras')
   if (!(escolhido.preco > 0)) motivos.push('oferta sem preco')
-  if (!escolhido.disponivel) motivos.push('oferta indisponivel')
   if (resultado.confianca !== 'alta') motivos.push(`confianca ${resultado.confianca}`)
   return motivos.join(', ') || 'confianca alta'
 }

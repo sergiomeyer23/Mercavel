@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-13T23:45:34.464Z",
+  "geradoEm": "2026-10-14T00:43:46.941Z",
   "observacao": "Vinculo entre cada produto nosso e o codigo de barras do mesmo produto na loja. Os codigos de barras sao das lojas: o nosso produto e generico (\"Arroz Branco Tipo 1 5 kg\") e nao tem codigo proprio.",
   "vinculos": [
     {
@@ -25,12 +25,12 @@
     {
       "produtoId": "cafe-torrado-500g",
       "mercadoId": "muffato",
-      "eanLoja": "7891021006125",
-      "nomeNaLoja": "Café Torrado e Moído Tradicional Melitta Caixa 500g",
-      "marcaNaLoja": "Melitta",
+      "eanLoja": "7896089010916",
+      "nomeNaLoja": "Café Caboclo Torrado e Moído Tradicional Vácuo 500g",
+      "marcaNaLoja": "Caboclo",
       "tamanhoNaLoja": "500 g",
-      "precoNaAprovacao": 25.19,
-      "linkNaLoja": "https://www.supermuffato.com.br/cafe-melitta-tradicional-a-vacuo-500-g-588/p"
+      "precoNaAprovacao": 21.07,
+      "linkNaLoja": "https://www.supermuffato.com.br/cafe-caboclo-torrado-e-moido-tradicional-vacuo-500g-102492/p"
     },
     {
       "produtoId": "acucar-refinado-1kg",
@@ -51,6 +51,16 @@
       "tamanhoNaLoja": "900 ml",
       "precoNaAprovacao": 7.2,
       "linkNaLoja": "https://www.supermuffato.com.br/oleo-de-soja-cocamar--900ml-8059/p"
+    },
+    {
+      "produtoId": "macarrao-espaguete-500g",
+      "mercadoId": "muffato",
+      "eanLoja": "7896022200046",
+      "nomeNaLoja": "Macarrão Renata Superiore Espaguete nº8 500g",
+      "marcaNaLoja": "Renata",
+      "tamanhoNaLoja": "500 g",
+      "precoNaAprovacao": 9.8,
+      "linkNaLoja": "https://www.supermuffato.com.br/macarrao-renata-superiore-espaguete-nº8-500g-2857/p"
     },
     {
       "produtoId": "milho-verde-lata",
@@ -93,6 +103,16 @@
       "linkNaLoja": "https://www.supermuffato.com.br/queijo-presidente-mussarela-fatiada-kg-211696/p"
     },
     {
+      "produtoId": "requeijao-200g",
+      "mercadoId": "muffato",
+      "eanLoja": "7891025699880",
+      "nomeNaLoja": "Requeijão Cremoso Danone 200g",
+      "marcaNaLoja": "Danone",
+      "tamanhoNaLoja": "200 g",
+      "precoNaAprovacao": 8.7,
+      "linkNaLoja": "https://www.supermuffato.com.br/requeijao-cremoso-danone-tradicional-200g-182487/p"
+    },
+    {
       "produtoId": "coxao-mole-kg",
       "mercadoId": "muffato",
       "eanLoja": "0000000052122",
@@ -131,6 +151,16 @@
       "tamanhoNaLoja": "1 kg",
       "precoNaAprovacao": 10.3,
       "linkNaLoja": "https://www.supermuffato.com.br/coxa-com-sobrecoxa-congelada-kg-107845/p"
+    },
+    {
+      "produtoId": "refrigerante-cola-2l",
+      "mercadoId": "muffato",
+      "eanLoja": "7894900701517",
+      "nomeNaLoja": "Refrigerante Coca-Cola Sem Açúcar 2L",
+      "marcaNaLoja": "Coca-Cola",
+      "tamanhoNaLoja": "2 L",
+      "precoNaAprovacao": 11.8,
+      "linkNaLoja": "https://www.supermuffato.com.br/refrigerante-coca-cola-sem-acucar-2-l-112089/p"
     },
     {
       "produtoId": "refrigerante-guarana-2l",
@@ -263,6 +293,16 @@
       "linkNaLoja": "https://www.supermuffato.com.br/vela-guanabara-n-0-branca-pacote-8-un-85845/p"
     },
     {
+      "produtoId": "arroz-tipo1-5kg",
+      "mercadoId": "festval",
+      "eanLoja": "7896290300011",
+      "nomeNaLoja": "Arroz Branco Prato Fino 5kg",
+      "marcaNaLoja": "Prato Fino",
+      "tamanhoNaLoja": "5 kg",
+      "precoNaAprovacao": 34.9,
+      "linkNaLoja": "https://www.festval.com/arroz_prato_fino_branco_5kg/p"
+    },
+    {
       "produtoId": "feijao-carioca-1kg",
       "mercadoId": "festval",
       "eanLoja": "7896050600276",
@@ -299,7 +339,7 @@
       "nomeNaLoja": "Farinha de Trigo Tipo 1 Anaconda Pacote 1kg",
       "marcaNaLoja": "Anaconda",
       "tamanhoNaLoja": "1 kg",
-      "precoNaAprovacao": 5.99,
+      "precoNaAprovacao": 4.79,
       "linkNaLoja": "https://www.festval.com/farinha-de-trigo-tipo-1-anaconda-pacote-1kg/p"
     },
     {
@@ -311,6 +351,16 @@
       "tamanhoNaLoja": "900 ml",
       "precoNaAprovacao": 8.79,
       "linkNaLoja": "https://www.festval.com/oleo-de-soja-suavit-900ml/p"
+    },
+    {
+      "produtoId": "macarrao-espaguete-500g",
+      "mercadoId": "festval",
+      "eanLoja": "7891079006009",
+      "nomeNaLoja": "Macarrão Espaguete 3 Minutos Nissin 500g",
+      "marcaNaLoja": "Nissin",
+      "tamanhoNaLoja": "500 g",
+      "precoNaAprovacao": 6.99,
+      "linkNaLoja": "https://www.festval.com/macarrao_instantaneo_espaguete_nissin_3_minutos_pacote_500g/p"
     },
     {
       "produtoId": "molho-tomate-340g",
@@ -349,7 +399,7 @@
       "nomeNaLoja": "Leite UHT Integral com Tampa Batavo 1L",
       "marcaNaLoja": "Batavo",
       "tamanhoNaLoja": "1 L",
-      "precoNaAprovacao": 5.99,
+      "precoNaAprovacao": 5.98,
       "linkNaLoja": "https://www.festval.com/leite-uht-integral-batavo-caixa-com-tampa-1l/p"
     },
     {
@@ -433,6 +483,16 @@
       "linkNaLoja": "https://www.festval.com/cerveja-pilsen-itaipava-lata-350ml/p"
     },
     {
+      "produtoId": "pao-forma-500g",
+      "mercadoId": "festval",
+      "eanLoja": "7891203010056",
+      "nomeNaLoja": "Pão de Forma Panco Tradicional 500g",
+      "marcaNaLoja": "PANCO",
+      "tamanhoNaLoja": "500 g",
+      "precoNaAprovacao": 9.98,
+      "linkNaLoja": "https://www.festval.com/pao-panco-forma-500g-1515/p"
+    },
+    {
       "produtoId": "detergente-neutro-500ml",
       "mercadoId": "festval",
       "eanLoja": "7891022638004",
@@ -449,7 +509,7 @@
       "nomeNaLoja": "Papel Higiênico Folha Dupla Neutro Duetto 30m Pacote 12 Unidades Leve Mais Pague Menos",
       "marcaNaLoja": "Duetto",
       "tamanhoNaLoja": "?",
-      "precoNaAprovacao": 21.99,
+      "precoNaAprovacao": 19.99,
       "linkNaLoja": "https://www.festval.com/papel-higienico-folha-dupla-neutro-duetto-30m-pacote-12-unidades-leve-mais-pague-menos/p"
     },
     {
@@ -461,6 +521,16 @@
       "tamanhoNaLoja": "85 g",
       "precoNaAprovacao": 3.99,
       "linkNaLoja": "https://www.festval.com/sabonete-barra-hidratante-erva-doce-and-oleos-nivea-flow-pack-85g/p"
+    },
+    {
+      "produtoId": "creme-dental-90g",
+      "mercadoId": "festval",
+      "eanLoja": "7509546701059",
+      "nomeNaLoja": "Creme Dental Sorriso Kolynos Caixa 90g",
+      "marcaNaLoja": "Colgate",
+      "tamanhoNaLoja": "90 g",
+      "precoNaAprovacao": 2.99,
+      "linkNaLoja": "https://www.festval.com/cr-dental-sorriso-90g-kolynos-1902029/p"
     },
     {
       "produtoId": "shampoo-350ml",
@@ -533,6 +603,16 @@
       "linkNaLoja": "https://secure.atacadao.com.br/leite-xando-integral-a2-86967/p"
     },
     {
+      "produtoId": "queijo-mussarela-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "85568",
+      "nomeNaLoja": "Queijo Mussarela Fatiado Aurora quilo",
+      "marcaNaLoja": "Aurora",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 54.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/queijo-mussarela-fatiado-aurora-85568/p"
+    },
+    {
       "produtoId": "manteiga-200g",
       "mercadoId": "atacadao",
       "eanLoja": "7896066804354",
@@ -583,6 +663,16 @@
       "linkNaLoja": "https://secure.atacadao.com.br/bife-de-coxao-mole-swift-2790/p"
     },
     {
+      "produtoId": "picanha-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "69515",
+      "nomeNaLoja": "Carne Bovina Picanha Bordon Resf Preço por quilo na peça",
+      "marcaNaLoja": "Bordon",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 74.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/carne-bovina-picanha-bordon-resfriada-69515/p"
+    },
+    {
       "produtoId": "file-peito-frango-kg",
       "mercadoId": "atacadao",
       "eanLoja": "7894904015108",
@@ -595,12 +685,22 @@
     {
       "produtoId": "coxa-sobrecoxa-kg",
       "mercadoId": "atacadao",
-      "eanLoja": "7894904298518",
-      "nomeNaLoja": "Coxa e Sobrecoxa de Frango Seara Congelada Desossada 1kg",
-      "marcaNaLoja": "Seara",
+      "eanLoja": "85338",
+      "nomeNaLoja": "Coxa e Sobrecoxa de Frango Resfriada Preço por quilo",
+      "marcaNaLoja": "Atacadão S/A",
       "tamanhoNaLoja": "1 kg",
-      "precoNaAprovacao": 17.9,
-      "linkNaLoja": "https://secure.atacadao.com.br/coxa-e-sobrecoxa-de-frango-seara-congelada-desossada-7782/p"
+      "precoNaAprovacao": 11.59,
+      "linkNaLoja": "https://secure.atacadao.com.br/coxa-e-sobrecoxa-de-frango-resfriada-85338/p"
+    },
+    {
+      "produtoId": "linguica-toscana-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "94103",
+      "nomeNaLoja": "Linguiça Toscana Alegra Congelada quilo",
+      "marcaNaLoja": "Alegra",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 18.99,
+      "linkNaLoja": "https://secure.atacadao.com.br/linguica-toscana-alegra-congelada-94103/p"
     },
     {
       "produtoId": "refrigerante-guarana-2l",
@@ -631,6 +731,36 @@
       "tamanhoNaLoja": "1.5 L",
       "precoNaAprovacao": 2.39,
       "linkNaLoja": "https://secure.atacadao.com.br/agua-mineral-bulnez-sem-gas-14355/p"
+    },
+    {
+      "produtoId": "banana-prata-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "1646",
+      "nomeNaLoja": "Banana Prata Quilo",
+      "marcaNaLoja": "Atacadão S/A",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 9.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/banana-prata-quilo-1646/p"
+    },
+    {
+      "produtoId": "tomate-italiano-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "33159",
+      "nomeNaLoja": "Tomate Italiano Quilo",
+      "marcaNaLoja": "Atacadão S/A",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 14.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/tomate-italiano-33159/p"
+    },
+    {
+      "produtoId": "pao-frances-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "6662",
+      "nomeNaLoja": "Pão Francês Mini Marquespan quilo",
+      "marcaNaLoja": "Marquespan",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 16.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/pao-frances-mini-marquespan-6662/p"
     },
     {
       "produtoId": "pao-forma-500g",
