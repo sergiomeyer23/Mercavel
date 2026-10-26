@@ -4,11 +4,12 @@ import { markets, prices } from '../data'
 import { dataHora } from '../utils'
 
 export default function Mercados() {
+  const comPrecos = markets.filter((m) => prices.some((p) => p.marketId === m.id)).length
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-bold text-gray-900">Supermercados monitorados</h1>
       <p className="text-sm text-gray-500">
-        os preços são coletados nos sites desses mercados, cada um com sua data de coleta
+        {comPrecos} de {markets.length} mercados já têm preços coletados nos sites, cada um com sua data de coleta
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -35,7 +36,7 @@ export default function Mercados() {
                 </div>
               </div>
               <p className="mt-2 text-xs text-gray-500">
-                {qtdProdutos} produtos · {obs.length} preços
+                {qtdProdutos > 0 ? `${qtdProdutos} produtos · ${obs.length} preços` : 'sem preços coletados ainda'}
               </p>
               <p className="text-xs text-gray-400">última coleta: {ultima ? dataHora(ultima) : '—'}</p>
               <p className="mt-2 text-xs text-gray-500">

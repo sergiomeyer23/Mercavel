@@ -195,7 +195,7 @@ export default function Cesta() {
             {itens.map((item) => {
               const produto = products.find((p) => p.id === item.productId)
               if (!produto) return null
-              const precos = precosDoProduto(item.productId)
+              const precos = precosDoProduto(item.productId, tipo === 'todos' ? undefined : tipo)
               const maisBarato = precos[0]
               const mercado = maisBarato ? acharMarket(maisBarato.marketId) : null
               return (

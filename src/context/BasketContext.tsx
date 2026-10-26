@@ -20,7 +20,22 @@ const CestaContext = createContext<CestaContexto | null>(null)
 function lerCesta(): ItemCesta[] {
   try {
     const salvo = localStorage.getItem('cesta')
-    return salvo ? JSON.parse(salvo) : []
+    if (!salvo) return []
+    const dados: unknown = JSON.parse(salvo)
+    if (!Array.isArray(dados)) return []
+    const vistos = new Set<string>()
+    const itens: ItemCesta[] = []
+    for (const item of dados) {
+      if (!item || typeof item !== 'object') continue
+      const { productId, qtd } = item as { productId?: unknown; qtd?: unknown }
+      if (typeof productId !== 'string' || productId.length === 0 || vistos.has(productId)) continue
+      if (typeof qtd !== 'number' || !Number.isFinite(qtd)) continue
+      const quantidade = Math.min(Math.floor(qtd), 999)
+      if (quantidade < 1) continue
+      vistos.add(productId)
+      itens.push({ productId, qtd: quantidade })
+    }
+    return itens
   } catch {
     return []
   }
@@ -30,7 +45,11 @@ export function CestaProvider({ children }: { children: ReactNode }) {
   const [itens, setItens] = useState<ItemCesta[]>(lerCesta)
 
   useEffect(() => {
-    localStorage.setItem('cesta', JSON.stringify(itens))
+    try {
+      localStorage.setItem('cesta', JSON.stringify(itens))
+    } catch {
+      // armazenamento indisponível ou cheio: a cesta continua funcionando na sessão
+    }
   }, [itens])
 
   // tudo aqui atualiza a cesta pela forma funcional (atual => ...) porque o

@@ -62,7 +62,11 @@ export default function Mercado() {
             </>
           )}
           {' · '}
-          {mercado.onlineShoppingAvailable ? 'coleta no site do mercado' : 'coleta na loja física'}
+          {obs.length === 0
+            ? 'sem preços coletados ainda'
+            : mercado.onlineShoppingAvailable
+              ? 'coleta no site do mercado'
+              : 'coleta na loja física'}
         </p>
 
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -79,6 +83,11 @@ export default function Mercado() {
             <p className="text-sm font-bold text-gray-800">{ultima ? dataHora(ultima) : '—'}</p>
           </div>
         </div>
+        {obs.length === 0 && (
+          <p className="mt-4 rounded-lg bg-amber-50 px-4 py-2 text-xs text-amber-700">
+            ainda não há preços coletados para este mercado. quando a coleta rodar, os produtos aparecem aqui.
+          </p>
+        )}
       </div>
 
       <div>

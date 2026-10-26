@@ -40,6 +40,8 @@ export default function Home() {
     .filter((m) => m.media !== null)
     .sort((a, b) => (b.media ?? 0) - (a.media ?? 0))
   const maiorMedia = medias[0]?.media ?? 1
+  const idsComPrecos = new Set(prices.map((p) => p.marketId))
+  const mercadosComPrecos = markets.filter((m) => idsComPrecos.has(m.id))
 
   return (
     <div className="space-y-8">
@@ -66,7 +68,8 @@ export default function Home() {
           </button>
         </form>
         <p className="mt-3 text-xs text-marca-200">
-          {markets.length} mercados · {products.length} produtos · {prices.length} preços coletados
+          {markets.length} mercados cadastrados · {mercadosComPrecos.length} com preços · {products.length} produtos ·{' '}
+          {prices.length} preços coletados
         </p>
       </section>
 
@@ -122,6 +125,9 @@ export default function Home() {
               <p className="text-xs text-gray-400">
                 {m.city}/{m.state} · {m.onlineShoppingAvailable ? 'tem site próprio' : 'só loja física'}
               </p>
+              {!idsComPrecos.has(m.id) && (
+                <p className="mt-1 text-[11px] font-semibold text-amber-600">preços ainda não coletados</p>
+              )}
             </Link>
           ))}
         </div>
