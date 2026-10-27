@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import Chip from '../components/Chip'
 import MarketLogo from '../components/MarketLogo'
 import { markets, products } from '../data'
-import { useCesta } from '../context/BasketContext'
+import { cestaDoTexto, cestaParaTexto, useCesta } from '../context/BasketContext'
 import type { PriceType } from '../types'
 import { acharMarket, brl, precosDoProduto } from '../utils'
 
-// cesta de exemplo pra não começar do zero
-const cestaModelo = [
+// cesta de exemplo pra não começar do zero. só entram produtos com preço em pelo
+// menos 2 mercados, senão a comparação da demo não faz sentido
+const candidatosModelo = [
   'arroz-tipo1-5kg',
   'feijao-carioca-1kg',
   'cafe-torrado-500g',
@@ -19,15 +20,46 @@ const cestaModelo = [
   'refrigerante-cola-2l',
 ]
 
+const cestaModelo = (() => {
+  const comparaveis = (id: string) => precosDoProduto(id).length >= 2
+  const fixos = candidatosModelo.filter(comparaveis)
+  const extras = products.map((p) => p.id).filter((id) => !fixos.includes(id) && comparaveis(id))
+  return [...fixos, ...extras].slice(0, 8)
+})()
+
 export default function Cesta() {
-  const { itens, qtdItens, adicionar, remover, mudarQtd, limpar } = useCesta()
+  const { itens, qtdItens, adicionar, remover, mudarQtd, limpar, substituir } = useCesta()
   const [tipo, setTipo] = useState<'todos' | PriceType>('todos')
+  const [params, setParams] = useSearchParams()
+  const [copiado, setCopiado] = useState(false)
+
+  // abre uma cesta compartilhada (?c=id:qtd,id:qtd) e tira o parâmetro da URL
+  const compartilhada = params.get('c')
+  useEffect(() => {
+    if (compartilhada === null) return
+    const recebidos = cestaDoTexto(compartilhada).filter((i) => products.some((p) => p.id === i.productId))
+    if (recebidos.length > 0) substituir(recebidos)
+    setParams({}, { replace: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [compartilhada])
+
+  async function copiarLink() {
+    const url = `${window.location.origin}${window.location.pathname}?c=${encodeURIComponent(cestaParaTexto(itens))}`
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopiado(true)
+      setTimeout(() => setCopiado(false), 2000)
+    } catch {
+      window.prompt('copie o link da sua cesta:', url)
+    }
+  }
 
   // total da cesta em cada mercado. se o mercado não tiver algum item, não entra na disputa
   const resultados = markets
     .map((m) => {
       let total = 0
       let faltando = 0
+      const faltantes: string[] = []
       for (const item of itens) {
         const obs = precosDoProduto(item.productId, tipo === 'todos' ? undefined : tipo).find(
           (o) => o.marketId === m.id,
@@ -36,9 +68,10 @@ export default function Cesta() {
           total += obs.price * item.qtd
         } else {
           faltando += 1
+          faltantes.push(products.find((p) => p.id === item.productId)?.name ?? item.productId)
         }
       }
-      return { mercado: m, total, faltando }
+      return { mercado: m, total, faltando, faltantes }
     })
     .sort((a, b) => a.faltando - b.faltando || a.total - b.total)
 
@@ -65,7 +98,7 @@ export default function Cesta() {
             onClick={() => cestaModelo.forEach((id) => adicionar(id))}
             className="mt-4 rounded-lg bg-marca-600 px-4 py-2 text-sm font-semibold text-white hover:bg-marca-700"
           >
-            usar cesta de exemplo (8 itens)
+            usar cesta de exemplo ({cestaModelo.length} itens)
           </button>
         </div>
 
@@ -128,7 +161,9 @@ export default function Cesta() {
                       {r.mercado.name}
                     </Link>
                     <p className="text-[11px] text-gray-400">
-                      {r.faltando > 0 ? `não tem ${r.faltando} item(ns) dessa cesta` : 'cesta completa'}
+                      {r.faltando > 0
+                        ? `faltam ${r.faltando} de ${itens.length} produtos: ${r.faltantes.join(', ')}`
+                        : 'cesta completa'}
                     </p>
                   </div>
                   <div className="text-right">
@@ -139,8 +174,13 @@ export default function Cesta() {
                           <p className="text-[11px] text-gray-400">+{brl(r.total - menor)} que o menor</p>
                         )}
                       </>
+                    ) : r.faltando < itens.length ? (
+                      <>
+                        <p className="font-bold text-gray-500">{brl(r.total)}</p>
+                        <p className="text-[11px] text-gray-400">total parcial</p>
+                      </>
                     ) : (
-                      <span className="text-xs text-gray-400">—</span>
+                      <span className="text-xs text-gray-400">sem preços</span>
                     )}
                   </div>
                 </li>
@@ -154,7 +194,9 @@ export default function Cesta() {
             <p className="text-xs font-semibold uppercase text-marca-200">cesta mais barata</p>
             <p className="mt-1 text-2xl font-bold">{menor !== null ? brl(menor) : '—'}</p>
             <p className="mt-1 text-sm text-marca-100">
-              {completos.length > 0 ? completos[0].mercado.name : 'nenhum mercado tem tudo'}
+              {completos.length > 0
+                ? completos[0].mercado.name
+                : 'nenhum mercado tem tudo (veja os totais parciais ao lado)'}
             </p>
           </div>
           <div className="rounded-xl border border-gray-200 bg-white p-5">
@@ -171,6 +213,12 @@ export default function Cesta() {
                 : '—'}
             </p>
           </div>
+          <button
+            onClick={copiarLink}
+            className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-600 hover:border-marca-400 hover:text-marca-700"
+          >
+            {copiado ? 'link copiado!' : 'copiar link da cesta'}
+          </button>
           <button
             onClick={limpar}
             className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-500 hover:border-red-300 hover:text-red-600"

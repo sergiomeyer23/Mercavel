@@ -55,7 +55,7 @@
     "city": "Cascavel",
     "state": "PR",
     "website": "https://www.atacadao.com.br",
-    "onlineShoppingAvailable": false,
+    "onlineShoppingAvailable": true,
     "logo": "/logos/atacadao.png",
     "cor": "#0f766e"
   },
