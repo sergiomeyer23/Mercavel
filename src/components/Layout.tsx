@@ -42,7 +42,7 @@ export default function Layout() {
   const { qtdItens } = useCesta()
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
+    <div className="flex min-h-screen flex-col bg-gray-50 bg-[radial-gradient(circle_at_1px_1px,theme(colors.marca.200/0.45)_1px,transparent_0)] [background-size:22px_22px]">
       <header className="sticky top-0 z-40 border-b border-gray-200 bg-white">
         <div className="mx-auto flex h-14 max-w-5xl items-center gap-3 px-4">
           <Link to="/" aria-label="página inicial">

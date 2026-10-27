@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import Chip from '../components/Chip'
 import MarketLogo from '../components/MarketLogo'
+import IconeComida from '../components/IconeComida'
+import { emojiDoProduto } from '../emoji'
 import { markets, products } from '../data'
 import { cestaDoTexto, cestaParaTexto, useCesta } from '../context/BasketContext'
 import type { PriceType } from '../types'
@@ -249,12 +251,17 @@ export default function Cesta() {
               return (
                 <tr key={item.productId} className="border-b border-gray-50 last:border-0">
                   <td className="px-4 py-2.5">
-                    <Link to={`/produto/${produto.id}`} className="font-semibold text-gray-800 hover:text-marca-700">
-                      {produto.name}
-                    </Link>
-                    <p className="text-[11px] text-gray-400">
-                      {mercado ? `menor no ${mercado.shortName}` : 'sem preço'}
-                    </p>
+                    <div className="flex items-center gap-3">
+                      <IconeComida emoji={emojiDoProduto(produto.id, produto.categoryId)} tamanho="sm" />
+                      <div>
+                        <Link to={`/produto/${produto.id}`} className="font-semibold text-gray-800 hover:text-marca-700">
+                          {produto.name}
+                        </Link>
+                        <p className="text-[11px] text-gray-400">
+                          {mercado ? `menor no ${mercado.shortName}` : 'sem preço'}
+                        </p>
+                      </div>
+                    </div>
                   </td>
                   <td className="px-4 py-2.5">
                     <div className="inline-flex items-center rounded-lg border border-gray-300">

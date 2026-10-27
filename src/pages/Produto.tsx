@@ -4,6 +4,8 @@ import { categories, products } from '../data'
 import Chip from '../components/Chip'
 import MarketLogo from '../components/MarketLogo'
 import AddToBasket from '../components/AddToBasket'
+import IconeComida from '../components/IconeComida'
+import { emojiDoProduto } from '../emoji'
 import NaoEncontrada from './NaoEncontrada'
 import type { PriceType } from '../types'
 import {
@@ -53,11 +55,14 @@ export default function Produto() {
 
       <div className="rounded-xl border border-gray-200 bg-white p-5">
         <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
-            <h1 className="text-xl font-bold text-gray-900">{produto.name}</h1>
-            <p className="mt-1 text-sm text-gray-500">
-              marca: {produto.brand} · categoria: {categoria?.name} · embalagem: {produto.unit}
-            </p>
+          <div className="flex items-center gap-4">
+            <IconeComida emoji={emojiDoProduto(produto.id, produto.categoryId)} tamanho="lg" />
+            <div>
+              <h1 className="text-xl font-bold text-gray-900">{produto.name}</h1>
+              <p className="mt-1 text-sm text-gray-500">
+                categoria: {categoria?.name} · embalagem: {produto.unit}
+              </p>
+            </div>
           </div>
           <AddToBasket productId={produto.id} />
         </div>

@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom'
 import { categories, markets, prices, products } from '../data'
 import Chip from '../components/Chip'
 import ProductCard from '../components/ProductCard'
+import IconeComida from '../components/IconeComida'
+import { emojiDaCategoria } from '../emoji'
 import NaoEncontrada from './NaoEncontrada'
 import type { Price, Product } from '../types'
 import { brl, mediaValores, precosDoProduto } from '../utils'
@@ -74,9 +76,12 @@ export default function Categoria() {
         <span className="text-gray-600">{categoria.name}</span>
       </p>
 
-      <div>
-        <h1 className="text-xl font-bold text-gray-900">Preços de {categoria.name.toLowerCase()} em Cascavel</h1>
-        <p className="mt-1 text-sm text-gray-500">{categoria.description}</p>
+      <div className="flex items-center gap-4">
+        <IconeComida emoji={emojiDaCategoria(categoria.id)} tamanho="lg" />
+        <div>
+          <h1 className="text-xl font-bold text-gray-900">Preços de {categoria.name.toLowerCase()} em Cascavel</h1>
+          <p className="mt-1 text-sm text-gray-500">{categoria.description}</p>
+        </div>
       </div>
 
       <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">

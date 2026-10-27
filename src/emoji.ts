@@ -1,0 +1,75 @@
+// ícone de comida de cada produto e de cada categoria (o catálogo é pequeno, então fica tudo aqui)
+const porProduto: Record<string, string> = {
+  'arroz-tipo1-5kg': '🍚',
+  'feijao-carioca-1kg': '🫘',
+  'cafe-torrado-500g': '☕',
+  'acucar-refinado-1kg': '🍬',
+  'farinha-trigo-1kg': '🌾',
+  'oleo-soja-900ml': '🫒',
+  'macarrao-espaguete-500g': '🍝',
+  'molho-tomate-340g': '🍅',
+  'milho-verde-lata': '🌽',
+  'atum-ralado-lata': '🐟',
+  'leite-uht-integral-1l': '🥛',
+  'queijo-mussarela-kg': '🧀',
+  'manteiga-200g': '🧈',
+  'requeijao-200g': '🥣',
+  'iogurte-natural-170g': '🥣',
+  'ovo-branco-dz': '🥚',
+  'coxao-mole-kg': '🥩',
+  'picanha-kg': '🥩',
+  'file-peito-frango-kg': '🍗',
+  'coxa-sobrecoxa-kg': '🍗',
+  'linguica-toscana-kg': '🌭',
+  'refrigerante-cola-2l': '🥤',
+  'refrigerante-guarana-2l': '🥤',
+  'suco-laranja-1l': '🍊',
+  'agua-mineral-15l': '💧',
+  'cerveja-pilsen-350ml': '🍺',
+  'banana-prata-kg': '🍌',
+  'tomate-italiano-kg': '🍅',
+  'batata-inglesa-kg': '🥔',
+  'cebola-nacional-kg': '🧅',
+  'alface-crespa-un': '🥬',
+  'pao-frances-kg': '🥖',
+  'pao-forma-500g': '🍞',
+  'bolo-forma-400g': '🍰',
+  'pizza-congelada-460g': '🍕',
+  'sorvete-creme-2l': '🍨',
+  'batata-palito-congelada-2kg': '🍟',
+  'detergente-neutro-500ml': '🧽',
+  'sabao-po-1kg': '🧺',
+  'amaciante-2l': '🧴',
+  'desinfetante-2l': '🧹',
+  'papel-higienico-12un': '🧻',
+  'sabonete-85g': '🧼',
+  'creme-dental-90g': '🪥',
+  'shampoo-350ml': '🧴',
+  'racao-cao-adulto-3kg': '🐶',
+  'racao-gato-1kg': '🐱',
+  'pilha-aa-4un': '🔋',
+  'vela-comum-cx': '🕯️',
+}
+
+const porCategoria: Record<string, string> = {
+  'cat-mercearia': '🛒',
+  'cat-carnes': '🥩',
+  'cat-bebidas': '🥤',
+  'cat-laticinios': '🧀',
+  'cat-hortifruti': '🥬',
+  'cat-higiene': '🧼',
+  'cat-limpeza': '🧽',
+  'cat-padaria': '🥖',
+  'cat-congelados': '🍦',
+  'cat-alimentos': '🍽️',
+  'cat-pet': '🐾',
+  'cat-outros': '🛍️',
+}
+
+export function emojiDoProduto(produtoId: string, categoriaId?: string) {
+  return porProduto[produtoId] ?? (categoriaId ? emojiDaCategoria(categoriaId) : '🛒')
+}
+
+export function emojiDaCategoria(categoriaId: string) {
+  return porCategoria[categoriaId] ?? '🛒'
+}
