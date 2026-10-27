@@ -1,25 +1,46 @@
-import { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { categories, products } from '../data'
 import Chip from '../components/Chip'
 import ProductCard from '../components/ProductCard'
+import { precosDoProduto } from '../utils'
 
 function semAcento(texto: string) {
   return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 }
 
-export default function Busca() {
-  const [params] = useSearchParams()
-  const q = params.get('q') ?? ''
-  const [categoria, setCategoria] = useState('todas')
+type Ordem = 'relevancia' | 'menor' | 'nome'
 
-  const termo = semAcento(q.trim())
-  let achados = products
-  if (termo) {
-    achados = products.filter((p) => semAcento(`${p.name} ${p.brand} ${p.ean ?? ''}`).includes(termo))
+export default function Busca() {
+  const [params, setParams] = useSearchParams()
+  const q = params.get('q') ?? ''
+  const categoria = params.get('cat') ?? 'todas'
+  const ordem = (params.get('ordem') as Ordem | null) ?? 'relevancia'
+
+  // atualiza só um parâmetro e mantém o resto na URL (dá pra compartilhar a busca)
+  function mudar(chave: string, valor: string, padrao: string) {
+    const novo = new URLSearchParams(params)
+    if (valor === padrao) novo.delete(chave)
+    else novo.set(chave, valor)
+    setParams(novo, { replace: true })
   }
 
-  const filtrados = categoria === 'todas' ? achados : achados.filter((p) => p.categoryId === categoria)
+  // todas as palavras precisam aparecer (em qualquer ordem)
+  const palavras = semAcento(q.trim()).split(/\s+/).filter(Boolean)
+  const achados = products.filter((p) => {
+    const texto = semAcento(`${p.name} ${p.brand} ${p.ean ?? ''}`)
+    return palavras.every((w) => texto.includes(w))
+  })
+
+  const filtrados = (categoria === 'todas' ? achados : achados.filter((p) => p.categoryId === categoria)).map(
+    (p) => ({ produto: p, menor: precosDoProduto(p.id)[0]?.price ?? null }),
+  )
+  // produtos sem preço sempre vão pro fim da lista
+  filtrados.sort((a, b) => {
+    if ((a.menor === null) !== (b.menor === null)) return a.menor === null ? 1 : -1
+    if (ordem === 'menor') return (a.menor ?? 0) - (b.menor ?? 0)
+    if (ordem === 'nome') return a.produto.name.localeCompare(b.produto.name, 'pt-BR')
+    return 0
+  })
   const catsDoResultado = [...new Set(achados.map((p) => p.categoryId))]
 
   return (
@@ -29,8 +50,22 @@ export default function Busca() {
       </h1>
       <p className="text-sm text-gray-500">{achados.length} produtos encontrados</p>
 
+      <div className="flex items-center gap-2 text-sm text-gray-500">
+        <label htmlFor="ordem">ordenar por</label>
+        <select
+          id="ordem"
+          value={ordem}
+          onChange={(e) => mudar('ordem', e.target.value, 'relevancia')}
+          className="rounded-lg border border-gray-300 bg-white px-2 py-1 text-sm"
+        >
+          <option value="relevancia">relevância</option>
+          <option value="menor">menor preço</option>
+          <option value="nome">nome (A-Z)</option>
+        </select>
+      </div>
+
       <div className="flex flex-wrap gap-2">
-        <Chip onClick={() => setCategoria('todas')} ativo={categoria === 'todas'}>
+        <Chip onClick={() => mudar('cat', 'todas', 'todas')} ativo={categoria === 'todas'}>
           todas ({achados.length})
         </Chip>
         {catsDoResultado.map((id) => {
@@ -38,7 +73,7 @@ export default function Busca() {
           if (!cat) return null
           const qtd = achados.filter((p) => p.categoryId === id).length
           return (
-            <Chip key={id} onClick={() => setCategoria(id)} ativo={categoria === id}>
+            <Chip key={id} onClick={() => mudar('cat', id, 'todas')} ativo={categoria === id}>
               {cat.name} ({qtd})
             </Chip>
           )
@@ -54,8 +89,8 @@ export default function Busca() {
         </div>
       ) : (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {filtrados.map((p) => (
-            <ProductCard key={p.id} produto={p} />
+          {filtrados.map(({ produto }) => (
+            <ProductCard key={produto.id} produto={produto} />
           ))}
         </div>
       )}
