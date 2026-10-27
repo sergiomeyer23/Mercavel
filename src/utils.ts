@@ -66,3 +66,34 @@ export function mediaValores(valores: number[]) {
   const soma = valores.reduce((total, v) => total + v, 0)
   return soma / valores.length
 }
+
+// quantos dias se passaram desde a coleta
+export function diasDesde(iso: string, agora: Date = new Date()) {
+  const ms = agora.getTime() - new Date(iso).getTime()
+  return Math.max(0, Math.floor(ms / 86_400_000))
+}
+
+export const DIAS_PRECO_VELHO = 7
+
+export function idadeDoPreco(iso: string, agora: Date = new Date()) {
+  const dias = diasDesde(iso, agora)
+  if (dias === 0) return 'hoje'
+  if (dias === 1) return 'há 1 dia'
+  return `há ${dias} dias`
+}
+
+export function precoVelho(iso: string, agora: Date = new Date()) {
+  return diasDesde(iso, agora) > DIAS_PRECO_VELHO
+}
+
+// preço por kg ou por litro, pra comparar embalagens de tamanhos diferentes.
+// devolve null quando a unidade não é de peso nem de volume
+export function precoPorUnidade(preco: number, quantidade: number, unidade: string) {
+  if (!(quantidade > 0)) return null
+  const u = unidade.toLowerCase()
+  if (u === 'kg') return { valor: preco / quantidade, rotulo: 'kg' }
+  if (u === 'g') return { valor: (preco / quantidade) * 1000, rotulo: 'kg' }
+  if (u === 'l') return { valor: preco / quantidade, rotulo: 'L' }
+  if (u === 'ml') return { valor: (preco / quantidade) * 1000, rotulo: 'L' }
+  return null
+}

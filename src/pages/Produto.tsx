@@ -6,7 +6,17 @@ import MarketLogo from '../components/MarketLogo'
 import AddToBasket from '../components/AddToBasket'
 import NaoEncontrada from './NaoEncontrada'
 import type { PriceType } from '../types'
-import { acharMarket, brl, corDoPreco, dataHora, nomeDoPreco, precosDoProduto } from '../utils'
+import {
+  acharMarket,
+  brl,
+  corDoPreco,
+  dataHora,
+  idadeDoPreco,
+  nomeDoPreco,
+  precoPorUnidade,
+  precoVelho,
+  precosDoProduto,
+} from '../utils'
 
 export default function Produto() {
   const { id } = useParams()
@@ -19,6 +29,7 @@ export default function Produto() {
   const precos = precosDoProduto(produto.id, tipo === 'todos' ? undefined : tipo)
   const menor = precos.length > 0 ? precos[0].price : null
   const maior = precos.length > 0 ? precos[precos.length - 1].price : null
+  const unidadeRotulo = precoPorUnidade(1, produto.quantity, produto.quantityUnit)?.rotulo
   const categoria = categories.find((c) => c.id === produto.categoryId)
   const relacionados = products
     .filter((p) => p.categoryId === produto.categoryId && p.id !== produto.id)
@@ -91,11 +102,12 @@ export default function Produto() {
           </p>
         ) : (
           <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-            <table className="w-full min-w-[680px] text-left text-sm">
+            <table className="w-full min-w-[760px] text-left text-sm">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50 text-xs uppercase text-gray-500">
                   <th className="px-4 py-2.5">mercado</th>
                   <th className="px-4 py-2.5">preço</th>
+                  <th className="px-4 py-2.5">por {unidadeRotulo ?? 'unidade'}</th>
                   <th className="px-4 py-2.5">tipo</th>
                   <th className="px-4 py-2.5">fonte</th>
                   <th className="px-4 py-2.5">coletado em</th>
@@ -125,6 +137,12 @@ export default function Produto() {
                         )}
                       </td>
                       <td className="px-4 py-2.5 font-bold text-gray-900">{brl(p.price)}</td>
+                      <td className="px-4 py-2.5 text-gray-500">
+                        {(() => {
+                          const u = precoPorUnidade(p.price, produto.quantity, produto.quantityUnit)
+                          return u ? `${brl(u.valor)}/${u.rotulo}` : '—'
+                        })()}
+                      </td>
                       <td className="px-4 py-2.5">
                         <span className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${corDoPreco(p.priceType)}`}>
                           {nomeDoPreco(p.priceType)}
@@ -144,7 +162,16 @@ export default function Produto() {
                           p.source
                         )}
                       </td>
-                      <td className="px-4 py-2.5 text-gray-500">{dataHora(p.collectedAt)}</td>
+                      <td className="px-4 py-2.5 text-gray-500">
+                        {dataHora(p.collectedAt)}
+                        <span
+                          className={`ml-1.5 rounded-full px-1.5 py-0.5 text-[10px] font-semibold ${
+                            precoVelho(p.collectedAt) ? 'bg-amber-100 text-amber-700' : 'bg-gray-100 text-gray-500'
+                          }`}
+                        >
+                          {idadeDoPreco(p.collectedAt)}
+                        </span>
+                      </td>
                       <td className="px-4 py-2.5 text-right text-gray-500">
                         {dif === 0 ? <span className="font-semibold text-marca-700">menor preço</span> : `+${brl(dif)}`}
                       </td>
@@ -156,7 +183,7 @@ export default function Produto() {
           </div>
         )}
         <p className="mt-2 text-xs text-gray-400">
-          preço de e-commerce, coletado no site do mercado · pode mudar a qualquer momento
+          preço de e-commerce, coletado no site do mercado · pode mudar a qualquer momento · preços com mais de 7 dias aparecem em destaque
         </p>
       </div>
 
