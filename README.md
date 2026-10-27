@@ -95,7 +95,6 @@ cada mercado aparece com um escudo de iniciais na cor dele, que fica no campo `c
 
 as logos ficam em `public/logos/<slug>.png`, todas padronizadas do mesmo jeito: margem em volta
 recortada, mesmo formato (PNG) e no máximo 128px de altura, que é 2x o maior tamanho usado na tela.
-o Compre Mais ainda está sem logo, então aparece o escudo `CM`.
 
 as logos são marca dos respectivos mercados, então o certo é usar com autorização deles.
 
@@ -135,7 +134,6 @@ Situação de cada mercado:
 | Super Muffato, Festval, Atacadão | automática (API VTEX) |
 | Irani | por raspagem da página de ofertas |
 | Super Puppo | manual — a loja só existe no app Mercadapp, sem catálogo web |
-| Compre Mais | manual — não tem site |
 
 preço de e-commerce não é o mesmo preço da loja física, por isso o site separa por tipo de preço.
 

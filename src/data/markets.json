@@ -58,17 +58,5 @@
     "onlineShoppingAvailable": true,
     "logo": "/logos/atacadao.png",
     "cor": "#0f766e"
-  },
-  {
-    "id": "compre-mais",
-    "name": "Compre Mais",
-    "shortName": "Compre Mais",
-    "slug": "compre-mais",
-    "city": "Cascavel",
-    "state": "PR",
-    "website": null,
-    "onlineShoppingAvailable": false,
-    "logo": null,
-    "cor": "#be185d"
   }
 ]
