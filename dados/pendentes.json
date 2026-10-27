@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-27T19:23:42.820Z",
+  "geradoEm": "2026-10-27T23:04:04.382Z",
   "observacao": "Casamentos que nao passaram no criterio de aprovacao e precisam de olho humano.",
   "pendentes": [
     {
@@ -220,13 +220,6 @@
       "melhorOferta": "Cebola Roxa Festval 1kg"
     },
     {
-      "produtoId": "alface-crespa-un",
-      "mercadoId": "festval",
-      "confianca": "media",
-      "motivo": "tamanho nao confirmado, confianca media",
-      "melhorOferta": "Alface Crespa Unidade"
-    },
-    {
       "produtoId": "pao-frances-kg",
       "mercadoId": "festval",
       "confianca": "media",
@@ -304,20 +297,6 @@
       "melhorOferta": "Vela Prata Branca N 12 3 U"
     },
     {
-      "produtoId": "arroz-tipo1-5kg",
-      "mercadoId": "atacadao",
-      "confianca": "media",
-      "motivo": "confianca media",
-      "melhorOferta": "Arroz Bulnez Agulhinha Tipo 1 5kg"
-    },
-    {
-      "produtoId": "cafe-torrado-500g",
-      "mercadoId": "atacadao",
-      "confianca": "media",
-      "motivo": "moido, torrado, confianca media",
-      "melhorOferta": "Café Bulnez Tradicional 500g"
-    },
-    {
       "produtoId": "farinha-trigo-1kg",
       "mercadoId": "atacadao",
       "confianca": "media",
@@ -365,13 +344,6 @@
       "confianca": "media",
       "motivo": "confianca media",
       "melhorOferta": "Batata Asterix Quilo"
-    },
-    {
-      "produtoId": "cebola-nacional-kg",
-      "mercadoId": "atacadao",
-      "confianca": "media",
-      "motivo": "confianca media",
-      "melhorOferta": "Cebola Quilo"
     },
     {
       "produtoId": "alface-crespa-un",

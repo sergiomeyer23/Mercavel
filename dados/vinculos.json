@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-27T19:23:42.819Z",
+  "geradoEm": "2026-10-27T23:04:04.380Z",
   "observacao": "Vinculo entre cada produto nosso e o codigo de barras do mesmo produto na loja. Os codigos de barras sao das lojas: o nosso produto e generico (\"Arroz Branco Tipo 1 5 kg\") e nao tem codigo proprio.",
   "vinculos": [
     {
@@ -483,6 +483,16 @@
       "linkNaLoja": "https://www.festval.com/cerveja-pilsen-itaipava-lata-350ml/p"
     },
     {
+      "produtoId": "alface-crespa-un",
+      "mercadoId": "festval",
+      "eanLoja": "7898186220014",
+      "nomeNaLoja": "Alface Crespa Unidade",
+      "marcaNaLoja": "Percicoti",
+      "tamanhoNaLoja": "?",
+      "precoNaAprovacao": 3.99,
+      "linkNaLoja": "https://www.festval.com/alface-crespa-unidade/p"
+    },
+    {
       "produtoId": "pao-forma-500g",
       "mercadoId": "festval",
       "eanLoja": "7891203010056",
@@ -553,6 +563,16 @@
       "linkNaLoja": "https://www.festval.com/pilha_duracell_alcalina_aa_mn1500b4_15v_4_unidades/p"
     },
     {
+      "produtoId": "arroz-tipo1-5kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "7896401184080",
+      "nomeNaLoja": "Arroz Bulnez Agulhinha Tipo 1 5kg",
+      "marcaNaLoja": "Bulnez",
+      "tamanhoNaLoja": "5 kg",
+      "precoNaAprovacao": 18.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/arroz-bulnez-agulhinha-tipo-1-14110/p"
+    },
+    {
       "produtoId": "feijao-carioca-1kg",
       "mercadoId": "atacadao",
       "eanLoja": "7896116910202",
@@ -561,6 +581,16 @@
       "tamanhoNaLoja": "1 kg",
       "precoNaAprovacao": 7.79,
       "linkNaLoja": "https://secure.atacadao.com.br/feijao-carioca-bulnez-tipo-1-13759/p"
+    },
+    {
+      "produtoId": "cafe-torrado-500g",
+      "mercadoId": "atacadao",
+      "eanLoja": "7897042200467",
+      "nomeNaLoja": "Café Bulnez Tradicional 500g",
+      "marcaNaLoja": "Bulnez",
+      "tamanhoNaLoja": "500 g",
+      "precoNaAprovacao": 17.9,
+      "linkNaLoja": "https://secure.atacadao.com.br/cafe-bulnez-tradicional-16675/p"
     },
     {
       "produtoId": "acucar-refinado-1kg",
@@ -751,6 +781,16 @@
       "tamanhoNaLoja": "1 kg",
       "precoNaAprovacao": 14.9,
       "linkNaLoja": "https://secure.atacadao.com.br/tomate-italiano-33159/p"
+    },
+    {
+      "produtoId": "cebola-nacional-kg",
+      "mercadoId": "atacadao",
+      "eanLoja": "14692",
+      "nomeNaLoja": "Cebola Quilo",
+      "marcaNaLoja": "Atacadão S/A",
+      "tamanhoNaLoja": "1 kg",
+      "precoNaAprovacao": 6.49,
+      "linkNaLoja": "https://secure.atacadao.com.br/cebola-quilo-14692/p"
     },
     {
       "produtoId": "pao-frances-kg",
