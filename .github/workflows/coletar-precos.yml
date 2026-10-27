@@ -19,6 +19,8 @@ jobs:
           node-version: 20
       - name: Coletar
         run: node scripts/coletar-precos.mjs
+      - name: Ofertas do Irani
+        run: node scripts/coletar-irani.mjs
       - name: Gravar alterações
         run: |
           git config user.name "github-actions[bot]"

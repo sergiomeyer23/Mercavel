@@ -225,11 +225,16 @@ if (!precos.length) {
   process.exit(1)
 }
 
+// precos de mercados que nao sao coletados aqui (encartes do Puppo, ofertas do Irani) ficam como estao
+const coletados = precos.length
+const anteriores = await lerJson('src/data/prices.json')
+precos.push(...anteriores.filter((p) => !(p.marketId in MERCADOS)))
+
 precos.sort((a, b) => a.productId.localeCompare(b.productId) || a.marketId.localeCompare(b.marketId))
 await gravarJson('src/data/prices.json', precos)
 await gravarJson('dados/coleta.json', {
   coletadoEm: agora,
-  precosGravados: precos.length,
+  precosGravados: coletados,
   semOferta,
   falhas,
   porMercado: Object.fromEntries(

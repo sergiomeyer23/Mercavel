@@ -12,7 +12,8 @@
     "test": "vitest run",
     "lint": "eslint .",
     "coletar": "node scripts/coletar.mjs",
-    "coletar:precos": "node scripts/coletar-precos.mjs"
+    "coletar:precos": "node scripts/coletar-precos.mjs",
+    "coletar:irani": "node scripts/coletar-irani.mjs"
   },
   "keywords": [
     "precos",

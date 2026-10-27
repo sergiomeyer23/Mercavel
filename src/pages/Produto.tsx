@@ -183,7 +183,7 @@ export default function Produto() {
           </div>
         )}
         <p className="mt-2 text-xs text-gray-400">
-          preço de e-commerce, coletado no site do mercado · pode mudar a qualquer momento · preços com mais de 7 dias aparecem em destaque
+          preços coletados nos sites e encartes dos mercados (confira o tipo: online, promoção ou clube) · podem mudar a qualquer momento · preços com mais de 7 dias aparecem em destaque
         </p>
       </div>
 

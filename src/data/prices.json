@@ -165,6 +165,21 @@
     "marketBrand": "Atacadão S/A"
   },
   {
+    "id": "irani--banana-prata-kg",
+    "productId": "banana-prata-kg",
+    "marketId": "irani",
+    "price": 3.89,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T19:58:44.892Z",
+    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
+    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Banana Prata Kg",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--banana-prata-kg",
     "productId": "banana-prata-kg",
     "marketId": "muffato",
@@ -178,6 +193,21 @@
     "marketEan": "666",
     "marketProductName": "Banana Prata Kg",
     "marketBrand": "Hortifruti"
+  },
+  {
+    "id": "irani--batata-inglesa-kg",
+    "productId": "batata-inglesa-kg",
+    "marketId": "irani",
+    "price": 3.89,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T19:58:44.892Z",
+    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
+    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Batata Monalisa Kg",
+    "marketBrand": null
   },
   {
     "id": "atacadao--batata-palito-congelada-2kg",
@@ -225,6 +255,21 @@
     "marketBrand": "Café do Ponto"
   },
   {
+    "id": "irani--cafe-torrado-500g",
+    "productId": "cafe-torrado-500g",
+    "marketId": "irani",
+    "price": 19.9,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T19:58:44.892Z",
+    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
+    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Cafe Caboclo 500g Vacuo Tradicional",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--cafe-torrado-500g",
     "productId": "cafe-torrado-500g",
     "marketId": "muffato",
@@ -238,6 +283,21 @@
     "marketEan": "7896089010916",
     "marketProductName": "Café Caboclo Torrado e Moído Tradicional Vácuo 500g",
     "marketBrand": "Caboclo"
+  },
+  {
+    "id": "puppo--cafe-torrado-500g",
+    "productId": "cafe-torrado-500g",
+    "marketId": "puppo",
+    "price": 19.99,
+    "priceType": "CLUB",
+    "collectedAt": "2026-10-27T19:58:57.604Z",
+    "source": "encarte do Puppo (preço Clube Puppo, 15/10/2026 a 01/11/2026)",
+    "sourceUrl": "https://www.superpuppo.com.br/uploads/SHOW%20DE%20OFERTAS%20-%20SUPER%20PUPPO%2015-10%20A%2001-11-26.pdf",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Café Super Puppo 500g Vácuo",
+    "marketBrand": null
   },
   {
     "id": "festval--cerveja-pilsen-350ml",
@@ -313,6 +373,21 @@
     "marketEan": "7908625604425",
     "marketProductName": "Bife de Coxão Mole Swift 1kg",
     "marketBrand": "Swift"
+  },
+  {
+    "id": "irani--coxao-mole-kg",
+    "productId": "coxao-mole-kg",
+    "marketId": "irani",
+    "price": 41.99,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T19:58:44.892Z",
+    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
+    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Coxao Mole Bovino Peca/Pedaco Resf Kg Caixaria",
+    "marketBrand": null
   },
   {
     "id": "muffato--coxao-mole-kg",
@@ -433,6 +508,21 @@
     "marketEan": "7896419431015",
     "marketProductName": "Farinha de Trigo Tipo 1 Anaconda Pacote 1kg",
     "marketBrand": "Anaconda"
+  },
+  {
+    "id": "puppo--farinha-trigo-1kg",
+    "productId": "farinha-trigo-1kg",
+    "marketId": "puppo",
+    "price": 3.29,
+    "priceType": "CLUB",
+    "collectedAt": "2026-10-27T19:58:57.604Z",
+    "source": "encarte do Puppo (preço Clube Puppo, 15/10/2026 a 01/11/2026)",
+    "sourceUrl": "https://www.superpuppo.com.br/uploads/SHOW%20DE%20OFERTAS%20-%20SUPER%20PUPPO%2015-10%20A%2001-11-26.pdf",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Farinha Trigo Anniela 1kg Tp 1",
+    "marketBrand": null
   },
   {
     "id": "atacadao--feijao-carioca-1kg",
@@ -735,6 +825,21 @@
     "marketBrand": "Predilecta"
   },
   {
+    "id": "puppo--milho-verde-lata",
+    "productId": "milho-verde-lata",
+    "marketId": "puppo",
+    "price": 2.89,
+    "priceType": "CLUB",
+    "collectedAt": "2026-10-27T19:58:57.604Z",
+    "source": "encarte do Puppo (preço Clube Puppo, 15/10/2026 a 01/11/2026)",
+    "sourceUrl": "https://www.superpuppo.com.br/uploads/SHOW%20DE%20OFERTAS%20-%20SUPER%20PUPPO%2015-10%20A%2001-11-26.pdf",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Milho Verde Sofruta 170g Lata",
+    "marketBrand": null
+  },
+  {
     "id": "festval--molho-tomate-340g",
     "productId": "molho-tomate-340g",
     "marketId": "festval",
@@ -928,6 +1033,21 @@
     "marketEan": "431545",
     "marketProductName": "Picanha Carne Bovina Steak Brasa Forte Kg",
     "marketBrand": "Brasa Forte"
+  },
+  {
+    "id": "puppo--picanha-kg",
+    "productId": "picanha-kg",
+    "marketId": "puppo",
+    "price": 49.99,
+    "priceType": "CLUB",
+    "collectedAt": "2026-10-27T19:58:57.604Z",
+    "source": "encarte do Puppo (preço Clube Puppo, 15/10/2026 a 01/11/2026)",
+    "sourceUrl": "https://www.superpuppo.com.br/uploads/SHOW%20DE%20OFERTAS%20-%20SUPER%20PUPPO%2015-10%20A%2001-11-26.pdf",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Picanha Sul Beef Kg Fatiada a Vácuo",
+    "marketBrand": null
   },
   {
     "id": "atacadao--pilha-aa-4un",

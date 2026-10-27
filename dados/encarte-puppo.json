@@ -1,0 +1,11 @@
+{
+  "observacao": "Precos lidos a mao do encarte 'Show de Ofertas' do Super Puppo (https://www.superpuppo.com.br/catalogos). O Puppo nao tem loja online. Os precos sao do Clube Puppo (o encarte traz tambem um preco normal menor destaque, que nao foi usado) e so valem na validade do encarte. Entram so itens com o mesmo tipo e tamanho de um produto do catalogo.",
+  "validade": "15/10/2026 a 01/11/2026",
+  "pdf": "https://www.superpuppo.com.br/uploads/SHOW%20DE%20OFERTAS%20-%20SUPER%20PUPPO%2015-10%20A%2001-11-26.pdf",
+  "itens": [
+    { "produtoId": "cafe-torrado-500g", "nome": "Café Super Puppo 500g Vácuo", "preco": 19.99 },
+    { "produtoId": "farinha-trigo-1kg", "nome": "Farinha Trigo Anniela 1kg Tp 1", "preco": 3.29 },
+    { "produtoId": "milho-verde-lata", "nome": "Milho Verde Sofruta 170g Lata", "preco": 2.89 },
+    { "produtoId": "picanha-kg", "nome": "Picanha Sul Beef Kg Fatiada a Vácuo", "preco": 49.99 }
+  ]
+}
