@@ -37,7 +37,7 @@ export default function MarketLogo({ mercado, tamanho = 'md' }: MarketLogoProps)
   if (mercado.logo && !naoCarregou) {
     return (
       <img
-        src={mercado.logo}
+        src={import.meta.env.BASE_URL + mercado.logo.replace(/^\//, '')}
         alt=""
         className={`${LOGO[tamanho]} w-auto shrink-0 bg-white object-contain p-0.5`}
         onError={() => setNaoCarregou(true)}

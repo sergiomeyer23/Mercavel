@@ -1,0 +1,32 @@
+name: Coletar preços
+
+# roda todo dia de manhã (horário de Brasília) e também sob demanda
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Coletar
+        run: node scripts/coletar-precos.mjs
+      - name: Gravar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data dados
+          if git diff --cached --quiet; then
+            echo "nada mudou"
+          else
+            git commit -m "chore: atualiza preços coletados"
+            git push
+          fi
