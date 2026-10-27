@@ -20,7 +20,14 @@ const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 const MERCADOS = {
   muffato: { nome: 'Super Muffato', shortName: 'Muffato', base: 'https://www.supermuffato.com.br' },
-  festval: { nome: 'Festval', shortName: 'Festval', base: 'https://www.festval.com' },
+  // o Festval vende por loja: o catalogo mostra o vendedor padrao (sem estoque em tudo).
+  // pra saber o que da pra comprar em Cascavel a gente simula o carrinho com o CEP e as lojas da regiao
+  festval: {
+    nome: 'Festval',
+    shortName: 'Festval',
+    base: 'https://www.festval.com',
+    simulacao: { cep: '85810-000', vendedores: ['meufestvalcarlosgomes', 'meufestvalcatuai', '1'] },
+  },
   atacadao: { nome: 'Atacadao', shortName: 'Atacadao', base: 'https://www.atacadao.com.br/io' },
 }
 
@@ -45,11 +52,13 @@ const gravarJson = async (caminho, dados) =>
  * IsAvailable=false em tudo) e o que fez o Atacadao devolver Price=0. O sinal
  * confiavel de "sem oferta" e' o preco, que ja vem filtrado da revisao.
  */
-function ehSeguro(resultado) {
+function ehSeguro(resultado, aprovadoNaMao = false) {
   const escolhido = resultado.escolhido
-  if (resultado.confianca !== 'alta') return false
   if (!escolhido) return false
-  if ((escolhido.motivosRevisao ?? []).length > 0) return false
+  if (!aprovadoNaMao) {
+    if (resultado.confianca !== 'alta') return false
+    if ((escolhido.motivosRevisao ?? []).length > 0) return false
+  }
   if (!escolhido.ean) return false
   if (!(escolhido.preco > 0)) return false
   return true
@@ -65,14 +74,15 @@ function motivosDaRecusa(resultado) {
   return motivos.join(', ') || 'confianca alta'
 }
 
-function montarVinculos(revisao) {
+function montarVinculos(revisao, aprovacoes) {
   const vinculos = []
   const pendentes = []
   const eansUsados = new Map()
 
   for (const mercado of revisao.mercados) {
     for (const resultado of mercado.resultados) {
-      if (!ehSeguro(resultado)) {
+      const aprovado = aprovacoes.some((a) => a.produtoId === resultado.produtoId && a.mercadoId === mercado.mercado)
+      if (!ehSeguro(resultado, aprovado)) {
         pendentes.push({
           produtoId: resultado.produtoId,
           mercadoId: mercado.mercado,
@@ -139,6 +149,7 @@ async function buscarPorEan(mercado, ean) {
 
       return {
         preco,
+        skuId: item.itemId,
         disponivel: Boolean(oferta.IsAvailable),
         nomeNaLoja: produto.productName,
         marcaNaLoja: produto.brand ?? null,
@@ -151,12 +162,31 @@ async function buscarPorEan(mercado, ean) {
   return null
 }
 
+/** Simula o carrinho com o CEP de Cascavel e devolve preco e estoque de verdade (ou null). */
+async function simularCarrinho(mercado, skuId) {
+  const { cep, vendedores } = mercado.simulacao
+  for (const vendedor of vendedores) {
+    const resposta = await fetch(`${mercado.base}/api/checkout/pub/orderforms/simulation?sc=1`, {
+      method: 'POST',
+      headers: { ...CABECALHOS, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: [{ id: skuId, quantity: 1, seller: vendedor }], country: 'BRA', postalCode: cep }),
+    })
+    if (!resposta.ok) continue
+    const item = (await resposta.json()).items?.[0]
+    if (item?.availability === 'available' && item.sellingPrice > 0) {
+      return { preco: item.sellingPrice / 100, disponivel: true }
+    }
+  }
+  return { preco: null, disponivel: false }
+}
+
 // ------------------------------------------------- principal
 
 const revisao = await lerJson('dados/revisao.json')
 const produtos = await lerJson('src/data/products.json')
 
-const { vinculos, pendentes } = montarVinculos(revisao)
+const aprovacoes = (await lerJson('dados/aprovacoes.json')).aprovados
+const { vinculos, pendentes } = montarVinculos(revisao, aprovacoes)
 
 console.log(`vinculos aprovados: ${vinculos.length}`)
 console.log(`pendentes de revisao: ${pendentes.length}`)
@@ -190,6 +220,11 @@ for (const vinculo of vinculos) {
   const mercado = MERCADOS[vinculo.mercadoId]
   try {
     const oferta = await buscarPorEan(mercado, vinculo.eanLoja)
+    if (oferta && mercado.simulacao) {
+      const real = await simularCarrinho(mercado, oferta.skuId)
+      oferta.disponivel = real.disponivel
+      if (real.preco) oferta.preco = real.preco
+    }
     if (!oferta) {
       semOferta++
       process.stdout.write('x')
