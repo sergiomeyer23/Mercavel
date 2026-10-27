@@ -30,6 +30,21 @@
     "marketBrand": "Caravella"
   },
   {
+    "id": "irani--acucar-refinado-1kg",
+    "productId": "acucar-refinado-1kg",
+    "marketId": "irani",
+    "price": 4.49,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/acucar-refinado-alto-alegre-1kg-189915",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Açúcar Refinado Alto Alegre 1kg",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--acucar-refinado-1kg",
     "productId": "acucar-refinado-1kg",
     "marketId": "muffato",
@@ -73,6 +88,21 @@
     "marketEan": "7898014855098",
     "marketProductName": "Água Mineral Sferriê sem Gás 1,5L",
     "marketBrand": "Sferriê"
+  },
+  {
+    "id": "irani--agua-mineral-15l",
+    "productId": "agua-mineral-15l",
+    "marketId": "irani",
+    "price": 2.89,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/agua-mineral-sferrie-sem-gas-15-litro-190729",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Água Mineral Sferriê Sem Gás 1,5 litro",
+    "marketBrand": null
   },
   {
     "id": "festval--alface-crespa-un",
@@ -135,6 +165,21 @@
     "marketBrand": "Prato Fino"
   },
   {
+    "id": "irani--arroz-tipo1-5kg",
+    "productId": "arroz-tipo1-5kg",
+    "marketId": "irani",
+    "price": 17.49,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/arroz-polido-carreteiro-tp1-5kg-195697",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Arroz Polido Carreteiro Tp1 5Kg",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--arroz-tipo1-5kg",
     "productId": "arroz-tipo1-5kg",
     "marketId": "muffato",
@@ -163,6 +208,21 @@
     "marketEan": "7896009301131",
     "marketProductName": "Atum Ralado em Óleo Coqueiro 170g",
     "marketBrand": "Coqueiro"
+  },
+  {
+    "id": "irani--atum-ralado-lata",
+    "productId": "atum-ralado-lata",
+    "marketId": "irani",
+    "price": 8.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/atum-ralado-nautique-170g-oleo-192927",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Atum Ralado Nautique 170g Óleo",
+    "marketBrand": null
   },
   {
     "id": "muffato--atum-ralado-lata",
@@ -200,9 +260,9 @@
     "marketId": "irani",
     "price": 3.89,
     "priceType": "PROMOTION",
-    "collectedAt": "2026-10-27T19:58:44.892Z",
-    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
-    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/banana-prata-kg-189691",
     "availability": "IN_STOCK",
     "marketOriginalCategory": null,
     "marketEan": null,
@@ -230,9 +290,9 @@
     "marketId": "irani",
     "price": 3.89,
     "priceType": "PROMOTION",
-    "collectedAt": "2026-10-27T19:58:44.892Z",
-    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
-    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/batata-monalisa-kg-189801",
     "availability": "IN_STOCK",
     "marketOriginalCategory": null,
     "marketEan": null,
@@ -253,6 +313,21 @@
     "marketEan": "7897200607671",
     "marketProductName": "Batata Pré-Frita Canção Congelada 2kg",
     "marketBrand": "Canção"
+  },
+  {
+    "id": "irani--batata-palito-congelada-2kg",
+    "productId": "batata-palito-congelada-2kg",
+    "marketId": "irani",
+    "price": 36.98,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/batata-palito-congelada-mais-batata-2-kg-194027",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Batata Palito Congelada Mais Batata 2 kg",
+    "marketBrand": null
   },
   {
     "id": "muffato--batata-palito-congelada-2kg",
@@ -304,14 +379,14 @@
     "productId": "cafe-torrado-500g",
     "marketId": "irani",
     "price": 19.9,
-    "priceType": "PROMOTION",
-    "collectedAt": "2026-10-27T19:58:44.892Z",
-    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
-    "sourceUrl": "https://www.superirani.com.br/ofertas",
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/cafe-piquiri-500g-vacuo-194035",
     "availability": "IN_STOCK",
     "marketOriginalCategory": null,
     "marketEan": null,
-    "marketProductName": "Cafe Caboclo 500g Vacuo Tradicional",
+    "marketProductName": "Café Piquiri 500g Vácuo",
     "marketBrand": null
   },
   {
@@ -360,6 +435,21 @@
     "marketBrand": "Atacadão S/A"
   },
   {
+    "id": "irani--cebola-nacional-kg",
+    "productId": "cebola-nacional-kg",
+    "marketId": "irani",
+    "price": 8.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/cebola-kg-190042",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Cebola Kg",
+    "marketBrand": null
+  },
+  {
     "id": "festval--cerveja-pilsen-350ml",
     "productId": "cerveja-pilsen-350ml",
     "marketId": "festval",
@@ -373,6 +463,21 @@
     "marketEan": "7897395020132",
     "marketProductName": "Cerveja Pilsen Lata Itaipava 350ml",
     "marketBrand": "Itaipava"
+  },
+  {
+    "id": "irani--cerveja-pilsen-350ml",
+    "productId": "cerveja-pilsen-350ml",
+    "marketId": "irani",
+    "price": 2.79,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/cerveja-colonia-pilsen-350ml-lata-unidade-190147",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Cerveja Colônia Pilsen 350ml Lata Unidade",
+    "marketBrand": null
   },
   {
     "id": "atacadao--coxa-sobrecoxa-kg",
@@ -405,6 +510,21 @@
     "marketBrand": "Copacol"
   },
   {
+    "id": "irani--coxa-sobrecoxa-kg",
+    "productId": "coxa-sobrecoxa-kg",
+    "marketId": "irani",
+    "price": 10.98,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/coxa-scoxa-frango-especial-kg-congelada-193423",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Coxa e Sobrecoxa Frango Especial Kg Congelada",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--coxa-sobrecoxa-kg",
     "productId": "coxa-sobrecoxa-kg",
     "marketId": "muffato",
@@ -433,21 +553,6 @@
     "marketEan": "7908625604425",
     "marketProductName": "Bife de Coxão Mole Swift 1kg",
     "marketBrand": "Swift"
-  },
-  {
-    "id": "irani--coxao-mole-kg",
-    "productId": "coxao-mole-kg",
-    "marketId": "irani",
-    "price": 41.99,
-    "priceType": "PROMOTION",
-    "collectedAt": "2026-10-27T19:58:44.892Z",
-    "source": "ofertas do dia do Irani (27/10/2026 - 28/10/2026)",
-    "sourceUrl": "https://www.superirani.com.br/ofertas",
-    "availability": "IN_STOCK",
-    "marketOriginalCategory": null,
-    "marketEan": null,
-    "marketProductName": "Coxao Mole Bovino Peca/Pedaco Resf Kg Caixaria",
-    "marketBrand": null
   },
   {
     "id": "muffato--coxao-mole-kg",
@@ -495,6 +600,21 @@
     "marketBrand": "Colgate"
   },
   {
+    "id": "irani--creme-dental-90g",
+    "productId": "creme-dental-90g",
+    "marketId": "irani",
+    "price": 5.79,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/creme-dental-sorriso-kolynos-90g-195953",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Creme Dental Sorriso Kolynos 90g",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--creme-dental-90g",
     "productId": "creme-dental-90g",
     "marketId": "muffato",
@@ -508,6 +628,21 @@
     "marketEan": "7509546700342",
     "marketProductName": "Creme Dental Sorriso Fresh Branqueador 90g",
     "marketBrand": "Sorriso"
+  },
+  {
+    "id": "irani--desinfetante-2l",
+    "productId": "desinfetante-2l",
+    "marketId": "irani",
+    "price": 9.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/desinfetante-girando-sol-2l-pinho-194904",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Desinfetante Girando Sol 2l Pinho",
+    "marketBrand": null
   },
   {
     "id": "atacadao--detergente-neutro-500ml",
@@ -540,6 +675,21 @@
     "marketBrand": "Limpol"
   },
   {
+    "id": "irani--detergente-neutro-500ml",
+    "productId": "detergente-neutro-500ml",
+    "marketId": "irani",
+    "price": 2.49,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/detergente-liquido-coopclean-500ml-neutro-194958",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Detergente Liquido Coopclean 500ml Neutro",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--detergente-neutro-500ml",
     "productId": "detergente-neutro-500ml",
     "marketId": "muffato",
@@ -568,6 +718,21 @@
     "marketEan": "7896419431015",
     "marketProductName": "Farinha de Trigo Tipo 1 Anaconda Pacote 1kg",
     "marketBrand": "Anaconda"
+  },
+  {
+    "id": "irani--farinha-trigo-1kg",
+    "productId": "farinha-trigo-1kg",
+    "marketId": "irani",
+    "price": 4.29,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/farinha-de-trigo-andre-1kg-191426",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Farinha de Trigo André 1kg",
+    "marketBrand": null
   },
   {
     "id": "puppo--farinha-trigo-1kg",
@@ -615,6 +780,21 @@
     "marketBrand": "RESERVA"
   },
   {
+    "id": "irani--feijao-carioca-1kg",
+    "productId": "feijao-carioca-1kg",
+    "marketId": "irani",
+    "price": 8.49,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/feijao-carioca-itasa-1kg-190145",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Feijão carioca Itasa 1kg",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--feijao-carioca-1kg",
     "productId": "feijao-carioca-1kg",
     "marketId": "muffato",
@@ -658,6 +838,21 @@
     "marketEan": "7891515515348",
     "marketProductName": "Filé de Peito de Frango Congelado sem Pele sem Osso Bio Sadia 1kg",
     "marketBrand": "Sadia"
+  },
+  {
+    "id": "irani--file-peito-frango-kg",
+    "productId": "file-peito-frango-kg",
+    "marketId": "irani",
+    "price": 33.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/file-peito-frango-kg-resfriado-193466",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Filé de Peito de Frango Kg Resfriado",
+    "marketBrand": null
   },
   {
     "id": "muffato--file-peito-frango-kg",
@@ -735,6 +930,21 @@
     "marketBrand": "Batavo"
   },
   {
+    "id": "irani--leite-uht-integral-1l",
+    "productId": "leite-uht-integral-1l",
+    "marketId": "irani",
+    "price": 4.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/leite-lider-1-litro-integral-190333",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Leite UHT Lider 1L Integral",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--leite-uht-integral-1l",
     "productId": "leite-uht-integral-1l",
     "marketId": "muffato",
@@ -795,6 +1005,21 @@
     "marketBrand": "Nissin"
   },
   {
+    "id": "irani--macarrao-espaguete-500g",
+    "productId": "macarrao-espaguete-500g",
+    "marketId": "irani",
+    "price": 3.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/macarrao-semola-todeschini-500g-espaguete-5-191228",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Macarrão Sêmola Todeschini 500g Espaguete 5",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--macarrao-espaguete-500g",
     "productId": "macarrao-espaguete-500g",
     "marketId": "muffato",
@@ -840,6 +1065,21 @@
     "marketBrand": "Aviação"
   },
   {
+    "id": "irani--manteiga-200g",
+    "productId": "manteiga-200g",
+    "marketId": "irani",
+    "price": 6.99,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/manteiga-elege-200g-tablete-com-sal-191082",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Manteiga Elege 200g Tablete Com Sal",
+    "marketBrand": null
+  },
+  {
     "id": "atacadao--milho-verde-lata",
     "productId": "milho-verde-lata",
     "marketId": "atacadao",
@@ -868,6 +1108,21 @@
     "marketEan": "7891150058903",
     "marketProductName": "Milho Verde em Conserva Knorr Lata 170g",
     "marketBrand": "Knorr"
+  },
+  {
+    "id": "irani--milho-verde-lata",
+    "productId": "milho-verde-lata",
+    "marketId": "irani",
+    "price": 3.49,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/milho-verde-170g-bonare-194297",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Milho Verde 170g Bonare",
+    "marketBrand": null
   },
   {
     "id": "muffato--milho-verde-lata",
@@ -930,6 +1185,21 @@
     "marketBrand": "Suavit"
   },
   {
+    "id": "irani--oleo-soja-900ml",
+    "productId": "oleo-soja-900ml",
+    "marketId": "irani",
+    "price": 6.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/oleo-de-soja-vitaliv-900ml-pet-189998",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Óleo Soja Coamo 900ml",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--oleo-soja-900ml",
     "productId": "oleo-soja-900ml",
     "marketId": "muffato",
@@ -958,6 +1228,21 @@
     "marketEan": "7896632312023",
     "marketProductName": "Ovo Branco Grande 12 un",
     "marketBrand": "Atacadão S/A"
+  },
+  {
+    "id": "irani--ovo-branco-dz",
+    "productId": "ovo-branco-dz",
+    "marketId": "irani",
+    "price": 7.49,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/ovos-brancos-c12-real-agro-193662",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Ovos Brancos C/12 Real Agro",
+    "marketBrand": null
   },
   {
     "id": "atacadao--pao-forma-500g",
@@ -1050,6 +1335,21 @@
     "marketBrand": "Duetto"
   },
   {
+    "id": "irani--papel-higienico-12un",
+    "productId": "papel-higienico-12un",
+    "marketId": "irani",
+    "price": 15.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/papel-higienico-atualle-folha-dupla-c12-192965",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Papel Higiênico Atualle Folha Dupla C/12",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--papel-higienico-12un",
     "productId": "papel-higienico-12un",
     "marketId": "muffato",
@@ -1078,6 +1378,21 @@
     "marketEan": "69515",
     "marketProductName": "Carne Bovina Picanha Bordon Resf Preço por quilo na peça",
     "marketBrand": "Bordon"
+  },
+  {
+    "id": "irani--picanha-kg",
+    "productId": "picanha-kg",
+    "marketId": "irani",
+    "price": 99.9,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/picanha-bovina-astra-kg-vacuo-193456",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Picanha Bovina Astra kg VÁCUO",
+    "marketBrand": null
   },
   {
     "id": "muffato--picanha-kg",
@@ -1138,6 +1453,21 @@
     "marketEan": "041333001029",
     "marketProductName": "Pilha Alcalina AA Duracell 4 Unidades",
     "marketBrand": "Duracell"
+  },
+  {
+    "id": "irani--pilha-aa-4un",
+    "productId": "pilha-aa-4un",
+    "marketId": "irani",
+    "price": 18.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/pilha-alcalina-rayovac-aa-c4-lv4-pg3-pequena-192713",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Pilha Alcalina Rayovac Aa C/4 Lv4 Pg3 Pequena",
+    "marketBrand": null
   },
   {
     "id": "muffato--pizza-congelada-460g",
@@ -1230,6 +1560,21 @@
     "marketBrand": "KAPO"
   },
   {
+    "id": "irani--refrigerante-guarana-2l",
+    "productId": "refrigerante-guarana-2l",
+    "marketId": "irani",
+    "price": 5.59,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/refrigerante-taubaiana-2l-guarana-191019",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Refrigerante Taubaiana 2l Guaraná",
+    "marketBrand": null
+  },
+  {
     "id": "muffato--refrigerante-guarana-2l",
     "productId": "refrigerante-guarana-2l",
     "marketId": "muffato",
@@ -1258,6 +1603,21 @@
     "marketEan": "7891097107269",
     "marketProductName": "Requeijão Cremoso Président Queijo Azul 200g",
     "marketBrand": "Président"
+  },
+  {
+    "id": "irani--requeijao-200g",
+    "productId": "requeijao-200g",
+    "marketId": "irani",
+    "price": 8.49,
+    "priceType": "PROMOTION",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/requeijao-cremoso-catupiry-200g-tradicional-191050",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Requeijão Cremoso Catupiry 200g Tradicional",
+    "marketBrand": null
   },
   {
     "id": "muffato--requeijao-200g",
@@ -1303,6 +1663,21 @@
     "marketEan": "7890704806441",
     "marketProductName": "Sabonete Barra Hidratante Erva-Doce & Óleos Nivea Flow Pack 85g",
     "marketBrand": "Nivea"
+  },
+  {
+    "id": "irani--sabonete-85g",
+    "productId": "sabonete-85g",
+    "marketId": "irani",
+    "price": 2.99,
+    "priceType": "ONLINE",
+    "collectedAt": "2026-10-27T23:14:15.524Z",
+    "source": "loja online do Irani (Av. Brasil, Cascavel)",
+    "sourceUrl": "https://www.irani.delivery/pacaembu/produto/m/sabonete-em-barra-nivea-85g-erva-doce-oleos-191380",
+    "availability": "IN_STOCK",
+    "marketOriginalCategory": null,
+    "marketEan": null,
+    "marketProductName": "Sabonete em Barra Nivea 85g Erva Doce & Óleos",
+    "marketBrand": null
   },
   {
     "id": "muffato--sabonete-85g",

@@ -32,7 +32,8 @@ npm run lint             eslint
 npm run coletar          fase 1: compara o catálogo com as ofertas dos sites e gera dados/revisao.json
 npm run coletar:precos   fase 2: aprova os casamentos seguros, consulta cada código de barras e grava
                          src/data/prices.json, dados/vinculos.json, dados/pendentes.json e dados/coleta.json
-npm run coletar:irani    lê as ofertas do dia do Irani (só itens equivalentes ao catálogo, tipo promoção)
+npm run coletar:irani    abre a loja online do Irani num navegador, busca cada item e guarda o mais barato que
+                         for equivalente ao catálogo (mesmo tipo e tamanho)
 ```
 
 a pasta `dados/` guarda o que é intermediário da coleta (revisão, vínculos, pendentes e o resumo da última
@@ -40,10 +41,13 @@ coleta). o que o site lê de verdade fica em `src/data`.
 
 ## Puppo e Irani
 
-nenhum dos dois tem API pública de loja online. o **Puppo** só publica encartes em PDF: os preços de
-`dados/encarte-puppo.json` foram lidos à mão (tipo clube, com validade do encarte). o **Irani** vende só
-pelo irani.delivery, então o site usa as ofertas do dia de superirani.com.br/ofertas (tipo promoção). nos
-dois casos entram só itens do mesmo tipo e tamanho do produto do catálogo, e são preços de validade curta.
+o **Irani** vende pelo irani.delivery (loja da Av. Brasil, Cascavel) e não tem API: o `coletar-irani.mjs`
+abre a loja num navegador, busca cada produto e só aceita oferta do mesmo tipo e tamanho do item do
+catálogo (as regras estão no próprio script). entre as equivalentes fica a mais barata. se aparece
+desconto, o preço vai como promoção.
+
+o **Puppo** não tem loja online, só encarte em PDF: os preços de `dados/encarte-puppo.json` foram lidos
+à mão e valem só na validade do encarte (preço do Clube Puppo).
 
 ## Automação
 
