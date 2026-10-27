@@ -22,13 +22,39 @@ pra gerar a versão de produção:
 npm run build
 ```
 
+## Scripts
+
+```
+npm run dev              servidor de desenvolvimento
+npm run build            build de produção
+npm test                 testes (vitest)
+npm run lint             eslint
+npm run coletar          fase 1: compara o catálogo com as ofertas dos sites e gera dados/revisao.json
+npm run coletar:precos   fase 2: aprova os casamentos seguros, consulta cada código de barras e grava
+                         src/data/prices.json, dados/vinculos.json, dados/pendentes.json e dados/coleta.json
+```
+
+a pasta `dados/` guarda o que é intermediário da coleta (revisão, vínculos, pendentes e o resumo da última
+coleta). o que o site lê de verdade fica em `src/data`.
+
+## Automação
+
+- `.github/workflows/ci.yml`: lint, testes e build em cada push e pull request
+- `.github/workflows/coletar-precos.yml`: roda a fase 2 todo dia e faz commit se os preços mudaram
+  (também dá pra disparar na mão pela aba Actions)
+- `.github/workflows/deploy.yml`: publica o site no GitHub Pages em `/Mercavel/`. pra ativar, vai em
+  Settings > Pages e escolhe "GitHub Actions" como fonte
+
 ## O que tem no site
 
 - home com busca, categorias, mercados e destaques
 - página de produto com tabela de preços por mercado (preço, tipo, origem do dado, data da coleta e diferença)
 - página de categoria com média por mercado
 - página de cada mercado com os produtos e preços dele
-- cesta de compras que compara o total em cada mercado (diferença em R$ e %)
+- cesta de compras que compara o total em cada mercado (diferença em R$ e %), mostra total parcial e os
+  itens que faltam em cada mercado e gera um link pra compartilhar a cesta
+- preço por kg/L e há quantos dias o preço foi coletado (acima de 7 dias aparece em destaque)
+- busca com várias palavras, ordenação por preço e filtros guardados na URL
 - dashboard com números gerais
 
 os preços marcam se são online ou de loja física, porque um não vale pro outro.
