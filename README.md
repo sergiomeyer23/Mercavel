@@ -25,35 +25,42 @@ npm run build
 ## Scripts
 
 ```
-npm run dev              servidor de desenvolvimento
-npm run build            build de produção
-npm test                 testes (vitest)
-npm run lint             eslint
-npm run coletar          fase 1: compara o catálogo com as ofertas dos sites e gera dados/revisao.json
-npm run coletar:precos   fase 2: aprova os casamentos seguros, consulta cada código de barras e grava
-                         src/data/prices.json, dados/vinculos.json, dados/pendentes.json e dados/coleta.json
-npm run coletar:irani    abre a loja online do Irani num navegador, busca cada item e guarda o mais barato que
-                         for equivalente ao catálogo (mesmo tipo e tamanho)
+npm run dev                                   servidor de desenvolvimento
+npm run build                                 build de produção
+npm test                                      testes (vitest)
+npm run lint                                  eslint
+npm run varrer -- --mercado muffato           varre o catálogo inteiro de um mercado (muffato, festval, atacadao)
+npm run montar                                junta o que foi varrido e gera a base do site
 ```
 
-a pasta `dados/` guarda o que é intermediário da coleta (revisão, vínculos, pendentes e o resumo da última
-coleta). o que o site lê de verdade fica em `src/data`.
+## Como a base é montada
 
-## Puppo e Irani
+em vez de procurar uns poucos itens escolhidos a dedo, o `scripts/varrer-catalogo.mjs` lê o catálogo
+público inteiro de cada mercado, **categoria por categoria** (a API da VTEX não entrega mais de 2.450
+resultados por consulta, então categoria grande é dividida nas subcategorias). dá pra rodar em fatias
+(`--parte 2/4`) e retomar (`--retomar`). o que sai fica em `dados/catalogo/` (fora do git).
 
-o **Irani** vende pelo irani.delivery (loja da Av. Brasil, Cascavel) e não tem API: o `coletar-irani.mjs`
-abre a loja num navegador, busca cada produto e só aceita oferta do mesmo tipo e tamanho do item do
-catálogo (as regras estão no próprio script). entre as equivalentes fica a mais barata. se aparece
-desconto, o preço vai como promoção.
+o `scripts/montar-base.mjs` casa o mesmo produto entre os mercados pelo **código de barras (EAN)**.
+o EAN é só a chave interna: não aparece no site, que mostra descrição, tamanho e preço. só entra produto
+que está em 2 ou mais mercados. a saída vai pra `src/data` em formato compacto (o `src/data.ts` expande)
+e o mapa id do site → EAN fica em `dados/ean-produtos.json`.
 
-o **Puppo** não tem loja online, só encarte em PDF: os preços de `dados/encarte-puppo.json` foram lidos
-à mão e valem só na validade do encarte (preço do Clube Puppo).
+- **Muffato**: lista pública do catálogo, preço do catálogo.
+- **Festval** e **Atacadão**: o preço e o estoque dependem da loja, então vêm da simulação de carrinho com
+  o CEP de Cascavel (no Atacadão, é a retirada na loja de Cascavel). no Atacadão o que não tem preço
+  lá é descartado.
+- **Irani** e **Puppo**: ainda fora da base nova. o Irani só tem loja renderizada (sem API) e o Puppo só
+  publica encarte em PDF. os scripts antigos ficam em `scripts/legado/`.
+- **Nota Paraná (Menor Preço)**: não uso. não achei API oficial e o uso automatizado parece não ser
+  permitido, então fica de fora.
+
+hortifruti e carnes a granel quase não entram: não têm código de barras, então não dá pra casar por EAN.
 
 ## Automação
 
 - `.github/workflows/ci.yml`: lint, testes e build em cada push e pull request
-- `.github/workflows/coletar-precos.yml`: roda a fase 2 todo dia e faz commit se os preços mudaram
-  (também dá pra disparar na mão pela aba Actions)
+- `.github/workflows/coletar-precos.yml`: todo dia varre cada mercado num job (o Atacadão em 4 fatias),
+  monta a base e faz commit se mudou. também dá pra disparar na mão pela aba Actions
 - `.github/workflows/deploy.yml`: publica o site no GitHub Pages em `/Mercavel/`. pra ativar, vai em
   Settings > Pages e escolhe "GitHub Actions" como fonte
 
@@ -101,45 +108,6 @@ as logos ficam em `public/logos/<slug>.png`, todas padronizadas do mesmo jeito: 
 recortada, mesmo formato (PNG) e no máximo 128px de altura, que é 2x o maior tamanho usado na tela.
 
 as logos são marca dos respectivos mercados, então o certo é usar com autorização deles.
-
-## Coleta de preços reais
-
-Os preços do site vêm dos scripts desta pasta. A coleta cobre os mercados que usam **VTEX**
-(Super Muffato, Festval e Atacadão), que expõem uma API pública de catálogo:
-
-```
-node scripts/coletar.mjs --mercados=muffato
-```
-
-O script busca cada produto do catálogo pelo nome, pontua os candidatos por nome e por **tamanho da
-embalagem** — comparar 5 kg com 1 kg é o erro que estraga a comparação de preço — e escreve uma lista
-de conferência em `dados/revisao.json`. Ele **não altera o catálogo**.
-
-A coleta tem duas fases, uma em cada script:
-
-1. `scripts/coletar.mjs` — busca cada produto pelo nome, pontua os candidatos e monta a lista de
-   conferência em `dados/revisao.json`.
-2. `scripts/coletar-precos.mjs` — aprova só os casamentos sem dúvida (`dados/vinculos.json`), coleta
-   cada um pelo código de barras e escreve `src/data/prices.json`. O que ficou duvidoso vai para
-   `dados/pendentes.json`.
-
-os códigos de barras são das lojas: o nosso produto é genérico ("Arroz Branco Tipo 1 5 kg") e não tem
-código próprio. Por isso o campo `ean` do catálogo é nulo e cada preço guarda o código, a marca e o nome
-do produto naquela loja — Muffato, Festval e Atacadão vendem marcas diferentes do mesmo item.
-
-Detalhe da API da VTEX que custa caro errar: o filtro por código de barras é
-`fq=alternateIds_Ean:<ean>` — com **dois pontos**. Com sinal de igual a API ignora o filtro em
-silêncio e devolve o catálogo inteiro.
-
-Situação de cada mercado:
-
-| Mercado | Coleta |
-|---|---|
-| Super Muffato, Festval, Atacadão | automática (API VTEX) |
-| Irani | por raspagem da página de ofertas |
-| Super Puppo | manual — a loja só existe no app Mercadapp, sem catálogo web |
-
-preço de e-commerce não é o mesmo preço da loja física, por isso o site separa por tipo de preço.
 
 ## Ideias pra depois
 
