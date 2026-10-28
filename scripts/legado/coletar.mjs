@@ -18,7 +18,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..')
+const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 
 // mercados que usam VTEX. o "base" inclui o prefixo /io que o Atacadao usa.
 const MERCADOS = {

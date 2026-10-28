@@ -16,7 +16,7 @@ import { readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..')
+const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 
 const MERCADOS = {
   muffato: { nome: 'Super Muffato', shortName: 'Muffato', base: 'https://www.supermuffato.com.br' },

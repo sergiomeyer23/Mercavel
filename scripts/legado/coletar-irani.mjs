@@ -17,7 +17,7 @@ import { chromium } from 'playwright'
 
 /* global document */
 
-const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..')
+const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const LOJA = 'https://www.irani.delivery/pacaembu'
 const PAUSA_MS = 1500
 

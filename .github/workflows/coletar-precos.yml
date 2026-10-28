@@ -1,34 +1,62 @@
 name: Coletar preços
 
-# roda todo dia de manhã (horário de Brasília) e também sob demanda
+# todo dia de manhã (horário de Brasília) e também sob demanda.
+# cada mercado é varrido num job separado (por categoria, dentro do script) e o montar junta tudo
 on:
   schedule:
     - cron: '0 9 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  coletar:
+  varrer:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        # o Atacadão tem 90 categorias e ~56 mil produtos: dividido em 4 fatias que rodam juntas
+        include:
+          - { mercado: muffato, parte: '1/1', nome: muffato }
+          - { mercado: festval, parte: '1/1', nome: festval }
+          - { mercado: atacadao, parte: '1/4', nome: atacadao-1 }
+          - { mercado: atacadao, parte: '2/4', nome: atacadao-2 }
+          - { mercado: atacadao, parte: '3/4', nome: atacadao-3 }
+          - { mercado: atacadao, parte: '4/4', nome: atacadao-4 }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Coletar
-        run: node scripts/coletar-precos.mjs
-      - name: Preços do Irani
-        run: |
-          npm ci --ignore-scripts
-          npx playwright install --with-deps chromium
-          node scripts/coletar-irani.mjs
+          node-version: 22
+      - run: node scripts/varrer-catalogo.mjs --mercado ${{ matrix.mercado }} --parte ${{ matrix.parte }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: catalogo-${{ matrix.nome }}
+          path: dados/catalogo
+          retention-days: 1
+
+  montar:
+    needs: varrer
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # cada artefato traz dados/catalogo/<mercado>/*.json; juntos viram a pasta completa
+      - uses: actions/download-artifact@v4
+        with:
+          path: dados/catalogo
+          pattern: catalogo-*
+          merge-multiple: true
+      - run: node scripts/montar-base.mjs
       - name: Gravar alterações
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data dados
+          git add src/data dados/ean-produtos.json
           if git diff --cached --quiet; then
             echo "nada mudou"
           else
