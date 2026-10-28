@@ -23,9 +23,9 @@ export default function Dashboard() {
   // média de preço por categoria
   const medias = categories
     .map((cat) => {
-      const ids = products.filter((p) => p.categoryId === cat.id).map((p) => p.id)
+      const ids = new Set(products.filter((p) => p.categoryId === cat.id).map((p) => p.id))
       const valores = prices
-        .filter((pr) => ids.includes(pr.productId) && pr.availability === 'IN_STOCK')
+        .filter((pr) => ids.has(pr.productId) && pr.availability === 'IN_STOCK')
         .map((pr) => pr.price)
       return { cat, media: mediaValores(valores) }
     })

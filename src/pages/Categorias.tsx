@@ -15,9 +15,10 @@ export default function Categorias() {
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat) => {
-          const ids = products.filter((p) => p.categoryId === cat.id).map((p) => p.id)
+          const idsCat = products.filter((p) => p.categoryId === cat.id).map((p) => p.id)
+          const ids = new Set(idsCat)
           const valores = prices
-            .filter((pr) => ids.includes(pr.productId) && pr.availability === 'IN_STOCK')
+            .filter((pr) => ids.has(pr.productId) && pr.availability === 'IN_STOCK')
             .map((pr) => pr.price)
           const media = mediaValores(valores)
           return (
@@ -30,7 +31,7 @@ export default function Categorias() {
                 <IconeComida emoji={emojiDaCategoria(cat.id)} />
                 <div className="min-w-0 flex-1">
                   <h2 className="font-semibold text-gray-800">{cat.name}</h2>
-                  <span className="text-xs text-gray-400">{ids.length} produtos</span>
+                  <span className="text-xs text-gray-400">{idsCat.length} produtos</span>
                 </div>
               </div>
               <p className="mt-1 text-xs text-gray-400">{cat.description}</p>

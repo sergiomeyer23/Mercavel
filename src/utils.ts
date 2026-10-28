@@ -1,4 +1,4 @@
-import { markets, prices } from './data'
+import { markets, pricesByProduct, products } from './data'
 import type { Market, Price, PriceType } from './types'
 
 export function brl(valor: number) {
@@ -49,7 +49,7 @@ export function acharMarket(id: string): Market | undefined {
 // preços que davam pra comprar na data da coleta, do mais barato pro mais caro
 // (os que estão sem estoque ficam de fora)
 export function precosDoProduto(productId: string, tipo?: PriceType): Price[] {
-  let lista = prices.filter((p) => p.productId === productId && p.availability === 'IN_STOCK')
+  let lista = (pricesByProduct.get(productId) ?? []).filter((p) => p.availability === 'IN_STOCK')
   if (tipo) {
     lista = lista.filter((p) => p.priceType === tipo)
   }
@@ -96,4 +96,9 @@ export function precoPorUnidade(preco: number, quantidade: number, unidade: stri
   if (u === 'l') return { valor: preco / quantidade, rotulo: 'L' }
   if (u === 'ml') return { valor: (preco / quantidade) * 1000, rotulo: 'L' }
   return null
+}
+
+// primeiro produto (com preço em 2+ mercados) cujo nome casa com o padrão; usado nos destaques e na cesta de exemplo
+export function acharProdutoComparavel(padrao: RegExp) {
+  return products.find((p) => padrao.test(p.name) && precosDoProduto(p.id).length >= 2)
 }

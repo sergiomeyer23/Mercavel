@@ -39,6 +39,8 @@ export interface Product {
   quantity: number
   quantityUnit: string
   categoryId: string
+  // segundo nível da árvore do mercado (ex: "Açúcar e adoçantes"), só pra filtrar dentro da categoria
+  subcategory?: string | null
 }
 
 export interface Price {

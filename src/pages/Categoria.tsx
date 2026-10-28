@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { categories, markets, prices, products } from '../data'
 import Chip from '../components/Chip'
-import ProductCard from '../components/ProductCard'
+import GradeProdutos from '../components/GradeProdutos'
 import IconeComida from '../components/IconeComida'
 import { emojiDaCategoria } from '../emoji'
 import NaoEncontrada from './NaoEncontrada'
@@ -17,13 +17,13 @@ export default function Categoria() {
   if (!categoria) return <NaoEncontrada />
 
   const produtosDaCat = products.filter((p) => p.categoryId === categoria.id)
-  const ids = produtosDaCat.map((p) => p.id)
+  const ids = new Set(produtosDaCat.map((p) => p.id))
 
   // resumo por mercado: média dos preços que aquele mercado tem nessa categoria
   const resumo = markets
     .map((m) => {
       const valores = prices
-        .filter((pr) => pr.marketId === m.id && ids.includes(pr.productId) && pr.availability === 'IN_STOCK')
+        .filter((pr) => pr.marketId === m.id && ids.has(pr.productId) && pr.availability === 'IN_STOCK')
         .map((pr) => pr.price)
       return { mercado: m, media: mediaValores(valores), qtd: valores.length }
     })
@@ -160,11 +160,7 @@ export default function Categoria() {
             </Chip>
           </div>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {ordenados.map((info) => (
-            <ProductCard key={info.produto.id} produto={info.produto} />
-          ))}
-        </div>
+        <GradeProdutos produtos={ordenados.map((info) => info.produto)} />
       </div>
     </div>
   )

@@ -6,20 +6,22 @@ import MarketLogo from '../components/MarketLogo'
 import ProductCard from '../components/ProductCard'
 import IconeComida from '../components/IconeComida'
 import { emojiDaCategoria } from '../emoji'
-import { brl, caminhoDaBusca, mediaValores } from '../utils'
+import { acharProdutoComparavel, brl, caminhoDaBusca, mediaValores } from '../utils'
 
-const destaques = [
-  'arroz-tipo1-5kg',
-  'leite-uht-integral-1l',
-  'cafe-torrado-500g',
-  'detergente-neutro-500ml',
-  'refrigerante-cola-2l',
-  'file-peito-frango-kg',
-  'papel-higienico-12un',
-  'banana-prata-kg',
+// itens do dia a dia que quase todo mundo compra; pega o primeiro de cada tipo que tem preço em 2+ mercados
+const padroesDestaque = [
+  /^arroz .*\b5 ?kg/i,
+  /^leite .*integral.*\b1 ?l\b/i,
+  /^caf[eé] .*\b500 ?g/i,
+  /^detergente .*\b500 ?ml/i,
+  /^refrigerante .*\b2 ?l\b/i,
+  /^papel higi[eê]nico/i,
+  /^feij[aã]o .*\b1 ?kg/i,
+  /^a[cç][uú]car .*\b1 ?kg/i,
 ]
 
 export default function Home() {
+  const destaques = padroesDestaque.map((r) => acharProdutoComparavel(r)).filter((p) => p !== undefined)
   const navigate = useNavigate()
   const [busca, setBusca] = useState('')
 
@@ -33,9 +35,9 @@ export default function Home() {
   // média de preço por categoria (pra colocar no gráfico de barras)
   const medias = categories
     .map((cat) => {
-      const ids = products.filter((p) => p.categoryId === cat.id).map((p) => p.id)
+      const ids = new Set(products.filter((p) => p.categoryId === cat.id).map((p) => p.id))
       const valores = prices
-        .filter((pr) => ids.includes(pr.productId) && pr.availability === 'IN_STOCK')
+        .filter((pr) => ids.has(pr.productId) && pr.availability === 'IN_STOCK')
         .map((pr) => pr.price)
       return { cat, media: mediaValores(valores) }
     })
@@ -119,9 +121,9 @@ export default function Home() {
       <section>
         <h2 className="mb-3 text-lg font-bold text-gray-900">Produtos em destaque</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {destaques
-            .map((id) => products.find((p) => p.id === id))
-            .map((p) => (p ? <ProductCard key={p.id} produto={p} /> : null))}
+          {destaques.map((p) => (
+            <ProductCard key={p.id} produto={p} />
+          ))}
         </div>
       </section>
 

@@ -33,9 +33,15 @@ export default function Produto() {
   const maior = precos.length > 0 ? precos[precos.length - 1].price : null
   const unidadeRotulo = precoPorUnidade(1, produto.quantity, produto.quantityUnit)?.rotulo
   const categoria = categories.find((c) => c.id === produto.categoryId)
+  // parecidos: mesma subcategoria (ou categoria, se não tiver), dando preferência a quem tem 2+ mercados
   const relacionados = products
-    .filter((p) => p.categoryId === produto.categoryId && p.id !== produto.id)
+    .filter((p) =>
+      p.id !== produto.id && (produto.subcategory ? p.subcategory === produto.subcategory : p.categoryId === produto.categoryId),
+    )
+    .map((p) => ({ p, n: precosDoProduto(p.id).length }))
+    .sort((a, b) => b.n - a.n)
     .slice(0, 8)
+    .map((x) => x.p)
 
   return (
     <div className="space-y-6">
@@ -56,7 +62,7 @@ export default function Produto() {
       <div className="rounded-xl border border-gray-200 bg-white p-5">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div className="flex items-center gap-4">
-            <IconeComida emoji={emojiDoProduto(produto.id, produto.categoryId)} tamanho="lg" />
+            <IconeComida emoji={emojiDoProduto(produto.name, produto.subcategory, produto.categoryId)} tamanho="lg" />
             <div>
               <h1 className="text-xl font-bold text-gray-900">{produto.name}</h1>
               <p className="mt-1 text-sm text-gray-500">
@@ -194,7 +200,7 @@ export default function Produto() {
 
       {relacionados.length > 0 && (
         <div>
-          <h2 className="mb-2 text-sm font-bold text-gray-900">outros produtos de {categoria?.name}</h2>
+          <h2 className="mb-2 text-sm font-bold text-gray-900">parecidos com este</h2>
           <div className="flex flex-wrap gap-2">
             {relacionados.map((p) => (
               <Link

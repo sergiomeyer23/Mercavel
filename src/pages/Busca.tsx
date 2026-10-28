@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from 'react-router-dom'
 import { categories, products } from '../data'
 import Chip from '../components/Chip'
-import ProductCard from '../components/ProductCard'
+import GradeProdutos from '../components/GradeProdutos'
 import { precosDoProduto } from '../utils'
 
 function semAcento(texto: string) {
@@ -32,12 +32,16 @@ export default function Busca() {
   })
 
   const filtrados = (categoria === 'todas' ? achados : achados.filter((p) => p.categoryId === categoria)).map(
-    (p) => ({ produto: p, menor: precosDoProduto(p.id)[0]?.price ?? null }),
+    (p) => {
+      const ps = precosDoProduto(p.id)
+      return { produto: p, menor: ps[0]?.price ?? null, n: ps.length }
+    },
   )
   // produtos sem preço sempre vão pro fim da lista
   filtrados.sort((a, b) => {
     if ((a.menor === null) !== (b.menor === null)) return a.menor === null ? 1 : -1
     if (ordem === 'menor') return (a.menor ?? 0) - (b.menor ?? 0)
+    if (ordem === 'relevancia' && a.n !== b.n) return b.n - a.n
     if (ordem === 'nome') return a.produto.name.localeCompare(b.produto.name, 'pt-BR')
     return 0
   })
@@ -88,11 +92,7 @@ export default function Busca() {
           </Link>
         </div>
       ) : (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {filtrados.map(({ produto }) => (
-            <ProductCard key={produto.id} produto={produto} />
-          ))}
-        </div>
+        <GradeProdutos produtos={filtrados.map((f) => f.produto)} />
       )}
     </div>
   )

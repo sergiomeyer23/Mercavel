@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Chip from '../components/Chip'
 import MarketLogo from '../components/MarketLogo'
+import { BotaoMais } from '../components/GradeProdutos'
 import { categories, markets, prices, products } from '../data'
 import NaoEncontrada from './NaoEncontrada'
 import { brl, corDoPreco, dataHora, mediaValores, nomeDoPreco } from '../utils'
@@ -10,6 +11,7 @@ export default function Mercado() {
   const { slug } = useParams()
   const mercado = markets.find((m) => m.slug === slug)
   const [catFiltro, setCatFiltro] = useState('todas')
+  const [limite, setLimite] = useState(48)
 
   if (!mercado) return <NaoEncontrada />
 
@@ -25,16 +27,19 @@ export default function Mercado() {
   // média de preço por categoria nesse mercado
   const porCategoria = categories
     .map((cat) => {
-      const daCat = produtos.filter((p) => p.categoryId === cat.id).map((p) => p.id)
+      const daCat = new Set(produtos.filter((p) => p.categoryId === cat.id).map((p) => p.id))
       const valores = obs
-        .filter((o) => daCat.includes(o.productId) && o.availability === 'IN_STOCK')
+        .filter((o) => daCat.has(o.productId) && o.availability === 'IN_STOCK')
         .map((o) => o.price)
-      return { cat, media: mediaValores(valores), qtd: daCat.length }
+      return { cat, media: mediaValores(valores), qtd: daCat.size }
     })
     .filter((r) => r.qtd > 0)
 
+  const obsPorProduto = new Map(obs.map((o) => [o.productId, o]))
   const produtosFiltrados =
     catFiltro === 'todas' ? produtos : produtos.filter((p) => p.categoryId === catFiltro)
+  const visiveis = produtosFiltrados.slice(0, limite)
+  const restam = Math.max(0, produtosFiltrados.length - limite)
 
   return (
     <div className="space-y-6">
@@ -152,8 +157,8 @@ export default function Mercado() {
               </tr>
             </thead>
             <tbody>
-              {produtosFiltrados.map((p) => {
-                const o = obs.find((x) => x.productId === p.id)
+              {visiveis.map((p) => {
+                const o = obsPorProduto.get(p.id)
                 if (!o) return null
                 const cat = categories.find((c) => c.id === p.categoryId)
                 return (
@@ -178,7 +183,8 @@ export default function Mercado() {
             </tbody>
           </table>
         </div>
-        preços coletados no site do mercado · e-commerce, não loja física
+        <BotaoMais restam={restam} onClick={() => setLimite((l) => l + 48)} />
+        <p className="mt-2 text-xs text-gray-400">preços coletados no site do mercado · e-commerce, não loja física</p>
       </div>
     </div>
   )

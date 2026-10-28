@@ -7,27 +7,23 @@ import { emojiDoProduto } from '../emoji'
 import { markets, products } from '../data'
 import { cestaDoTexto, cestaParaTexto, useCesta } from '../context/BasketContext'
 import type { PriceType } from '../types'
-import { acharMarket, brl, precosDoProduto } from '../utils'
+import { acharMarket, acharProdutoComparavel, brl, precosDoProduto } from '../utils'
 
-// cesta de exemplo pra não começar do zero. só entram produtos com preço em pelo
-// menos 2 mercados, senão a comparação da demo não faz sentido
-const candidatosModelo = [
-  'arroz-tipo1-5kg',
-  'feijao-carioca-1kg',
-  'cafe-torrado-500g',
-  'leite-uht-integral-1l',
-  'detergente-neutro-500ml',
-  'sabonete-85g',
-  'file-peito-frango-kg',
-  'refrigerante-cola-2l',
+// cesta de exemplo pra não começar do zero: itens básicos que têm preço em 2+ mercados
+const padroesModelo = [
+  /^arroz .*\b5 ?kg/i,
+  /^feij[aã]o .*\b1 ?kg/i,
+  /^caf[eé] .*\b500 ?g/i,
+  /^leite .*integral.*\b1 ?l\b/i,
+  /^a[cç][uú]car .*\b1 ?kg/i,
+  /^[oó]leo .*soja/i,
+  /^detergente .*\b500 ?ml/i,
+  /^papel higi[eê]nico/i,
 ]
 
-const cestaModelo = (() => {
-  const comparaveis = (id: string) => precosDoProduto(id).length >= 2
-  const fixos = candidatosModelo.filter(comparaveis)
-  const extras = products.map((p) => p.id).filter((id) => !fixos.includes(id) && comparaveis(id))
-  return [...fixos, ...extras].slice(0, 8)
-})()
+const cestaModelo = padroesModelo
+  .map((r) => acharProdutoComparavel(r)?.id)
+  .filter((id) => id !== undefined)
 
 export default function Cesta() {
   const { itens, qtdItens, adicionar, remover, mudarQtd, limpar, substituir } = useCesta()
@@ -252,7 +248,7 @@ export default function Cesta() {
                 <tr key={item.productId} className="border-b border-gray-50 last:border-0">
                   <td className="px-4 py-2.5">
                     <div className="flex items-center gap-3">
-                      <IconeComida emoji={emojiDoProduto(produto.id, produto.categoryId)} tamanho="sm" />
+                      <IconeComida emoji={emojiDoProduto(produto.name, produto.subcategory, produto.categoryId)} tamanho="sm" />
                       <div>
                         <Link to={`/produto/${produto.id}`} className="font-semibold text-gray-800 hover:text-marca-700">
                           {produto.name}
