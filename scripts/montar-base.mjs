@@ -6,7 +6,7 @@
  * - quem ficou sem par ganha um segundo passe por marca + tamanho + nome (scripts/lib/casar-por-nome.mjs),
  *   porque o mesmo produto pode ter codigos de barras diferentes. os pares ficam em dados/casamentos-por-nome.json
  * - so entra produto que aparece em 2 ou mais mercados (senao nao tem o que comparar)
- * - gera src/data/products.json, prices.json e dados/ean-produtos.json (id do site -> EAN)
+ * - gera src/data/products.json, prices.json e src/data/ean-produtos.json (id do site -> EAN, so o leitor de codigo de barras usa)
  *
  * Formato compacto (o site expande em src/data.ts), porque sao milhares de linhas:
  *   produto: { id, n: nome, b: marca, q: quantidade, u: unidade, t: texto do tamanho, c: categoria, s: subcategoria }
@@ -184,7 +184,7 @@ precos.sort((a, b) => a.p.localeCompare(b.p) || a.m.localeCompare(b.m))
 
 await writeFile(join(RAIZ, 'src/data/products.json'), JSON.stringify(produtos) + '\n')
 await writeFile(join(RAIZ, 'src/data/prices.json'), JSON.stringify(precos) + '\n')
-await writeFile(join(RAIZ, 'dados/ean-produtos.json'), JSON.stringify(eans) + '\n')
+await writeFile(join(RAIZ, 'src/data/ean-produtos.json'), JSON.stringify(eans) + '\n')
 await writeFile(join(RAIZ, 'dados/casamentos-por-nome.json'), JSON.stringify(auditoria, null, 1) + '\n')
 
 const todos = [...porEan.values()].length

@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data dados/ean-produtos.json dados/casamentos-por-nome.json
+          git add src/data dados/casamentos-por-nome.json
           if git diff --cached --quiet; then
             echo "nada mudou"
           else

@@ -9,6 +9,8 @@ import Mercados from './pages/Mercados'
 import Mercado from './pages/Mercado'
 import Cesta from './pages/Cesta'
 import Dashboard from './pages/Dashboard'
+import Contribuir from './pages/Contribuir'
+import MeusEnvios from './pages/MeusEnvios'
 import NaoEncontrada from './pages/NaoEncontrada'
 import { CestaProvider } from './context/BasketContext'
 
@@ -27,6 +29,8 @@ export default function App() {
             <Route path="/mercado/:slug" element={<Mercado />} />
             <Route path="/cesta" element={<Cesta />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/contribuir" element={<Contribuir />} />
+            <Route path="/contribuicoes" element={<MeusEnvios />} />
             <Route path="*" element={<NaoEncontrada />} />
           </Route>
         </Routes>

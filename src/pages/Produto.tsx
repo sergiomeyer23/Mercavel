@@ -7,6 +7,7 @@ import AddToBasket from '../components/AddToBasket'
 import IconeComida from '../components/IconeComida'
 import { emojiDoProduto } from '../emoji'
 import NaoEncontrada from './NaoEncontrada'
+import EnviosDoProduto from '../colaboracao/EnviosDoProduto'
 import type { PriceType } from '../types'
 import {
   acharMarket,
@@ -197,6 +198,8 @@ export default function Produto() {
           preços coletados nos sites e encartes dos mercados (confira o tipo: online, promoção ou clube) · podem mudar a qualquer momento · preços com mais de 7 dias aparecem em destaque
         </p>
       </div>
+
+      <EnviosDoProduto produtoId={produto.id} />
 
       {relacionados.length > 0 && (
         <div>

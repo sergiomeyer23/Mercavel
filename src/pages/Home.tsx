@@ -93,6 +93,21 @@ export default function Home() {
         em todo mercado, porque depende do que cada loja vende online.
       </p>
 
+      <section className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-marca-200 bg-marca-50 p-5">
+        <div>
+          <h2 className="text-base font-bold text-gray-900">Está no mercado agora?</h2>
+          <p className="mt-0.5 text-sm text-gray-600">
+            Fotografe a etiqueta e ajude a manter o preço de loja física certo. É só uma demonstração por enquanto.
+          </p>
+        </div>
+        <Link
+          to="/contribuir"
+          className="rounded-lg bg-marca-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-marca-700"
+        >
+          enviar um preço
+        </Link>
+      </section>
+
       <section>
         <h2 className="mb-3 text-lg font-bold text-gray-900">Categorias</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">

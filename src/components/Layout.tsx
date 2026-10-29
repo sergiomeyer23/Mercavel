@@ -35,6 +35,7 @@ const links = [
   { to: '/categorias', texto: 'Categorias' },
   { to: '/mercados', texto: 'Mercados' },
   { to: '/dashboard', texto: 'Dashboard' },
+  { to: '/contribuir', texto: 'Contribuir' },
 ]
 
 export default function Layout() {
