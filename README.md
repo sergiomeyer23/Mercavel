@@ -53,7 +53,7 @@ resultados por consulta, então categoria grande é dividida nas subcategorias).
 o `scripts/montar-base.mjs` casa o mesmo produto entre os mercados pelo **código de barras (EAN)**.
 o EAN é só a chave interna: não aparece no site, que mostra descrição, tamanho e preço. só entra produto
 que está em 2 ou mais mercados. a saída vai pra `src/data` em formato compacto (o `src/data.ts` expande)
-e o mapa id do site → EAN fica em `dados/ean-produtos.json`.
+e o mapa id do site → EAN fica em `src/data/ean-produtos.json` (só o leitor de código de barras da tela de envio usa, carregado sob demanda).
 
 - **Muffato**: lista pública do catálogo, preço do catálogo.
 - **Festval** e **Atacadão**: o preço e o estoque dependem da loja, então vêm da simulação de carrinho com
@@ -86,6 +86,9 @@ hortifruti e carnes a granel quase não entram: não têm código de barras, ent
 - preço por kg/L e há quantos dias o preço foi coletado (acima de 7 dias aparece em destaque)
 - busca com várias palavras, ordenação por preço e filtros guardados na URL
 - dashboard com números gerais
+- `/contribuir`: a pessoa fotografa a etiqueta de preço no mercado e envia (câmera do app com hora e
+  localização, leitor de código de barras, chave da nota fiscal opcional), com triagem automática,
+  confirmação por 2 pessoas e pontos. **está em modo demonstração, sem servidor**: veja `docs/colaboracao.md`
 
 os preços marcam se são online ou de loja física, porque um não vale pro outro.
 
