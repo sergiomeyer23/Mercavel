@@ -3,6 +3,8 @@
  *
  * - casa o mesmo produto entre mercados pelo codigo de barras (EAN). O EAN e' so a chave interna:
  *   nao vai pro site, que mostra descricao, tamanho e preco.
+ * - quem ficou sem par ganha um segundo passe por marca + tamanho + nome (scripts/lib/casar-por-nome.mjs),
+ *   porque o mesmo produto pode ter codigos de barras diferentes. os pares ficam em dados/casamentos-por-nome.json
  * - so entra produto que aparece em 2 ou mais mercados (senao nao tem o que comparar)
  * - gera src/data/products.json, prices.json e dados/ean-produtos.json (id do site -> EAN)
  *
@@ -15,6 +17,7 @@ import { createHash } from 'node:crypto'
 import { readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { casarOrfaos } from './lib/casar-por-nome.mjs'
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -120,10 +123,8 @@ const precos = []
 const eans = {}
 const porMercado = {}
 
-for (const [ean, ofertas] of porEan) {
+function adicionar(ean, ofertas) {
   const mercadosDoProduto = MERCADOS.filter((m) => ofertas[m])
-  if (mercadosDoProduto.length < 2) continue
-
   const base = ofertas[mercadosDoProduto[0]]
   const nome = limparNome(base.nome)
   const tamanho = tamanhoDoNome(nome, base.medida)
@@ -155,6 +156,26 @@ for (const [ean, ofertas] of porEan) {
     })
     porMercado[mercado] = (porMercado[mercado] ?? 0) + 1
   }
+  return id
+}
+
+// 1o passe: mesmo EAN em 2+ mercados
+const orfaos = []
+for (const [ean, ofertas] of porEan) {
+  const presentes = MERCADOS.filter((m) => ofertas[m])
+  if (presentes.length >= 2) adicionar(ean, ofertas)
+  else if (presentes.length === 1) orfaos.push({ mercado: presentes[0], ean, nome: ofertas[presentes[0]].nome, marca: ofertas[presentes[0]].marca })
+}
+const casadosPorEan = produtos.length
+
+// 2o passe: quem ficou sozinho, por marca + tamanho + nome
+const auditoria = []
+for (const grupo of casarOrfaos(orfaos)) {
+  const ofertas = {}
+  for (const g of grupo) ofertas[g.mercado] = porEan.get(g.ean)[g.mercado]
+  const primeiro = MERCADOS.find((m) => ofertas[m])
+  const id = adicionar(grupo.find((g) => g.mercado === primeiro).ean, ofertas)
+  auditoria.push({ produto: id, itens: grupo.map(({ mercado, ean, nome }) => ({ mercado, ean, nome })) })
 }
 
 produtos.sort((a, b) => a.n.localeCompare(b.n, 'pt-BR'))
@@ -163,8 +184,10 @@ precos.sort((a, b) => a.p.localeCompare(b.p) || a.m.localeCompare(b.m))
 await writeFile(join(RAIZ, 'src/data/products.json'), JSON.stringify(produtos) + '\n')
 await writeFile(join(RAIZ, 'src/data/prices.json'), JSON.stringify(precos) + '\n')
 await writeFile(join(RAIZ, 'dados/ean-produtos.json'), JSON.stringify(eans) + '\n')
+await writeFile(join(RAIZ, 'dados/casamentos-por-nome.json'), JSON.stringify(auditoria, null, 1) + '\n')
 
 const todos = [...porEan.values()].length
 console.log(`produtos distintos (EAN): ${todos}`)
+console.log(`casados por EAN: ${casadosPorEan}, casados por nome: ${auditoria.length}`)
 console.log(`na base do site (2+ mercados): ${produtos.length}`)
 console.log('precos por mercado:', porMercado)
