@@ -60,8 +60,7 @@ e o mapa id do site → EAN fica em `src/data/ean-produtos.json` (só o leitor d
   o CEP de Cascavel (no Atacadão, é a retirada na loja de Cascavel). no Atacadão o que não tem preço
   lá é descartado.
 - **Irani** e **Puppo**: fora da base. o Irani só tem loja renderizada (sem API) e o `robots.txt` dele
-  bloqueia a busca, então não coleto. o Puppo só publica encarte em PDF. os scripts da primeira versão
-  (catálogo manual de 49 itens) ficam em `scripts/legado/` só como registro.
+  bloqueia a busca, então não coleto. o Puppo só publica encarte em PDF.
 - **Nota Paraná (Menor Preço)**: não uso. não achei API oficial e o uso automatizado parece não ser
   permitido, então fica de fora.
 

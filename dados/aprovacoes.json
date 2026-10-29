@@ -1,9 +1,0 @@
-{
-  "observacao": "Casamentos que o script deixou como pendentes e eu revisei na mao: mesmo tipo e mesmo tamanho do produto do catalogo. O resto continua pendente (marca/tamanho/tipo diferente nao serve pra comparar preco).",
-  "aprovados": [
-    { "produtoId": "arroz-tipo1-5kg", "mercadoId": "atacadao", "motivo": "arroz agulhinha tipo 1, 5 kg" },
-    { "produtoId": "cafe-torrado-500g", "mercadoId": "atacadao", "motivo": "cafe tradicional 500 g" },
-    { "produtoId": "cebola-nacional-kg", "mercadoId": "atacadao", "motivo": "cebola a quilo" },
-    { "produtoId": "alface-crespa-un", "mercadoId": "festval", "motivo": "alface crespa unidade" }
-  ]
-}
