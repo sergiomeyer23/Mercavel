@@ -40,6 +40,7 @@ async function lerCatalogos() {
     for (const arquivo of arquivos) {
       const dados = JSON.parse(await readFile(join(RAIZ, 'dados/catalogo', mercado, arquivo), 'utf8'))
       for (const item of dados.itens) {
+        if (!(item.preco > 0)) continue
         if (!porEan.has(item.ean)) porEan.set(item.ean, {})
         const atual = porEan.get(item.ean)[mercado]
         // o mesmo EAN pode aparecer mais de uma vez no mercado: fica o que tem estoque, depois o mais barato

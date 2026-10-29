@@ -195,7 +195,8 @@ async function refinarPorSimulacao(itens) {
       await dormir(PAUSA_MS)
     }
   }
-  return descartarSemPreco ? itens.filter((i) => i.disponivel) : itens
+  // item sem estoque e sem preco no catalogo (preco 0) nao serve nem como referencia
+  return itens.filter((i) => (descartarSemPreco ? i.disponivel : i.preco > 0))
 }
 
 // ---------------------------------------------------------------- principal
