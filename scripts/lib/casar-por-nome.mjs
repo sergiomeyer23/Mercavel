@@ -1,14 +1,11 @@
-/**
- * Segundo passe do casamento: o mesmo produto pode ter codigos de barras diferentes (embalagem,
- * promocao, fabrica), entao quem ficou sozinho no primeiro passe (casado por EAN) ganha uma segunda
- * chance, comparando marca + tamanho + nome.
- *
- * E' conservador de proposito: marca igual, tamanho igual, nomes parecidos (Jaccard >= 0.75), nenhuma
- * diferenca em palavra que muda o produto (zero, diet, integral, sem lactose...) e o par tem que ser o
- * melhor do outro lado tambem. Na duvida, nao casa.
- */
+// Segundo passe do casamento. O mesmo produto pode ter EANs diferentes (embalagem, promocao, fabrica),
+// entao quem ficou sem par ganha outra chance por marca + tamanho + nome.
+//
+// Regras: marca e tamanho iguais, nomes parecidos (Jaccard >= 0.75), nenhuma palavra que muda o produto
+// so de um lado (zero, diet, integral...) e o par precisa ser o melhor dos dois lados. Na duvida, nao casa.
 
-const semAcento = (t) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+import { semAcento } from './texto.mjs'
+
 const palavras = (t) => semAcento(t).replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean)
 
 const SO_TAMANHO = /^\d+([.,]\d+)?(kg|g|mg|ml|l|lt|un|und|unid)?$/
@@ -17,7 +14,7 @@ const VAZIAS = new Set([
   'de', 'da', 'do', 'das', 'dos', 'com', 'e', 'em', 'a', 'o', 'para', 'pacote', 'caixa', 'lata', 'garrafa',
   'pet', 'sache', 'pote', 'unidade', 'tipo', 'pct', 'cx', 'fardo', 'embalagem', 'sem',
 ])
-// palavra que muda o produto: se so um dos nomes tem, nao e' o mesmo item
+// Se so um dos nomes tem uma dessas, nao e' o mesmo item.
 const CRITICAS = new Set([
   'zero', 'diet', 'light', 'integral', 'desnatado', 'semidesnatado', 'desnatada', 'lactose', 'gluten',
   'organico', 'organica', 'gratis', 'desconto', 'fit', 'kids', 'infantil', 'refil', 'concentrado', 'descafeinado', 'cafeina',
@@ -57,10 +54,8 @@ function mesmoProduto(a, b) {
   return jaccard
 }
 
-/**
- * itens: [{ mercado, ean, nome, marca }] que ficaram sem par no primeiro passe.
- * Devolve grupos de itens (um por mercado, 2+ mercados) que sao o mesmo produto.
- */
+// itens: [{ mercado, ean, nome, marca }] sem par no primeiro passe.
+// Devolve grupos de itens (um por mercado, 2 ou mais) que sao o mesmo produto.
 export function casarOrfaos(itens) {
   const grupos = new Map()
   for (const item of itens) {
@@ -77,7 +72,7 @@ export function casarOrfaos(itens) {
     const mercados = [...new Set(lista.map((i) => i.mercado))]
     if (mercados.length < 2) continue
 
-    // melhor parceiro de cada item em cada outro mercado
+    // melhor parceiro de cada item, mercado por mercado
     const melhor = new Map() // item -> Map(mercado -> { alvo, nota, empate })
     for (const a of lista) {
       const porMercado = new Map()
@@ -92,16 +87,15 @@ export function casarOrfaos(itens) {
       melhor.set(a, porMercado)
     }
 
-    // so vale se os dois lados se escolhem e nao ha empate (duvida = nao casa)
+    // so vale se os dois lados se escolhem e nao ha empate
     const visto = new Set()
     for (const a of lista) {
       if (visto.has(a)) continue
       const grupo = [a]
-      for (const [mercado, { alvo, empate }] of melhor.get(a)) {
+      for (const { alvo, empate } of melhor.get(a).values()) {
         if (empate || visto.has(alvo)) continue
         const volta = melhor.get(alvo)?.get(a.mercado)
         if (volta && !volta.empate && volta.alvo === a) grupo.push(alvo)
-        void mercado
       }
       if (grupo.length >= 2 && new Set(grupo.map((i) => i.mercado)).size === grupo.length) {
         grupo.forEach((i) => visto.add(i))
