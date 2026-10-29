@@ -1,6 +1,5 @@
-// A nota fiscal do consumidor (NFC-e) traz uma chave de acesso de 44 dígitos. Ela já diz o estado, o mês,
-// o CNPJ do mercado e tem um dígito verificador, então dá pra conferir sem consultar ninguém.
-// Aqui só se lê isso: não se guarda CPF, itens da compra nem o endereço da consulta.
+// A chave de acesso da NFC-e (44 dígitos) traz estado, mês, CNPJ do mercado e um dígito verificador,
+// então dá pra conferir sem consultar a SEFAZ. Só isso é lido: nada de CPF, itens ou o link do QR code.
 
 import type { NotaFiscal } from './tipos'
 

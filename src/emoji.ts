@@ -1,5 +1,4 @@
-// ícone de comida de cada produto e de cada categoria (o catálogo é pequeno, então fica tudo aqui)
-// o ícone sai do nome e da subcategoria do produto: a base tem milhares de itens, então é por palavra-chave
+// Ícone de comida do produto: sai de palavras do nome e da subcategoria, porque são milhares de itens.
 const porPalavra: [RegExp, string][] = [
   [/arroz/, '🍚'],
   [/feij[aã]o/, '🫘'],

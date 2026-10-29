@@ -5,10 +5,10 @@ import ProductCard from './ProductCard'
 const PASSO = 48
 
 // com milhares de produtos não dá pra desenhar tudo de uma vez: mostra 48 e libera mais a pedido
-export function useLimite<T>(lista: T[], passo = PASSO) {
+// `chave` identifica a lista (outra busca, outro filtro): quando muda, volta pro começo
+export function useLimite<T>(lista: T[], chave: string, passo = PASSO) {
   const [limite, setLimite] = useState(passo)
-  // volta pro começo quando a lista muda (outro filtro, outra busca)
-  useEffect(() => setLimite(passo), [lista.length, lista[0], passo]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => setLimite(passo), [chave, passo])
   return {
     visiveis: lista.slice(0, limite),
     restam: Math.max(0, lista.length - limite),
@@ -31,7 +31,7 @@ export function BotaoMais({ restam, onClick }: { restam: number; onClick: () => 
 }
 
 export default function GradeProdutos({ produtos }: { produtos: Product[] }) {
-  const { visiveis, restam, maisUm } = useLimite(produtos)
+  const { visiveis, restam, maisUm } = useLimite(produtos, `${produtos.length}:${produtos[0]?.id}`)
   return (
     <>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

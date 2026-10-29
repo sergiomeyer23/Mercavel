@@ -12,6 +12,10 @@ export default function Mercado() {
   const mercado = markets.find((m) => m.slug === slug)
   const [catFiltro, setCatFiltro] = useState('todas')
   const [limite, setLimite] = useState(48)
+  const escolherCategoria = (id: string) => {
+    setCatFiltro(id)
+    setLimite(48)
+  }
 
   if (!mercado) return <NaoEncontrada />
 
@@ -118,7 +122,7 @@ export default function Mercado() {
                   <td className="px-4 py-2.5 text-gray-600">{r.qtd}</td>
                   <td className="px-4 py-2.5 font-bold text-gray-900">{r.media !== null ? brl(r.media) : '—'}</td>
                   <td className="px-4 py-2.5 text-right">
-                    <button onClick={() => setCatFiltro(r.cat.id)} className="text-xs font-semibold text-marca-700 hover:underline">
+                    <button onClick={() => escolherCategoria(r.cat.id)} className="text-xs font-semibold text-marca-700 hover:underline">
                       filtrar ↓
                     </button>
                   </td>
@@ -133,11 +137,11 @@ export default function Mercado() {
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-lg font-bold text-gray-900">Produtos</h2>
           <div className="flex flex-wrap gap-1.5">
-            <Chip onClick={() => setCatFiltro('todas')} ativo={catFiltro === 'todas'}>
+            <Chip onClick={() => escolherCategoria('todas')} ativo={catFiltro === 'todas'}>
               todas
             </Chip>
             {porCategoria.map((r) => (
-              <Chip key={r.cat.id} onClick={() => setCatFiltro(r.cat.id)} ativo={catFiltro === r.cat.id}>
+              <Chip key={r.cat.id} onClick={() => escolherCategoria(r.cat.id)} ativo={catFiltro === r.cat.id}>
                 {r.cat.name}
               </Chip>
             ))}

@@ -1,33 +1,19 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { markets, products } from '../data'
+import { markets } from '../data'
 import type { Product } from '../types'
 import CameraPreco from '../colaboracao/CameraPreco'
 import type { FotoCapturada } from '../colaboracao/CameraPreco'
-import LeitorCodigo, { temLeitor } from '../colaboracao/LeitorCodigo'
 import { lerNota } from '../colaboracao/nfce'
 import { enviarPreco, repositorioLocal } from '../colaboracao/repositorio'
+import SeletorDeProduto from '../colaboracao/SeletorDeProduto'
+import { MENSAGEM_DO_STATUS } from '../colaboracao/status'
 import type { Envio } from '../colaboracao/tipos'
-import IconeComida from '../components/IconeComida'
-import { emojiDoProduto } from '../emoji'
 import { brl } from '../utils'
 
-const semAcento = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
-
-const textoDoStatus: Record<Envio['status'], string> = {
-  em_analise: 'Recebido. Falta outra pessoa confirmar um preço parecido para ele valer.',
-  confirmado: 'Confirmado!',
-  revisao_manual: 'Recebido, mas foi para revisão manual.',
-  rejeitado: 'Não foi aceito.',
-}
-
 export default function Contribuir() {
-  const [busca, setBusca] = useState('')
   const [produto, setProduto] = useState<Product | null>(null)
-  const [lendo, setLendo] = useState(false)
-  const [codigo, setCodigo] = useState('')
-  const [aviso, setAviso] = useState<string | null>(null)
   const [mercadoId, setMercadoId] = useState('')
   const [preco, setPreco] = useState('')
   const [foto, setFoto] = useState<FotoCapturada | null>(null)
@@ -35,32 +21,9 @@ export default function Contribuir() {
   const [aceito, setAceito] = useState(false)
   const [resultado, setResultado] = useState<Envio | null>(null)
 
-  const sugestoes = useMemo(() => {
-    const palavras = semAcento(busca.trim()).split(/\s+/).filter(Boolean)
-    if (palavras.length === 0 || produto) return []
-    return products.filter((p) => palavras.every((w) => semAcento(`${p.name} ${p.brand}`).includes(w))).slice(0, 8)
-  }, [busca, produto])
-
   const nota = notaTexto.trim() ? lerNota(notaTexto) : null
   const valor = Number(preco.replace(',', '.'))
   const pronto = produto && mercadoId && valor > 0 && foto && aceito
-
-  // o código de barras só serve pra achar o produto: não aparece em lugar nenhum
-  const procurarPorCodigo = useCallback(async (bruto: string) => {
-    const ean = bruto.replace(/\D/g, '').replace(/^0+/, '')
-    if (ean.length < 8) return setAviso('Código de barras muito curto.')
-    const mapa = (await import('../data/ean-produtos.json')).default as Record<string, string>
-    const id = Object.keys(mapa).find((k) => mapa[k] === ean)
-    const achado = id ? products.find((p) => p.id === id) : undefined
-    if (achado) {
-      setProduto(achado)
-      setAviso(null)
-      setLendo(false)
-    } else {
-      setAviso('Esse produto ainda não está na base. Procure pelo nome.')
-      setLendo(false)
-    }
-  }, [])
 
   function enviar(e: FormEvent) {
     e.preventDefault()
@@ -81,7 +44,6 @@ export default function Contribuir() {
 
   function novoEnvio() {
     setProduto(null)
-    setBusca('')
     setPreco('')
     setFoto(null)
     setNotaTexto('')
@@ -94,7 +56,7 @@ export default function Contribuir() {
       <div className="mx-auto max-w-xl space-y-4">
         <h1 className="text-xl font-bold text-gray-900">Envio registrado</h1>
         <div className="rounded-2xl border border-gray-200 bg-white p-5">
-          <p className="font-semibold text-gray-900">{textoDoStatus[resultado.status]}</p>
+          <p className="font-semibold text-gray-900">{MENSAGEM_DO_STATUS[resultado.status]}</p>
           {resultado.motivos.length > 0 && (
             <ul className="mt-2 list-disc pl-5 text-sm text-gray-600">
               {resultado.motivos.map((m) => (
@@ -133,60 +95,7 @@ export default function Contribuir() {
 
       <section className="space-y-2 rounded-2xl border border-gray-200 bg-white p-4">
         <h2 className="text-sm font-bold text-gray-900">1. Produto</h2>
-        {produto ? (
-          <div className="flex items-center gap-3">
-            <IconeComida emoji={emojiDoProduto(produto.name, produto.subcategory, produto.categoryId)} />
-            <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-gray-900">{produto.name}</p>
-              <p className="text-xs text-gray-400">{produto.unit}</p>
-            </div>
-            <button type="button" onClick={() => setProduto(null)} className="text-xs font-semibold text-gray-400 hover:text-red-600">
-              trocar
-            </button>
-          </div>
-        ) : (
-          <>
-            <input
-              value={busca}
-              onChange={(e) => setBusca(e.target.value)}
-              placeholder="nome do produto, ex: arroz 5kg"
-              aria-label="produto que você está vendo"
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-marca-500 focus:outline-none"
-            />
-            {sugestoes.length > 0 && (
-              <ul className="divide-y divide-gray-100 rounded-lg border border-gray-200">
-                {sugestoes.map((p) => (
-                  <li key={p.id}>
-                    <button type="button" onClick={() => setProduto(p)} className="w-full px-3 py-2 text-left text-sm hover:bg-marca-50">
-                      {p.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-            <div className="flex flex-wrap items-center gap-2 pt-1 text-sm">
-              <span className="text-gray-400">ou pelo código de barras:</span>
-              <input
-                value={codigo}
-                onChange={(e) => setCodigo(e.target.value)}
-                inputMode="numeric"
-                placeholder="digite o código"
-                aria-label="código de barras"
-                className="w-40 rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-marca-500 focus:outline-none"
-              />
-              <button type="button" onClick={() => void procurarPorCodigo(codigo)} className="rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-marca-400">
-                buscar
-              </button>
-              {temLeitor() && (
-                <button type="button" onClick={() => setLendo((l) => !l)} className="rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-semibold text-gray-600 hover:border-marca-400">
-                  {lendo ? 'fechar leitor' : 'escanear'}
-                </button>
-              )}
-            </div>
-            {lendo && <LeitorCodigo onCodigo={(c) => void procurarPorCodigo(c)} />}
-            {aviso && <p className="text-xs text-amber-700">{aviso}</p>}
-          </>
-        )}
+        <SeletorDeProduto produto={produto} onEscolher={setProduto} />
       </section>
 
       <section className="grid gap-3 rounded-2xl border border-gray-200 bg-white p-4 sm:grid-cols-2">

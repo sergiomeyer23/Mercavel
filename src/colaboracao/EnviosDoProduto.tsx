@@ -2,13 +2,7 @@ import { Link } from 'react-router-dom'
 import { markets } from '../data'
 import { brl, dataHora } from '../utils'
 import { repositorioLocal } from './repositorio'
-
-const rotulo = {
-  em_analise: ['em análise', 'bg-sky-100 text-sky-700'],
-  confirmado: ['confirmado', 'bg-marca-100 text-marca-700'],
-  revisao_manual: ['revisão manual', 'bg-amber-100 text-amber-700'],
-  rejeitado: ['rejeitado', 'bg-red-100 text-red-700'],
-} as const
+import { ROTULO_DO_STATUS } from './status'
 
 // preços de gôndola enviados pela comunidade. no modo demonstração só aparecem os deste navegador
 export default function EnviosDoProduto({ produtoId }: { produtoId: string }) {
@@ -35,7 +29,9 @@ export default function EnviosDoProduto({ produtoId }: { produtoId: string }) {
             <li key={e.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2 text-sm">
               <span className="font-semibold text-gray-800">{markets.find((m) => m.id === e.mercadoId)?.name ?? 'Outro mercado'}</span>
               <span className="font-bold text-gray-900">{brl(e.preco)}</span>
-              <span className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${rotulo[e.status][1]}`}>{rotulo[e.status][0]}</span>
+              <span className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${ROTULO_DO_STATUS[e.status].cor}`}>
+                {ROTULO_DO_STATUS[e.status].texto}
+              </span>
               <span className="text-xs text-gray-400">{dataHora(e.criadoEm)}</span>
             </li>
           ))}
