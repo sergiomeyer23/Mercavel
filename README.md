@@ -7,6 +7,16 @@ cada mercado cobra, olhar a média por categoria e montar uma cesta pra ver onde
 podem mudar a qualquer momento. Nem todo produto tem preço em todo mercado: depende do que cada loja
 vende online, e cada preço guarda a data da coleta e o link da oferta.
 
+## Aviso
+
+projeto de estudo, sem vínculo com nenhum dos mercados citados. os preços vêm de coleta automatizada
+das APIs públicas de catálogo dos sites, rodam uma vez por dia, com pausa entre as requisições e um
+`User-Agent` que identifica o projeto. podem estar errados ou desatualizados e **não são recomendação
+de compra**. o Atacadão é atacarejo, então a comparação com supermercado não é 100% equivalente.
+
+as marcas e logos são dos respectivos mercados. se algum mercado quiser que seus dados ou sua logo
+saiam, é só abrir uma issue que eu retiro.
+
 ## Como rodar
 
 ```
@@ -49,8 +59,9 @@ e o mapa id do site → EAN fica em `dados/ean-produtos.json`.
 - **Festval** e **Atacadão**: o preço e o estoque dependem da loja, então vêm da simulação de carrinho com
   o CEP de Cascavel (no Atacadão, é a retirada na loja de Cascavel). no Atacadão o que não tem preço
   lá é descartado.
-- **Irani** e **Puppo**: ainda fora da base nova. o Irani só tem loja renderizada (sem API) e o Puppo só
-  publica encarte em PDF. os scripts antigos ficam em `scripts/legado/`.
+- **Irani** e **Puppo**: fora da base. o Irani só tem loja renderizada (sem API) e o `robots.txt` dele
+  bloqueia a busca, então não coleto. o Puppo só publica encarte em PDF. os scripts da primeira versão
+  (catálogo manual de 49 itens) ficam em `scripts/legado/` só como registro.
 - **Nota Paraná (Menor Preço)**: não uso. não achei API oficial e o uso automatizado parece não ser
   permitido, então fica de fora.
 
