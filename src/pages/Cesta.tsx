@@ -6,8 +6,16 @@ import IconeComida from '../components/IconeComida'
 import { emojiDoProduto } from '../emoji'
 import { markets, products } from '../data'
 import { cestaDoTexto, cestaParaTexto, useCesta } from '../context/BasketContext'
-import type { PriceType } from '../types'
+import type { Market, PriceType } from '../types'
 import { acharMarket, acharProdutoComparavel, brl, precosDoProduto } from '../utils'
+import {
+  multiplicarPorEscalar,
+  norma,
+  produtoEscalar,
+  similaridadeEntreMercados,
+  vetorDePrecos,
+  vetorDeQuantidades,
+} from '../vetor'
 
 // cesta de exemplo pra não começar do zero: itens básicos que têm preço em 2+ mercados
 const padroesModelo = [
@@ -52,24 +60,18 @@ export default function Cesta() {
     }
   }
 
-  // total da cesta em cada mercado. se o mercado não tiver algum item, não entra na disputa
-  const resultados = markets
-    .map((m) => {
-      let total = 0
-      let faltando = 0
-      const faltantes: string[] = []
-      for (const item of itens) {
-        const obs = precosDoProduto(item.productId, tipo === 'todos' ? undefined : tipo).find(
-          (o) => o.marketId === m.id,
-        )
-        if (obs) {
-          total += obs.price * item.qtd
-        } else {
-          faltando += 1
-          faltantes.push(products.find((p) => p.id === item.productId)?.name ?? item.productId)
-        }
-      }
-      return { mercado: m, total, faltando, faltantes }
+  // a cesta é o vetor de quantidades q; cada mercado é um vetor de preços p
+  // (um eixo por produto). O total do mercado é o produto escalar q·p.
+  // se o mercado não tiver algum item, não entra na disputa
+  const tipoFiltro = tipo === 'todos' ? undefined : tipo
+  const q = vetorDeQuantidades(itens)
+  const vetores = markets.map((m) => ({ mercado: m, ...vetorDePrecos(itens, m.id, tipoFiltro) }))
+  const resultados = vetores
+    .map((v) => {
+      const faltantes = itens
+        .filter((_, i) => !v.temItem[i])
+        .map((item) => products.find((p) => p.id === item.productId)?.name ?? item.productId)
+      return { mercado: v.mercado, total: produtoEscalar(q, v.precos), faltando: faltantes.length, faltantes }
     })
     .sort((a, b) => a.faltando - b.faltando || a.total - b.total)
 
@@ -312,10 +314,124 @@ export default function Cesta() {
         </div>
       )}
 
+      <PainelVetorial
+        nomes={itens.map((i) => products.find((p) => p.id === i.productId)?.name ?? i.productId)}
+        q={q}
+        vetores={vetores}
+      />
+
       <p className="text-xs text-gray-400">
         obs: os totais comparam o mesmo tipo de preço entre os mercados (ex: online com online).
         preços coletados nos sites dos mercados.
       </p>
     </div>
+  )
+}
+
+const fatores = [1, 2, 4]
+
+interface PainelProps {
+  nomes: string[]
+  q: number[]
+  vetores: { mercado: Market; precos: number[]; temItem: boolean[] }[]
+}
+
+// mostra a mesma conta da cesta em linguagem de vetores
+function PainelVetorial({ nomes, q, vetores }: PainelProps) {
+  const [k, setK] = useState(1)
+  const kq = multiplicarPorEscalar(k, q)
+  const completos = vetores.filter((v) => v.temItem.every(Boolean))
+  const referencia = completos.length > 0 ? completos[0] : null
+  const comparaveis = vetores.filter((v) => v.temItem.some(Boolean))
+
+  return (
+    <details className="rounded-xl border border-gray-200 bg-white p-5">
+      <summary className="cursor-pointer text-sm font-bold text-gray-900">
+        a matemática da cesta: vetores e produto escalar
+      </summary>
+
+      <div className="mt-4 space-y-5 text-sm text-gray-600">
+        <p>
+          cada produto da cesta é um eixo, perpendicular aos outros. Com {nomes.length} produtos, a cesta é uma
+          flecha num espaço de {nomes.length} dimensões: o vetor de quantidades <b>q</b>. Cada mercado também é uma
+          flecha nesse espaço: o vetor de preços <b>p</b>. O total que você paga é o produto escalar{' '}
+          <b>q·p</b> = soma de quantidade × preço de cada eixo, um número só (um escalar).
+        </p>
+
+        <div>
+          <p className="text-xs font-semibold uppercase text-gray-400">multiplicar por um escalar k</p>
+          <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+            {fatores.map((f) => (
+              <Chip key={f} onClick={() => setK(f)} ativo={k === f}>
+                {f === 1 ? 'k = 1 (1 semana)' : `k = ${f} (${f} semanas)`}
+              </Chip>
+            ))}
+          </div>
+          <p className="mt-2 font-mono text-xs text-gray-700">
+            k·q = [{kq.join(', ')}] · comprimento ‖k·q‖ = {norma(kq).toFixed(2).replace('.', ',')}
+          </p>
+          <p className="text-xs text-gray-400">
+            multiplicar por k estica o vetor sem mudar a direção, então k·(q·p) = (k·q)·p: o total escala igual e o
+            mercado mais barato continua o mesmo.
+          </p>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[420px] text-left text-xs">
+            <thead>
+              <tr className="border-b border-gray-200 text-gray-500">
+                <th className="py-1.5 pr-3">mercado</th>
+                <th className="py-1.5 pr-3">vetor de preços p</th>
+                <th className="py-1.5 text-right">k·(q·p)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {vetores.map((v) => {
+                const completo = v.temItem.every(Boolean)
+                return (
+                  <tr key={v.mercado.id} className="border-b border-gray-50 last:border-0">
+                    <td className="py-1.5 pr-3 font-semibold text-gray-700">{v.mercado.shortName}</td>
+                    <td className="py-1.5 pr-3 font-mono text-gray-500">
+                      [{v.precos.map((x, i) => (v.temItem[i] ? x.toFixed(2).replace('.', ',') : '—')).join(', ')}]
+                    </td>
+                    <td className="py-1.5 text-right font-semibold text-gray-700">
+                      {v.temItem.some(Boolean) ? brl(produtoEscalar(kq, v.precos)) : '—'}
+                      {!completo && v.temItem.some(Boolean) && <span className="text-gray-400"> (parcial)</span>}
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        {referencia && comparaveis.length > 1 && (
+          <div>
+            <p className="text-xs font-semibold uppercase text-gray-400">
+              parecido com {referencia.mercado.shortName} (cosseno do ângulo entre os vetores de preço)
+            </p>
+            <ul className="mt-1.5 flex flex-wrap gap-x-5 gap-y-1 text-xs">
+              {comparaveis
+                .filter((v) => v.mercado.id !== referencia.mercado.id)
+                .map((v) => {
+                  const cos = similaridadeEntreMercados(referencia, v)
+                  return (
+                    <li key={v.mercado.id} className="text-gray-600">
+                      {v.mercado.shortName}:{' '}
+                      <span className="font-mono font-semibold">
+                        {cos === null ? '—' : cos.toFixed(3).replace('.', ',')}
+                      </span>
+                    </li>
+                  )
+                })}
+            </ul>
+            <p className="mt-1 text-xs text-gray-400">
+              perto de 1 = as flechas apontam pro mesmo lado: os dois mercados são caros e baratos nos mesmos
+              produtos. Só entram os produtos que os dois mercados têm.
+            </p>
+          </div>
+        )}
+      </div>
+    </details>
   )
 }
