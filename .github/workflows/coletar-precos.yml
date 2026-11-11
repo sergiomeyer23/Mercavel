@@ -1,10 +1,11 @@
 name: Coletar preços
 
-# todo dia de manhã (horário de Brasília) e também sob demanda.
+# todo dia de manhã (horário de Brasília) e também sob demanda. minuto quebrado porque na hora cheia
+# o agendamento do Actions atrasa horas.
 # cada mercado é varrido num job separado (por categoria, dentro do script) e o montar junta tudo
 on:
   schedule:
-    - cron: '0 9 * * *'
+    - cron: '17 9 * * *'
   workflow_dispatch:
 
 jobs:

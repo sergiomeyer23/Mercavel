@@ -135,7 +135,11 @@ export function criarClienteVtex(mercado) {
             postalCode: cep,
           }),
         })
-        if (!resposta.ok) continue
+        if (!resposta.ok) {
+          // sem resposta o lote inteiro ficaria como "sem estoque" sem ninguem saber
+          console.warn(`  aviso: simulacao HTTP ${resposta.status} (vendedor ${vendedor}, ${lote.length} itens)`)
+          continue
+        }
         for (const resultado of (await resposta.json()).items ?? []) {
           const item = semResposta.get(String(resultado.id))
           if (item && resultado.availability === 'available' && resultado.sellingPrice > 0) {

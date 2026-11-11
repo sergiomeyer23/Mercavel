@@ -13,6 +13,11 @@ describe('tamanhoDoNome', () => {
   it('usa o último tamanho quando há mais de um', () => {
     expect(tamanhoDoNome('Biscoito 3 un 130g')).toMatchObject({ quantidade: 130, unidade: 'G' })
   })
+  it('entende unidades por extenso', () => {
+    expect(tamanhoDoNome('Pano Umedecido Pote 35 Unidades')).toMatchObject({ quantidade: 35, unidade: 'UN', texto: '35 un' })
+    expect(tamanhoDoNome('Saco para Lixo 50l Dover Roll 20 Unidades')).toMatchObject({ quantidade: 20, unidade: 'UN' })
+    expect(tamanhoDoNome('Limpador Veja com 3 unidades de 500ml')).toMatchObject({ quantidade: 500, unidade: 'ML' })
+  })
   it('sem tamanho no nome, cai em por kg ou 1 un', () => {
     expect(tamanhoDoNome('Banana prata', 'kg').texto).toBe('por kg')
     expect(tamanhoDoNome('Alface crespa', 'un').texto).toBe('1 un')

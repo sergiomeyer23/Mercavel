@@ -53,8 +53,10 @@ em `dados/catalogo/`, fora do git.
 o `scripts/montar-base.mjs` junta tudo e casa o mesmo produto entre os mercados pelo código de barras
 (EAN). o EAN é só a chave interna e não aparece no site, que mostra descrição, tamanho e preço. quem ficou
 sem par passa por um segundo casamento por marca, tamanho e nome (`scripts/lib/casar-por-nome.mjs`),
-porque o mesmo produto às vezes tem mais de um código. só entra na base o produto que está em 2 ou mais
-mercados. a saída vai pra `src/data` em formato compacto, que o `src/data.ts` expande. o mapa do id do
+porque o mesmo produto às vezes tem mais de um código. só entra na base o produto que tem estoque em 2 ou
+mais mercados. o mesmo código às vezes é unidade num mercado e pacote em outro ("85g" e "8x85g"): a oferta
+que não bate com a embalagem, ou com preço 4x maior ou menor, sai (`scripts/lib/qualidade.mjs`). a saída vai pra `src/data` em formato compacto, que o `src/data.ts` expande. a data da coleta fica uma
+vez por mercado em `src/data/coletas.json`, pra base não mudar inteira todo dia. o mapa do id do
 site para o EAN fica em `src/data/ean-produtos.json`, usado só pelo leitor de código de barras da tela de
 envio e carregado quando precisa.
 
@@ -73,8 +75,10 @@ hortifruti e carnes a granel quase não entram, porque não têm código de barr
 
 - `.github/workflows/ci.yml`: lint, testes e build em cada push e pull request
 - `.github/workflows/coletar-precos.yml`: todo dia varre cada mercado num job (o Atacadão em 4 fatias),
-  monta a base e faz commit se mudou. também dá pra disparar na mão pela aba Actions
-- `.github/workflows/deploy.yml`: publica o site no GitHub Pages em `/Mercavel/`. pra ativar, vai em
+  monta a base e faz commit se mudou. se algum mercado vier vazio ou a base cair mais de 30%, o montar
+  para com erro e nada é gravado (`npm run montar -- --forcar` grava assim mesmo). também dá pra disparar na mão pela aba Actions
+- `.github/workflows/deploy.yml`: publica o site no GitHub Pages em `/Mercavel/`, a cada push na main e
+  depois de cada coleta que deu certo. pra ativar, vai em
   Settings > Pages e escolhe "GitHub Actions" como fonte
 
 ## O que tem no site
@@ -110,7 +114,7 @@ src/
 scripts/
   varrer-catalogo.mjs   coleta o catálogo de um mercado
   montar-base.mjs       gera a base do site
-  lib/                  config dos mercados, cliente VTEX, tamanho, categorias e casamento por nome
+  lib/                  config dos mercados, cliente VTEX, tamanho, categorias, casamento por nome e travas de qualidade
 docs/                   como funciona o envio de preço pelas pessoas
 supabase/               esquema de banco pra esse envio (não testado)
 ```

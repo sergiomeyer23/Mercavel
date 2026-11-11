@@ -3,6 +3,11 @@ name: Publicar site
 on:
   push:
     branches: [main]
+  # o commit da coleta é feito com o token do Actions, que não dispara o push acima:
+  # sem isto o site publicado ficaria com os preços do último push manual
+  workflow_run:
+    workflows: [Coletar preços]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,12 +21,15 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run build
