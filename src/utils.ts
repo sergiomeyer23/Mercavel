@@ -1,5 +1,5 @@
 import { markets, pricesByProduct, products } from './data'
-import type { Market, Price, PriceType } from './types'
+import type { Market, Price, PriceType, Product } from './types'
 
 export function brl(valor: number) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -98,7 +98,22 @@ export function precoPorUnidade(preco: number, quantidade: number, unidade: stri
   return null
 }
 
-// primeiro produto (com preço em 2+ mercados) cujo nome casa com o padrão; usado nos destaques e na cesta de exemplo
+// produto (com preço em 2+ mercados) cujo nome casa com o padrão; usado nos destaques e na cesta de exemplo
+// entre os que casam, fica o que está em mais mercados (pra cesta de exemplo fechar em todos)
 export function acharProdutoComparavel(padrao: RegExp) {
-  return products.find((p) => padrao.test(p.name) && precosDoProduto(p.id).length >= 2)
+  let melhor: Product | undefined
+  let mercadosDoMelhor = 1
+  for (const p of products) {
+    if (!padrao.test(p.name)) continue
+    const n = precosDoProduto(p.id).length
+    if (n > mercadosDoMelhor) {
+      melhor = p
+      mercadosDoMelhor = n
+    }
+  }
+  return melhor
+}
+
+export function semAcento(texto: string) {
+  return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 }

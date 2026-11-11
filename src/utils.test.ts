@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { prices, products } from './data'
+import { acharProduto, mercadosComPrecos, prices, products } from './data'
 import {
+  acharProdutoComparavel,
   caminhoDaBusca,
   diasDesde,
   idadeDoPreco,
@@ -73,5 +74,39 @@ describe('integridade dos dados', () => {
   })
   it('não repete o id de preço', () => {
     expect(new Set(prices.map((p) => p.id)).size).toBe(prices.length)
+  })
+})
+
+describe('acharProduto', () => {
+  it('acha pelo id e, se o nome mudou, pelo final do id', () => {
+    const p = products[0]
+    expect(acharProduto(p.id)).toBe(p)
+    const final = p.id.slice(p.id.lastIndexOf('-'))
+    expect(acharProduto('nome-antigo' + final)).toBe(p)
+    expect(acharProduto('nao-existe-zzzzzz')).toBeUndefined()
+    expect(acharProduto(undefined)).toBeUndefined()
+  })
+})
+
+describe('acharProdutoComparavel', () => {
+  it('prefere o produto que está em mais mercados', () => {
+    const arroz = acharProdutoComparavel(/^arroz /i)
+    expect(arroz).toBeDefined()
+    const melhorPossivel = Math.max(
+      ...products.filter((p) => /^arroz /i.test(p.name)).map((p) => precosDoProduto(p.id).length),
+    )
+    expect(precosDoProduto(arroz!.id).length).toBe(melhorPossivel)
+  })
+  it('não devolve produto que só tem um mercado', () => {
+    expect(acharProdutoComparavel(/isso nao existe em lugar nenhum/)).toBeUndefined()
+  })
+})
+
+describe('base', () => {
+  it('todo produto tem estoque em 2+ mercados e todo preço é de um mercado com coleta', () => {
+    for (const p of products) expect(precosDoProduto(p.id).length).toBeGreaterThanOrEqual(2)
+    const ids = new Set(mercadosComPrecos.map((m) => m.id))
+    for (const pr of prices) expect(ids.has(pr.marketId)).toBe(true)
+    for (const pr of prices) expect(Number.isNaN(new Date(pr.collectedAt).getTime())).toBe(false)
   })
 })

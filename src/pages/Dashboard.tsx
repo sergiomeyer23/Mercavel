@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { categories, markets, prices, products } from '../data'
+import { categories, mercadosComPrecos, prices, products } from '../data'
 import type { Product } from '../types'
 import { brl, dataHora, mediaValores, precosDoProduto } from '../utils'
 
@@ -34,7 +34,7 @@ export default function Dashboard() {
   const maiorMedia = medias[0]?.media ?? 1
 
   // quantos produtos cada mercado tem
-  const porMercado = markets
+  const porMercado = mercadosComPrecos
     .map((m) => ({
       m,
       qtd: new Set(prices.filter((p) => p.marketId === m.id).map((p) => p.productId)).size,
@@ -49,12 +49,12 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       <h1 className="text-xl font-bold text-gray-900">Dashboard</h1>
-      números gerais dos preços coletados nos sites dos mercados
+      <p className="text-sm text-gray-500">números gerais dos preços coletados nos sites dos mercados</p>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         <div className="rounded-xl border border-gray-200 bg-white p-4">
           <p className="text-[11px] font-semibold uppercase text-gray-400">mercados</p>
-          <p className="text-2xl font-bold text-gray-900">{markets.length}</p>
+          <p className="text-2xl font-bold text-gray-900">{mercadosComPrecos.length}</p>
         </div>
         <div className="rounded-xl border border-gray-200 bg-white p-4">
           <p className="text-[11px] font-semibold uppercase text-gray-400">produtos</p>

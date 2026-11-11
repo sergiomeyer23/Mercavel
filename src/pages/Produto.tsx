@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { categories, products } from '../data'
+import { Link, Navigate, useParams } from 'react-router-dom'
+import { acharProduto, categories, products, temPrecoDeLoja } from '../data'
 import Chip from '../components/Chip'
 import MarketLogo from '../components/MarketLogo'
 import AddToBasket from '../components/AddToBasket'
@@ -23,11 +23,13 @@ import {
 
 export default function Produto() {
   const { id } = useParams()
-  const produto = products.find((p) => p.id === id)
+  const produto = acharProduto(id)
   // filtro por tipo de preço, porque preço online não é o mesmo preço da loja física
   const [tipo, setTipo] = useState<'todos' | PriceType>('todos')
 
   if (!produto) return <NaoEncontrada />
+  // link antigo, de antes do nome mudar no mercado: leva pro endereço atual
+  if (produto.id !== id) return <Navigate to={`/produto/${produto.id}`} replace />
 
   const precos = precosDoProduto(produto.id, tipo === 'todos' ? undefined : tipo)
   const menor = precos.length > 0 ? precos[0].price : null
@@ -99,13 +101,15 @@ export default function Produto() {
       <div>
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-lg font-bold text-gray-900">Preço em cada supermercado</h2>
-          <div className="flex gap-1.5">
-            {(['todos', 'ONLINE', 'PHYSICAL'] as const).map((t) => (
-              <Chip key={t} onClick={() => setTipo(t)} ativo={tipo === t}>
-                {t === 'todos' ? 'todos os tipos' : nomeDoPreco(t)}
-              </Chip>
-            ))}
-          </div>
+          {temPrecoDeLoja && (
+            <div className="flex gap-1.5">
+              {(['todos', 'ONLINE', 'PHYSICAL'] as const).map((t) => (
+                <Chip key={t} onClick={() => setTipo(t)} ativo={tipo === t}>
+                  {t === 'todos' ? 'todos os tipos' : nomeDoPreco(t)}
+                </Chip>
+              ))}
+            </div>
+          )}
         </div>
 
         {precos.length === 0 ? (

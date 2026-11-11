@@ -4,7 +4,7 @@ import Chip from '../components/Chip'
 import MarketLogo from '../components/MarketLogo'
 import IconeComida from '../components/IconeComida'
 import { emojiDoProduto } from '../emoji'
-import { markets, products } from '../data'
+import { acharProduto, mercadosComPrecos, temPrecoDeLoja } from '../data'
 import { cestaDoTexto, cestaParaTexto, useCesta } from '../context/BasketContext'
 import type { Market, PriceType } from '../types'
 import { acharMarket, acharProdutoComparavel, brl, precosDoProduto } from '../utils'
@@ -43,7 +43,10 @@ export default function Cesta() {
   const compartilhada = params.get('c')
   useEffect(() => {
     if (compartilhada === null) return
-    const recebidos = cestaDoTexto(compartilhada).filter((i) => products.some((p) => p.id === i.productId))
+    const recebidos = cestaDoTexto(compartilhada).flatMap((i) => {
+      const produto = acharProduto(i.productId)
+      return produto ? [{ ...i, productId: produto.id }] : []
+    })
     if (recebidos.length > 0) substituir(recebidos)
     setParams({}, { replace: true })
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -65,12 +68,12 @@ export default function Cesta() {
   // se o mercado não tiver algum item, não entra na disputa
   const tipoFiltro = tipo === 'todos' ? undefined : tipo
   const q = vetorDeQuantidades(itens)
-  const vetores = markets.map((m) => ({ mercado: m, ...vetorDePrecos(itens, m.id, tipoFiltro) }))
+  const vetores = mercadosComPrecos.map((m) => ({ mercado: m, ...vetorDePrecos(itens, m.id, tipoFiltro) }))
   const resultados = vetores
     .map((v) => {
       const faltantes = itens
         .filter((_, i) => !v.temItem[i])
-        .map((item) => products.find((p) => p.id === item.productId)?.name ?? item.productId)
+        .map((item) => acharProduto(item.productId)?.name ?? item.productId)
       return { mercado: v.mercado, total: produtoEscalar(q, v.precos), faltando: faltantes.length, faltantes }
     })
     .sort((a, b) => a.faltando - b.faltando || a.total - b.total)
@@ -81,7 +84,7 @@ export default function Cesta() {
 
   const sugestoes = cestaModelo
     .filter((id) => !itens.some((i) => i.productId === id))
-    .map((id) => products.find((p) => p.id === id))
+    .map((id) => acharProduto(id))
     .filter((p) => p !== undefined)
 
   if (itens.length === 0) {
@@ -126,13 +129,15 @@ export default function Cesta() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h1 className="text-xl font-bold text-gray-900">Compare sua cesta</h1>
-        <div className="flex gap-1.5">
-          {(['todos', 'ONLINE', 'PHYSICAL'] as const).map((t) => (
-            <Chip key={t} onClick={() => setTipo(t)} ativo={tipo === t}>
-              {t === 'todos' ? 'qualquer tipo' : t === 'ONLINE' ? 'só online' : 'só loja física'}
-            </Chip>
-          ))}
-        </div>
+        {temPrecoDeLoja && (
+          <div className="flex gap-1.5">
+            {(['todos', 'ONLINE', 'PHYSICAL'] as const).map((t) => (
+              <Chip key={t} onClick={() => setTipo(t)} ativo={tipo === t}>
+                {t === 'todos' ? 'qualquer tipo' : t === 'ONLINE' ? 'só online' : 'só loja física'}
+              </Chip>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="grid gap-3 lg:grid-cols-3">
@@ -160,11 +165,16 @@ export default function Cesta() {
                       <MarketLogo mercado={r.mercado} tamanho="sm" />
                       {r.mercado.name}
                     </Link>
-                    <p className="text-[11px] text-gray-400">
-                      {r.faltando > 0
-                        ? `faltam ${r.faltando} de ${itens.length} produtos: ${r.faltantes.join(', ')}`
-                        : 'cesta completa'}
-                    </p>
+                    {r.faltando > 0 ? (
+                      <details className="text-[11px] text-gray-400">
+                        <summary className="cursor-pointer">
+                          faltam {r.faltando} de {itens.length} produtos
+                        </summary>
+                        <p className="mt-0.5">{r.faltantes.join(', ')}</p>
+                      </details>
+                    ) : (
+                      <p className="text-[11px] text-gray-400">cesta completa</p>
+                    )}
                   </div>
                   <div className="text-right">
                     {r.faltando === 0 ? (
@@ -241,7 +251,7 @@ export default function Cesta() {
           </thead>
           <tbody>
             {itens.map((item) => {
-              const produto = products.find((p) => p.id === item.productId)
+              const produto = acharProduto(item.productId)
               if (!produto) return null
               const precos = precosDoProduto(item.productId, tipo === 'todos' ? undefined : tipo)
               const maisBarato = precos[0]
@@ -315,7 +325,7 @@ export default function Cesta() {
       )}
 
       <PainelVetorial
-        nomes={itens.map((i) => products.find((p) => p.id === i.productId)?.name ?? i.productId)}
+        nomes={itens.map((i) => acharProduto(i.productId)?.name ?? i.productId)}
         q={q}
         vetores={vetores}
       />

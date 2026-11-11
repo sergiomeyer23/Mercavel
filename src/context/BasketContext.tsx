@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
+import { acharProduto } from '../data'
 
 export interface ItemCesta {
   productId: string
@@ -53,7 +54,14 @@ export function cestaDoTexto(texto: string): ItemCesta[] {
 function lerCesta(): ItemCesta[] {
   try {
     const salvo = localStorage.getItem('cesta')
-    return salvo ? limparItens(JSON.parse(salvo)) : []
+    if (!salvo) return []
+    // a base muda todo dia: produto que saiu some da cesta, e id antigo vira o atual
+    return limparItens(
+      limparItens(JSON.parse(salvo)).flatMap((i) => {
+        const produto = acharProduto(i.productId)
+        return produto ? [{ ...i, productId: produto.id }] : []
+      }),
+    )
   } catch {
     return []
   }

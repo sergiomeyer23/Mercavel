@@ -35,36 +35,6 @@
   ]
  },
  {
-  "produto": "cera-liquida-poliflor-auto-brilho-incolor-750ml-13d952",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891035322495",
-    "nome": "Cera Líquida Poliflor Auto Brilho Incolor 750ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891035320309",
-    "nome": "Cera Líquida Auto Brilho Incolor Poliflor Brilho Prático 750ml"
-   }
-  ]
- },
- {
-  "produto": "salame-tipo-italiano-fatiado-seara-gourmet-100g-df759b",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7894904555659",
-    "nome": "Salame Tipo italiano fatiado Seara Gourmet 100g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7898343526454",
-    "nome": "Salame Tipo Italiano Fatiado Seara Gourmet 100g"
-   }
-  ]
- },
- {
   "produto": "mortadela-tradicionalmente-defumada-perdigao-ouro-200g-3e9928",
   "itens": [
    {
@@ -76,21 +46,6 @@
     "mercado": "festval",
     "ean": "7891515434335",
     "nome": "Mortadela Defumada Perdigão Ouro 200g"
-   }
-  ]
- },
- {
-  "produto": "queijo-mussarela-de-bufala-bom-destino-bola-250g-e561c3",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7898130990093",
-    "nome": "Queijo Mussarela de Búfala Bom Destino Bola 250g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7898130990468",
-    "nome": "Queijo Mussarela de Búfala Bola Média Bom Destino 250g"
    }
   ]
  },
@@ -121,21 +76,6 @@
     "mercado": "festval",
     "ean": "7891700206891",
     "nome": "Margarina Becel Manteiga Com Sal 500g"
-   }
-  ]
- },
- {
-  "produto": "queijo-prato-fatiado-president-150g-9f7cef",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898955617519",
-    "nome": "Queijo Prato Fatiado Président 150g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "77527944",
-    "nome": "Queijo Prato Président Fatiado 150g"
    }
   ]
  },
@@ -185,21 +125,6 @@
   ]
  },
  {
-  "produto": "biscoito-ruschel-amanteigado-400g-1a3e58",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7899542000141",
-    "nome": "Biscoito Ruschel Amanteigado 400g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7899542000868",
-    "nome": "Biscoito Amanteigado Ruschel 400g"
-   }
-  ]
- },
- {
   "produto": "cookies-vitao-sem-gluten-chocolate-60g-3d7be2",
   "itens": [
    {
@@ -230,36 +155,6 @@
   ]
  },
  {
-  "produto": "macarrao-barilla-spaghetti-integral-500g-287148",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "8076809529419",
-    "nome": "Macarrão Barilla Spaghetti Integral 500g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "8076809575553",
-    "nome": "Macarrão de Sêmola Integral Barilla Spaghetti 500g"
-   }
-  ]
- },
- {
-  "produto": "cafe-em-capsula-ristretto-espresso-l-or-caixa-52g-10-unidade-d59315",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "8711000362747",
-    "nome": "Café em Cápsula Ristretto Espresso L'or Caixa 52g 10 Unidades"
-   },
-   {
-    "mercado": "festval",
-    "ean": "8711000362754",
-    "nome": "Café em Cápsula Ristretto Espresso L'or Caixa 52g 10 Unidades"
-   }
-  ]
- },
- {
   "produto": "cafe-em-capsula-espresso-sontuoso-l-or-caixa-52g-10-unidades-798caf",
   "itens": [
    {
@@ -271,36 +166,6 @@
     "mercado": "festval",
     "ean": "8711000362563",
     "nome": "Café em Cápsula Torrado e Moído Espresso Sontuoso L'or Caixa 52g 10 Unidades"
-   }
-  ]
- },
- {
-  "produto": "cafe-soluvel-nescafe-gold-intenso-intensidade-9-100g-2f5762",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "8445291748590",
-    "nome": "Café Solúvel Nescafé Gold Intenso Intensidade 9 100g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7613037064322",
-    "nome": "Café Solúvel Nescafé Gold Intenso 100g"
-   }
-  ]
- },
- {
-  "produto": "cafe-em-capsula-torrado-e-moido-ristretto-espresso-melitta-c-f42dec",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896348301069",
-    "nome": "Café em Cápsula Torrado e Moído Ristretto Espresso Melitta Caixa 53g 10 Unidades"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7896348301083",
-    "nome": "Café em Cápsula Torrado e Moído Marcato Espresso Melitta Caixa 53g 10 Unidades"
    }
   ]
  },
@@ -331,21 +196,6 @@
     "mercado": "atacadao",
     "ean": "27896038305197",
     "nome": "Macarrão de Arroz Urbano Pena 500g"
-   }
-  ]
- },
- {
-  "produto": "torrada-fhom-slim-tost-natural-110g-642aa5",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7897701100688",
-    "nome": "Torrada Fhom Slim Tost Natural 110g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7897701102774",
-    "nome": "Torrada Slim Tost Natural Fhom 110g"
    }
   ]
  },
@@ -451,21 +301,6 @@
     "mercado": "festval",
     "ean": "7898922618204",
     "nome": "Sumo de Limão Castelo 500ml"
-   }
-  ]
- },
- {
-  "produto": "sal-rosa-do-himalaia-fino-br-spices-500g-308f75",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7898635644309",
-    "nome": "Sal Rosa do Himalaia Fino BR Spices 500g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7898946481860",
-    "nome": "Sal Rosa Himalaia Fino Br Spices Pouch 500g"
    }
   ]
  },
@@ -755,21 +590,6 @@
   ]
  },
  {
-  "produto": "cerveja-original-pilsen-600ml-garrafa-e4bd22",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "78905351",
-    "nome": "Cerveja Original Pilsen 600ml Garrafa"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891991100830",
-    "nome": "Cerveja Antarctica Original Pilsen Garrafa 600ml"
-   }
-  ]
- },
- {
   "produto": "aperitivo-aperol-garrafa-750ml-c0a33c",
   "itens": [
    {
@@ -815,36 +635,6 @@
   ]
  },
  {
-  "produto": "licor-fino-original-irish-cream-baileys-garrafa-750ml-a353fb",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "5011013100132",
-    "nome": "Licor Fino Original Irish Cream Baileys Garrafa 750ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "5011013100989",
-    "nome": "Licor Fino Original Irish Cream Baileys Garrafa 750ml"
-   }
-  ]
- },
- {
-  "produto": "whisky-escoces-blended-black-label-johnnie-walker-garrafa-75-09bab7",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "5000267024011",
-    "nome": "Whisky Escocês Blended Black Label Johnnie Walker Garrafa 750ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "5000267024097",
-    "nome": "Whisky Escocês Blended Black Label Johnnie Walker 750ml"
-   }
-  ]
- },
- {
   "produto": "montilla-carta-ouro-rum-nacional-1l-de633b",
   "itens": [
    {
@@ -860,21 +650,6 @@
   ]
  },
  {
-  "produto": "whisky-ballantine-s-finest-blended-escoces-1-litro-777030",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "5010106111956",
-    "nome": "Whisky Ballantine's Finest Blended Escocês 1 Litro"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891050005199",
-    "nome": "Whisky Finest Blended Escocês Ballantine's 1L"
-   }
-  ]
- },
- {
   "produto": "vinho-tinto-saint-germain-assemblage-seco-750ml-263bba",
   "itens": [
    {
@@ -886,21 +661,6 @@
     "mercado": "atacadao",
     "ean": "7896023082108",
     "nome": "Vinho Saint Germain Assemblage Tinto 750ml"
-   }
-  ]
- },
- {
-  "produto": "pao-de-queijo-forno-de-minas-coquetel-congelado-820g-07c548",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896074606742",
-    "nome": "Pão de Queijo Forno de Minas Coquetel Congelado 820g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7896074606872",
-    "nome": "Pão de Queijo Congelado Forno de Minas Pacote 820g"
    }
   ]
  },
@@ -965,21 +725,6 @@
   ]
  },
  {
-  "produto": "sabonete-em-barra-palmolive-naturals-hidratacao-refrescante--e142ff",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7509546669670",
-    "nome": "Sabonete em Barra Palmolive Naturals Hidratação Refrescante Melancia & Lichia 85g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7509546693859",
-    "nome": "Sabonete Palmolive Naturals Hidratação Refrescante Melancia & Lichia 8x85g"
-   }
-  ]
- },
- {
   "produto": "absorvente-mili-dia-e-noite-cobertura-suave-com-abas-32un-ff029a",
   "itens": [
    {
@@ -991,21 +736,6 @@
     "mercado": "atacadao",
     "ean": "7896104992748",
     "nome": "Absorvente Dia e Noite Mili Suave com Abas 32 un"
-   }
-  ]
- },
- {
-  "produto": "sabonete-antibacteriano-em-barra-protex-cream-85g-2f6097",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891024035078",
-    "nome": "Sabonete Antibacteriano em Barra Protex Cream 85g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891024114001",
-    "nome": "Sabonete Antibacteriano em Barra Protex Cream 85g"
    }
   ]
  },
@@ -1036,21 +766,6 @@
     "mercado": "festval",
     "ean": "7791293008868",
     "nome": "Desodorante Antitranspirante Aerosol Dove Invisible Dry 150ml"
-   }
-  ]
- },
- {
-  "produto": "antitranspirante-roll-on-nivea-men-active-dry-impact-50ml-302b46",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "4005808257553",
-    "nome": "Antitranspirante Roll-On Nivea Men Active Dry Impact 50ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "4005808816118",
-    "nome": "NIVEA MEN Desodorante Antitranspirante Roll-on Active Dry Impact 50ml"
    }
   ]
  },
@@ -1096,36 +811,6 @@
     "mercado": "atacadao",
     "ean": "7897173082970",
     "nome": "Panettone Casa Suíça La Veneziana 750g"
-   }
-  ]
- },
- {
-  "produto": "whisky-18-anos-chivas-750ml-c41d90",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "5000299225028",
-    "nome": "Whisky 18 anos Chivas 750ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "80432400395",
-    "nome": "Whisky Chivas 12 Anos 750ml"
-   }
-  ]
- },
- {
-  "produto": "sobrecoxa-de-frango-temperada-congelada-copacol-1kg-3eb6ac",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7891527057935",
-    "nome": "Sobrecoxa de Frango Temperada Congelada Copacol 1kg"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7891527000771",
-    "nome": "Sobrecoxa de Frango Copacol Congelada 1kg"
    }
   ]
  },
@@ -1186,21 +871,6 @@
     "mercado": "atacadao",
     "ean": "7898755180060",
     "nome": "Barra de Proteína Bold Cookies Cream 60g"
-   }
-  ]
- },
- {
-  "produto": "barra-de-proteina-bold-thin-cookies-cream-40g-f4f19d",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898755180220",
-    "nome": "Barra de Proteína BOLD Thin Cookies & Cream 40g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7898755180978",
-    "nome": "Barra de Proteína Bold Cookies Cream 40g"
    }
   ]
  }

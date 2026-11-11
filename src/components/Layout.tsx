@@ -5,7 +5,7 @@ import { useCesta } from '../context/BasketContext'
 import Logo from './Logo'
 import { caminhoDaBusca } from '../utils'
 
-function CampoBusca() {
+function CampoBusca({ largo, aoBuscar }: { largo?: boolean; aoBuscar?: () => void }) {
   const [texto, setTexto] = useState('')
   const navigate = useNavigate()
 
@@ -14,6 +14,7 @@ function CampoBusca() {
     if (!texto.trim()) return
     navigate(caminhoDaBusca(texto))
     setTexto('')
+    aoBuscar?.()
   }
 
   return (
@@ -24,7 +25,7 @@ function CampoBusca() {
         value={texto}
         onChange={(e) => setTexto(e.target.value)}
         placeholder="buscar produto..."
-        className="w-44 rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-marca-500 focus:outline-none"
+        className={(largo ? 'w-full' : 'w-44') + ' rounded-lg border border-gray-300 px-3 py-1.5 text-sm focus:border-marca-500 focus:outline-none'}
       />
     </form>
   )
@@ -87,6 +88,9 @@ export default function Layout() {
 
         {menuAberto && (
           <nav className="border-t border-gray-200 px-4 py-2 sm:hidden">
+            <div className="pb-2">
+              <CampoBusca largo aoBuscar={() => setMenuAberto(false)} />
+            </div>
             {links.map((l) => (
               <Link
                 key={l.to}

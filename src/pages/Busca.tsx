@@ -2,11 +2,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { categories, products } from '../data'
 import Chip from '../components/Chip'
 import GradeProdutos from '../components/GradeProdutos'
-import { precosDoProduto } from '../utils'
-
-function semAcento(texto: string) {
-  return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-}
+import { precosDoProduto, semAcento } from '../utils'
 
 type Ordem = 'relevancia' | 'menor' | 'nome'
 
@@ -27,7 +23,7 @@ export default function Busca() {
   // todas as palavras precisam aparecer (em qualquer ordem)
   const palavras = semAcento(q.trim()).split(/\s+/).filter(Boolean)
   const achados = products.filter((p) => {
-    const texto = semAcento(`${p.name} ${p.brand} ${p.ean ?? ''}`)
+    const texto = semAcento(`${p.name} ${p.brand}`)
     return palavras.every((w) => texto.includes(w))
   })
 
