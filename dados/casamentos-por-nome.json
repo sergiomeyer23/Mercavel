@@ -1,31 +1,16 @@
 [
  {
-  "produto": "limpador-multiuso-veja-gold-original-500ml-6adb98",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7891035210013",
-    "nome": "Limpador Multiuso Veja Gold Original 500ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7891035210006",
-    "nome": "Limpador Multiuso Veja Gold Original 500ml"
-   }
-  ]
- },
- {
-  "produto": "inseticida-aerossol-raid-multi-insetos-aqua-protection-420ml-2146af",
+  "produto": "mortadela-tradicionalmente-defumada-perdigao-ouro-200g-3e9928",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7894650008546",
-    "nome": "Inseticida Aerossol Raid Multi-insetos Aqua Protection 420ml"
+    "ean": "7891515434311",
+    "nome": "Mortadela tradicionalmente defumada Perdigão Ouro 200g"
    },
    {
-    "mercado": "atacadao",
-    "ean": "7894650007907",
-    "nome": "Inseticida Aerossol Raid Multi Insetos Aqua 420ml"
+    "mercado": "festval",
+    "ean": "7891515434335",
+    "nome": "Mortadela Defumada Perdigão Ouro 200g"
    }
   ]
  },
@@ -45,21 +30,6 @@
   ]
  },
  {
-  "produto": "suplemento-alimentar-liquido-yakult-hiline-f-frasco-100ml-6bb864",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891156076185",
-    "nome": "Suplemento Alimentar Líquido Yakult Hiline F Frasco 100ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891156011018",
-    "nome": "Suplemento Alimentar Líquido Yakult Hiline F Frasco 100ml"
-   }
-  ]
- },
- {
   "produto": "mistura-para-bolo-fleischmann-cremoso-aipim-390g-a5d64a",
   "itens": [
    {
@@ -71,6 +41,21 @@
     "mercado": "atacadao",
     "ean": "7897309408476",
     "nome": "Mistura para bolo Fleischmann Aipim 390g"
+   }
+  ]
+ },
+ {
+  "produto": "mistura-para-bolo-fleischmann-chocolate-390g-6e97e4",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7897309408575",
+    "nome": "Mistura para Bolo Fleischmann Chocolate 390g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7898331013331",
+    "nome": "Mistura para Bolo Fleischmann Chocolate com Avelã 390g"
    }
   ]
  },
@@ -105,21 +90,6 @@
   ]
  },
  {
-  "produto": "biscoito-salgado-club-social-recheado-queijo-tomate-e-manjer-a8fb08",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7622210661609",
-    "nome": "Biscoito Salgado Club Social Recheado Queijo, Tomate e Manjericão 106g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7622300828585",
-    "nome": "Biscoito Salgado Recheado Queijo Tomate Manjericão Multipack Club Social 106g"
-   }
-  ]
- },
- {
   "produto": "cookies-vitao-sem-gluten-chocolate-60g-3d7be2",
   "itens": [
    {
@@ -131,36 +101,6 @@
     "mercado": "festval",
     "ean": "7896063201347",
     "nome": "Cookies Chocolate sem Glúten Disney Vitao 60g"
-   }
-  ]
- },
- {
-  "produto": "macarrao-instantaneo-nissin-talharim-carne-com-tomate-99g-df6fd9",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891079000410",
-    "nome": "Macarrão Instantâneo Nissin Talharim Carne com Tomate 99g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891079011973",
-    "nome": "Macarrão Instantâneo Carne com Tomate Nissin Talharim Pacote 99g"
-   }
-  ]
- },
- {
-  "produto": "gordura-vegetal-primor-500g-8a3554",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7894904271191",
-    "nome": "Gordura Vegetal Primor 500g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7891080400674",
-    "nome": "Gordura Vegetal Primor 500g"
    }
   ]
  },
@@ -195,17 +135,32 @@
   ]
  },
  {
-  "produto": "macarrao-de-arroz-sem-ovos-pena-urbano-500g-89c68e",
+  "produto": "chocolate-lacta-ao-leite-80g-7f8ed4",
   "itens": [
    {
-    "mercado": "festval",
-    "ean": "7896038305193",
-    "nome": "Macarrão de Arroz sem Ovos Pena Urbano 500g"
+    "mercado": "muffato",
+    "ean": "7622210673831",
+    "nome": "Chocolate Lácta Ao Leite 80g"
    },
    {
-    "mercado": "atacadao",
-    "ean": "27896038305197",
-    "nome": "Macarrão de Arroz Urbano Pena 500g"
+    "mercado": "festval",
+    "ean": "7622210674029",
+    "nome": "Chocolate ao Leite Lacta Pacote 80g"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-branco-laka-80g-e12599",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7622210674319",
+    "nome": "Chocolate branco Laka 80g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7622210674326",
+    "nome": "Chocolate Branco Lacta Laka 80g"
    }
   ]
  },
@@ -225,17 +180,62 @@
   ]
  },
  {
-  "produto": "chocolate-milka-oreo-100g-70bc59",
+  "produto": "chocolate-branco-e-ao-leite-diamante-negro-laka-80g-a25a54",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7622300631574",
-    "nome": "Chocolate Milka Oreo 100g"
+    "ean": "7622210575630",
+    "nome": "Chocolate branco e ao leite Diamante Negro Laka 80g"
    },
    {
-    "mercado": "atacadao",
-    "ean": "7622210262202",
-    "nome": "Chocolate Milka Oreo 100g"
+    "mercado": "festval",
+    "ean": "7622210674272",
+    "nome": "Chocolate ao Leite e Branco Lacta Laka + Diamante Negro Pacote 80g"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-ao-leite-com-amendoim-shot-80g-ecb357",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7622210674395",
+    "nome": "Chocolate ao leite com amendoim Shot 80g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7622210674401",
+    "nome": "Chocolate ao Leite com Amendoim Shot Lacta 80g"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-ao-leite-garoto-tablete-80g-86fb3d",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891008123975",
+    "nome": "Chocolate ao Leite Garoto Tablete 80g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7891008123999",
+    "nome": "Chocolate Ao Leite Garoto Tablete 80g"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-ao-leite-garoto-caju-com-passas-80g-616b03",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891008124828",
+    "nome": "Chocolate ao Leite Garoto  Caju com Passas 80g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7891008124835",
+    "nome": "Chocolate ao Leite Garoto Caju Com Passas Tablete 80g"
    }
   ]
  },
@@ -255,6 +255,66 @@
   ]
  },
  {
+  "produto": "bala-de-gelatina-fini-minhocas-90g-f744e5",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7898279790776",
+    "nome": "Bala de Gelatina Fini Minhocas 90g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "8410525116711",
+    "nome": "Bala Gelatina Minhocas Brilho Fini 90g"
+   }
+  ]
+ },
+ {
+  "produto": "bala-de-gelatina-fini-beijos-90g-055901",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7898279790400",
+    "nome": "Bala de Gelatina  Fini Beijos  90g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "8410525116704",
+    "nome": "Bala Gelatina Beijos de Morango Fini 90g"
+   }
+  ]
+ },
+ {
+  "produto": "bala-de-gelatina-fini-dentaduras-90g-36d7b0",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7898279790417",
+    "nome": "Bala de Gelatina Fini Dentaduras 90g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "8410525122903",
+    "nome": "Bala Gelatina Dentaduras Fini 90g"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-branco-snickers-pacote-42g-1bf1e2",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896423488883",
+    "nome": "Chocolate Branco Snickers Pacote 42g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7896423439038",
+    "nome": "Chocolate Branco Snickers Pacote 42g"
+   }
+  ]
+ },
+ {
   "produto": "caixa-de-bombons-chocolate-lindt-lindor-ao-leite-200g-com-16-8f3f1b",
   "itens": [
    {
@@ -270,62 +330,17 @@
   ]
  },
  {
-  "produto": "extrato-de-tomate-quero-130g-104a97",
+  "produto": "panettone-santa-edwiges-frutas-lata-400g-0ef34c",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7896102502183",
-    "nome": "Extrato de Tomate Quero 130g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7896102515718",
-    "nome": "Extrato de Tomate Quero Caixa 130g"
-   }
-  ]
- },
- {
-  "produto": "sumo-de-limao-castelo-500ml-ded2a9",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896048285270",
-    "nome": "Sumo de Limão Castelo 500ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7898922618204",
-    "nome": "Sumo de Limão Castelo 500ml"
-   }
-  ]
- },
- {
-  "produto": "canjica-vapza-cozida-no-vapor-500g-1b6f64",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7897122600521",
-    "nome": "Canjica Vapza Cozida no Vapor 500g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7897122600682",
-    "nome": "Canjica Cozida no Vapor Vapza 500g"
-   }
-  ]
- },
- {
-  "produto": "pao-de-alho-zinho-tradicional-300g-8122e4",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7898337980248",
-    "nome": "Pão de Alho Zinho Tradicional 300g"
+    "ean": "7896064205719",
+    "nome": "Panettone Santa Edwiges Frutas Lata 400g"
    },
    {
     "mercado": "atacadao",
-    "ean": "7898337980064",
-    "nome": "Pão de Alho Zinho Bolinha Tradicional 300g"
+    "ean": "7896064205696",
+    "nome": "Panettone Santa Edwiges Frutas 400g"
    }
   ]
  },
@@ -345,17 +360,17 @@
   ]
  },
  {
-  "produto": "refrigerante-coca-cola-sem-acucar-310ml-5131b7",
+  "produto": "cerveja-heineken-garrafa-330ml-d43ab6",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7894900701159",
-    "nome": "Refrigerante Coca-Cola Sem Açúcar 310ml"
+    "ean": "78936683",
+    "nome": "Cerveja Heineken Garrafa 330ml"
    },
    {
-    "mercado": "festval",
-    "ean": "7894900701166",
-    "nome": "Refrigerante Sem Açúcar Coca-Cola Lata 310ml"
+    "mercado": "atacadao",
+    "ean": "7896045506538",
+    "nome": "Cerveja Heineken 330ml"
    }
   ]
  },
@@ -375,6 +390,21 @@
   ]
  },
  {
+  "produto": "energetico-maca-verde-baly-lata-473ml-ee3666",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7898080664587",
+    "nome": "Energético Maçã-Verde Baly Lata 473ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7898080664815",
+    "nome": "Energético Baly Maçã Verde Sem Açúcar Lata 473ml"
+   }
+  ]
+ },
+ {
   "produto": "cerveja-brahma-duplo-malte-puro-malte-lata-350ml-5473d3",
   "itens": [
    {
@@ -386,21 +416,6 @@
     "mercado": "festval",
     "ean": "7891991294959",
     "nome": "Cerveja Duplo Malte Brahma 350ml"
-   }
-  ]
- },
- {
-  "produto": "cerveja-brahma-malzbier-350ml-lata-973ed4",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891149101528",
-    "nome": "Cerveja Brahma Malzbier 350ml Lata"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891149101535",
-    "nome": "Cerveja Brahma Malzbier Lata 350ml"
    }
   ]
  },
@@ -420,32 +435,107 @@
   ]
  },
  {
-  "produto": "cerveja-budweiser-american-lager-350ml-lata-765e24",
+  "produto": "energetico-red-bull-energy-drink-250ml-137502",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7891991010481",
-    "nome": "Cerveja Budweiser American Lager 350ml Lata"
+    "ean": "611269991000",
+    "nome": "Energético Red Bull Energy Drink 250ml"
    },
    {
     "mercado": "festval",
-    "ean": "7891991296342",
-    "nome": "Cerveja American Lager Lata Budweiser 350ml"
+    "ean": "9002490225216",
+    "nome": "Energético Red Bull Energy Drink 250ml"
    }
   ]
  },
  {
-  "produto": "cerveja-budweiser-zero-alcool-lata-350ml-503a2f",
+  "produto": "energetico-zero-acucar-red-bull-lata-250ml-e816b1",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7891991298407",
-    "nome": "Cerveja Budweiser Zero Álcool Lata 350ml"
+    "ean": "9002490283063",
+    "nome": "Energético Zero Açúcar Red Bull Lata 250ml"
    },
    {
     "mercado": "festval",
-    "ean": "7891991298414",
-    "nome": "Cerveja Budweiser Zero Álcool Lata Sleek 350ml"
+    "ean": "9002490284527",
+    "nome": "Energético Zero Açúcar Red Bull 250ml"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-red-bull-sugar-free-sem-acucar-250ml-5e7d6a",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "611269101713",
+    "nome": "Energético Red Bull Sugar Free Sem açúcar 250ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "9002490225094",
+    "nome": "Energético Red Bull Sugar Free 250ml"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-red-bull-pomelo-sem-acucar-250ml-7578f7",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "9002490280901",
+    "nome": "Energético Red Bull Pomelo Sem Açúcar 250ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "9002490280925",
+    "nome": "Energético Red Bull Pomelo Sem Açúcar 250ml"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-red-bull-amora-sem-acucar-250ml-e42629",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "9002490275020",
+    "nome": "Energético Red Bull Amora Sem Açúcar 250ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "9002490281151",
+    "nome": "Energético Red Bull Amora Sem Açúcar 250ml"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-red-bull-cereja-e-frutas-silvestres-250ml-2f6ea1",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "9002490264093",
+    "nome": "Energético Red Bull Cereja e Frutas Silvestres 250ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "9002490271091",
+    "nome": "Energético Red Bull Cereja e Frutas Silvestres 250ml"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-red-bull-melancia-250ml-97df7a",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "9002490247379",
+    "nome": "Energético Red Bull Melancia 250ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "9002490247386",
+    "nome": "Energético Red Bull Melancia 250ml"
    }
   ]
  },
@@ -510,17 +600,17 @@
   ]
  },
  {
-  "produto": "cerveja-budweiser-american-lager-330ml-long-neck-ca9432",
+  "produto": "refrigerante-h2oh-limoneto-garrafa-500ml-c2eff8",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7891991014762",
-    "nome": "Cerveja Budweiser American Lager 330ml Long Neck"
+    "ean": "7892840812850",
+    "nome": "Refrigerante H2OH Limoneto Garrafa 500ml"
    },
    {
     "mercado": "festval",
-    "ean": "7891991014779",
-    "nome": "Cerveja American Lager Long Neck Budweiser 330ml"
+    "ean": "7892840812867",
+    "nome": "Refrigerante H2OH! Limoneto 500ml"
    }
   ]
  },
@@ -540,21 +630,6 @@
   ]
  },
  {
-  "produto": "drink-pronto-beats-senses-long-neck-269ml-c0d1b8",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891991301138",
-    "nome": "Drink Pronto Beats Senses Long Neck 269ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891991301145",
-    "nome": "Drink Pronto Beats Senses Long Neck 269ml"
-   }
-  ]
- },
- {
   "produto": "drink-pronto-beats-gt-sabor-gin-tonica-long-neck-269ml-aba496",
   "itens": [
    {
@@ -570,36 +645,6 @@
   ]
  },
  {
-  "produto": "aperitivo-aperol-garrafa-750ml-c0a33c",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891136057012",
-    "nome": "Aperitivo Aperol Garrafa 750ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7896010006292",
-    "nome": "Aperitivo Aperol Garrafa 750ml"
-   }
-  ]
- },
- {
-  "produto": "espumante-salton-demi-sec-750ml-03a20f",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896023082979",
-    "nome": "Espumante Salton Demi-Sec 750ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7896023015717",
-    "nome": "Espumante Salton Classic Demi-Sec 750ml"
-   }
-  ]
- },
- {
   "produto": "cha-lipton-ice-tea-limao-garrafa-1-5l-4f01a6",
   "itens": [
    {
@@ -611,21 +656,6 @@
     "mercado": "festval",
     "ean": "7891042102547",
     "nome": "Chá Ice Tea Limão Lipton Garrafa 1,5L"
-   }
-  ]
- },
- {
-  "produto": "whisky-black-white-1l-6b7df7",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "50196081",
-    "nome": "Whisky Black & White 1L"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7893218003375",
-    "nome": "Whisky Black & White 1L"
    }
   ]
  },
@@ -671,21 +701,6 @@
     "mercado": "atacadao",
     "ean": "92429980",
     "nome": "Pizza Sadia Mussarela 440g"
-   }
-  ]
- },
- {
-  "produto": "sabonete-barra-hidratante-erva-doce-oleos-nivea-flow-pack-85-1bdf86",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "4005900521934",
-    "nome": "Sabonete Barra Hidratante Erva-Doce & Óleos Nivea Flow Pack 85g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7890704806441",
-    "nome": "Sabonete Barra Hidratante Erva-Doce & Óleos Nivea Flow Pack 85g"
    }
   ]
  },
@@ -750,17 +765,32 @@
   ]
  },
  {
-  "produto": "nivea-desodorante-roll-on-derma-control-defende-50ml-40f75b",
+  "produto": "listerine-antisseptico-bucal-cool-mint-500ml-ede65e",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "4006000181936",
-    "nome": "NIVEA Desodorante Roll-on Derma Control Defende 50ml"
+    "ean": "7891010256753",
+    "nome": "Listerine Antisséptico Bucal Cool Mint 500ml"
    },
    {
-    "mercado": "atacadao",
-    "ean": "4006000305783",
-    "nome": "Desodorante Roll-On Nivea Derma Control Defende 50ml"
+    "mercado": "festval",
+    "ean": "7895800406731",
+    "nome": "Enxaguante Bucal Antisséptico Listerine Cool Mint 500ml"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-em-gel-closeup-protecao-360-fresh-red-hot-90g-6ae780",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891037744356",
+    "nome": "Creme Dental em Gel Closeup Proteção 360º Fresh Red Hot 90g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7891150061736",
+    "nome": "Close Up Gel Dental Proteção 360º Fresh Red Hot 90 g"
    }
   ]
  },
@@ -795,6 +825,21 @@
   ]
  },
  {
+  "produto": "cerveja-unfiltered-lata-eisenbahn-350ml-86f9b7",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7898367984384",
+    "nome": "Cerveja Unfiltered Lata Eisenbahn 350ml"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7898367984377",
+    "nome": "Cerveja Eisenbahn Unfiltered 350ml"
+   }
+  ]
+ },
+ {
   "produto": "agua-mineral-natural-sem-gas-crystal-garrafa-1-5l-5f3c9b",
   "itens": [
    {
@@ -806,51 +851,6 @@
     "mercado": "atacadao",
     "ean": "7896371000052",
     "nome": "Água Mineral Crystal Sem gás 1,5L"
-   }
-  ]
- },
- {
-  "produto": "energetico-red-bull-morango-e-pessego-250ml-129efb",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "9002490269128",
-    "nome": "Energético Red Bull Morango e Pêssego 250ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "9002490258825",
-    "nome": "Energético Red Bull Morango e Pêssego 250ml"
-   }
-  ]
- },
- {
-  "produto": "isotonico-gatorade-morango-com-maracuja-500ml-7c887a",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7892840808440",
-    "nome": "Isotônico Gatorade Morango com Maracujá 500ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7892840808174",
-    "nome": "Isotônico Gatorade Morango com Maracujá 500ml"
-   }
-  ]
- },
- {
-  "produto": "energetico-red-bull-energy-drink-355ml-d92191",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "9002490225353",
-    "nome": "Energético Red Bull Energy Drink 355ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "9002490209346",
-    "nome": "Energético Red Bull Energy Drink 355ml"
    }
   ]
  },
