@@ -1,16 +1,16 @@
 [
  {
-  "produto": "lava-roupas-em-po-assim-triplacao-sache-1-6kg-c576d5",
+  "produto": "limpador-multiuso-veja-gold-original-500ml-6adb98",
   "itens": [
    {
-    "mercado": "muffato",
-    "ean": "7908324402728",
-    "nome": "Lava-Roupas em Pó Assim Triplação Sachê 1.6kg"
+    "mercado": "festval",
+    "ean": "7891035210013",
+    "nome": "Limpador Multiuso Veja Gold Original 500ml"
    },
    {
     "mercado": "atacadao",
-    "ean": "7908324402742",
-    "nome": "Lava Roupas em Pó Assim Triplação Micelar 1,6kg"
+    "ean": "7891035210006",
+    "nome": "Limpador Multiuso Veja Gold Original 500ml"
    }
   ]
  },
@@ -26,6 +26,21 @@
     "mercado": "atacadao",
     "ean": "7894650007907",
     "nome": "Inseticida Aerossol Raid Multi Insetos Aqua 420ml"
+   }
+  ]
+ },
+ {
+  "produto": "queijo-burrata-de-bufala-bom-destino-120g-91772a",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7898130991335",
+    "nome": "Queijo Burrata de Búfala Bom Destino 120g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7898130991748",
+    "nome": "Creme de Queijo Burrata de Búfala Bom Destino Caixa 120g"
    }
   ]
  },
@@ -90,6 +105,21 @@
   ]
  },
  {
+  "produto": "mistura-para-bolo-dona-benta-chocolate-450g-5b783f",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896005217023",
+    "nome": "Mistura para Bolo Dona Benta Chocolate 450g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7896005272008",
+    "nome": "Mistura para Bolo Dona Benta Chocolate 450g"
+   }
+  ]
+ },
+ {
   "produto": "cookies-vitao-sem-gluten-chocolate-60g-3d7be2",
   "itens": [
    {
@@ -101,36 +131,6 @@
     "mercado": "festval",
     "ean": "7896063201347",
     "nome": "Cookies Chocolate sem Glúten Disney Vitao 60g"
-   }
-  ]
- },
- {
-  "produto": "macarrao-instantaneo-nissin-lamen-carne-85g-1dc7e6",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891079000205",
-    "nome": "Macarrão Instantâneo Nissin Lámen Carne 85g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7891079014295",
-    "nome": "Macarrão Instantâneo Nissin Lámen Carne Picante 85g"
-   }
-  ]
- },
- {
-  "produto": "macarrao-galo-semola-ninho-n-3-500g-659d95",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896022200695",
-    "nome": "Macarrão Galo Sêmola Ninho nº3 500g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7896022200664",
-    "nome": "Macarrão de Sêmola Galo Ninho 500g"
    }
   ]
  },
@@ -150,32 +150,47 @@
   ]
  },
  {
-  "produto": "oleo-composto-maria-tradicional-500ml-e81602",
+  "produto": "macarrao-galo-semola-ninho-n-3-500g-659d95",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7896036096437",
-    "nome": "Óleo Composto Maria Tradicional 500ml"
+    "ean": "7896022200695",
+    "nome": "Macarrão Galo Sêmola Ninho nº3 500g"
    },
    {
     "mercado": "atacadao",
-    "ean": "7896036092934",
-    "nome": "Óleo Composto Maria Tradicional 500ml"
+    "ean": "7896022200664",
+    "nome": "Macarrão de Sêmola Galo Ninho 500g"
    }
   ]
  },
  {
-  "produto": "chocolate-em-po-apti-50-cacau-200g-276a83",
+  "produto": "arroz-branco-prato-fino-tipo-1-2kg-0f6848",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7896327502371",
-    "nome": "Chocolate em Pó Apti 50% Cacau 200g"
+    "ean": "7896290300141",
+    "nome": "Arroz Branco Prato Fino Tipo 1 2kg"
    },
    {
-    "mercado": "atacadao",
-    "ean": "7896327515791",
-    "nome": "Chocolate em Pó Apti 32% Cacau 200g"
+    "mercado": "festval",
+    "ean": "7896290300158",
+    "nome": "Arroz Branco Prato Fino 2kg"
+   }
+  ]
+ },
+ {
+  "produto": "erva-mate-tertulia-chimarrao-a-vacuo-1kg-04328e",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896394600062",
+    "nome": "Erva Mate Tertúlia Chimarrão a Vácuo 1kg"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7896394600024",
+    "nome": "Erva-Mate Chimarrão Tertúlia 1kg"
    }
   ]
  },
@@ -191,21 +206,6 @@
     "mercado": "festval",
     "ean": "7894321711607",
     "nome": "Achocolatado em Pó Light Toddy 380g"
-   }
-  ]
- },
- {
-  "produto": "chocolate-branco-laka-oreo-80g-7cd3ab",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7622210674357",
-    "nome": "Chocolate branco Laka Oreo 80g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7622210674364",
-    "nome": "Chocolate Branco com Biscoito Oreo Lacta Laka Pacote 80g"
    }
   ]
  },
@@ -285,6 +285,21 @@
   ]
  },
  {
+  "produto": "panettone-santa-edwiges-frutas-lata-400g-0ef34c",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896064205719",
+    "nome": "Panettone Santa Edwiges Frutas Lata 400g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7896064205696",
+    "nome": "Panettone Santa Edwiges Frutas 400g"
+   }
+  ]
+ },
+ {
   "produto": "refrigerante-coca-cola-garrafa-200ml-0b1c67",
   "itens": [
    {
@@ -300,47 +315,32 @@
   ]
  },
  {
-  "produto": "refrigerante-coca-cola-sem-acucar-310ml-5131b7",
+  "produto": "cerveja-heineken-garrafa-330ml-d43ab6",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7894900701159",
-    "nome": "Refrigerante Coca-Cola Sem Açúcar 310ml"
+    "ean": "78936683",
+    "nome": "Cerveja Heineken Garrafa 330ml"
    },
    {
-    "mercado": "festval",
-    "ean": "7894900701166",
-    "nome": "Refrigerante Sem Açúcar Coca-Cola Lata 310ml"
+    "mercado": "atacadao",
+    "ean": "7896045506538",
+    "nome": "Cerveja Heineken 330ml"
    }
   ]
  },
  {
-  "produto": "refresco-em-po-tang-limao-18g-bf504d",
+  "produto": "refrigerante-coca-cola-sem-acucar-600ml-56f927",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7622210571540",
-    "nome": "Refresco em pó Tang Limão 18g"
+    "ean": "7894900701609",
+    "nome": "Refrigerante Coca-Cola Sem Açúcar 600ml"
    },
    {
-    "mercado": "festval",
-    "ean": "7622210571854",
-    "nome": "Refresco em pó Tang Limão 18g"
-   }
-  ]
- },
- {
-  "produto": "refresco-em-po-tang-abacaxi-18g-2d86b0",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7622210571755",
-    "nome": "Refresco em pó Tang Abacaxi 18g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7622210571748",
-    "nome": "Refresco em Pó Abacaxi Tang Pacote 18g"
+    "mercado": "atacadao",
+    "ean": "40665926",
+    "nome": "Refrigerante Coca-Cola Sem açúcar 600ml"
    }
   ]
  },
@@ -356,21 +356,6 @@
     "mercado": "festval",
     "ean": "7891991294959",
     "nome": "Cerveja Duplo Malte Brahma 350ml"
-   }
-  ]
- },
- {
-  "produto": "refrigerante-laranja-fanta-garrafa-200ml-f0bad6",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "78936478",
-    "nome": "Refrigerante Laranja Fanta Garrafa 200ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7894900032215",
-    "nome": "Refrigerante Fanta Laranja Pet 200ml"
    }
   ]
  },
@@ -450,21 +435,6 @@
   ]
  },
  {
-  "produto": "cha-lipton-ice-tea-limao-garrafa-1-5l-4f01a6",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891042000201",
-    "nome": "Chá Lipton Ice Tea Limão Garrafa 1,5L"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891042102547",
-    "nome": "Chá Ice Tea Limão Lipton Garrafa 1,5L"
-   }
-  ]
- },
- {
   "produto": "espumante-salton-series-demi-sec-750ml-b949ca",
   "itens": [
    {
@@ -495,6 +465,21 @@
   ]
  },
  {
+  "produto": "whisky-black-white-1l-6b7df7",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "50196081",
+    "nome": "Whisky Black & White 1L"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7893218003375",
+    "nome": "Whisky Black & White 1L"
+   }
+  ]
+ },
+ {
   "produto": "montilla-carta-ouro-rum-nacional-1l-de633b",
   "itens": [
    {
@@ -510,36 +495,6 @@
   ]
  },
  {
-  "produto": "vinho-tinto-country-wine-suave-750ml-38a31f",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891141011986",
-    "nome": "Vinho Tinto Country Wine Suave 750ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891141024559",
-    "nome": "Vinho Tinto Suave Brasileiro Country Wine 750ml"
-   }
-  ]
- },
- {
-  "produto": "vinho-tinto-seco-country-wine-750ml-a9922b",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891141016882",
-    "nome": "Vinho Tinto Seco Country Wine 750ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891141024573",
-    "nome": "Vinho Tinto Seco Brasileiro Country Wine 750ml"
-   }
-  ]
- },
- {
   "produto": "pizza-mussarela-sadia-440g-1e55fe",
   "itens": [
    {
@@ -551,21 +506,6 @@
     "mercado": "atacadao",
     "ean": "92429980",
     "nome": "Pizza Sadia Mussarela 440g"
-   }
-  ]
- },
- {
-  "produto": "sabonete-barra-hidratante-erva-doce-oleos-nivea-flow-pack-85-1bdf86",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "4005900521934",
-    "nome": "Sabonete Barra Hidratante Erva-Doce & Óleos Nivea Flow Pack 85g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7890704806441",
-    "nome": "Sabonete Barra Hidratante Erva-Doce & Óleos Nivea Flow Pack 85g"
    }
   ]
  },
@@ -615,36 +555,6 @@
   ]
  },
  {
-  "produto": "desodorante-antitranspirante-aerosol-dove-original-150ml-d013d9",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7506306241183",
-    "nome": "Desodorante Antitranspirante Aerosol Dove Original 150ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891150007697",
-    "nome": "Desodorante Antitranspirante Aerosol Dove Original 150ml"
-   }
-  ]
- },
- {
-  "produto": "creme-dental-em-gel-closeup-protecao-360-fresh-red-hot-90g-6ae780",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891037744356",
-    "nome": "Creme Dental em Gel Closeup Proteção 360º Fresh Red Hot 90g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891150061736",
-    "nome": "Close Up Gel Dental Proteção 360º Fresh Red Hot 90 g"
-   }
-  ]
- },
- {
   "produto": "panettone-premium-casa-suica-la-veneziana-750g-f10e82",
   "itens": [
    {
@@ -671,36 +581,6 @@
     "mercado": "atacadao",
     "ean": "7891000073018",
     "nome": "Iogurte Natural Nestlé Desnatado 160g"
-   }
-  ]
- },
- {
-  "produto": "cerveja-patagonia-amber-lager-lata-473ml-fed0c1",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7891149108374",
-    "nome": "Cerveja Patagonia Amber Lager Lata 473ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7891149108152",
-    "nome": "Cerveja Patagonia Amber Lager 473ml"
-   }
-  ]
- },
- {
-  "produto": "cerveja-patagonia-weisse-lata-473ml-a37c26",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7891149108671",
-    "nome": "Cerveja Patagonia Weisse Lata 473ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7898605254064",
-    "nome": "Cerveja Patagonia Weisse 473ml"
    }
   ]
  },
@@ -776,21 +656,6 @@
     "mercado": "atacadao",
     "ean": "7898755180060",
     "nome": "Barra de Proteína Bold Cookies Cream 60g"
-   }
-  ]
- },
- {
-  "produto": "pate-atum-tradicional-sache-coqueiro-170g-50a58a",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7894321841014",
-    "nome": "Patê Atum Tradicional Sachê Coqueiro 170g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7896009301193",
-    "nome": "Patê de Atum Coqueiro Tradicional 170g"
    }
   ]
  }
