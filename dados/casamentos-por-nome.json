@@ -30,21 +30,6 @@
   ]
  },
  {
-  "produto": "queijo-burrata-de-bufala-bom-destino-120g-91772a",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7898130991335",
-    "nome": "Queijo Burrata de Búfala Bom Destino 120g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7898130991748",
-    "nome": "Creme de Queijo Burrata de Búfala Bom Destino Caixa 120g"
-   }
-  ]
- },
- {
   "produto": "manteiga-tirol-com-sal-200g-e70ef3",
   "itens": [
    {
@@ -105,6 +90,21 @@
   ]
  },
  {
+  "produto": "mistura-para-bolo-fleischmann-chocolate-390g-6e97e4",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7897309408575",
+    "nome": "Mistura para Bolo Fleischmann Chocolate 390g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7898331013331",
+    "nome": "Mistura para Bolo Fleischmann Chocolate com Avelã 390g"
+   }
+  ]
+ },
+ {
   "produto": "mistura-para-bolo-dona-benta-chocolate-450g-5b783f",
   "itens": [
    {
@@ -135,21 +135,6 @@
   ]
  },
  {
-  "produto": "macarrao-instantaneo-nissin-talharim-carne-com-tomate-99g-df6fd9",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891079000410",
-    "nome": "Macarrão Instantâneo Nissin Talharim Carne com Tomate 99g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891079011973",
-    "nome": "Macarrão Instantâneo Carne com Tomate Nissin Talharim Pacote 99g"
-   }
-  ]
- },
- {
   "produto": "macarrao-galo-semola-ninho-n-3-500g-659d95",
   "itens": [
    {
@@ -161,21 +146,6 @@
     "mercado": "atacadao",
     "ean": "7896022200664",
     "nome": "Macarrão de Sêmola Galo Ninho 500g"
-   }
-  ]
- },
- {
-  "produto": "arroz-branco-prato-fino-tipo-1-2kg-0f6848",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896290300141",
-    "nome": "Arroz Branco Prato Fino Tipo 1 2kg"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7896290300158",
-    "nome": "Arroz Branco Prato Fino 2kg"
    }
   ]
  },
@@ -255,36 +225,6 @@
   ]
  },
  {
-  "produto": "extrato-de-tomate-quero-130g-104a97",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896102502183",
-    "nome": "Extrato de Tomate Quero 130g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7896102515718",
-    "nome": "Extrato de Tomate Quero Caixa 130g"
-   }
-  ]
- },
- {
-  "produto": "canjica-vapza-cozida-no-vapor-500g-1b6f64",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7897122600521",
-    "nome": "Canjica Vapza Cozida no Vapor 500g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7897122600682",
-    "nome": "Canjica Cozida no Vapor Vapza 500g"
-   }
-  ]
- },
- {
   "produto": "panettone-santa-edwiges-frutas-lata-400g-0ef34c",
   "itens": [
    {
@@ -300,21 +240,6 @@
   ]
  },
  {
-  "produto": "refrigerante-coca-cola-garrafa-200ml-0b1c67",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "78908901",
-    "nome": "Refrigerante Coca-Cola Garrafa 200ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "57474968",
-    "nome": "Refrigerante Coca-Cola 200ml"
-   }
-  ]
- },
- {
   "produto": "cerveja-heineken-garrafa-330ml-d43ab6",
   "itens": [
    {
@@ -326,6 +251,21 @@
     "mercado": "atacadao",
     "ean": "7896045506538",
     "nome": "Cerveja Heineken 330ml"
+   }
+  ]
+ },
+ {
+  "produto": "refrigerante-coca-cola-garrafa-200ml-0b1c67",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "78908901",
+    "nome": "Refrigerante Coca-Cola Garrafa 200ml"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "57474968",
+    "nome": "Refrigerante Coca-Cola 200ml"
    }
   ]
  },
@@ -390,32 +330,17 @@
   ]
  },
  {
-  "produto": "drink-pronto-beats-senses-269ml-lata-7a7d5d",
+  "produto": "cerveja-budweiser-zero-alcool-long-neck-330ml-d235c1",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7891149105564",
-    "nome": "Drink Pronto Beats Senses 269ml Lata"
+    "ean": "7891991298421",
+    "nome": "Cerveja Budweiser Zero Álcool Long Neck 330ml"
    },
    {
     "mercado": "festval",
-    "ean": "7891149105571",
-    "nome": "Drink Pronto Beats Senses Lata 269ml"
-   }
-  ]
- },
- {
-  "produto": "drink-pronto-beats-gt-sabor-gin-tonica-long-neck-269ml-aba496",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891991301114",
-    "nome": "Drink Pronto Beats GT Sabor Gin&Tônica Long Neck 269ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891991301121",
-    "nome": "Drink Pronto Beats GT Sabor Gin&Tônica Long Neck 269ml"
+    "ean": "7891991298445",
+    "nome": "Cerveja Budweiser Zero Álcool Long Neck 330ml"
    }
   ]
  },
@@ -461,6 +386,21 @@
     "mercado": "atacadao",
     "ean": "7896023083938",
     "nome": "Espumante Salton Brut Rosé 750ml"
+   }
+  ]
+ },
+ {
+  "produto": "drink-pronto-beats-gt-sabor-gin-tonica-long-neck-269ml-aba496",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891991301114",
+    "nome": "Drink Pronto Beats GT Sabor Gin&Tônica Long Neck 269ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7891991301121",
+    "nome": "Drink Pronto Beats GT Sabor Gin&Tônica Long Neck 269ml"
    }
   ]
  },
@@ -540,6 +480,21 @@
   ]
  },
  {
+  "produto": "antitranspirante-roll-on-nivea-men-active-dry-impact-50ml-302b46",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "4005808257553",
+    "nome": "Antitranspirante Roll-On Nivea Men Active Dry Impact 50ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "4005808816118",
+    "nome": "NIVEA MEN Desodorante Antitranspirante Roll-on Active Dry Impact 50ml"
+   }
+  ]
+ },
+ {
   "produto": "absorvente-mili-dia-e-noite-cobertura-suave-com-abas-32un-ff029a",
   "itens": [
    {
@@ -570,32 +525,17 @@
   ]
  },
  {
-  "produto": "iogurte-desnatado-natural-nestle-copo-160g-5cc8a0",
+  "produto": "vinho-tinto-seco-brasileiro-country-wine-750ml-9509d7",
   "itens": [
    {
     "mercado": "festval",
-    "ean": "7891000171004",
-    "nome": "Iogurte Desnatado Natural Nestlé Copo 160g"
+    "ean": "7891141024573",
+    "nome": "Vinho Tinto Seco Brasileiro Country Wine 750ml"
    },
    {
     "mercado": "atacadao",
-    "ean": "7891000073018",
-    "nome": "Iogurte Natural Nestlé Desnatado 160g"
-   }
-  ]
- },
- {
-  "produto": "energetico-red-bull-melancia-250ml-c998d3",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "9002490247386",
-    "nome": "Energético Red Bull Melancia 250ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "9002490247379",
-    "nome": "Energético Red Bull Melancia 250ml"
+    "ean": "7891141016882",
+    "nome": "Vinho Country Wine Tinto Seco 750ml"
    }
   ]
  },
