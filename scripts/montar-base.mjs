@@ -22,6 +22,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { casarOrfaos } from './lib/casar-por-nome.mjs'
 import { categoriaDe, subcategoriaDe } from './lib/categorias.mjs'
+import { lerArquivoDoCatalogo } from './lib/leitura.mjs'
 import { MERCADOS, ORDEM_DOS_MERCADOS } from './lib/mercados.mjs'
 import { mercadosCompativeis, problemasDaColeta } from './lib/qualidade.mjs'
 import { tamanhoDoNome } from './lib/tamanho.mjs'
@@ -41,9 +42,19 @@ async function lerCatalogos() {
   for (const mercado of ORDEM_DOS_MERCADOS) {
     const arquivos = await readdir(join(CATALOGO, mercado)).catch(() => [])
     lidos[mercado] = 0
+    let ruins = 0
     for (const arquivo of arquivos.filter((a) => a.endsWith('.json'))) {
-      const { itens, coletadoEm } = JSON.parse(await readFile(join(CATALOGO, mercado, arquivo), 'utf8'))
-      if (itens.length > 0 && !(coletas[mercado] >= coletadoEm)) coletas[mercado] = coletadoEm
+      let lido
+      try {
+        lido = lerArquivoDoCatalogo(await readFile(join(CATALOGO, mercado, arquivo), 'utf8'))
+      } catch (erro) {
+        ruins++
+        console.warn(`  aviso: ${mercado}/${arquivo} ignorado: ${erro.message}`)
+        continue
+      }
+      const { itens, coletadoEm, descartados: invalidos } = lido
+      if (invalidos > 0) console.warn(`  aviso: ${mercado}/${arquivo}: ${invalidos} itens invalidos descartados`)
+      if (itens.length > 0 && coletadoEm && !(coletas[mercado] >= coletadoEm)) coletas[mercado] = coletadoEm
       for (const item of itens) {
         if (!(item.preco > 0)) continue
         const ofertas = porEan.get(item.ean) ?? {}
@@ -52,6 +63,7 @@ async function lerCatalogos() {
         lidos[mercado]++
       }
     }
+    console.log(`${mercado}: ${arquivos.length} arquivos, ${ruins} ignorados, ${lidos[mercado]} itens`)
   }
   return { porEan, lidos, coletas }
 }

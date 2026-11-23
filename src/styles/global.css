@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* micro-interações: só transform/opacity/cor, curta e com saída rápida */
+@media (prefers-reduced-motion: no-preference) {
+  a,
+  button,
+  select {
+    transition:
+      transform 140ms cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 140ms ease-out,
+      border-color 140ms ease-out,
+      color 140ms ease-out;
+  }
+  button:active:not(:disabled) {
+    transform: scale(0.97);
+  }
+}
+
+/* foco sempre visível por teclado */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

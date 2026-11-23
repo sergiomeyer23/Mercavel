@@ -9,6 +9,8 @@ export const REGRAS = {
   // caixa aproximada de Cascavel/PR
   cascavel: { latMin: -25.15, latMax: -24.8, lngMin: -53.65, lngMax: -53.25 },
   confirmacao: { diasDeValidade: 7, tolerancia: 0.03, envios: 2 },
+  // entradas fora disso nem chegam à triagem: não vêm do formulário do app
+  limites: { precoMaximo: 10_000, fotoMaxChars: 2_000_000 },
   pontos: { base: 1, produtoDesatualizado: 2, primeiroDoMercado: 3, comNotaFiscal: 1 },
 } as const
 
@@ -23,6 +25,10 @@ export interface Avaliacao {
   motivos: string[]
 }
 
+// só imagem embutida: nada de http:, javascript: ou svg
+const FOTO_VALIDA = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/
+const ID_VALIDO = /^[a-z0-9][a-z0-9-]{0,99}$/i
+
 const minutosEntre = (a: string, b: string) => Math.abs(new Date(a).getTime() - new Date(b).getTime()) / 60000
 
 /**
@@ -30,8 +36,16 @@ const minutosEntre = (a: string, b: string) => Math.abs(new Date(a).getTime() - 
  * rejeitado: não tem como valer. revisao_manual: algo estranho, uma pessoa olha. em_analise: passou.
  */
 export function avaliarEnvio(envio: NovoEnvio, ctx: ContextoDeAvaliacao): Avaliacao {
-  if (!Number.isFinite(envio.preco) || envio.preco <= 0) return { status: 'rejeitado', motivos: ['preço inválido'] }
+  if (!Number.isFinite(envio.preco) || envio.preco <= 0 || envio.preco > REGRAS.limites.precoMaximo) {
+    return { status: 'rejeitado', motivos: ['preço inválido'] }
+  }
   if (!envio.foto) return { status: 'rejeitado', motivos: ['sem foto da etiqueta'] }
+  if (!FOTO_VALIDA.test(envio.foto) || envio.foto.length > REGRAS.limites.fotoMaxChars) {
+    return { status: 'rejeitado', motivos: ['foto inválida'] }
+  }
+  if (!ID_VALIDO.test(envio.produtoId) || !ID_VALIDO.test(envio.mercadoId)) {
+    return { status: 'rejeitado', motivos: ['produto ou mercado inválido'] }
+  }
   if (ctx.enviosDoUsuarioHoje >= REGRAS.limiteDiario) {
     return { status: 'rejeitado', motivos: [`limite de ${REGRAS.limiteDiario} envios por dia`] }
   }

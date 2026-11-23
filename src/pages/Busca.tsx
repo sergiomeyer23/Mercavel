@@ -8,9 +8,11 @@ type Ordem = 'relevancia' | 'menor' | 'nome'
 
 export default function Busca() {
   const [params, setParams] = useSearchParams()
-  const q = params.get('q') ?? ''
+  // limite de tamanho: uma URL gigante não deve travar o filtro
+  const q = (params.get('q') ?? '').slice(0, 80)
   const categoria = params.get('cat') ?? 'todas'
-  const ordem = (params.get('ordem') as Ordem | null) ?? 'relevancia'
+  const ordemDaUrl = params.get('ordem')
+  const ordem: Ordem = ordemDaUrl === 'menor' || ordemDaUrl === 'nome' ? ordemDaUrl : 'relevancia'
 
   // atualiza só um parâmetro e mantém o resto na URL (dá pra compartilhar a busca)
   function mudar(chave: string, valor: string, padrao: string) {

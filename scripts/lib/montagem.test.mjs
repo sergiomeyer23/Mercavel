@@ -60,3 +60,30 @@ describe('normalizarEan', () => {
     expect(normalizarEan('2012345678905')).toBeNull()
   })
 })
+
+import { itemValido, lerArquivoDoCatalogo } from './leitura.mjs'
+
+describe('lerArquivoDoCatalogo', () => {
+  const item = { ean: '7891000100103', nome: 'Leite 1L', preco: 5.5 }
+  it('le um arquivo bom e descarta item invalido', () => {
+    const lido = lerArquivoDoCatalogo(
+      JSON.stringify({ coletadoEm: '2026-11-17T09:00:00Z', itens: [item, { ean: 1, nome: 'x', preco: 2 }, null, { ...item, preco: 'a' }] }),
+    )
+    expect(lido.itens).toEqual([item])
+    expect(lido.descartados).toBe(3)
+    expect(lido.coletadoEm).toBe('2026-11-17T09:00:00Z')
+  })
+  it('recusa JSON truncado e formato sem itens, com motivo', () => {
+    expect(() => lerArquivoDoCatalogo('{"itens": [')).toThrow(/JSON invalido/)
+    expect(() => lerArquivoDoCatalogo('{}')).toThrow(/itens/)
+    expect(() => lerArquivoDoCatalogo('null')).toThrow(/itens/)
+  })
+  it('ignora data de coleta invalida', () => {
+    expect(lerArquivoDoCatalogo(JSON.stringify({ coletadoEm: 'ontem', itens: [] })).coletadoEm).toBeNull()
+  })
+  it('itemValido exige ean, nome e preco finito', () => {
+    expect(itemValido(item)).toBe(true)
+    expect(itemValido({ ...item, preco: Infinity })).toBe(false)
+    expect(itemValido({ ...item, nome: '' })).toBe(false)
+  })
+})

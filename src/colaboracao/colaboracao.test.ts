@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { enviosConfirmados } from './confirmacao'
 import { acharChave, chaveValida, cnpjValido, digitoDaChave, lerNota } from './nfce'
+import { pareceEnvio } from './repositorio'
 import { avaliarEnvio, pontosDoEnvio, REGRAS } from './regras'
 import type { Envio, NovoEnvio } from './tipos'
 
@@ -101,5 +102,25 @@ describe('nota fiscal', () => {
     expect(nota?.avisos).toContain('nota de outro estado')
     expect(lerNota('1'.repeat(44))?.chaveValida).toBe(false)
     expect(lerNota('sem chave nenhuma')).toBeNull()
+  })
+})
+
+describe('validação de entradas', () => {
+  it('rejeita preço absurdo, foto que não é imagem embutida e ids com caracteres estranhos', () => {
+    expect(avaliarEnvio(novo({ preco: 1e9 }), ctx).status).toBe('rejeitado')
+    expect(avaliarEnvio(novo({ foto: 'javascript:alert(1)' }), ctx).motivos).toEqual(['foto inválida'])
+    expect(avaliarEnvio(novo({ foto: 'https://x.com/a.jpg' }), ctx).status).toBe('rejeitado')
+    expect(avaliarEnvio(novo({ produtoId: '<img onerror=x>' }), ctx).status).toBe('rejeitado')
+    expect(avaliarEnvio(novo({ mercadoId: "a'; drop table" }), ctx).status).toBe('rejeitado')
+  })
+  it('aceita foto jpeg embutida', () => {
+    expect(avaliarEnvio(novo({ foto: 'data:image/jpeg;base64,/9j/4AAQ' }), ctx).status).toBe('em_analise')
+  })
+  it('pareceEnvio descarta o que foi mexido à mão no localStorage', () => {
+    const bom = { id: 'a', usuarioId: 'u', produtoId: 'p', mercadoId: 'm', preco: 3, criadoEm: agora.toISOString(), captura: {}, status: 'em_analise', motivos: [], pontos: 0 }
+    expect(pareceEnvio(bom)).toBe(true)
+    expect(pareceEnvio({ ...bom, status: 'hackeado' })).toBe(false)
+    expect(pareceEnvio({ ...bom, preco: '3' })).toBe(false)
+    expect(pareceEnvio(null)).toBe(false)
   })
 })

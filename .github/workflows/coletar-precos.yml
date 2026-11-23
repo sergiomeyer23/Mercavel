@@ -8,6 +8,15 @@ on:
     - cron: '17 9 * * *'
   workflow_dispatch:
 
+# menor privilegio: so o job montar escreve no repositorio
+permissions:
+  contents: read
+
+# duas coletas ao mesmo tempo disputariam o push
+concurrency:
+  group: coletar-precos
+  cancel-in-progress: false
+
 jobs:
   varrer:
     runs-on: ubuntu-latest
@@ -28,17 +37,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node scripts/varrer-catalogo.mjs --mercado ${{ matrix.mercado }} --parte ${{ matrix.parte }}
+      # valores da matrix passam por env: nada de ${{ }} dentro do script do shell
+      - name: Varrer
+        env:
+          MERCADO: ${{ matrix.mercado }}
+          PARTE: ${{ matrix.parte }}
+        run: node scripts/varrer-catalogo.mjs --mercado "$MERCADO" --parte "$PARTE"
+      # sobe o que deu pra coletar mesmo se a varredura falhou no meio
       - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
         with:
           name: catalogo-${{ matrix.nome }}
           path: dados/catalogo
           retention-days: 1
+          if-no-files-found: warn
 
   montar:
     needs: varrer
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
@@ -46,12 +64,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # cada artefato traz dados/catalogo/<mercado>/*.json; juntos viram a pasta completa
+      # cada artefato traz dados/catalogo/<mercado>/*.json; juntos viram a pasta completa.
+      # sem nenhum artefato o download falha: o montar roda assim mesmo e recusa a base vazia com mensagem clara
       - uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           path: dados/catalogo
           pattern: catalogo-*
           merge-multiple: true
+      - name: Conferir o que chegou
+        run: |
+          mkdir -p dados/catalogo
+          find dados/catalogo -name '*.json' | cut -d/ -f3 | sort | uniq -c
       - run: node scripts/montar-base.mjs
       - name: Gravar alterações
         run: |
@@ -62,5 +86,10 @@ jobs:
             echo "nada mudou"
           else
             git commit -m "chore: atualiza preços coletados"
-            git push
+            # outro commit pode ter entrado durante a coleta: reaplica por cima e tenta de novo
+            for tentativa in 1 2 3; do
+              git pull --rebase origin "$GITHUB_REF_NAME" && git push && exit 0
+              echo "push falhou (tentativa $tentativa/3)"; sleep $((tentativa * 5))
+            done
+            exit 1
           fi

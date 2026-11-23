@@ -4,7 +4,9 @@ const PAGINA = 50
 // a VTEX nao entrega resultado alem de 2500 por consulta
 const LIMITE_POR_CONSULTA = 2450
 const PAUSA_MS = 300
-const TENTATIVAS = 4
+const TENTATIVAS = 5
+// sem prazo, uma conexao pendurada trava o job inteiro
+const PRAZO_MS = 30_000
 
 const CABECALHOS = {
   'User-Agent': 'Mercavel/0.2 (+https://github.com/sergiomeyer23/Mercavel; projeto de estudo)',
@@ -31,12 +33,13 @@ export function criarClienteVtex(mercado) {
   async function pedir(url, opcoes = {}) {
     for (let tentativa = 1; tentativa <= TENTATIVAS; tentativa++) {
       try {
-        const resposta = await fetch(url, { headers: CABECALHOS, ...opcoes })
+        const resposta = await fetch(url, { headers: CABECALHOS, signal: AbortSignal.timeout(PRAZO_MS), ...opcoes })
         if (resposta.status === 429 || resposta.status >= 500) throw new Error(`HTTP ${resposta.status}`)
         return resposta
       } catch (erro) {
         if (tentativa === TENTATIVAS) throw erro
-        await dormir(1500 * tentativa)
+        console.warn(`  aviso: ${new URL(url).pathname} falhou (${erro.message}); tentativa ${tentativa}/${TENTATIVAS}`)
+        await dormir(2000 * tentativa)
       }
     }
   }

@@ -33,7 +33,8 @@ export const repositorioLocal: Repositorio = {
   listar() {
     try {
       const dados: unknown = JSON.parse(localStorage.getItem(CHAVE_ENVIOS) ?? '[]')
-      return Array.isArray(dados) ? (dados as Envio[]) : []
+      // o localStorage pode ter sido mexido à mão: só passa o que tem a forma de um envio
+      return Array.isArray(dados) ? dados.filter(pareceEnvio) : []
     } catch {
       return []
     }
@@ -45,6 +46,30 @@ export const repositorioLocal: Repositorio = {
       // armazenamento cheio ou bloqueado: o envio some quando a página fechar
     }
   },
+}
+
+const STATUS: readonly string[] = ['em_analise', 'confirmado', 'revisao_manual', 'rejeitado']
+
+export function pareceEnvio(valor: unknown): valor is Envio {
+  const e = valor as Partial<Envio> | null
+  return (
+    typeof e === 'object' &&
+    e !== null &&
+    typeof e.id === 'string' &&
+    typeof e.usuarioId === 'string' &&
+    typeof e.produtoId === 'string' &&
+    typeof e.mercadoId === 'string' &&
+    typeof e.preco === 'number' &&
+    Number.isFinite(e.preco) &&
+    typeof e.criadoEm === 'string' &&
+    !Number.isNaN(Date.parse(e.criadoEm)) &&
+    typeof e.captura === 'object' &&
+    e.captura !== null &&
+    typeof e.status === 'string' &&
+    STATUS.includes(e.status) &&
+    Array.isArray(e.motivos) &&
+    typeof e.pontos === 'number'
+  )
 }
 
 const mediana = (valores: number[]) => {

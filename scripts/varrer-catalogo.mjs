@@ -49,18 +49,20 @@ async function categoriasParaVarrer() {
 
 const jaExiste = (arquivo) => access(arquivo).then(() => true, () => false)
 
+// pasta criada antes de tudo: mesmo se a coleta falhar, o upload do artefato nao quebra por falta dela
+const pasta = join(RAIZ, 'dados/catalogo', nomeDoMercado)
+await mkdir(pasta, { recursive: true })
+
 const todas = await categoriasParaVarrer()
 console.log(`${nomeDoMercado}: ${todas.length} categorias, ${todas.reduce((soma, c) => soma + c.n, 0)} produtos`)
 
 const categorias = todas.filter((_, i) => i % totalDePartes === parte - 1)
 if (totalDePartes > 1) console.log(`${nomeDoMercado}: parte ${parte}/${totalDePartes}, ${categorias.length} categorias`)
 
-const pasta = join(RAIZ, 'dados/catalogo', nomeDoMercado)
-await mkdir(pasta, { recursive: true })
-
 const coletadoEm = new Date().toISOString()
 let gravadas = 0
 let itensGravados = 0
+let falhas = 0
 
 for (const categoria of categorias) {
   if (gravadas >= limiteDeCategorias) break
@@ -77,8 +79,16 @@ for (const categoria of categorias) {
     itensGravados += itens.length
     console.log(`  ${nome}: ${itens.length} itens`)
   } catch (erro) {
+    falhas++
     console.error(`  falhou "${nome}": ${erro.message}`)
   }
 }
 
 console.log(`${nomeDoMercado}: ${gravadas} categorias gravadas, ${itensGravados} itens`)
+
+// falha parcial segue (o montar usa o que veio); coleta sem nenhuma categoria e' erro
+if (gravadas === 0 && categorias.length > 0) {
+  console.error(`${nomeDoMercado}: nada coletado (${falhas} categorias falharam)`)
+  process.exit(1)
+}
+if (falhas > 0) console.warn(`${nomeDoMercado}: ${falhas} de ${categorias.length} categorias falharam`)
