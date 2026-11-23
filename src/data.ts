@@ -31,12 +31,15 @@ interface PrecoCompacto {
 const sitesDosMercados: Record<string, string> = {
   muffato: 'https://www.supermuffato.com.br',
   festval: 'https://www.festval.com',
+  irani: 'https://www.irani.delivery',
+  riviera: 'https://www.rmaisdelivery.com.br',
 }
 const nomesDasFontes: Record<string, string> = {
   muffato: 'site do Muffato',
   festval: 'site do Festval',
   atacadao: 'site do Atacadão',
   irani: 'loja online do Irani',
+  riviera: 'loja online do Riviera',
   puppo: 'encarte do Puppo',
 }
 

@@ -20,6 +20,21 @@ export const MERCADOS = {
     site: '',
     simulacao: { cep: CEP_CASCAVEL, vendedores: ['1'], descartarSemPreco: true },
   },
+  // Lojas da plataforma Mercafacil (sem EAN na API: casam pelo segundo passe, por marca + tamanho + nome).
+  // Irani: loja online da Av. Brasil, em Cascavel. Se o site bloquear a coleta, cai nas ofertas do dia.
+  irani: {
+    tipo: 'mercafacil',
+    base: 'https://www.irani.delivery',
+    loja: 'pacaembu',
+    site: 'https://www.irani.delivery',
+    ofertasDoDia: true,
+  },
+  riviera: {
+    tipo: 'mercafacil',
+    base: 'https://www.rmaisdelivery.com.br',
+    loja: '1',
+    site: 'https://www.rmaisdelivery.com.br',
+  },
 }
 
 export const ORDEM_DOS_MERCADOS = Object.keys(MERCADOS)

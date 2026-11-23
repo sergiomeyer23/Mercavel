@@ -32,6 +32,9 @@ jobs:
           - { mercado: atacadao, parte: '2/4', nome: atacadao-2 }
           - { mercado: atacadao, parte: '3/4', nome: atacadao-3 }
           - { mercado: atacadao, parte: '4/4', nome: atacadao-4 }
+          # lojas Mercafacil: um job cada (Irani com fallback nas ofertas do dia se o site bloquear o Actions)
+          - { mercado: irani, parte: '1/1', nome: irani }
+          - { mercado: riviera, parte: '1/1', nome: riviera }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -58,5 +58,17 @@
     "onlineShoppingAvailable": true,
     "logo": "/logos/atacadao.png",
     "cor": "#0f766e"
+  },
+  {
+    "id": "riviera",
+    "name": "Supermercado Riviera",
+    "shortName": "Riviera",
+    "slug": "riviera",
+    "city": "Cascavel",
+    "state": "PR",
+    "website": "https://www.rmaisdelivery.com.br",
+    "onlineShoppingAvailable": true,
+    "logo": null,
+    "cor": "#be123c"
   }
 ]

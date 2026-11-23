@@ -23,6 +23,7 @@ import { fileURLToPath } from 'node:url'
 import { casarOrfaos } from './lib/casar-por-nome.mjs'
 import { categoriaDe, subcategoriaDe } from './lib/categorias.mjs'
 import { lerArquivoDoCatalogo } from './lib/leitura.mjs'
+import { ehIdProprio } from './lib/mercafacil.mjs'
 import { MERCADOS, ORDEM_DOS_MERCADOS } from './lib/mercados.mjs'
 import { mercadosCompativeis, problemasDaColeta } from './lib/qualidade.mjs'
 import { tamanhoDoNome } from './lib/tamanho.mjs'
@@ -106,7 +107,8 @@ function adicionarProduto(ean, ofertas) {
     c: categoriaDe(base.caminho),
     s: subcategoriaDe(base.caminho),
   })
-  eanPorProduto[id] = ean
+  // id proprio de loja sem codigo de barras (Mercafacil) nao serve pro leitor de codigo
+  if (!ehIdProprio(ean)) eanPorProduto[id] = ean
 
   for (const mercado of mercados) {
     const oferta = ofertas[mercado]

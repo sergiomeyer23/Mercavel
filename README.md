@@ -39,7 +39,7 @@ npm run dev                                   servidor de desenvolvimento
 npm run build                                 build de produção
 npm test                                      testes (vitest)
 npm run lint                                  eslint
-npm run varrer -- --mercado muffato           varre o catálogo inteiro de um mercado (muffato, festval, atacadao)
+npm run varrer -- --mercado muffato           varre o catálogo inteiro de um mercado (muffato, festval, atacadao, irani, riviera)
 npm run montar                                junta o que foi varrido e gera a base do site
 ```
 
@@ -65,6 +65,10 @@ de onde vem o preço em cada mercado:
 - Muffato: o preço do próprio catálogo.
 - Festval e Atacadão: preço e estoque dependem da loja, então vêm de uma simulação de carrinho com o CEP
   de Cascavel (no Atacadão, a retirada na loja de lá). o que não tem preço lá é descartado.
+- Irani (loja Av. Brasil) e Riviera: lojas Mercafacil, lidas página a página por departamento (`lib/mercafacil.mjs`).
+  a API delas não traz código de barras, então esses itens só casam com os outros mercados pelo segundo
+  passe (marca + tamanho + nome). se o site do Irani bloquear a coleta, o varrer usa as ofertas do dia de
+  superirani.com.br. o preço do clube não entra na comparação (só o normal ou a promoção aberta).
 - Irani: fora da base. só tem loja renderizada, sem API, e o `robots.txt` dele bloqueia a busca.
 - Puppo: fora da base. só publica encarte em PDF.
 - Nota Paraná (Menor Preço): não uso. não achei API oficial e o uso automatizado parece não ser permitido.
