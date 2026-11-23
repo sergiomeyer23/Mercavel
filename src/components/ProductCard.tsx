@@ -20,7 +20,7 @@ export default function ProductCard({ produto }: { produto: Product }) {
           <Link to={`/produto/${produto.id}`} className="text-sm font-semibold text-gray-900 hover:text-marca-700">
             {produto.name}
           </Link>
-          <p className="mt-0.5 text-xs text-gray-400">
+          <p className="mt-0.5 text-xs text-gray-500">
             {categoria?.name} · {produto.unit}
           </p>
         </div>
@@ -31,12 +31,12 @@ export default function ProductCard({ produto }: { produto: Product }) {
           {maisBarato ? (
             <>
               <p className="text-lg font-bold text-marca-700">{brl(maisBarato.price)}</p>
-              <p className="text-[11px] text-gray-400">
+              <p className="text-xs text-gray-500">
                 {acharMarket(maisBarato.marketId)?.shortName} · {nomeDoPreco(maisBarato.priceType)}
               </p>
             </>
           ) : (
-            <p className="text-sm text-gray-400">sem preço</p>
+            <p className="text-sm text-gray-500">sem preço</p>
           )}
         </div>
         <div className="flex flex-col items-end gap-2">
@@ -48,8 +48,8 @@ export default function ProductCard({ produto }: { produto: Product }) {
       </div>
 
       {maisBarato && maisCaro && maisCaro.price > maisBarato.price && (
-        <p className="mt-2 border-t border-gray-100 pt-2 text-[11px] text-gray-400">
-          diferença de {brl(maisCaro.price - maisBarato.price)} entre mercados
+        <p className="mt-2 border-t border-gray-100 pt-2 text-xs font-medium text-marca-800">
+          economize até {brl(maisCaro.price - maisBarato.price)} escolhendo o mercado certo
         </p>
       )}
     </div>

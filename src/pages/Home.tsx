@@ -49,43 +49,32 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-marca-700 via-marca-700 to-marca-600 px-6 py-10 text-white sm:px-10 sm:py-12">
-        <div aria-hidden="true" className="pointer-events-none absolute -right-4 top-2 hidden select-none text-6xl leading-none opacity-90 sm:block">
-          <span className="absolute -top-1 right-44 rotate-[-12deg] text-5xl">🍅</span>
-          <span className="absolute right-6 top-6 rotate-[10deg] text-7xl">🛒</span>
-          <span className="absolute right-52 top-28 rotate-[8deg] text-5xl">🥖</span>
-          <span className="absolute right-24 top-36 rotate-[-8deg] text-6xl">🧀</span>
-          <span className="absolute right-2 top-44 rotate-[14deg] text-5xl">🥕</span>
-          <span className="absolute right-64 top-48 rotate-[-10deg] text-4xl">🍊</span>
-        </div>
-        <div aria-hidden="true" className="pointer-events-none absolute -bottom-16 -left-10 h-48 w-48 rounded-full bg-marca-500/30 blur-2xl" />
-        <div className="relative">
-        <p className="text-xs font-semibold uppercase tracking-wider text-marca-200">
+      <section className="rounded-3xl bg-tinta-900 px-6 py-10 text-white sm:px-10 sm:py-14">
+        <p className="text-xs font-semibold uppercase tracking-wider text-marca-300">
           protótipo · preços coletados nos sites dos mercados · Cascavel/PR
         </p>
-        <h1 className="mt-2 max-w-2xl text-2xl font-bold sm:text-3xl">
-          Compare os preços dos supermercados de Cascavel
+        <h1 className="mt-3 max-w-2xl text-balance text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+          Onde sua compra custa menos em Cascavel
         </h1>
-        <p className="mt-2 max-w-xl text-marca-100">
-          Descubra onde sua compra custa menos. Pesquise um produto e veja o preço em cada mercado, com a data
-          da coleta.
+        <p className="mt-3 max-w-xl text-pretty text-base text-gray-300">
+          Pesquise um produto e veja o preço em cada mercado, com a data da coleta.
         </p>
-        <form onSubmit={procurar} className="mt-5 flex max-w-xl gap-2">
+        <form onSubmit={procurar} role="search" className="mt-6 flex max-w-xl gap-2">
           <input
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
+            aria-label="Buscar produto"
             placeholder="ex: arroz, leite, detergente..."
-            className="flex-1 rounded-lg border-0 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-marca-300"
+            className="min-w-0 flex-1 rounded-xl border-0 px-4 py-3 text-base text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-marca-300"
           />
-          <button type="submit" className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-marca-700">
+          <button type="submit" className="rounded-xl bg-marca-500 px-6 py-3 text-base font-semibold text-tinta-900 hover:bg-marca-400">
             Buscar
           </button>
         </form>
-        <p className="mt-3 text-xs text-marca-200">
-          {markets.length} mercados cadastrados · {mercadosComPrecos.length} com preços · {products.length} produtos ·{' '}
+        <p className="mt-4 text-xs text-gray-500">
+          {markets.length} mercados · {mercadosComPrecos.length} com preços · {products.length} produtos ·{' '}
           {prices.length} preços coletados
         </p>
-        </div>
       </section>
 
       <p className="rounded-lg bg-amber-50 px-4 py-2 text-xs text-amber-700">
@@ -122,7 +111,7 @@ export default function Home() {
                 <IconeComida emoji={emojiDaCategoria(cat.id)} />
                 <div>
                   <p className="text-sm font-semibold text-gray-800">{cat.name}</p>
-                  <p className="text-xs text-gray-400">{qtd} produtos</p>
+                  <p className="text-xs text-gray-500">{qtd} produtos</p>
                 </div>
               </Link>
             )
@@ -155,7 +144,7 @@ export default function Home() {
                 <MarketLogo mercado={m} tamanho="md" />
                 <p className="text-sm font-semibold text-gray-800">{m.name}</p>
               </div>
-              <p className="text-xs text-gray-400">
+              <p className="text-xs text-gray-500">
                 {m.city}/{m.state} · {m.onlineShoppingAvailable ? 'tem site próprio' : 'só loja física'}
               </p>
               {!idsComPrecos.has(m.id) && (

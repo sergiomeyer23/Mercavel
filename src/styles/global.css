@@ -23,3 +23,16 @@
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
+
+/* texto equilibrado em títulos e entrada suave de cards só quando o usuário aceita movimento */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes entrar {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+  main section {
+    animation: entrar 280ms cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+}
