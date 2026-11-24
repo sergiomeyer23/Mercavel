@@ -105,6 +105,21 @@
   ]
  },
  {
+  "produto": "saponaceo-ype-multiuso-cremoso-lavanda-300ml-aca4ab",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896098904350",
+    "nome": "Saponáceo Ypê Multiuso Cremoso Lavanda 300ml"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569890",
+    "nome": "Saponáceo Cremoso Ype 300ml Lavanda"
+   }
+  ]
+ },
+ {
   "produto": "desinfetante-ype-bak-turquesa-500ml-cae3b7",
   "itens": [
    {
@@ -180,21 +195,6 @@
   ]
  },
  {
-  "produto": "saponaceo-ype-multiuso-cremoso-lavanda-300ml-aca4ab",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896098904350",
-    "nome": "Saponáceo Ypê Multiuso Cremoso Lavanda 300ml"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569890",
-    "nome": "Saponáceo Cremoso Ype 300ml Lavanda"
-   }
-  ]
- },
- {
   "produto": "inseticida-aerossol-raid-multi-insetos-aqua-protection-420ml-2146af",
   "itens": [
    {
@@ -221,6 +221,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-9312",
     "nome": "Cereal Nestle Snow Flakes 120 g Sache"
+   }
+  ]
+ },
+ {
+  "produto": "cereal-nestle-sachet-120g-moca-flakes-68057d",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-600785",
+    "nome": "Cereal Nestlé Sachet 120g Moça Flakes"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4669",
+    "nome": "Cereal Nestle Sache 120 g Moca Flakes"
    }
   ]
  },
@@ -380,6 +395,21 @@
   ]
  },
  {
+  "produto": "iogurte-batavo-450g-pedacos-abacaxi-093e50",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569357",
+    "nome": "Iogurte Batavo 450g Pedaços Abacaxi"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-9432",
+    "nome": "Iogurte Batavo Pedacos 450g Coco e Abacaxi"
+   }
+  ]
+ },
+ {
   "produto": "cream-cheese-tradicional-vigor-pote-150g-ec58a0",
   "itens": [
    {
@@ -421,6 +451,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-7970",
     "nome": "Margarina Delicia 500 g C/Sal Com Sal"
+   }
+  ]
+ },
+ {
+  "produto": "cream-cheese-vigor-light-300g-0eb0fe",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896625211012",
+    "nome": "Cream Cheese Vigor Light 300g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569467",
+    "nome": "Cream Cheese Danubio 300g Light"
    }
   ]
  },
@@ -490,36 +535,6 @@
   ]
  },
  {
-  "produto": "gelatina-apti-framboesa-20g-0a8d8f",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896327516163",
-    "nome": "Gelatina Apti Framboesa 20g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-7211",
-    "nome": "Gelatina Apti 20g Framboesa"
-   }
-  ]
- },
- {
-  "produto": "gelatina-apti-morango-20g-05cd99",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896327516118",
-    "nome": "Gelatina Apti Morango 20g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-10043",
-    "nome": "Gelatina Apti 20g Morango"
-   }
-  ]
- },
- {
   "produto": "gelatina-dr-oetker-uva-20g-41bb34",
   "itens": [
    {
@@ -575,6 +590,26 @@
   ]
  },
  {
+  "produto": "gelatina-dr-oetker-framboesa-20g-34e5e5",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891048050637",
+    "nome": "Gelatina Dr Oetker Framboesa 20g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569576",
+    "nome": "Gelatina Dr. Oetker 20g Framboesa"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-8871",
+    "nome": "Gelatina Dr Oetker 20g Framboesa"
+   }
+  ]
+ },
+ {
   "produto": "gelatina-dr-oetker-tutti-frutti-20g-d12983",
   "itens": [
    {
@@ -610,26 +645,6 @@
   ]
  },
  {
-  "produto": "gelatina-dr-oetker-framboesa-20g-34e5e5",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891048050637",
-    "nome": "Gelatina Dr Oetker Framboesa 20g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569576",
-    "nome": "Gelatina Dr. Oetker 20g Framboesa"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-8871",
-    "nome": "Gelatina Dr Oetker 20g Framboesa"
-   }
-  ]
- },
- {
   "produto": "gelatina-dr-oetker-cereja-20g-2b6902",
   "itens": [
    {
@@ -661,6 +676,51 @@
     "mercado": "riviera",
     "ean": "mf-riviera-408",
     "nome": "Gelatina Dr Oetker 20g Morango"
+   }
+  ]
+ },
+ {
+  "produto": "gelatina-apti-framboesa-20g-0a8d8f",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896327516163",
+    "nome": "Gelatina Apti Framboesa 20g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-7211",
+    "nome": "Gelatina Apti 20g Framboesa"
+   }
+  ]
+ },
+ {
+  "produto": "gelatina-apti-uva-20g-a31459",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896327516125",
+    "nome": "Gelatina Apti Uva 20g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-5966",
+    "nome": "Gelatina Apti 20g Uva"
+   }
+  ]
+ },
+ {
+  "produto": "gelatina-apti-morango-20g-05cd99",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896327516118",
+    "nome": "Gelatina Apti Morango 20g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10043",
+    "nome": "Gelatina Apti 20g Morango"
    }
   ]
  },
@@ -790,6 +850,21 @@
   ]
  },
  {
+  "produto": "pudim-dr-oetker-baunilha-50g-96c20d",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891048045114",
+    "nome": "Pudim Dr. Oetker Baunilha 50g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568895",
+    "nome": "Pudim Dr. Oetker 50g Baunilha"
+   }
+  ]
+ },
+ {
   "produto": "mistura-para-bolo-apti-baunilha-400g-6e5de0",
   "itens": [
    {
@@ -801,6 +876,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-7301",
     "nome": "Mistura Bolo Apti 400g Baunilha"
+   }
+  ]
+ },
+ {
+  "produto": "mistura-para-bolo-apti-coco-400g-ff7b28",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896327511328",
+    "nome": "Mistura para Bolo Apti Coco 400g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-6237",
+    "nome": "Mistura Bolo Apti 400g Coco"
    }
   ]
  },
@@ -876,121 +966,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-13114",
     "nome": "Biscoito Parati Rosquinha Coco 250g Coco"
-   }
-  ]
- },
- {
-  "produto": "biscoito-isabela-cream-cracker-350g-ac7f1d",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896022086909",
-    "nome": "Biscoito Isabela Cream Cracker 350g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570617",
-    "nome": "Biscoito Isabela 350g Cream Cracker"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-5096",
-    "nome": "Biscoito Isabela 350g Cream Cracker"
-   }
-  ]
- },
- {
-  "produto": "biscoito-isabela-agua-e-sal-350g-4a43b6",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896022086862",
-    "nome": "Biscoito Isabela Água e Sal 350g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570618",
-    "nome": "Biscoito Isabela 350g Água e Sal"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-11504",
-    "nome": "Biscoito Isabela 350g Agua e Sal"
-   }
-  ]
- },
- {
-  "produto": "biscoito-isabela-com-gergelim-350g-1eaaf0",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896022086824",
-    "nome": "Biscoito Isabela com Gergelim 350g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570619",
-    "nome": "Biscoito Isabela 350g Gergelim"
-   }
-  ]
- },
- {
-  "produto": "biscoito-maria-isabela-chocolate-350g-e2025a",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896022086893",
-    "nome": "Biscoito Maria Isabela Chocolate 350g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570614",
-    "nome": "Biscoito Isabela 350g Maria Chocolate"
-   }
-  ]
- },
- {
-  "produto": "biscoito-isabela-350g-leite-chocolate-6d73f4",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570616",
-    "nome": "Biscoito Isabela 350g Leite Chocolate"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-14188",
-    "nome": "Biscoito Isabela 350g Leite C/Chocolate"
-   }
-  ]
- },
- {
-  "produto": "biscoito-isabela-350g-maizena-503278",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570612",
-    "nome": "Biscoito Isabela 350g Maizena"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-6613",
-    "nome": "Biscoito Isabela 350g Maizena"
-   }
-  ]
- },
- {
-  "produto": "biscoito-isabela-350g-maria-a09c39",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570613",
-    "nome": "Biscoito Isabela 350g Maria"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-3527",
-    "nome": "Biscoito Isabela 350g Maria"
    }
   ]
  },
@@ -1350,17 +1325,47 @@
   ]
  },
  {
-  "produto": "erva-mate-tertulia-chimarrao-a-vacuo-1kg-04328e",
+  "produto": "cafe-melitta-500g-extra-forte-17d053",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568375",
+    "nome": "Café Melitta 500g Extra Forte"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-6493",
+    "nome": "Cafe Melitta Extra Forte 500g Vacuo"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-bom-jesus-500g-vacuo-tradicional-6a2554",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568801",
+    "nome": "Café Bom Jesus 500g Vácuo Tradicional"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4546",
+    "nome": "Cafe Bom Jesus Vacuo 500g Tradicional"
+   }
+  ]
+ },
+ {
+  "produto": "goiabada-predilecta-300g-cfc414",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7896394600062",
-    "nome": "Erva Mate Tertúlia Chimarrão a Vácuo 1kg"
+    "ean": "7896292330061",
+    "nome": "Goiabada Predilecta 300g"
    },
    {
-    "mercado": "festval",
-    "ean": "7896394600024",
-    "nome": "Erva-Mate Chimarrão Tertúlia 1kg"
+    "mercado": "irani",
+    "ean": "mf-irani-568515",
+    "nome": "Goiabada Predilecta 300g"
    }
   ]
  },
@@ -1395,17 +1400,32 @@
   ]
  },
  {
-  "produto": "goiabada-predilecta-300g-cfc414",
+  "produto": "farelo-de-aveia-quaker-oat-bran-165g-d29644",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7896292330061",
-    "nome": "Goiabada Predilecta 300g"
+    "ean": "7892840815776",
+    "nome": "Farelo de Aveia Quaker Oat Bran  165g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-14345",
+    "nome": "Farelo De Aveia Quaker 165 g Oat Bran"
+   }
+  ]
+ },
+ {
+  "produto": "farinha-de-aveia-quaker-165g-882e27",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7892840815783",
+    "nome": "Farinha de Aveia Quaker 165g"
    },
    {
     "mercado": "irani",
-    "ean": "mf-irani-568515",
-    "nome": "Goiabada Predilecta 300g"
+    "ean": "mf-irani-570118",
+    "nome": "Farinha Aveia Quaker 165g"
    }
   ]
  },
@@ -1455,6 +1475,36 @@
   ]
  },
  {
+  "produto": "aveia-em-flocos-finos-jasmine-400g-8e7042",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896283000058",
+    "nome": "Aveia em Flocos Finos Jasmine 400g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568285",
+    "nome": "Aveia em Flocos Finos Jasmine 400g"
+   }
+  ]
+ },
+ {
+  "produto": "doce-de-leite-tirol-zero-lactose-350g-3811cf",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896256604528",
+    "nome": "Doce de Leite Tirol Zero Lactose 350g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-571270",
+    "nome": "Doce Leite Tirol 350g Zero Lactose"
+   }
+  ]
+ },
+ {
   "produto": "chocolate-milka-oreo-100g-70bc59",
   "itens": [
    {
@@ -1466,6 +1516,21 @@
     "mercado": "atacadao",
     "ean": "7622210262202",
     "nome": "Chocolate Milka Oreo 100g"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-suflair-nestle-ao-leite-50g-f302e1",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891000107836",
+    "nome": "Chocolate Suflair Nestlé ao Leite 50g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7891000455722",
+    "nome": "Chocolate Nestlé Suflair Ao Leite 50g"
    }
   ]
  },
@@ -1496,21 +1561,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-15515",
     "nome": "Marshmallow Torcao Fini 80g Sache"
-   }
-  ]
- },
- {
-  "produto": "chocolate-suflair-nestle-ao-leite-50g-f302e1",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891000107836",
-    "nome": "Chocolate Suflair Nestlé ao Leite 50g"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7891000455722",
-    "nome": "Chocolate Nestlé Suflair Ao Leite 50g"
    }
   ]
  },
@@ -1895,6 +1945,21 @@
   ]
  },
  {
+  "produto": "molho-de-pimenta-kenko-picante-150ml-2e1be1",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896007811298",
+    "nome": "Molho de Pimenta Kenko Picante 150ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-8448",
+    "nome": "Molho Pimenta Kenko 150ml Extra Picante"
+   }
+  ]
+ },
+ {
   "produto": "tempero-sazon-60g-verde-frango-d10b87",
   "itens": [
    {
@@ -1990,21 +2055,6 @@
   ]
  },
  {
-  "produto": "pao-bisnaguinha-visconti-240g-501a75",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891962071879",
-    "nome": "Pão Bisnaguinha Visconti 240g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-543",
-    "nome": "Pão Visconti 240 g Bisnaguinha"
-   }
-  ]
- },
- {
   "produto": "pao-de-leite-caseirinho-450g-49cb50",
   "itens": [
    {
@@ -2050,17 +2100,17 @@
   ]
  },
  {
-  "produto": "panettone-santa-edwiges-frutas-lata-400g-0ef34c",
+  "produto": "pao-de-forma-visconti-integral-400g-52c881",
   "itens": [
    {
-    "mercado": "muffato",
-    "ean": "7896064205719",
-    "nome": "Panettone Santa Edwiges Frutas Lata 400g"
+    "mercado": "atacadao",
+    "ean": "7891962051345",
+    "nome": "Pão de Forma Visconti Integral 400g"
    },
    {
-    "mercado": "atacadao",
-    "ean": "7896064205696",
-    "nome": "Panettone Santa Edwiges Frutas 400g"
+    "mercado": "riviera",
+    "ean": "mf-riviera-10830",
+    "nome": "Pao De Forma Visconti Integ 400g Integral"
    }
   ]
  },
@@ -2480,6 +2530,51 @@
   ]
  },
  {
+  "produto": "energetico-red-bull-energy-drink-250ml-9eae31",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "9002490225216",
+    "nome": "Energético Red Bull Energy Drink 250ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4541",
+    "nome": "Energetico Red Bull Lt 250ml Energy Drink"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-zero-acucar-red-bull-250ml-62a33c",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "9002490284527",
+    "nome": "Energético Zero Açúcar Red Bull 250ml"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "9002490283063",
+    "nome": "Red Bull Energético Zero Sem Açúcar 250ml"
+   }
+  ]
+ },
+ {
+  "produto": "energetico-red-bull-tropical-250ml-6ebf6f",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "9002490229160",
+    "nome": "Energético Red Bull Tropical 250ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-1398",
+    "nome": "Energetico Red Bull Lt 250ml Tropical"
+   }
+  ]
+ },
+ {
   "produto": "whisky-black-white-1l-6b7df7",
   "itens": [
    {
@@ -2555,6 +2650,21 @@
   ]
  },
  {
+  "produto": "lasanha-perdigao-bolonhesa-1kg-d1483b",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891515496241",
+    "nome": "Lasanha Perdigão Bolonhesa 1kg"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-591876",
+    "nome": "Lasanha Bolonhesa Perdigão 1kg"
+   }
+  ]
+ },
+ {
   "produto": "lasanha-bolonhesa-perdigao-600g-b8a178",
   "itens": [
    {
@@ -2581,21 +2691,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-4023",
     "nome": "Lasanha Perdigao 600g Calabresa"
-   }
-  ]
- },
- {
-  "produto": "lasanha-perdigao-bolonhesa-1kg-d1483b",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891515496241",
-    "nome": "Lasanha Perdigão Bolonhesa 1kg"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-591876",
-    "nome": "Lasanha Bolonhesa Perdigão 1kg"
    }
   ]
  },
@@ -2721,21 +2816,6 @@
     "mercado": "irani",
     "ean": "mf-irani-591994",
     "nome": "Lasanha de Calabresa Sadia 600g"
-   }
-  ]
- },
- {
-  "produto": "sobremesa-creamy-batavo-chocolate-branco-180g-3cf2a9",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "78903791",
-    "nome": "Sobremesa Creamy Batavo Chocolate Branco 180g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-567579",
-    "nome": "Sobremesa Batavo 180g C/2 Chocolate Branco"
    }
   ]
  },
@@ -3720,6 +3800,21 @@
   ]
  },
  {
+  "produto": "requeijao-cremoso-light-aviacao-copo-250g-811eb9",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7896331100471",
+    "nome": "Requeijão Cremoso Light Aviação Copo 250g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570882",
+    "nome": "Requeijão Cremoso Aviação 250g Light"
+   }
+  ]
+ },
+ {
   "produto": "tomate-sweet-heaven-bertolin-300g-3e1561",
   "itens": [
    {
@@ -3746,66 +3841,6 @@
     "mercado": "irani",
     "ean": "mf-irani-569997",
     "nome": "Tomate Sweet Grape Bertolin 180g"
-   }
-  ]
- },
- {
-  "produto": "tomatinho-bertolin-150g-a27570",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898342580860",
-    "nome": "Tomatinho Bertolin 150g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569999",
-    "nome": "Tomatinho Bertolin 150g"
-   }
-  ]
- },
- {
-  "produto": "pimentao-misto-bertolin-500g-bb5442",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898342580297",
-    "nome": "Pimentão Misto Bertolin 500g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569995",
-    "nome": "Pimentão Misto Bertolin 500g"
-   }
-  ]
- },
- {
-  "produto": "uva-passa-escura-sem-semente-la-violetera-200g-06f8f6",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7891089061692",
-    "nome": "Uva Passa Escura Sem Semente La Violetera 200g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568415",
-    "nome": "Uva Passa La Violetera 200g Escura S/Semente"
-   }
-  ]
- },
- {
-  "produto": "ameixa-importada-ksbig-500g-1f97d8",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898902650217",
-    "nome": "Ameixa Importada KSBIG 500G"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-571597",
-    "nome": "Ameixa Importada Ks Big 500g"
    }
   ]
  },
@@ -3950,37 +3985,17 @@
   ]
  },
  {
-  "produto": "energetico-red-bull-energy-drink-250ml-9eae31",
+  "produto": "agua-mineral-sferrie-sem-gas-510ml-9909eb",
   "itens": [
    {
     "mercado": "festval",
-    "ean": "9002490225216",
-    "nome": "Energético Red Bull Energy Drink 250ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "611269991000",
-    "nome": "Energético Red Bull Energy Drink 250ml"
+    "ean": "7898014855074",
+    "nome": "Água Mineral Sferriê sem Gás 510ml"
    },
    {
     "mercado": "riviera",
-    "ean": "mf-riviera-4541",
-    "nome": "Energetico Red Bull Lt 250ml Energy Drink"
-   }
-  ]
- },
- {
-  "produto": "energetico-red-bull-tropical-250ml-6ebf6f",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "9002490229160",
-    "nome": "Energético Red Bull Tropical 250ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-1398",
-    "nome": "Energetico Red Bull Lt 250ml Tropical"
+    "ean": "mf-riviera-5828",
+    "nome": "Agua Mineral Sferrie C/G 510ml C/Gas"
    }
   ]
  },
@@ -4056,71 +4071,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-8572",
     "nome": "Suco Del Valle Mais 1 Litro Uva"
-   }
-  ]
- },
- {
-  "produto": "cafe-gourmet-3-coracoes-espirito-santo-250g-e0f907",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7896045115341",
-    "nome": "Café Gourmet 3 Corações Espírito Santo 250g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-588905",
-    "nome": "Café 3 Corações 250g Gourmet Espirito Santo"
-   }
-  ]
- },
- {
-  "produto": "cafe-3-coracoes-descafeinado-vacuo-250g-b4a514",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896005800577",
-    "nome": "Café 3 Corações Descafeinado Vácuo 250g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-588899",
-    "nome": "Café 3 Corações 250g Vácuo Descafeinado"
-   }
-  ]
- },
- {
-  "produto": "cafe-3-coracoes-tradicional-vacuo-250g-f397dc",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896005800362",
-    "nome": "Café 3 Corações Tradicional Vácuo 250g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-591606",
-    "nome": "Café 3 Corações 250g Vácuo Tradicional"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-1582",
-    "nome": "Cafe 3 Coracoes Tradicional 250g Vacuo"
-   }
-  ]
- },
- {
-  "produto": "doce-de-leite-ilolay-400g-56f9db",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7790787153664",
-    "nome": "Doce de Leite Ilolay 400g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-7015",
-    "nome": "Doce Leite Ilolay 400g Pote"
    }
   ]
  },
@@ -4211,6 +4161,36 @@
     "mercado": "irani",
     "ean": "mf-irani-568485",
     "nome": "Bala Gelatina Fini 90g Dentaduras"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-em-barra-garoto-80g-caju-e-passas-e741d3",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570811",
+    "nome": "Chocolate em Barra Garoto 80g Caju e Passas"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-14092",
+    "nome": "Chocolate Garoto 80g Caju Passas"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-em-barra-garoto-80g-meio-amargo-892bf9",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570810",
+    "nome": "Chocolate em Barra Garoto 80g Meio Amargo"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10428",
+    "nome": "Chocolate Garoto 80g Meio Amargo"
    }
   ]
  },
@@ -4420,21 +4400,6 @@
   ]
  },
  {
-  "produto": "grao-de-bico-pinduca-400g-3d8ad9",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896015976972",
-    "nome": "Grão de Bico Pinduca 400g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-3014",
-    "nome": "Grao De Bico Pinduca 400g"
-   }
-  ]
- },
- {
   "produto": "molho-4-queijos-elege-caixa-200g-fa8bfd",
   "itens": [
    {
@@ -4446,6 +4411,21 @@
     "mercado": "irani",
     "ean": "mf-irani-568775",
     "nome": "Molho Elege 200g 4 Queijos"
+   }
+  ]
+ },
+ {
+  "produto": "grao-de-bico-pinduca-400g-3d8ad9",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896015976972",
+    "nome": "Grão de Bico Pinduca 400g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-3014",
+    "nome": "Grao De Bico Pinduca 400g"
    }
   ]
  },
@@ -4895,17 +4875,17 @@
   ]
  },
  {
-  "produto": "salsicha-hot-dog-aurora-resfriada-500g-c8f39b",
+  "produto": "ameixa-seca-la-violetera-sem-caroco-100g-ca44b8",
   "itens": [
    {
     "mercado": "atacadao",
-    "ean": "7891164005436",
-    "nome": "Salsicha Hot Dog Aurora Resfriada 500g"
+    "ean": "7891089062736",
+    "nome": "Ameixa Seca La Violetera Sem Caroço 100g"
    },
    {
-    "mercado": "riviera",
-    "ean": "mf-riviera-8551",
-    "nome": "Salsicha Aurora Hot Dog 500g"
+    "mercado": "irani",
+    "ean": "mf-irani-568316",
+    "nome": "Ameixa Seca La Violetera 100g C/Caroço"
    }
   ]
  },
@@ -4966,6 +4946,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-155",
     "nome": "Cafe Nescafe Sache 40g Dolca"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-nescafe-sachet-40g-tradicao-7906be",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-600804",
+    "nome": "Café Nescafé Sachet 40g Tradição"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-263",
+    "nome": "Cafe Nescafe Sache 40g Tradicao"
    }
   ]
  },
@@ -5050,6 +5045,41 @@
   ]
  },
  {
+  "produto": "cafe-3-coracoes-descafeinado-vacuo-250g-b4a514",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896005800577",
+    "nome": "Café 3 Corações Descafeinado Vácuo 250g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-588899",
+    "nome": "Café 3 Corações 250g Vácuo Descafeinado"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-3-coracoes-tradicional-vacuo-250g-f397dc",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896005800362",
+    "nome": "Café 3 Corações Tradicional Vácuo 250g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-591606",
+    "nome": "Café 3 Corações 250g Vácuo Tradicional"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-1582",
+    "nome": "Cafe 3 Coracoes Tradicional 250g Vacuo"
+   }
+  ]
+ },
+ {
   "produto": "cafe-coamo-tradicional-vacuo-500g-7c935f",
   "itens": [
    {
@@ -5076,36 +5106,6 @@
     "mercado": "irani",
     "ean": "mf-irani-570559",
     "nome": "Cafe Coamo 500g Tradicional Pacote"
-   }
-  ]
- },
- {
-  "produto": "cafe-melitta-500g-extra-forte-17d053",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568375",
-    "nome": "Café Melitta 500g Extra Forte"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-6493",
-    "nome": "Cafe Melitta Extra Forte 500g Vacuo"
-   }
-  ]
- },
- {
-  "produto": "cafe-bom-jesus-500g-vacuo-tradicional-6a2554",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568801",
-    "nome": "Café Bom Jesus 500g Vácuo Tradicional"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-4546",
-    "nome": "Cafe Bom Jesus Vacuo 500g Tradicional"
    }
   ]
  },
@@ -5366,6 +5366,111 @@
     "mercado": "riviera",
     "ean": "mf-riviera-2652",
     "nome": "Biscoito Passatempo 130g Morango"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-amanteigado-isabela-sortidos-300g-8860c9",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896022086282",
+    "nome": "Biscoito Amanteigado Isabela Sortidos 300g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570125",
+    "nome": "Biscoito Isabela 300g Sortidos Amanteigado"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-maria-isabela-chocolate-350g-e2025a",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896022086893",
+    "nome": "Biscoito Maria Isabela Chocolate 350g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570614",
+    "nome": "Biscoito Isabela 350g Maria Chocolate"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-isabela-350g-cream-cracker-228cb3",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570617",
+    "nome": "Biscoito Isabela 350g Cream Cracker"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-5096",
+    "nome": "Biscoito Isabela 350g Cream Cracker"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-isabela-350g-leite-chocolate-6d73f4",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570616",
+    "nome": "Biscoito Isabela 350g Leite Chocolate"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-14188",
+    "nome": "Biscoito Isabela 350g Leite C/Chocolate"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-isabela-350g-maizena-503278",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570612",
+    "nome": "Biscoito Isabela 350g Maizena"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-6613",
+    "nome": "Biscoito Isabela 350g Maizena"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-isabela-350g-maria-a09c39",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570613",
+    "nome": "Biscoito Isabela 350g Maria"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-3527",
+    "nome": "Biscoito Isabela 350g Maria"
+   }
+  ]
+ },
+ {
+  "produto": "biscoito-isabela-350g-agua-e-sal-68000c",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570618",
+    "nome": "Biscoito Isabela 350g Água e Sal"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-11504",
+    "nome": "Biscoito Isabela 350g Agua e Sal"
    }
   ]
  },
@@ -5815,21 +5920,6 @@
   ]
  },
  {
-  "produto": "molho-de-pimenta-cepera-vermelha-150ml-afd452",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896025800052",
-    "nome": "Molho de Pimenta Cepêra Vermelha 150ml"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568733",
-    "nome": "Molho Pimenta Cepêra 150ml Vermelha"
-   }
-  ]
- },
- {
   "produto": "sal-refinado-marfim-1kg-e609b4",
   "itens": [
    {
@@ -5845,6 +5935,36 @@
   ]
  },
  {
+  "produto": "molho-de-pimenta-cepera-vermelha-150ml-afd452",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896025800052",
+    "nome": "Molho de Pimenta Cepêra Vermelha 150ml"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568733",
+    "nome": "Molho Pimenta Cepêra 150ml Vermelha"
+   }
+  ]
+ },
+ {
+  "produto": "erva-mate-terra-mate-500g-pacote-7c554c",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-567935",
+    "nome": "Erva-Mate Terra Mate 500g Pacote"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-3790",
+    "nome": "Erva Mate Terra Mate 500g"
+   }
+  ]
+ },
+ {
   "produto": "erva-mate-verdelandia-premium-1kg-6936f2",
   "itens": [
    {
@@ -5856,6 +5976,21 @@
     "mercado": "irani",
     "ean": "mf-irani-569215",
     "nome": "Erva-Mate Verdelândia 1kg Premium"
+   }
+  ]
+ },
+ {
+  "produto": "erva-mate-terra-mate-1kg-pacote-8d4f30",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-567934",
+    "nome": "Erva-Mate Terra Mate 1kg Pacote"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10454",
+    "nome": "Erva Mate Terra Mate 1kg Pacote"
    }
   ]
  },
@@ -6250,6 +6385,21 @@
   ]
  },
  {
+  "produto": "manteiga-aviacao-200g-lata-com-sal-e5149f",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-567606",
+    "nome": "Manteiga Aviação 200g Lata Com Sal"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-12146",
+    "nome": "Manteiga Aviacao 200g Com Sal"
+   }
+  ]
+ },
+ {
   "produto": "margarina-cremosy-com-sal-500g-86ee4f",
   "itens": [
    {
@@ -6495,21 +6645,6 @@
   ]
  },
  {
-  "produto": "condicionador-darling-tilia-350ml-bbf6a3",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891024182970",
-    "nome": "Condicionador Darling Tília 350ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-5489",
-    "nome": "Condicionador Darling 350ml Tilia"
-   }
-  ]
- },
- {
   "produto": "shampoo-darling-detox-350ml-0221cd",
   "itens": [
    {
@@ -6521,6 +6656,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-4455",
     "nome": "Shampoo Darling 350ml Detox"
+   }
+  ]
+ },
+ {
+  "produto": "condicionador-darling-tilia-350ml-bbf6a3",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891024182970",
+    "nome": "Condicionador Darling Tília 350ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-5489",
+    "nome": "Condicionador Darling 350ml Tilia"
    }
   ]
  },
@@ -7770,6 +7920,21 @@
   ]
  },
  {
+  "produto": "leite-fermentado-frimesa-850g-89fbd3",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569572",
+    "nome": "Leite Fermentado Frimesa 850g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10869",
+    "nome": "Leite Fermentado Frimesa 850g"
+   }
+  ]
+ },
+ {
   "produto": "torrada-bauducco-142g-tradicional-c1b836",
   "itens": [
    {
@@ -8036,36 +8201,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-6346",
     "nome": "Tempero Completo Sabor Ami 300g Alho Sal"
-   }
-  ]
- },
- {
-  "produto": "erva-mate-terra-mate-500g-pacote-7c554c",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-567935",
-    "nome": "Erva-Mate Terra Mate 500g Pacote"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-3790",
-    "nome": "Erva Mate Terra Mate 500g"
-   }
-  ]
- },
- {
-  "produto": "erva-mate-terra-mate-1kg-pacote-8d4f30",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-567934",
-    "nome": "Erva-Mate Terra Mate 1kg Pacote"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-10454",
-    "nome": "Erva Mate Terra Mate 1kg Pacote"
    }
   ]
  },
