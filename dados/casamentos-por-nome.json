@@ -15,6 +15,36 @@
   ]
  },
  {
+  "produto": "desinfetante-ype-bak-floral-2l-337a55",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896098903681",
+    "nome": "Desinfetante Ypê Bak Floral 2L"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-599323",
+    "nome": "Desinfetante Ypê Bak 2L Floral"
+   }
+  ]
+ },
+ {
+  "produto": "alvejante-ype-flores-da-primavera-2-litros-e09fda",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896098904725",
+    "nome": "Alvejante Ypê Flores da Primavera 2 Litros"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-587234",
+    "nome": "Alvejante Liquido Ypê 2l Flores de Primavera"
+   }
+  ]
+ },
+ {
   "produto": "detergente-liquido-girando-sol-coco-500ml-a5f379",
   "itens": [
    {
@@ -56,36 +86,6 @@
     "mercado": "atacadao",
     "ean": "7891035210006",
     "nome": "Limpador Multiuso Veja Gold Original 500ml"
-   }
-  ]
- },
- {
-  "produto": "desinfetante-ype-bak-floral-2l-337a55",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896098903681",
-    "nome": "Desinfetante Ypê Bak Floral 2L"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-599323",
-    "nome": "Desinfetante Ypê Bak 2L Floral"
-   }
-  ]
- },
- {
-  "produto": "alvejante-ype-flores-da-primavera-2-litros-e09fda",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896098904725",
-    "nome": "Alvejante Ypê Flores da Primavera 2 Litros"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-587234",
-    "nome": "Alvejante Liquido Ypê 2l Flores de Primavera"
    }
   ]
  },
@@ -345,6 +345,21 @@
   ]
  },
  {
+  "produto": "cream-cheese-tradicional-vigor-pote-150g-ec58a0",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896625211005",
+    "nome": "Cream Cheese Tradicional Vigor Pote 150g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568594",
+    "nome": "Cream Cheese Danubio 150g Tradicional"
+   }
+  ]
+ },
+ {
   "produto": "iogurte-grego-batavo-flocos-450g-257239",
   "itens": [
    {
@@ -406,21 +421,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-9432",
     "nome": "Iogurte Batavo Pedacos 450g Coco e Abacaxi"
-   }
-  ]
- },
- {
-  "produto": "cream-cheese-tradicional-vigor-pote-150g-ec58a0",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896625211005",
-    "nome": "Cream Cheese Tradicional Vigor Pote 150g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568594",
-    "nome": "Cream Cheese Danubio 150g Tradicional"
    }
   ]
  },
@@ -895,21 +895,6 @@
   ]
  },
  {
-  "produto": "mistura-para-bolo-apti-festa-400g-d284be",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896327501398",
-    "nome": "Mistura para Bolo Apti Festa 400g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-10324",
-    "nome": "Mistura Bolo Apti 400g Festa"
-   }
-  ]
- },
- {
   "produto": "mistura-para-bolo-fleischmann-brownie-de-chocolate-400g-290769",
   "itens": [
    {
@@ -1325,32 +1310,17 @@
   ]
  },
  {
-  "produto": "cafe-melitta-500g-extra-forte-17d053",
+  "produto": "erva-mate-tertulia-chimarrao-a-vacuo-1kg-04328e",
   "itens": [
    {
-    "mercado": "irani",
-    "ean": "mf-irani-568375",
-    "nome": "Café Melitta 500g Extra Forte"
+    "mercado": "muffato",
+    "ean": "7896394600062",
+    "nome": "Erva Mate Tertúlia Chimarrão a Vácuo 1kg"
    },
    {
-    "mercado": "riviera",
-    "ean": "mf-riviera-6493",
-    "nome": "Cafe Melitta Extra Forte 500g Vacuo"
-   }
-  ]
- },
- {
-  "produto": "cafe-bom-jesus-500g-vacuo-tradicional-6a2554",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568801",
-    "nome": "Café Bom Jesus 500g Vácuo Tradicional"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-4546",
-    "nome": "Cafe Bom Jesus Vacuo 500g Tradicional"
+    "mercado": "festval",
+    "ean": "7896394600024",
+    "nome": "Erva-Mate Chimarrão Tertúlia 1kg"
    }
   ]
  },
@@ -1400,36 +1370,6 @@
   ]
  },
  {
-  "produto": "farelo-de-aveia-quaker-oat-bran-165g-d29644",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7892840815776",
-    "nome": "Farelo de Aveia Quaker Oat Bran  165g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-14345",
-    "nome": "Farelo De Aveia Quaker 165 g Oat Bran"
-   }
-  ]
- },
- {
-  "produto": "farinha-de-aveia-quaker-165g-882e27",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7892840815783",
-    "nome": "Farinha de Aveia Quaker 165g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570118",
-    "nome": "Farinha Aveia Quaker 165g"
-   }
-  ]
- },
- {
   "produto": "formula-infantil-nan-comfor-0-a-6-meses-800g-c6c46c",
   "itens": [
    {
@@ -1460,36 +1400,6 @@
   ]
  },
  {
-  "produto": "acucar-mascavo-guimaraes-500g-8693f2",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896775178135",
-    "nome": "Açúcar Mascavo Guimarães 500g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568181",
-    "nome": "Açúcar Mascavo Guimarães 500g"
-   }
-  ]
- },
- {
-  "produto": "aveia-em-flocos-finos-jasmine-400g-8e7042",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896283000058",
-    "nome": "Aveia em Flocos Finos Jasmine 400g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568285",
-    "nome": "Aveia em Flocos Finos Jasmine 400g"
-   }
-  ]
- },
- {
   "produto": "doce-de-leite-tirol-zero-lactose-350g-3811cf",
   "itens": [
    {
@@ -1501,6 +1411,21 @@
     "mercado": "irani",
     "ean": "mf-irani-571270",
     "nome": "Doce Leite Tirol 350g Zero Lactose"
+   }
+  ]
+ },
+ {
+  "produto": "acucar-mascavo-guimaraes-500g-8693f2",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896775178135",
+    "nome": "Açúcar Mascavo Guimarães 500g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568181",
+    "nome": "Açúcar Mascavo Guimarães 500g"
    }
   ]
  },
@@ -1945,21 +1870,6 @@
   ]
  },
  {
-  "produto": "molho-de-pimenta-kenko-picante-150ml-2e1be1",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896007811298",
-    "nome": "Molho de Pimenta Kenko Picante 150ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-8448",
-    "nome": "Molho Pimenta Kenko 150ml Extra Picante"
-   }
-  ]
- },
- {
   "produto": "tempero-sazon-60g-verde-frango-d10b87",
   "itens": [
    {
@@ -2035,6 +1945,21 @@
   ]
  },
  {
+  "produto": "molho-de-pimenta-kenko-picante-150ml-2e1be1",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896007811298",
+    "nome": "Molho de Pimenta Kenko Picante 150ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-8448",
+    "nome": "Molho Pimenta Kenko 150ml Extra Picante"
+   }
+  ]
+ },
+ {
   "produto": "sal-ajimomoto-aji-sal-churrasco-500g-3ce220",
   "itens": [
    {
@@ -2055,6 +1980,21 @@
   ]
  },
  {
+  "produto": "pao-para-hot-dog-caseirinho-400g-d8195d",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896844300368",
+    "nome": "Pão para Hot Dog Caseirinho 400g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569026",
+    "nome": "Pão Caseirinho 400g Lanche Hot Dog"
+   }
+  ]
+ },
+ {
   "produto": "pao-de-leite-caseirinho-450g-49cb50",
   "itens": [
    {
@@ -2070,21 +2010,6 @@
   ]
  },
  {
-  "produto": "pao-de-forma-caseirinho-integral-450g-dc0d67",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896844300573",
-    "nome": "Pão de Forma Caseirinho Integral 450g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569358",
-    "nome": "Pão Caseirinho 450g Forma Integral"
-   }
-  ]
- },
- {
   "produto": "pao-caseirinho-integral-select-castanha-e-quinoa-450g-571539",
   "itens": [
    {
@@ -2096,6 +2021,21 @@
     "mercado": "irani",
     "ean": "mf-irani-569125",
     "nome": "Pão Caseirinho 450g Castanha/Quinoa integral"
+   }
+  ]
+ },
+ {
+  "produto": "bolinho-ana-maria-chocolate-35g-6d3ab6",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896002301510",
+    "nome": "Bolinho Ana Maria Chocolate 35g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-8930",
+    "nome": "Bolinho Ana Maria 35g Chocolate"
    }
   ]
  },
@@ -2300,6 +2240,36 @@
   ]
  },
  {
+  "produto": "agua-tonica-antarctica-lata-350ml-52d288",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7891991014953",
+    "nome": "Água Tônica Antarctica Lata 350ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-9895",
+    "nome": "Agua Tonica Antarctica 350ml Lata"
+   }
+  ]
+ },
+ {
+  "produto": "refrigerante-schweppes-citrus-original-350ml-e9f641",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7894900180503",
+    "nome": "Refrigerante Schweppes Citrus Original 350ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7894900370041",
+    "nome": "Refrigerante Schweppes Citrus Original Lata 350ml"
+   }
+  ]
+ },
+ {
   "produto": "refrigerante-coca-cola-sem-acucar-220ml-95b014",
   "itens": [
    {
@@ -2326,21 +2296,6 @@
     "mercado": "irani",
     "ean": "mf-irani-569446",
     "nome": "Refrigerante Coca-Cola 220ml Unidade Original"
-   }
-  ]
- },
- {
-  "produto": "agua-tonica-antarctica-lata-350ml-52d288",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7891991014953",
-    "nome": "Água Tônica Antarctica Lata 350ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-9895",
-    "nome": "Agua Tonica Antarctica 350ml Lata"
    }
   ]
  },
@@ -2405,21 +2360,6 @@
   ]
  },
  {
-  "produto": "refrigerante-schweppes-citrus-original-350ml-e9f641",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7894900180503",
-    "nome": "Refrigerante Schweppes Citrus Original 350ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7894900370041",
-    "nome": "Refrigerante Schweppes Citrus Original Lata 350ml"
-   }
-  ]
- },
- {
   "produto": "drink-pronto-beats-senses-269ml-lata-7a7d5d",
   "itens": [
    {
@@ -2450,6 +2390,21 @@
   ]
  },
  {
+  "produto": "cerveja-budweiser-zero-alcool-long-neck-330ml-d235c1",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891991298421",
+    "nome": "Cerveja Budweiser Zero Álcool Long Neck 330ml"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7891991298445",
+    "nome": "Cerveja Budweiser Zero Álcool Long Neck 330ml"
+   }
+  ]
+ },
+ {
   "produto": "suco-tampico-frutas-citricas-2l-947e10",
   "itens": [
    {
@@ -2470,17 +2425,47 @@
   ]
  },
  {
-  "produto": "cerveja-budweiser-zero-alcool-long-neck-330ml-d235c1",
+  "produto": "aperitivo-aperol-garrafa-750ml-c0a33c",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7891991298421",
-    "nome": "Cerveja Budweiser Zero Álcool Long Neck 330ml"
+    "ean": "7891136057012",
+    "nome": "Aperitivo Aperol Garrafa 750ml"
    },
    {
     "mercado": "festval",
-    "ean": "7891991298445",
-    "nome": "Cerveja Budweiser Zero Álcool Long Neck 330ml"
+    "ean": "7896010006292",
+    "nome": "Aperitivo Aperol Garrafa 750ml"
+   }
+  ]
+ },
+ {
+  "produto": "espumante-casa-perini-prosecco-750ml-373bfc",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896452112094",
+    "nome": "Espumante Casa Perini Prosecco 750ml"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569933",
+    "nome": "Espumante Casa Perini 750ml Prosecco"
+   }
+  ]
+ },
+ {
+  "produto": "espumante-casa-perini-brut-750ml-c73c2b",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896452112001",
+    "nome": "Espumante Casa Perini Brut 750ml"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-571455",
+    "nome": "Espumante Casa Perini 750ml. Brut"
    }
   ]
  },
@@ -2586,21 +2571,6 @@
     "mercado": "atacadao",
     "ean": "7893218003375",
     "nome": "Whisky Black & White 1L"
-   }
-  ]
- },
- {
-  "produto": "espumante-casa-perini-brut-750ml-c73c2b",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896452112001",
-    "nome": "Espumante Casa Perini Brut 750ml"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-571455",
-    "nome": "Espumante Casa Perini 750ml. Brut"
    }
   ]
  },
@@ -2730,21 +2700,6 @@
   ]
  },
  {
-  "produto": "pizza-calabresa-sadia-460g-c0b6f1",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7893000632073",
-    "nome": "Pizza Calabresa Sadia 460g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-583330",
-    "nome": "Pizza Sadia 460g Calabresa"
-   }
-  ]
- },
- {
   "produto": "pizza-mussarela-sadia-440g-1e55fe",
   "itens": [
    {
@@ -2840,21 +2795,6 @@
   ]
  },
  {
-  "produto": "creme-dental-colgate-total-12-whitening-180g-f261f3",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7509546670744",
-    "nome": "Creme Dental Colgate Total 12 Whitening 180g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570136",
-    "nome": "Creme Dental Colgate Total 12 180g"
-   }
-  ]
- },
- {
   "produto": "sabonete-barra-vegetal-lima-da-persia-phebo-envoltorio-90g-225419",
   "itens": [
    {
@@ -2881,6 +2821,21 @@
     "mercado": "festval",
     "ean": "7898188203084",
     "nome": "Sabonete Barra Amazonian Phebo Envoltório 90g"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-colgate-total-12-whitening-180g-f261f3",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7509546670744",
+    "nome": "Creme Dental Colgate Total 12 Whitening 180g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570136",
+    "nome": "Creme Dental Colgate Total 12 180g"
    }
   ]
  },
@@ -3035,6 +2990,36 @@
   ]
  },
  {
+  "produto": "oleo-corporal-paixao-amendoas-com-avela-100ml-bf09ed",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7898919411917",
+    "nome": "Óleo Corporal Paixão Amêndoas com  Avelã 100ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-5793",
+    "nome": "Oleo Amendoas Paixao 100ml Avela"
+   }
+  ]
+ },
+ {
+  "produto": "absorvente-mili-dia-e-noite-cobertura-suave-com-abas-32un-ff029a",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896104992784",
+    "nome": "Absorvente Mili Dia e Noite Cobertura Suave com Abas 32un"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7896104992748",
+    "nome": "Absorvente Dia e Noite Mili Suave com Abas 32 un"
+   }
+  ]
+ },
+ {
   "produto": "shampoo-monange-lisos-te-quero-325ml-8ef45a",
   "itens": [
    {
@@ -3140,21 +3125,6 @@
   ]
  },
  {
-  "produto": "oleo-corporal-paixao-amendoas-com-avela-100ml-bf09ed",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7898919411917",
-    "nome": "Óleo Corporal Paixão Amêndoas com  Avelã 100ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-5793",
-    "nome": "Oleo Amendoas Paixao 100ml Avela"
-   }
-  ]
- },
- {
   "produto": "esmalte-cremoso-po-de-arroz-risque-8ml-d4cfbc",
   "itens": [
    {
@@ -3196,21 +3166,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-9599",
     "nome": "Esmalte Risque Cintilante 8ml Mini Saia"
-   }
-  ]
- },
- {
-  "produto": "absorvente-mili-dia-e-noite-cobertura-suave-com-abas-32un-ff029a",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896104992784",
-    "nome": "Absorvente Mili Dia e Noite Cobertura Suave com Abas 32un"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7896104992748",
-    "nome": "Absorvente Dia e Noite Mili Suave com Abas 32 un"
    }
   ]
  },
@@ -3530,21 +3485,6 @@
   ]
  },
  {
-  "produto": "creme-dental-sensibilidade-esmalte-sensodyne-menta-100g-071fef",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7896009498572",
-    "nome": "Creme Dental Sensibilidade & Esmalte Sensodyne Menta 100g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-593519",
-    "nome": "Creme Dental Sensodyne 100g Menta Sensibilidade e Esmalte"
-   }
-  ]
- },
- {
   "produto": "creme-dental-sensodyne-sensibilidade-gengivas-100g-195c6f",
   "itens": [
    {
@@ -3556,6 +3496,21 @@
     "mercado": "irani",
     "ean": "mf-irani-593468",
     "nome": "Creme Dental Sensodyne 100g Sensibilidade e Gengivas"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-sensibilidade-esmalte-sensodyne-menta-100g-071fef",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7896009498572",
+    "nome": "Creme Dental Sensibilidade & Esmalte Sensodyne Menta 100g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-593519",
+    "nome": "Creme Dental Sensodyne 100g Menta Sensibilidade e Esmalte"
    }
   ]
  },
@@ -3646,6 +3601,21 @@
     "mercado": "irani",
     "ean": "mf-irani-592220",
     "nome": "Condicionador Bio Extratus 300ml Homem Cabelo e Barba"
+   }
+  ]
+ },
+ {
+  "produto": "shampoo-seda-pretos-luminosos-325ml-cbb06c",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891150037526",
+    "nome": "Shampoo Seda Pretos Luminosos 325ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-17",
+    "nome": "Shampoo Seda 325ml Pretos Luminosos"
    }
   ]
  },
@@ -3845,6 +3815,66 @@
   ]
  },
  {
+  "produto": "tomatinho-bertolin-150g-a27570",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7898342580860",
+    "nome": "Tomatinho Bertolin 150g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569999",
+    "nome": "Tomatinho Bertolin 150g"
+   }
+  ]
+ },
+ {
+  "produto": "pimentao-misto-bertolin-500g-bb5442",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7898342580297",
+    "nome": "Pimentão Misto Bertolin 500g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569995",
+    "nome": "Pimentão Misto Bertolin 500g"
+   }
+  ]
+ },
+ {
+  "produto": "uva-passa-escura-sem-semente-la-violetera-200g-06f8f6",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7891089061692",
+    "nome": "Uva Passa Escura Sem Semente La Violetera 200g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568415",
+    "nome": "Uva Passa La Violetera 200g Escura S/Semente"
+   }
+  ]
+ },
+ {
+  "produto": "ameixa-importada-ksbig-500g-1f97d8",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7898902650217",
+    "nome": "Ameixa Importada KSBIG 500G"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-571597",
+    "nome": "Ameixa Importada Ks Big 500g"
+   }
+  ]
+ },
+ {
   "produto": "vinho-branco-refrescante-portugues-mateus-750ml-02a81a",
   "itens": [
    {
@@ -4015,36 +4045,6 @@
   ]
  },
  {
-  "produto": "leite-de-coco-sococo-vidro-200ml-e8e178",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-567880",
-    "nome": "Leite de Coco Sococo Vidro 200ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-12398",
-    "nome": "Leite Coco Sococo Vidro 200ml Vidro"
-   }
-  ]
- },
- {
-  "produto": "isotonico-powerade-frutas-tropicais-pet-500ml-aab3b4",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7894900508024",
-    "nome": "Isotonico Powerade Frutas Tropicais PET 500ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7894900508017",
-    "nome": "Isotônico Powerade Frutas Tropicais 500ml"
-   }
-  ]
- },
- {
   "produto": "refrigerante-coca-cola-sem-acucar-1l-9d6c2e",
   "itens": [
    {
@@ -4071,6 +4071,86 @@
     "mercado": "riviera",
     "ean": "mf-riviera-8572",
     "nome": "Suco Del Valle Mais 1 Litro Uva"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-gourmet-3-coracoes-espirito-santo-250g-e0f907",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7896045115341",
+    "nome": "Café Gourmet 3 Corações Espírito Santo 250g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-588905",
+    "nome": "Café 3 Corações 250g Gourmet Espirito Santo"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-3-coracoes-descafeinado-vacuo-250g-b4a514",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896005800577",
+    "nome": "Café 3 Corações Descafeinado Vácuo 250g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-588899",
+    "nome": "Café 3 Corações 250g Vácuo Descafeinado"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-3-coracoes-tradicional-vacuo-250g-f397dc",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896005800362",
+    "nome": "Café 3 Corações Tradicional Vácuo 250g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-591606",
+    "nome": "Café 3 Corações 250g Vácuo Tradicional"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-1582",
+    "nome": "Cafe 3 Coracoes Tradicional 250g Vacuo"
+   }
+  ]
+ },
+ {
+  "produto": "doce-de-leite-ilolay-400g-56f9db",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7790787153664",
+    "nome": "Doce de Leite Ilolay 400g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-7015",
+    "nome": "Doce Leite Ilolay 400g Pote"
+   }
+  ]
+ },
+ {
+  "produto": "mortadela-fatiada-defumada-sadia-soltissimo-200g-4d0a95",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7891515431587",
+    "nome": "Mortadela Fatiada Defumada Sadia Soltíssimo 200g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7891515536619",
+    "nome": "Mortadela Defumada Sadia Fatiada 200g"
    }
   ]
  },
@@ -4220,7 +4300,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-7792",
-    "nome": "Molho Tomate Fugini Tradicional 300g Sache"
+    "nome": "Molho Tomate Fugini Tradicional 300g+Sache"
    }
   ]
  },
@@ -4775,7 +4855,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-4453",
-    "nome": "Farinha De Milho Biju Sao Raimundo 1kg Pacote"
+    "nome": "Farinha De Milho Biju Sao Raimundo 1kg"
    }
   ]
  },
@@ -4795,17 +4875,17 @@
   ]
  },
  {
-  "produto": "fuba-medio-sinha-1kg-9e80dd",
+  "produto": "leite-de-coco-sococo-vidro-200ml-e8e178",
   "itens": [
    {
-    "mercado": "festval",
-    "ean": "7892300002999",
-    "nome": "Fubá Médio Sinhá 1kg"
+    "mercado": "irani",
+    "ean": "mf-irani-567880",
+    "nome": "Leite de Coco Sococo Vidro 200ml"
    },
    {
     "mercado": "riviera",
-    "ean": "mf-riviera-4848",
-    "nome": "Fuba Sinha Medio 1kg Pacote"
+    "ean": "mf-riviera-12398",
+    "nome": "Leite Coco Sococo Vidro 200ml Vidro"
    }
   ]
  },
@@ -4825,7 +4905,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-10624",
-    "nome": "Arroz Rampinelli Parboilizado 5kg Tipo 1"
+    "nome": "Arroz Rampinelli Parboilizado 5kg"
    }
   ]
  },
@@ -4871,21 +4951,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-3942",
     "nome": "Molho Aji No Shoyu 150ml"
-   }
-  ]
- },
- {
-  "produto": "ameixa-seca-la-violetera-sem-caroco-100g-ca44b8",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891089062736",
-    "nome": "Ameixa Seca La Violetera Sem Caroço 100g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568316",
-    "nome": "Ameixa Seca La Violetera 100g C/Caroço"
    }
   ]
  },
@@ -5045,41 +5110,6 @@
   ]
  },
  {
-  "produto": "cafe-3-coracoes-descafeinado-vacuo-250g-b4a514",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896005800577",
-    "nome": "Café 3 Corações Descafeinado Vácuo 250g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-588899",
-    "nome": "Café 3 Corações 250g Vácuo Descafeinado"
-   }
-  ]
- },
- {
-  "produto": "cafe-3-coracoes-tradicional-vacuo-250g-f397dc",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896005800362",
-    "nome": "Café 3 Corações Tradicional Vácuo 250g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-591606",
-    "nome": "Café 3 Corações 250g Vácuo Tradicional"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-1582",
-    "nome": "Cafe 3 Coracoes Tradicional 250g Vacuo"
-   }
-  ]
- },
- {
   "produto": "cafe-coamo-tradicional-vacuo-500g-7c935f",
   "itens": [
    {
@@ -5106,6 +5136,36 @@
     "mercado": "irani",
     "ean": "mf-irani-570559",
     "nome": "Cafe Coamo 500g Tradicional Pacote"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-melitta-500g-extra-forte-17d053",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568375",
+    "nome": "Café Melitta 500g Extra Forte"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-6493",
+    "nome": "Cafe Melitta Extra Forte 500g Vacuo"
+   }
+  ]
+ },
+ {
+  "produto": "cafe-bom-jesus-500g-vacuo-tradicional-6a2554",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568801",
+    "nome": "Café Bom Jesus 500g Vácuo Tradicional"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4546",
+    "nome": "Cafe Bom Jesus Vacuo 500g Tradicional"
    }
   ]
  },
@@ -5715,21 +5775,6 @@
   ]
  },
  {
-  "produto": "macarrao-com-ovos-todeschini-ave-maria-500g-c8bc48",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896022205966",
-    "nome": "Macarrão com Ovos Todeschini Ave Maria 500g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569524",
-    "nome": "Macarrão C/Ovos Todeschini 500g Ave Maria"
-   }
-  ]
- },
- {
   "produto": "macarrao-de-semola-todeschini-pena-500g-a8692c",
   "itens": [
    {
@@ -5741,6 +5786,21 @@
     "mercado": "irani",
     "ean": "mf-irani-569523",
     "nome": "Macarrão Sêmola Todeschini 500g Pena"
+   }
+  ]
+ },
+ {
+  "produto": "macarrao-com-ovos-todeschini-ave-maria-500g-c8bc48",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896022205966",
+    "nome": "Macarrão com Ovos Todeschini Ave Maria 500g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569524",
+    "nome": "Macarrão C/Ovos Todeschini 500g Ave Maria"
    }
   ]
  },
@@ -5950,21 +6010,6 @@
   ]
  },
  {
-  "produto": "erva-mate-terra-mate-500g-pacote-7c554c",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-567935",
-    "nome": "Erva-Mate Terra Mate 500g Pacote"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-3790",
-    "nome": "Erva Mate Terra Mate 500g"
-   }
-  ]
- },
- {
   "produto": "erva-mate-verdelandia-premium-1kg-6936f2",
   "itens": [
    {
@@ -5976,21 +6021,6 @@
     "mercado": "irani",
     "ean": "mf-irani-569215",
     "nome": "Erva-Mate Verdelândia 1kg Premium"
-   }
-  ]
- },
- {
-  "produto": "erva-mate-terra-mate-1kg-pacote-8d4f30",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-567934",
-    "nome": "Erva-Mate Terra Mate 1kg Pacote"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-10454",
-    "nome": "Erva Mate Terra Mate 1kg Pacote"
    }
   ]
  },
@@ -6265,36 +6295,6 @@
   ]
  },
  {
-  "produto": "bebida-lactea-carolina-morango-e-coco-360g-b10a97",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896691104454",
-    "nome": "Bebida Láctea Carolina Morango e Coco 360g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-2227",
-    "nome": "Bebida Lactea Carolina Bandeja 360g Morango/Coco"
-   }
-  ]
- },
- {
-  "produto": "bebida-lactea-carolina-morango-360g-e84ac0",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896691104362",
-    "nome": "Bebida Láctea Carolina Morango 360g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-3219",
-    "nome": "Bebida Lactea Carolina Bandeja 360g Morango"
-   }
-  ]
- },
- {
   "produto": "bebida-lactea-carolina-morango-150g-f58a27",
   "itens": [
    {
@@ -6366,6 +6366,36 @@
     "mercado": "riviera",
     "ean": "mf-riviera-3429",
     "nome": "Petit Suisse Carolina 320g Morango"
+   }
+  ]
+ },
+ {
+  "produto": "bebida-lactea-carolina-morango-e-coco-360g-b10a97",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896691104454",
+    "nome": "Bebida Láctea Carolina Morango e Coco 360g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-2227",
+    "nome": "Bebida Lactea Carolina Bandeja 360g Morango/Coco"
+   }
+  ]
+ },
+ {
+  "produto": "bebida-lactea-carolina-morango-360g-e84ac0",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896691104362",
+    "nome": "Bebida Láctea Carolina Morango 360g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-3219",
+    "nome": "Bebida Lactea Carolina Bandeja 360g Morango"
    }
   ]
  },
@@ -6630,21 +6660,6 @@
   ]
  },
  {
-  "produto": "shampoo-palmolive-naturals-ceramidas-force-350ml-d662e3",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891024174210",
-    "nome": "Shampoo Palmolive Naturals Ceramidas Force 350ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-10224",
-    "nome": "Shampoo Palmolive 350ml Ceramidas Force"
-   }
-  ]
- },
- {
   "produto": "shampoo-darling-detox-350ml-0221cd",
   "itens": [
    {
@@ -6671,6 +6686,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-5489",
     "nome": "Condicionador Darling 350ml Tilia"
+   }
+  ]
+ },
+ {
+  "produto": "shampoo-palmolive-naturals-ceramidas-force-350ml-d662e3",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891024174210",
+    "nome": "Shampoo Palmolive Naturals Ceramidas Force 350ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10224",
+    "nome": "Shampoo Palmolive 350ml Ceramidas Force"
    }
   ]
  },
@@ -6731,6 +6761,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-1360",
     "nome": "Sabonete Maran 80g Rosas Suave"
+   }
+  ]
+ },
+ {
+  "produto": "desinfetante-bak-ype-lavanda-5l-b87c38",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896098903520",
+    "nome": "Desinfetante Bak Ypê Lavanda 5L"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-599329",
+    "nome": "Desinfetante Líquido Ypê Bak 5L Lavanda"
    }
   ]
  },
@@ -7680,6 +7725,21 @@
   ]
  },
  {
+  "produto": "cerveja-budweiser-zero-330ml-long-neck-und-07aec5",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570762",
+    "nome": "Cerveja Budweiser Zero 330ml Long Neck Und"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-13598",
+    "nome": "Cerveja Budweiser Zero Ln 330ml Long Neck"
+   }
+  ]
+ },
+ {
   "produto": "refresco-trink-15g-maracuja-746111",
   "itens": [
    {
@@ -8201,6 +8261,36 @@
     "mercado": "riviera",
     "ean": "mf-riviera-6346",
     "nome": "Tempero Completo Sabor Ami 300g Alho Sal"
+   }
+  ]
+ },
+ {
+  "produto": "erva-mate-terra-mate-500g-pacote-7c554c",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-567935",
+    "nome": "Erva-Mate Terra Mate 500g Pacote"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-3790",
+    "nome": "Erva Mate Terra Mate 500g"
+   }
+  ]
+ },
+ {
+  "produto": "erva-mate-terra-mate-1kg-pacote-8d4f30",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-567934",
+    "nome": "Erva-Mate Terra Mate 1kg Pacote"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10454",
+    "nome": "Erva Mate Terra Mate 1kg Pacote"
    }
   ]
  },
