@@ -285,66 +285,6 @@
   ]
  },
  {
-  "produto": "sopao-maggi-200g-carne-c-legumes-026e85",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568030",
-    "nome": "Sopão Maggi 200g Carne C/Legumes"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-13903",
-    "nome": "Sopao Maggi 200g Carne Com Legumes"
-   }
-  ]
- },
- {
-  "produto": "creme-de-leite-nestle-200g-tp-978769",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568275",
-    "nome": "Creme de Leite Nestlé 200g Tp"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-106",
-    "nome": "Creme Leite Nestle Tp 200g"
-   }
-  ]
- },
- {
-  "produto": "sopao-maggi-200g-galinha-caipira-262f8a",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568523",
-    "nome": "Sopao Maggi 200g Galinha Caipira"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-6662",
-    "nome": "Sopao Maggi 200g Galinha Caipira"
-   }
-  ]
- },
- {
-  "produto": "cream-cheese-tradicional-vigor-pote-150g-ec58a0",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896625211005",
-    "nome": "Cream Cheese Tradicional Vigor Pote 150g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568594",
-    "nome": "Cream Cheese Danubio 150g Tradicional"
-   }
-  ]
- },
- {
   "produto": "iogurte-grego-batavo-flocos-450g-257239",
   "itens": [
    {
@@ -406,6 +346,66 @@
     "mercado": "riviera",
     "ean": "mf-riviera-9432",
     "nome": "Iogurte Batavo Pedacos 450g Coco e Abacaxi"
+   }
+  ]
+ },
+ {
+  "produto": "cream-cheese-tradicional-vigor-pote-150g-ec58a0",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896625211005",
+    "nome": "Cream Cheese Tradicional Vigor Pote 150g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568594",
+    "nome": "Cream Cheese Danubio 150g Tradicional"
+   }
+  ]
+ },
+ {
+  "produto": "sopao-maggi-200g-carne-c-legumes-026e85",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568030",
+    "nome": "Sopão Maggi 200g Carne C/Legumes"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-13903",
+    "nome": "Sopao Maggi 200g Carne Com Legumes"
+   }
+  ]
+ },
+ {
+  "produto": "creme-de-leite-nestle-200g-tp-978769",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568275",
+    "nome": "Creme de Leite Nestlé 200g Tp"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-106",
+    "nome": "Creme Leite Nestle Tp 200g"
+   }
+  ]
+ },
+ {
+  "produto": "sopao-maggi-200g-galinha-caipira-262f8a",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568523",
+    "nome": "Sopao Maggi 200g Galinha Caipira"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-6662",
+    "nome": "Sopao Maggi 200g Galinha Caipira"
    }
   ]
  },
@@ -555,6 +555,26 @@
   ]
  },
  {
+  "produto": "gelatina-dr-oetker-maracuja-20g-0295d2",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891048050651",
+    "nome": "Gelatina Dr Oetker Maracujá 20g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569578",
+    "nome": "Gelatina Dr. Oetker 20g Maracujá"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-10564",
+    "nome": "Gelatina Dr Oetker 20g Maracuja"
+   }
+  ]
+ },
+ {
   "produto": "gelatina-dr-oetker-framboesa-20g-34e5e5",
   "itens": [
    {
@@ -586,26 +606,6 @@
     "mercado": "irani",
     "ean": "mf-irani-569580",
     "nome": "Gelatina Dr. Oetker 20g Tutti-Frutti"
-   }
-  ]
- },
- {
-  "produto": "gelatina-dr-oetker-maracuja-20g-0295d2",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891048050651",
-    "nome": "Gelatina Dr Oetker Maracujá 20g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569578",
-    "nome": "Gelatina Dr. Oetker 20g Maracujá"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-10564",
-    "nome": "Gelatina Dr Oetker 20g Maracuja"
    }
   ]
  },
@@ -650,7 +650,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-5966",
-    "nome": "Gelatina Apti 20g Uva"
+    "nome": "Gelatina Apti 20g+Uva"
    }
   ]
  },
@@ -750,36 +750,6 @@
   ]
  },
  {
-  "produto": "mistura-para-bolo-apti-baunilha-400g-6e5de0",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896327511335",
-    "nome": "Mistura para Bolo Apti Baunilha 400g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-7301",
-    "nome": "Mistura Bolo Apti 400g Baunilha"
-   }
-  ]
- },
- {
-  "produto": "mistura-para-bolo-apti-coco-400g-ff7b28",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896327511328",
-    "nome": "Mistura para Bolo Apti Coco 400g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-6237",
-    "nome": "Mistura Bolo Apti 400g Coco"
-   }
-  ]
- },
- {
   "produto": "mistura-para-bolo-fleischmann-brownie-de-chocolate-400g-290769",
   "itens": [
    {
@@ -836,6 +806,36 @@
     "mercado": "irani",
     "ean": "mf-irani-568895",
     "nome": "Pudim Dr. Oetker 50g Baunilha"
+   }
+  ]
+ },
+ {
+  "produto": "mistura-para-bolo-apti-coco-400g-ff7b28",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896327511328",
+    "nome": "Mistura para Bolo Apti Coco 400g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-6237",
+    "nome": "Mistura Bolo Apti 400g Coco"
+   }
+  ]
+ },
+ {
+  "produto": "mistura-para-bolo-apti-baunilha-400g-6e5de0",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896327511335",
+    "nome": "Mistura para Bolo Apti Baunilha 400g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-7301",
+    "nome": "Mistura Bolo Apti 400g Baunilha"
    }
   ]
  },
@@ -1120,6 +1120,21 @@
   ]
  },
  {
+  "produto": "azeite-de-oliva-tipo-unico-portugues-gallo-vidro-500ml-d84bbb",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "5601252106103",
+    "nome": "Azeite de Oliva Tipo Único Português Gallo Vidro 500ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4326",
+    "nome": "Azeite Oliva Gallo Vidro 500ml Tipo Unico"
+   }
+  ]
+ },
+ {
   "produto": "polvilho-azedo-pinduca-500g-578b24",
   "itens": [
    {
@@ -1225,21 +1240,6 @@
   ]
  },
  {
-  "produto": "goiabada-predilecta-300g-cfc414",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896292330061",
-    "nome": "Goiabada Predilecta 300g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568515",
-    "nome": "Goiabada Predilecta 300g"
-   }
-  ]
- },
- {
   "produto": "leite-em-po-molico-280g-desnatado-426862",
   "itens": [
    {
@@ -1251,6 +1251,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-7231",
     "nome": "Leite Po Molico 280g Lata Desnatado"
+   }
+  ]
+ },
+ {
+  "produto": "goiabada-predilecta-300g-cfc414",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896292330061",
+    "nome": "Goiabada Predilecta 300g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568515",
+    "nome": "Goiabada Predilecta 300g"
    }
   ]
  },
@@ -1326,6 +1341,21 @@
     "mercado": "irani",
     "ean": "mf-irani-568181",
     "nome": "Açúcar Mascavo Guimarães 500g"
+   }
+  ]
+ },
+ {
+  "produto": "pasta-de-amendoim-guimaraes-cacau-e-coco-450g-01d7c7",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896775102468",
+    "nome": "Pasta de Amendoim Guimarães Cacau e Coco 450g"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7896775101881",
+    "nome": "Pasta de Amendoim Guimarães Cacau 450g"
    }
   ]
  },
@@ -1440,21 +1470,6 @@
   ]
  },
  {
-  "produto": "chocolate-lindt-excellence-tablete-extra-cremoso-ao-leite-10-b210a0",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7610400010481",
-    "nome": "Chocolate Lindt Excellence Tablete Extra Cremoso ao Leite 100g"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7610400271639",
-    "nome": "Chocolate Extra Cremoso Lindt Excellence ao Leite 100g"
-   }
-  ]
- },
- {
   "produto": "caixa-de-bombons-chocolate-lindt-lindor-ao-leite-200g-com-16-8f3f1b",
   "itens": [
    {
@@ -1481,6 +1496,21 @@
     "mercado": "festval",
     "ean": "8003340098869",
     "nome": "Caixa de Bombons Chocolate Lindt Lindor Ao Leite 37g Com 3 unidades"
+   }
+  ]
+ },
+ {
+  "produto": "chocolate-lindt-excellence-tablete-extra-cremoso-ao-leite-10-b210a0",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7610400010481",
+    "nome": "Chocolate Lindt Excellence Tablete Extra Cremoso ao Leite 100g"
+   },
+   {
+    "mercado": "festval",
+    "ean": "7610400271639",
+    "nome": "Chocolate Extra Cremoso Lindt Excellence ao Leite 100g"
    }
   ]
  },
@@ -1760,6 +1790,21 @@
   ]
  },
  {
+  "produto": "molho-de-shoyu-sakura-cereja-suave-1l-a63cc8",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896007801091",
+    "nome": "Molho de Shoyu Sakura Cereja Suave 1L"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568639",
+    "nome": "Shoyu Cereja Suave 1L"
+   }
+  ]
+ },
+ {
   "produto": "canjica-vapza-cozida-no-vapor-500g-1b6f64",
   "itens": [
    {
@@ -1900,21 +1945,6 @@
   ]
  },
  {
-  "produto": "pao-para-hot-dog-caseirinho-400g-d8195d",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7896844300368",
-    "nome": "Pão para Hot Dog Caseirinho 400g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569026",
-    "nome": "Pão Caseirinho 400g Lanche Hot Dog"
-   }
-  ]
- },
- {
   "produto": "pao-de-leite-caseirinho-450g-49cb50",
   "itens": [
    {
@@ -1956,6 +1986,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-8930",
     "nome": "Bolinho Ana Maria 35g Chocolate"
+   }
+  ]
+ },
+ {
+  "produto": "pao-para-hot-dog-caseirinho-400g-d8195d",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896844300368",
+    "nome": "Pão para Hot Dog Caseirinho 400g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569026",
+    "nome": "Pão Caseirinho 400g Lanche Hot Dog"
    }
   ]
  },
@@ -2175,21 +2220,6 @@
   ]
  },
  {
-  "produto": "cerveja-michelob-ultra-long-neck-330ml-4a8809",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891991299619",
-    "nome": "Cerveja Michelob Ultra Long Neck 330ml"
-   },
-   {
-    "mercado": "festval",
-    "ean": "7891991299626",
-    "nome": "Cerveja Michelob Ultra Long Neck 330ml"
-   }
-  ]
- },
- {
   "produto": "refrigerante-schweppes-citrus-original-350ml-e9f641",
   "itens": [
    {
@@ -2390,17 +2420,17 @@
   ]
  },
  {
-  "produto": "rum-montilla-carta-branca-1l-260bff",
+  "produto": "cerveja-unfiltered-lata-eisenbahn-350ml-86f9b7",
   "itens": [
    {
-    "mercado": "muffato",
-    "ean": "7891050004307",
-    "nome": "Rum Montilla Carta Branca 1L"
+    "mercado": "festval",
+    "ean": "7898367984384",
+    "nome": "Cerveja Unfiltered Lata Eisenbahn 350ml"
    },
    {
     "mercado": "atacadao",
-    "ean": "7891050000606",
-    "nome": "Rum Montilla Carta Branca 1L"
+    "ean": "7898367984377",
+    "nome": "Cerveja Eisenbahn Unfiltered 350ml"
    }
   ]
  },
@@ -2431,21 +2461,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-13699",
     "nome": "Steinhaeger Schuss 980ml"
-   }
-  ]
- },
- {
-  "produto": "cerveja-unfiltered-lata-eisenbahn-350ml-86f9b7",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898367984384",
-    "nome": "Cerveja Unfiltered Lata Eisenbahn 350ml"
-   },
-   {
-    "mercado": "atacadao",
-    "ean": "7898367984377",
-    "nome": "Cerveja Eisenbahn Unfiltered 350ml"
    }
   ]
  },
@@ -2491,6 +2506,21 @@
     "mercado": "atacadao",
     "ean": "7893218003375",
     "nome": "Whisky Black & White 1L"
+   }
+  ]
+ },
+ {
+  "produto": "rum-montilla-carta-branca-1l-260bff",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7891050004307",
+    "nome": "Rum Montilla Carta Branca 1L"
+   },
+   {
+    "mercado": "atacadao",
+    "ean": "7891050000606",
+    "nome": "Rum Montilla Carta Branca 1L"
    }
   ]
  },
@@ -2635,21 +2665,6 @@
   ]
  },
  {
-  "produto": "mac-n-cheese-cheddar-calabresa-sadia-pote-300g-e1c0f4",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7891515605704",
-    "nome": "Mac'n Cheese Cheddar&Calabresa Sadia Pote 300g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-583558",
-    "nome": "Mac`n Cheese Sadia 300g Calabresa"
-   }
-  ]
- },
- {
   "produto": "sobremesa-raffinee-petit-gateau-chocolate-80g-32f145",
   "itens": [
    {
@@ -2665,17 +2680,17 @@
   ]
  },
  {
-  "produto": "folhados-forno-de-minas-frango-240g-489606",
+  "produto": "mac-n-cheese-cheddar-calabresa-sadia-pote-300g-e1c0f4",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7896074600535",
-    "nome": "Folhados Forno de Minas Frango 240g"
+    "ean": "7891515605704",
+    "nome": "Mac'n Cheese Cheddar&Calabresa Sadia Pote 300g"
    },
    {
     "mercado": "irani",
-    "ean": "mf-irani-599974",
-    "nome": "Folhados Forno De Minas 240g Frango"
+    "ean": "mf-irani-583558",
+    "nome": "Mac`n Cheese Sadia 300g Calabresa"
    }
   ]
  },
@@ -2691,6 +2706,21 @@
     "mercado": "irani",
     "ean": "mf-irani-591994",
     "nome": "Lasanha de Calabresa Sadia 600g"
+   }
+  ]
+ },
+ {
+  "produto": "folhados-forno-de-minas-frango-240g-489606",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7896074600535",
+    "nome": "Folhados Forno de Minas Frango 240g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-599974",
+    "nome": "Folhados Forno De Minas 240g Frango"
    }
   ]
  },
@@ -2775,21 +2805,6 @@
   ]
  },
  {
-  "produto": "creme-dental-sorriso-fresh-branqueador-90g-a9d56b",
-  "itens": [
-   {
-    "mercado": "muffato",
-    "ean": "7509546700342",
-    "nome": "Creme Dental Sorriso Fresh Branqueador 90g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-14693",
-    "nome": "Creme Sorriso Fresh Branqueador 90g"
-   }
-  ]
- },
- {
   "produto": "hidratante-corporal-monange-iogurte-com-aveia-200ml-81e5e1",
   "itens": [
    {
@@ -2805,77 +2820,17 @@
   ]
  },
  {
-  "produto": "creme-dental-colgate-total-12-gengiva-reforcada-90g-9d5a45",
+  "produto": "creme-dental-sorriso-fresh-branqueador-90g-a9d56b",
   "itens": [
    {
     "mercado": "muffato",
-    "ean": "7509546668055",
-    "nome": "Creme Dental Colgate Total 12 Gengiva Reforçada 90g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-593564",
-    "nome": "Creme Dental Colgate Gengiva Reforçada 90g"
-   }
-  ]
- },
- {
-  "produto": "creme-dental-colgate-total-12-90g-whitening-c60a4e",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-568378",
-    "nome": "Creme Dental Colgate Total 12 90g Whitening"
+    "ean": "7509546700342",
+    "nome": "Creme Dental Sorriso Fresh Branqueador 90g"
    },
    {
     "mercado": "riviera",
-    "ean": "mf-riviera-1774",
-    "nome": "Creme Dental Colgate Total 12 90g Whitening+adv"
-   }
-  ]
- },
- {
-  "produto": "creme-dental-total-original-mint-90g-f8af4b",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-593569",
-    "nome": "Creme Dental Total Original Mint 90g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-9473",
-    "nome": "Creme Dental Colgate Total 90g Original Mint"
-   }
-  ]
- },
- {
-  "produto": "creme-dental-sorriso-90g-dentes-brancos-569082",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-593411",
-    "nome": "Creme Dental Sorriso 90g Dentes Brancos"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-4806",
-    "nome": "Creme Sorriso Dentes Brancos 90g Dentes Brancos"
-   }
-  ]
- },
- {
-  "produto": "creme-dental-tandy-50g-tutti-frutti-b0d8e6",
-  "itens": [
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-587942",
-    "nome": "Creme Dental Tandy 50g Tutti Frutti"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-9050",
-    "nome": "Creme Dental Tandy 50g Tutti Frutti"
+    "ean": "mf-riviera-14693",
+    "nome": "Creme Sorriso Fresh Branqueador 90g"
    }
   ]
  },
@@ -2955,6 +2910,66 @@
   ]
  },
  {
+  "produto": "creme-dental-colgate-total-12-gengiva-reforcada-90g-9d5a45",
+  "itens": [
+   {
+    "mercado": "muffato",
+    "ean": "7509546668055",
+    "nome": "Creme Dental Colgate Total 12 Gengiva Reforçada 90g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-593564",
+    "nome": "Creme Dental Colgate Gengiva Reforçada 90g"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-colgate-total-12-90g-whitening-c60a4e",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-568378",
+    "nome": "Creme Dental Colgate Total 12 90g Whitening"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-1774",
+    "nome": "Creme Dental Colgate Total 12 90g Whitening+adv"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-total-original-mint-90g-f8af4b",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-593569",
+    "nome": "Creme Dental Total Original Mint 90g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-9473",
+    "nome": "Creme Dental Colgate Total 90g Original Mint"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-sorriso-90g-dentes-brancos-569082",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-593411",
+    "nome": "Creme Dental Sorriso 90g Dentes Brancos"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4806",
+    "nome": "Creme Sorriso Dentes Brancos 90g Dentes Brancos"
+   }
+  ]
+ },
+ {
   "produto": "algodao-cottonbaby-caixa-50g-714ae3",
   "itens": [
    {
@@ -2966,6 +2981,21 @@
     "mercado": "irani",
     "ean": "mf-irani-595321",
     "nome": "Algodão Cottonbaby 50g Caixa"
+   }
+  ]
+ },
+ {
+  "produto": "creme-dental-tandy-50g-tutti-frutti-b0d8e6",
+  "itens": [
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-587942",
+    "nome": "Creme Dental Tandy 50g Tutti Frutti"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-9050",
+    "nome": "Creme Dental Tandy 50g Tutti Frutti"
    }
   ]
  },
@@ -3345,6 +3375,21 @@
   ]
  },
  {
+  "produto": "enxaguante-bucal-colgate-plax-ice-infinity-250ml-a1d9ab",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891024027028",
+    "nome": "Enxaguante Bucal Colgate Plax Ice Infinity 250ml"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-593273",
+    "nome": "Enxaguante Bucal Plax 250ml Ice Infinity"
+   }
+  ]
+ },
+ {
   "produto": "enxaguante-bucal-plax-250ml-classic-e1060a",
   "itens": [
    {
@@ -3540,21 +3585,6 @@
   ]
  },
  {
-  "produto": "condicionador-seda-cachos-definidos-325ml-20d7a7",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891150037465",
-    "nome": "Condicionador Seda Cachos Definidos 325ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-8737",
-    "nome": "Condicionador Seda 325ml Cachos Definidos"
-   }
-  ]
- },
- {
   "produto": "shampoo-seda-cachos-definidos-325ml-bb8477",
   "itens": [
    {
@@ -3566,6 +3596,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-8390",
     "nome": "Shampoo Seda 325ml Cachos Definidos"
+   }
+  ]
+ },
+ {
+  "produto": "condicionador-seda-cachos-definidos-325ml-20d7a7",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891150037465",
+    "nome": "Condicionador Seda Cachos Definidos 325ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-8737",
+    "nome": "Condicionador Seda 325ml Cachos Definidos"
    }
   ]
  },
@@ -3705,6 +3750,21 @@
   ]
  },
  {
+  "produto": "vagem-sem-fios-bertolin-300g-a50202",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7898342580068",
+    "nome": "Vagem sem Fios Bertolin 300g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570085",
+    "nome": "Vagem Sem Fios Bertolin 300g"
+   }
+  ]
+ },
+ {
   "produto": "tomate-sweet-grape-bertolin-uva-180g-d876fc",
   "itens": [
    {
@@ -3780,6 +3840,21 @@
   ]
  },
  {
+  "produto": "espumante-arte-brut-brasileiro-casa-valduga-750ml-4ace3d",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7898276971000",
+    "nome": "Espumante Arte Brut Brasileiro Casa Valduga 750ml"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-570740",
+    "nome": "Espumante Casa Valduga Arte 750ml Brut"
+   }
+  ]
+ },
+ {
   "produto": "vinho-italiano-freixenet-chianti-750ml-0a43d0",
   "itens": [
    {
@@ -3806,21 +3881,6 @@
     "mercado": "irani",
     "ean": "mf-irani-571223",
     "nome": "Vinho Português Mateus 750ml Branco"
-   }
-  ]
- },
- {
-  "produto": "espumante-arte-brut-brasileiro-casa-valduga-750ml-4ace3d",
-  "itens": [
-   {
-    "mercado": "festval",
-    "ean": "7898276971000",
-    "nome": "Espumante Arte Brut Brasileiro Casa Valduga 750ml"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-570740",
-    "nome": "Espumante Casa Valduga Arte 750ml Brut"
    }
   ]
  },
@@ -3965,17 +4025,17 @@
   ]
  },
  {
-  "produto": "isotonico-powerade-frutas-tropicais-pet-500ml-aab3b4",
+  "produto": "cha-ice-tea-limao-lipton-garrafa-1-5l-cb83f6",
   "itens": [
    {
     "mercado": "festval",
-    "ean": "7894900508024",
-    "nome": "Isotonico Powerade Frutas Tropicais PET 500ml"
+    "ean": "7891042102547",
+    "nome": "Chá Ice Tea Limão Lipton Garrafa 1,5L"
    },
    {
     "mercado": "atacadao",
-    "ean": "7894900508017",
-    "nome": "Isotônico Powerade Frutas Tropicais 500ml"
+    "ean": "7891042000201",
+    "nome": "Chá Lipton Ice Tea Limão 1,5L"
    }
   ]
  },
@@ -4250,7 +4310,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-7792",
-    "nome": "Molho Tomate Fugini Tradicional 300g+Sache"
+    "nome": "Molho Tomate Fugini Tradicional 300g Sache"
    }
   ]
  },
@@ -4790,7 +4850,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-4453",
-    "nome": "Farinha De Milho Biju Sao Raimundo 1kg"
+    "nome": "Farinha De Milho Biju Sao Raimundo 1kg Pacote"
    }
   ]
  },
@@ -4806,6 +4866,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-6723",
     "nome": "Arroz Rampinelli Parboilizado 1kg Tipo 1"
+   }
+  ]
+ },
+ {
+  "produto": "fuba-medio-sinha-1kg-9e80dd",
+  "itens": [
+   {
+    "mercado": "festval",
+    "ean": "7892300002999",
+    "nome": "Fubá Médio Sinhá 1kg"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-4848",
+    "nome": "Fuba Sinha Medio 1kg Pacote"
    }
   ]
  },
@@ -4840,7 +4915,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-10624",
-    "nome": "Arroz Rampinelli Parboilizado 5kg"
+    "nome": "Arroz Rampinelli Parboilizado 5kg Tipo 1"
    }
   ]
  },
@@ -4900,7 +4975,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-631",
-    "nome": "Leite Po Aurora Integral 400g Pacote"
+    "nome": "Leite Po Aurora Integral 400g+Pacote"
    }
   ]
  },
@@ -5110,21 +5185,6 @@
   ]
  },
  {
-  "produto": "feijao-carioca-sabor-sul-tipo-1-1kg-a51b0a",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896735115477",
-    "nome": "Feijão Carioca Sabor Sul Tipo 1 1kg"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-1860",
-    "nome": "Feijao Carioca Sabor Sul 1kg Tipo 1"
-   }
-  ]
- },
- {
   "produto": "arroz-sabor-sul-integral-tipo-1-1kg-b16608",
   "itens": [
    {
@@ -5136,6 +5196,21 @@
     "mercado": "irani",
     "ean": "mf-irani-569299",
     "nome": "Arroz Integral Sabor Sul 1Kg"
+   }
+  ]
+ },
+ {
+  "produto": "feijao-carioca-sabor-sul-tipo-1-1kg-a51b0a",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896735115477",
+    "nome": "Feijão Carioca Sabor Sul Tipo 1 1kg"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-1860",
+    "nome": "Feijao Carioca Sabor Sul 1kg Tipo 1"
    }
   ]
  },
@@ -5230,7 +5305,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-8217",
-    "nome": "Biscoito Ninfa 350 g Leite"
+    "nome": "Biscoito Ninfa 350 g+Leite"
    }
   ]
  },
@@ -5260,7 +5335,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-7748",
-    "nome": "Biscoito Ninfa 350 g Cream Cracker"
+    "nome": "Biscoito Ninfa 350 g+Cream Cracker"
    }
   ]
  },
@@ -5570,7 +5645,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-10418",
-    "nome": "Biscoito Cookie Nestle 60g Classic Cookie Baunilha"
+    "nome": "Biscoito Cookie Nestle 60g+Classic Cookie Bauni"
    }
   ]
  },
@@ -5710,21 +5785,6 @@
   ]
  },
  {
-  "produto": "macarrao-com-ovos-todeschini-ave-maria-500g-c8bc48",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896022205966",
-    "nome": "Macarrão com Ovos Todeschini Ave Maria 500g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-569524",
-    "nome": "Macarrão C/Ovos Todeschini 500g Ave Maria"
-   }
-  ]
- },
- {
   "produto": "macarrao-de-semola-todeschini-parafuso-500g-86c5b0",
   "itens": [
    {
@@ -5741,6 +5801,21 @@
     "mercado": "riviera",
     "ean": "mf-riviera-14037",
     "nome": "Macarrao Todeschini Semola 500g Parafuso"
+   }
+  ]
+ },
+ {
+  "produto": "macarrao-com-ovos-todeschini-ave-maria-500g-c8bc48",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896022205966",
+    "nome": "Macarrão com Ovos Todeschini Ave Maria 500g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-569524",
+    "nome": "Macarrão C/Ovos Todeschini 500g Ave Maria"
    }
   ]
  },
@@ -5831,6 +5906,11 @@
     "mercado": "irani",
     "ean": "mf-irani-568291",
     "nome": "Óleo Soja Coamo 900ml"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-465",
+    "nome": "Oleo De Soja Coamo 900ml"
    }
   ]
  },
@@ -6080,21 +6160,6 @@
   ]
  },
  {
-  "produto": "iogurte-com-pedacos-carolina-acai-e-morango-450g-71a5b8",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896691104669",
-    "nome": "Iogurte com Pedaços Carolina Açaí e Morango 450g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-2453",
-    "nome": "Iogurte Carolina Pedacos 450g Açai C/ Morango"
-   }
-  ]
- },
- {
   "produto": "iogurte-com-pedacos-carolina-morango-450g-75f039",
   "itens": [
    {
@@ -6106,21 +6171,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-3832",
     "nome": "Iogurte Carolina Pedacos 450g Morango"
-   }
-  ]
- },
- {
-  "produto": "iogurte-grego-carolina-acai-e-banana-450g-948336",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7896691105185",
-    "nome": "Iogurte Grego Carolina Açaí e Banana 450g"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-976",
-    "nome": "Iogurte Carolina Grego 450g Açai e Banana"
    }
   ]
  },
@@ -6151,6 +6201,36 @@
     "mercado": "riviera",
     "ean": "mf-riviera-10434",
     "nome": "Iogurte Carolina Pedacos 450g Abacaxi C/ Coco"
+   }
+  ]
+ },
+ {
+  "produto": "iogurte-com-pedacos-carolina-acai-e-morango-450g-71a5b8",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896691104669",
+    "nome": "Iogurte com Pedaços Carolina Açaí e Morango 450g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-2453",
+    "nome": "Iogurte Carolina Pedacos 450g Açai C/ Morango"
+   }
+  ]
+ },
+ {
+  "produto": "iogurte-grego-carolina-acai-e-banana-450g-948336",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7896691105185",
+    "nome": "Iogurte Grego Carolina Açaí e Banana 450g"
+   },
+   {
+    "mercado": "riviera",
+    "ean": "mf-riviera-976",
+    "nome": "Iogurte Carolina Grego 450g Açai e Banana"
    }
   ]
  },
@@ -6365,6 +6445,21 @@
   ]
  },
  {
+  "produto": "lasanha-perdigao-bolonhesa-350g-bc479d",
+  "itens": [
+   {
+    "mercado": "atacadao",
+    "ean": "7891515644826",
+    "nome": "Lasanha Perdigão Bolonhesa 350g"
+   },
+   {
+    "mercado": "irani",
+    "ean": "mf-irani-591891",
+    "nome": "Lasanha Bolonhesa Perdigão 350g"
+   }
+  ]
+ },
+ {
   "produto": "pizza-perdigao-brasileira-460g-58a2dc",
   "itens": [
    {
@@ -6391,21 +6486,6 @@
     "mercado": "irani",
     "ean": "mf-irani-585990",
     "nome": "Pizza Perdigão 460g Napolitana"
-   }
-  ]
- },
- {
-  "produto": "lasanha-perdigao-bolonhesa-350g-bc479d",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891515644826",
-    "nome": "Lasanha Perdigão Bolonhesa 350g"
-   },
-   {
-    "mercado": "irani",
-    "ean": "mf-irani-591891",
-    "nome": "Lasanha Bolonhesa Perdigão 350g"
    }
   ]
  },
@@ -6495,7 +6575,7 @@
    {
     "mercado": "riviera",
     "ean": "mf-riviera-11864",
-    "nome": "Suco Tampico 450ml Frutas Citricas"
+    "nome": "Suco Tampico 450ml+Frutas Citricas"
    }
   ]
  },
@@ -6561,21 +6641,6 @@
     "mercado": "riviera",
     "ean": "mf-riviera-9557",
     "nome": "Leite Po Integral Ccgl 400g Sache"
-   }
-  ]
- },
- {
-  "produto": "condicionador-seda-toque-de-seda-250ml-e0dd23",
-  "itens": [
-   {
-    "mercado": "atacadao",
-    "ean": "7891150101586",
-    "nome": "Condicionador Seda Toque de Seda 250ml"
-   },
-   {
-    "mercado": "riviera",
-    "ean": "mf-riviera-122",
-    "nome": "Condicionador Seda 250ml Toque De Seda"
    }
   ]
  },
